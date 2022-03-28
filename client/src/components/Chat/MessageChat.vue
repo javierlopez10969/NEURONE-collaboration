@@ -2,26 +2,26 @@
 <template>
   <v-card :color="color">
     <!-- Case is sender -->
-    <v-container v-if="item.username == 'You'" style="text-align: right">
+    <v-container fluid v-if="item.username == 'You'" style="text-align: right">
       <v-row no-gutters>
         <v-col> </v-col>
         <v-col>
-          {{ item.username }}
+          <span class="blue--text">
+            {{ item.username }}
+          </span>
           <ProfileIcon
             :username="item.username"
             :sender="true"
             :color="'indigo'"
           ></ProfileIcon>
           <v-spacer></v-spacer>
-          <span class="blue--text">
-            {{ item.message }}
-          </span>
+          {{ item.message }}
         </v-col>
       </v-row>
     </v-container>
 
     <!-- Case is the receiver -->
-    <v-container v-else>
+    <v-container fluid v-else>
       <v-col>
         <ProfileIcon
           :sender="false"

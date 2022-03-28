@@ -11,28 +11,41 @@ export default {
   },
   data() {
     return {
-      message: "",
-      chat: [],
-      socket: {},
+      //Username data
       username: "You",
-      type: false,
-      numUsers: 0,
-      valid: false,
+      //Socket for connection
+      socket: {},
+      //All messages
+      chat: [],
+      //Message
+      message: "",
+      //Typing process
+      isTyping: false,
+      someoneTyping: false,
+      lastTypingTime: new Date(),
+      TYPING_TIMER_LENGTH: 400,
       messageRules: [(v) => !!v || "Message can't be empty"],
     };
   },
-  mounted() {
+  created() {
     var Socket = io("http://localhost:3000");
     Socket.on("connect", () => {
       console.log(`You connected with id : ${Socket.id}`);
     });
-    Socket.on("message", (msg) => {
+    this.socket = Socket;
+  },
+  mounted() {
+    this.socket.on("message", (msg) => {
       this.chat.push(msg);
     });
     //Login
     //Add new user to the chat rooom
-
-    this.socket = Socket;
+  },
+  watch: {
+    // whenever question changes, this function will run
+    message() {
+      this.updateTyping();
+    },
   },
   methods: {
     sendMessage() {
@@ -42,31 +55,47 @@ export default {
         this.message = "";
       }
     },
-    typing() {
-      //Emit typing
-      this.type = "true";
+    updateTyping() {
+      //TODO : put if is connected or not
+      if (this.isTyping === false) {
+        this.isTyping = true;
+        console.log(this.isTyping);
+        this.socket.emit("typing");
+      } else {
+        console.log("wacha");
+      }
+      this.lastTypingTime = new Date().getTime();
+
+      setTimeout(() => {
+        const typingTimer = new Date().getTime();
+        const timeDiff = typingTimer - this.lastTypingTime;
+        if (timeDiff >= this.TYPING_TIMER_LENGTH && this.isTyping) {
+          this.socket.emit("stop typing");
+          this.isTyping = false;
+        }
+      }, this.TYPING_TIMER_LENGTH);
     },
   },
 };
 </script>
 
 <template>
-  <v-container>
-    <h1>Register as {{ username }}</h1>
+  <v-container fluid>
+    <h1>Register as {{ username }} {{ isTyping }}</h1>
     <MessagesChat :chat.sync="chat"></MessagesChat>
-    <vue-typer text="Someone is writting..."></vue-typer>
-    <v-form ref="form" v-model="valid" lazy-validation @submit="sendMessage">
+    <vue-typer v-if="someoneTyping" text="Someone is writting..."></vue-typer>
+    <v-form ref="form" @submit="sendMessage">
       <v-footer padless absolute>
         <v-container>
           <v-row>
-            <v-text-field
-              @change="typing"
+            <v-textarea
+              filled
+              auto-grow
               v-model="message"
               label="Send a Message"
               placeholder="Aa"
               outlined
-              required
-            ></v-text-field>
+            ></v-textarea>
             <v-btn depressed color="primary" type="submit"> Send </v-btn>
           </v-row>
         </v-container>

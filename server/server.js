@@ -6,7 +6,19 @@ const io = require("socket.io")(3000, {
 let numUsers = 0;
 
 io.on('connection', (socket) => {
-  let addedUser = false;
+  console.log("New user")
+  //New user joined the server
+  numUsers++;
+  socket.username = "username" + numUsers;
+  socket.on('login', (user) => {
+    socket.emit('login', {
+      numUsers: numUsers,
+      username: socket.username
+    });
+  })
+
+
+  //Disconect Server
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
@@ -28,7 +40,11 @@ io.on('connection', (socket) => {
     });
   });
   socket.on('message', (msg) => {
-    console.log('message: ' + msg);
-    io.emit('message', msg);
+    console.log('message: ' + msg + 'by ' + socket.username);
+    socket.broadcast.emit('message', {
+      username: socket.username,
+      message: msg
+    });
+
   });
 });

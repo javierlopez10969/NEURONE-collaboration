@@ -8,17 +8,22 @@
     >
       <!-- Messages -->
       <div
-        v-for="item in chat"
-        :key="item.username"
+        v-for="(item, index) in chat"
+        :key="index"
         :class="[
           'flex-row align-right',
           item.username == 'You' ? 'justify-end' : null,
         ]"
       >
-        <a v-if="item.username == 'You'">
+        <a v-if="item.username === 'You'">
           <MessageChat :item="item" :color="'blue lighten-4'"></MessageChat
         ></a>
-        <a v-else>
+        <a v-if="item.username === 'system'"
+          ><div v-bind:class="item.color + '--text text-center'">
+            <h1>{{ item.message }}</h1>
+          </div>
+        </a>
+        <a v-if="item.username !== 'You' && item.username !== 'system'">
           <MessageChat :item="item" :color="'purple lighten-4'"></MessageChat
         ></a>
       </div>

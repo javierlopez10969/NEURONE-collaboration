@@ -2,7 +2,7 @@
 <template>
   <v-card :color="color">
     <!-- Case is sender -->
-    <v-container fluid v-if="item.username == 'You'" style="text-align: right">
+    <v-container fluid v-if="item.username === 'You'" style="text-align: right">
       <v-row no-gutters>
         <v-col> </v-col>
         <v-col>
@@ -21,7 +21,7 @@
     </v-container>
 
     <!-- Case is the receiver -->
-    <v-container fluid v-else>
+    <v-container fluid v-if="item.username !== 'You'">
       <v-col>
         <ProfileIcon
           :sender="false"

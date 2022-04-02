@@ -1,26 +1,33 @@
 let app = require('express')();
 const morgan = require('morgan');
-const mongoose = require('mongoose');
+
+
+//Database
+const database = require('./database'),
+  //Routes
+  user = require('./routes/UserRoute');
+
+app.use("/api", user)
+
+
+
 let http = require('http').Server(app);
 let io = require('socket.io')(http, {
   cors: {
     origin: ["http://localhost:8080", "http://192.168.1.105:8080"],
   }
 });
-
-//Connection with the database
-mongoose.connect('mongodb://localhost/collaboration-db')
-  .then(db => console.log("Database connect")).catch(err => console.log(err))
-
-
+//UP the server
 http.listen(3000, () => {
   console.log('Listening on port *: 3000');
 });
 
 
 
+//Socket IO
 let numUsers = 0;
 var users = [];
+
 io.on('connection', (socket) => {
   //New user joined the server
   numUsers++;

@@ -15,6 +15,9 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(bodyParser.json());
+//Middlewares
+app.use(morgan('dev'));
+app.use(express.json());
 
 //Routes
 const task = require('./routes/TaskRoute'),

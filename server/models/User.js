@@ -1,33 +1,27 @@
-// User.js
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
 // Roles
 const roles = {
-    values: ['ADMIN', 'USER'],
+    values: ['ADMIN', 'USER', 'Cliente', 'Especialista'],
     message: '{VALUE} no es un rol válido'
 }
 
 // Setup schema
 let userSchema = mongoose.Schema({
-    email: {
-        type: String,
-        trim: true,
-        lowercase: true,
-        unique: true,
-        required: 'Email address is required',
-    },
     name: {
         type: String,
-        required: [true, 'Name ']
     },
     lastName: {
         type: String,
-        required: [true, 'Name ']
+    },
+    email: {
+        type: String,
+        required: [true, 'email is required']
     },
     password: {
         type: String,
-        required: [true, 'Password is neccecsary'],
+        required: [true, 'Password is required']
     },
     phone: String,
     role: {
@@ -35,12 +29,9 @@ let userSchema = mongoose.Schema({
         default: 'USER',
         enum: roles
     },
-    activo: {
+    active: {
         type: Boolean,
         default: true
-    },
-    groups: {
-        type: Array
     },
     created_at: {
         type: Date,

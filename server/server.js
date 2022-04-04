@@ -1,15 +1,29 @@
-let app = require('express')();
+const express = require('express'),
+  cors = require('cors'),
+  mongoose = require('mongoose'),
+  bodyParser = require('body-parser');
+
+//express
+const app = express();
 const morgan = require('morgan');
 
-
 //Database
-const database = require('./database'),
-  //Routes
+const database = require('./database');
+
+//Body parser configuration
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
+
+//Routes
+const task = require('./routes/TaskRoute'),
   user = require('./routes/UserRoute');
+app.use("/api/task", task)
+app.use("/api/user", user)
 
-app.use("/api", user)
-
-
+//Port
+const port = process.env.PORT || 3000;
 
 let http = require('http').Server(app);
 let io = require('socket.io')(http, {
@@ -17,8 +31,10 @@ let io = require('socket.io')(http, {
     origin: ["http://localhost:8080", "http://192.168.1.105:8080"],
   }
 });
+
+
 //UP the server
-http.listen(3000, () => {
+http.listen(port, () => {
   console.log('Listening on port *: 3000');
 });
 

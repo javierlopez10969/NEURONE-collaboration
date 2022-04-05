@@ -84,7 +84,7 @@ router.post('/login', async (req, res, next) => {
     })
 })
 //Obtener usuario grabbing user info
-router.route('/user').get((req, res, next) => {
+router.route('/').get((req, res, next) => {
     let token = req.headers.token; //token
     jwt.verify(token, 'secretkey', (err, decoded) => {
         if (err) return res.status(401).json({

@@ -18,6 +18,7 @@ app.use(bodyParser.json());
 //Middlewares
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(cors())
 
 //Routes
 const task = require('./routes/TaskRoute'),
@@ -31,7 +32,7 @@ const port = process.env.PORT || 3000;
 let http = require('http').Server(app);
 let io = require('socket.io')(http, {
   cors: {
-    origin: ["http://localhost:8080", "http://192.168.1.105:8080"],
+    origin: ["http://localhost:8080", "http://192.168.1.105:8080", "http://localhost:8080"],
   }
 });
 

@@ -10,10 +10,31 @@ const routes = [{
     name: 'home',
     component: HomeView
   },
+  {
+    path: '/register',
+    name: 'register',
+    component: () => import('../views/General/RegisterView.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/General/LoginView.vue')
+  },
 
+  //User
+  {
+    path: '/landing',
+    name: 'landing',
+    component: () => import('../views/User/LandingView.vue')
+  },
+  {
+    path: '/editprofile',
+    name: 'Edit Profile',
+    component: () => import('../views/User/EditProfile.vue')
+  },
   //Chat
   {
-    path: '/chat/',
+    path: '/chat',
     name: 'chat',
     component: () => import('../views/ChatView.vue')
   },
@@ -25,6 +46,7 @@ const routes = [{
 ]
 
 const router = new VueRouter({
+  mode: "history",
   routes
 })
 

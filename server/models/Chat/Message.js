@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
-// Setup schema
+// Message schema
 let messageSchema = mongoose.Schema({
     //Description of the message
     description: {
@@ -27,8 +27,5 @@ let messageSchema = mongoose.Schema({
     }
 });
 
-messageSchema.plugin(uniqueValidator, {
-    message: 'Error, esperaba {PATH} único.'
-});
 // Export
 module.exports = mongoose.model('message', messageSchema);

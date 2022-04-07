@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <NavBar :show="show" :user="user"></NavBar>
     <v-main>
+      <NavBar :show="show" :user="user"></NavBar>
       <router-view :user="user" />
     </v-main>
   </v-app>
@@ -16,7 +16,6 @@ export default {
   data() {
     return {
       show: true,
-      baseURL: "http://localhost:3000/api",
       tamanoRoute: 0,
       user: {},
       token: "",
@@ -40,14 +39,16 @@ export default {
     console.log(localStorage.getItem("token"));
   },
   mounted() {
-    axios
-      .get("http://localhost:3000/api/user", {
-        headers: { token: localStorage.getItem("token") },
-      })
-      .then((res) => {
-        this.user = res.data.user;
-        this.$store.commit("updateUser", res.data.user);
-      });
+    if (localStorage.getItem("token")) {
+      axios
+        .get(this.$store.state.apiURL + "/user", {
+          headers: { token: localStorage.getItem("token") },
+        })
+        .then((res) => {
+          this.user = res.data.user;
+          this.$store.commit("updateUser", res.data.user);
+        });
+    }
   },
 };
 </script>

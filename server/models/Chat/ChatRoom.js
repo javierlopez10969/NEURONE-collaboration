@@ -5,21 +5,17 @@ messageSchema.plugin(uniqueValidator, {
 // Setup schema
 let chatRoomSchema = mongoose.Schema({
     //Description of the message
-    description: {
+    name: {
         type: String,
         required: true
     },
-    //User who send the message
-    UserSender: {
-        id: string,
-        name: String,
-
+    //User who are in the  room
+    users: {
+        type: Array
     },
-    //Type of message
-    //Private message
-    //Group message
-    type_message: {
-        type: string
+    //Last 30 messages
+    lastMessages: {
+        type: Array
     },
     created_at: {
         type: Date,

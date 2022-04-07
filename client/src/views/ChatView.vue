@@ -123,7 +123,7 @@ export default {
     </v-row>
     <MessagesChat :chat.sync="chat"></MessagesChat>
     <vue-typer v-if="someoneTyping" text="Someone is writting..."></vue-typer>
-    <v-form ref="form" @submit="sendMessage">
+    <v-form ref="form">
       <v-footer padless absolute>
         <v-container>
           <v-row>
@@ -134,6 +134,7 @@ export default {
               v-model="message"
               label="Send a Message"
               placeholder="Aa"
+              @keyup.enter="sendMessage"
             ></v-text-field>
             <v-btn depressed color="primary" type="submit"> Send </v-btn>
           </v-row>

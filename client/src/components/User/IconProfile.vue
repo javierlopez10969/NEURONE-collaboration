@@ -2,9 +2,9 @@
   <v-container>
     <v-list>
       <v-list-item class="px-2">
-        <v-list-item-avatar>
-          <span class="white--text">{{ user.email[0] }}</span>
-        </v-list-item-avatar>
+        <v-avatar :color="user.color">
+          <span class="white--text text-h5">{{ letter }}</span>
+        </v-avatar>
       </v-list-item>
 
       <v-list-item link>
@@ -25,12 +25,10 @@ export default {
   data: () => ({
     hover: false,
   }),
+  props: ["user"],
   computed: {
-    user() {
-      return this.$store.state.user;
-    },
     letter() {
-      return this.user[0];
+      return "You";
     },
   },
 };

@@ -1,9 +1,9 @@
 <template>
-  <EditProfile></EditProfile>
+  <UserForm></UserForm>
 </template>
 <script>
-import EditProfile from "@/components/User/EditProfile.vue";
+import UserForm from "@/components/User/UserForm.vue";
 export default {
-  components: { EditProfile },
+  components: { UserForm },
 };
 </script>

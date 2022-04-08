@@ -23,7 +23,7 @@ const routes = [{
 
   //User
   {
-    path: '/landing',
+    path: '/home',
     name: 'landing',
     component: () => import('../views/User/LandingView.vue')
   },

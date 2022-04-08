@@ -1,6 +1,6 @@
 <template>
   <v-list nav dense>
-    <IconProfile></IconProfile>
+    <IconProfile :user="user"></IconProfile>
     <v-list-item link href="#">
       <v-list-item-icon>
         <v-icon color="white" small>mdi-lightbulb</v-icon>
@@ -8,27 +8,8 @@
       <v-list-item-title class="title">Blue</v-list-item-title>
     </v-list-item>
     <v-list-item link href="#">
-      <v-btn @click="logout"> <v-span>Logout </v-span></v-btn>
+      <v-btn @click="logout"> <span>Logout </span></v-btn>
     </v-list-item>
-    <v-list-group
-      v-for="item in items"
-      :key="item.title"
-      v-model="item.active"
-      :prepend-icon="item.action"
-      no-action
-    >
-      <template v-slot:activator>
-        <v-list-item-content>
-          <v-list-item-title v-text="item.title"></v-list-item-title>
-        </v-list-item-content>
-      </template>
-
-      <v-list-item v-for="child in item.items" :key="child.title">
-        <v-list-item-content>
-          <v-list-item-title v-text="child.title"></v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-    </v-list-group>
   </v-list>
 </template>
 
@@ -39,6 +20,7 @@ export default {
   methods: {
     logout() {
       localStorage.clear();
+      this.$store.commit("updateUser", {});
       if (window.location.pathname == "/") {
         location.reload();
       } else {
@@ -56,7 +38,7 @@ export default {
       {
         action: "mdi-ticket",
         items: [{ title: "List Item" }],
-        title: "Attractions",
+        title: "My groups",
       },
       {
         action: "mdi-silverware-fork-knife",

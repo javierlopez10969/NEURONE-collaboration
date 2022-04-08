@@ -15,6 +15,10 @@ let userSchema = mongoose.Schema({
     lastName: {
         type: String,
     },
+    color: {
+        type: String,
+        default: "#5123C1FF"
+    },
     email: {
         type: String,
         required: [true, 'email is required']

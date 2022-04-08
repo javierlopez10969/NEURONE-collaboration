@@ -14,6 +14,7 @@
         <v-text-field
           v-model="user.email"
           :rules="emailRules"
+          type="email"
           :prepend-icon="`mdi-email`"
           label="Email"
           required
@@ -50,6 +51,7 @@
           v-model="user.email"
           :rules="emailRules"
           :prepend-icon="`mdi-email`"
+          type="email"
           label="Email"
           required
           :placeholder="'name.lastname@email.web'"
@@ -118,7 +120,7 @@ export default {
           this.snack = true;
           this.snackColor = "succes";
           this.snackText = "Succesfully Login";
-          this.$router.push({ path: "/landing" });
+          this.$router.replace("/home");
         } catch (err) {
           console.log(err);
           console.log(err.response);

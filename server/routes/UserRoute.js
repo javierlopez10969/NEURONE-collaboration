@@ -83,7 +83,7 @@ router.post('/login', async (req, res, next) => {
         })
     })
 })
-//Obtener usuario grabbing user info
+//GET User info
 router.route('/').get((req, res, next) => {
     let token = req.headers.token; //token
     jwt.verify(token, 'secretkey', (err, decoded) => {
@@ -115,17 +115,24 @@ router.route('/edit-user/:id').get((req, res) => {
     })
 })
 
+//TODO : Change password
+//TODO : Auth on update user data
 // Update user
+router.put('/:id', async (req, res) => {
+    await User.findByIdAndUpdate(req.params.id, req.body)
+    res.json({
+        status: 'User Updated'
+    })
+})
 router.route('/update-user/:id').post((req, res, next) => {
     User.findByIdAndUpdate(req.params.id, {
-        $set: req.body
+        $set: req.body.user
     }, (error, data) => {
         if (error) {
             return next(error);
         } else {
             res.json(data)
             console.log('user successfully updated!');
-            console.log('Name user : ' + req.body.name + ' New user id proyecto : ' + req.body.idProyecto + ' id usuario' + req.body._id)
         }
     })
 })
@@ -150,21 +157,6 @@ router.get('/faker-user', (req, res) => {
     res.send('Creando 100 usuarios faker');
 });
 
-
-router.get('/', async (req, res) => {
-    const users = await User.find();
-    res.json(users);
-})
-
-
-
-
-router.put('/:id', async (req, res) => {
-    await User.findByIdAndUpdate(req.params.id, req.body)
-    res.json({
-        status: 'User Updated'
-    })
-})
 // Delete by id
 router.delete('/all/', async (req, res) => {
     await User.deleteMany()

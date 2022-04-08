@@ -28,7 +28,10 @@
       >
         <SideBar></SideBar>
       </v-navigation-drawer>
-      <v-app-bar color="primary" :clipped-left="clipped" fixed app>
+
+      <!-- Navbar-->
+      <v-app-bar color="primary" :clipped-left="clipped" fixed dark app>
+        <!-- LEFT SIDE -->
         <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
         <v-btn icon @click.stop="miniVariant = !miniVariant">
           <v-icon>mdi-{{ `chevron-${miniVariant ? "right" : "left"}` }}</v-icon>
@@ -39,12 +42,16 @@
         <v-btn icon @click.stop="fixed = !fixed">
           <v-icon>mdi-minus</v-icon>
         </v-btn>
-        <v-toolbar-title v-text="title" />
+        <h1>Collaboration for NEURONE</h1>
         <v-spacer />
+        <!-- RIGHT SIDE -->
+
         <v-btn icon @click.stop="rightDrawer = !rightDrawer">
           <v-icon>mdi-menu</v-icon>
         </v-btn>
       </v-app-bar>
+
+      <!-- RIGHT SIDEBAR-->
       <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
         <v-list>
           <v-list-item @click.native="right = !right">
@@ -73,8 +80,14 @@ export default {
     miniVariant: false,
     right: true,
     rightDrawer: false,
-    title: "Collaboration for NEURONE",
   }),
   components: { SideBar },
+  methods: {
+    logout() {
+      localStorage.clear();
+      this.$store.commit("updateUser", {});
+      this.$router.push("/login");
+    },
+  },
 };
 </script>

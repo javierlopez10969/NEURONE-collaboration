@@ -1,16 +1,35 @@
 <template>
   <v-container>
-    <h1>Welcome</h1>
-    {{ user }}
+    <v-row>
+      <h1>Welcome back {{ user.name }} {{ user.lastName }}</h1>
+      <v-spacer></v-spacer>
+      <v-col>
+        <GroupForm :label="'Create a group'"></GroupForm>
+      </v-col>
+    </v-row>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <!-- If is ADMIN-->
+
+    <v-row>
+      <v-col> <h2>Your Groups :</h2> </v-col>
+    </v-row>
   </v-container>
 </template>
 <script>
+import GroupForm from "@/components/User/GroupForm";
 export default {
-  props: ["user"],
   data() {
-    return {
-      i: 0,
-    };
+    return {};
+  },
+  components: {
+    GroupForm,
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
   },
   created() {
     //user is not authorized

@@ -70,6 +70,7 @@
   </a>
 </template>
 <script>
+import axios from "axios";
 export default {
   computed: {
     user() {
@@ -80,18 +81,20 @@ export default {
     },
   },
   data: () => ({
-    snack: true,
+    snack: false,
+    snackColor: "",
+    snackText: "",
+    valid: false,
   }),
   methods: {
     updateUser() {
-      this.$axios
-        .get(this.$store.state.apiURL + "/update-user/" + this.user._id, {
+      axios
+        .post(this.$store.state.apiURL + "/user/update-user/" + this.user._id, {
           user: this.user,
           headers: { token: localStorage.getItem("token") },
         })
         .then((res) => {
-          this.user = res.data.user;
-          this.$store.commit("updateUser", res.data.user);
+          console.log(res.data);
         });
     },
   },

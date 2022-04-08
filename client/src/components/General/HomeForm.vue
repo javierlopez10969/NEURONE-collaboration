@@ -48,13 +48,11 @@
         @submit.prevent="userLogin"
       >
         <v-text-field
+          label="Email*"
           v-model="user.email"
           :rules="emailRules"
           :prepend-icon="`mdi-email`"
-          type="email"
-          label="Email"
           required
-          :placeholder="'name.lastname@email.web'"
         ></v-text-field>
 
         <v-text-field

@@ -42,6 +42,9 @@
         <v-btn icon @click.stop="fixed = !fixed">
           <v-icon>mdi-minus</v-icon>
         </v-btn>
+        <v-btn icon href="/home">
+          <v-icon>mdi-home</v-icon>
+        </v-btn>
         <h1>Collaboration for NEURONE</h1>
         <v-spacer />
         <!-- RIGHT SIDE -->

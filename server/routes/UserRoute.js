@@ -125,16 +125,16 @@ router.put('/:id', async (req, res) => {
     })
 })
 router.route('/update-user/:id').post((req, res, next) => {
-    User.findByIdAndUpdate(req.params.id, {
-        $set: req.body.user
-    }, (error, data) => {
-        if (error) {
-            return next(error);
-        } else {
-            res.json(data)
-            console.log('user successfully updated!');
-        }
-    })
+    console.log(req.body)
+    User.findByIdAndUpdate(req.params.id, req.body.user,
+        (error, data) => {
+            if (error) {
+                return next(error);
+            } else {
+                res.json(data)
+                console.log('user successfully updated!');
+            }
+        })
 })
 
 

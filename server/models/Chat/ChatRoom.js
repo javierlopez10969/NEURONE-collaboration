@@ -1,6 +1,6 @@
-messageSchema.plugin(uniqueValidator, {
-    message: 'Error, esperaba {PATH} único.'
-});
+// Chat room
+const mongoose = require('mongoose');
+const uniqueValidator = require('mongoose-unique-validator');
 
 // Setup schema
 let chatRoomSchema = mongoose.Schema({

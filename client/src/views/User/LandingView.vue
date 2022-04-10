@@ -4,7 +4,7 @@
       <h1>Welcome back {{ user.name }} {{ user.lastName }}</h1>
       <v-spacer></v-spacer>
       <v-col>
-        <GroupForm :label="'Create a group'"></GroupForm>
+        <UserFormDialog :label="'Create a group'" :mode="1"></UserFormDialog>
       </v-col>
     </v-row>
     <v-spacer></v-spacer>
@@ -18,13 +18,13 @@
   </v-container>
 </template>
 <script>
-import GroupForm from "@/components/User/GroupForm";
+import UserFormDialog from "@/components/User/UserFormDialog";
 export default {
   data() {
     return {};
   },
   components: {
-    GroupForm,
+    UserFormDialog,
   },
   computed: {
     user() {

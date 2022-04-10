@@ -95,6 +95,9 @@ export default {
         })
         .then((res) => {
           console.log(res.data);
+          this.snack = true;
+          this.snackText = "User Profile successfully updated!";
+          this.snackColor = "green";
         });
     },
   },

@@ -55,7 +55,13 @@
       </v-app-bar>
 
       <!-- RIGHT SIDEBAR-->
-      <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
+      <v-navigation-drawer
+        v-model="rightDrawer"
+        :right="right"
+        permanent
+        fixed
+        app
+      >
         <v-list>
           <v-list-item @click.native="right = !right">
             <v-list-item-action>

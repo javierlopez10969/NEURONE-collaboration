@@ -2,37 +2,24 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
-// Roles
-const roles = {
-    values: ['ADMIN', 'USER', 'Cliente', 'Especialista'],
-    message: '{VALUE} no es un rol válido'
-}
-
 // Setup schema
-let userSchema = mongoose.Schema({
-    name: {
-        type: String,
-    },
-    lastName: {
+let groupSchema = mongoose.Schema({
+    title: {
         type: String,
     },
     color: {
         type: String,
         default: "#5123C1FF"
     },
-    email: {
-        type: String,
-        required: [true, 'email is required']
+    //ID of users
+    users: {
+        type: Array
     },
-    password: {
-        type: String,
-        required: [true, 'Password is required']
+    usersAdmin: {
+        type: Array
     },
-    phone: String,
-    role: {
-        type: String,
-        default: 'USER',
-        enum: roles
+    created_by: {
+        type: String
     },
     active: {
         type: Boolean,
@@ -45,8 +32,8 @@ let userSchema = mongoose.Schema({
 });
 
 // Validator
-userSchema.plugin(uniqueValidator, {
+groupSchema.plugin(uniqueValidator, {
     message: 'Error, esperaba {PATH} único.'
 });
 // Export
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Group', groupSchema);

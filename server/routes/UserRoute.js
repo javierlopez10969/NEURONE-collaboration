@@ -164,7 +164,18 @@ router.delete('/all/', async (req, res) => {
         message: 'All user is deleted successfully'
     })
 })
-
+router.get('/all', async (req, res) => {
+    const users = await User.find();
+    res.json(users);
+})
+router.get('/all/:id', async (req, res) => {
+    const users = await User.find({
+        '_id': {
+            $ne: req.params.id
+        }
+    });
+    res.json(users);
+})
 // Delete by id
 router.delete('/id/:id', async (req, res) => {
     await User.findByIdAndRemove(req.params.id, req.body)

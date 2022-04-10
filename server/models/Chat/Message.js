@@ -11,24 +11,30 @@ let messageSchema = mongoose.Schema({
     },
     //User who send the message
     UserSender: {
-        id: string,
         name: String,
-
+        _id: String
     },
     //Type of message
     //Private message
     //Group message
-    type_message: {
-        type: string
+    message_type: {
+        type: String,
     },
     created_at: {
         type: Date,
         default: Date.now
     },
     room_id: {
-        type: string
+        type: String
     }
 });
 
 // Export
-module.exports = mongoose.model('message', messageSchema);
+var Message;
+
+if (mongoose.models.Message) {
+    Message = mongoose.model('Message');
+} else {
+    Message = mongoose.model('Message', messageSchema);
+}
+module.exports = Message;

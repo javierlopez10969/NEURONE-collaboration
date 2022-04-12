@@ -23,8 +23,8 @@ app.use(cors())
 //Routes
 const task = require('./routes/TaskRoute'),
   user = require('./routes/UserRoute'),
-  message = require('./routes/GroupRoute'),
-  group = require('./routes/MessageRoute');
+  message = require('./routes/MessageRoute'),
+  group = require('./routes/GroupRoute');
 app.use("/api/task", task)
 app.use("/api/user", user)
 app.use("/api/message", message)

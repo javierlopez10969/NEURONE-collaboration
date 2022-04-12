@@ -28,6 +28,11 @@ let userSchema = mongoose.Schema({
         required: [true, 'Password is required']
     },
     phone: String,
+    groups: {
+        type: Array,
+        default: []
+    },
+
     role: {
         type: String,
         default: 'USER',

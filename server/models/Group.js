@@ -4,8 +4,9 @@ const uniqueValidator = require('mongoose-unique-validator');
 
 // Setup schema
 let groupSchema = mongoose.Schema({
-    title: {
+    name: {
         type: String,
+        default: "Group"
     },
     color: {
         type: String,
@@ -18,8 +19,22 @@ let groupSchema = mongoose.Schema({
     usersAdmin: {
         type: Array
     },
+    usersAdmin: {
+        type: Array
+    },
     created_by: {
-        type: String
+        type: String,
+    },
+    description: {
+        type: String,
+    },
+    chatRooms: {
+        type: Array,
+        default: [],
+    },
+    posts: {
+        type: Array,
+        default: [],
     },
     active: {
         type: Boolean,

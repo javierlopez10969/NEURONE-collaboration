@@ -1,39 +1,24 @@
 <template>
-  <v-card color="blue-grey darken-1" dark :loading="isUpdating">
-    <template v-slot:progress>
-      <v-progress-linear
-        absolute
-        color="green lighten-3"
-        height="4"
-        indeterminate
-      ></v-progress-linear>
+  <v-dialog v-model="dialog" width="600px">
+    <template v-slot:activator="{ on, attrs }">
+      <v-btn :color="group.color" dark v-bind="attrs" v-on="on">
+        {{ label }}
+      </v-btn>
     </template>
-    <v-img
-      height="200"
-      src="https://cdn.vuetifyjs.com/images/cards/dark-beach.jpg"
-    >
+    <v-card :color="group.color" dark :loading="isUpdating">
+      <template v-slot:progress>
+        <v-progress-linear
+          color="green lighten-3"
+          height="4"
+          indeterminate
+        ></v-progress-linear>
+      </template>
       <v-row>
-        <v-col class="text-right" cols="12">
-          <v-menu bottom left transition="slide-y-transition">
-            <template v-slot:activator="{ on, attrs }">
-              <v-btn icon v-bind="attrs" v-on="on">
-                <v-icon>mdi-dots-vertical</v-icon>
-              </v-btn>
-            </template>
-            <v-list>
-              <v-list-item @click="isUpdating = true">
-                <v-list-item-action>
-                  <v-icon>mdi-cog</v-icon>
-                </v-list-item-action>
-                <v-list-item-content>
-                  <v-list-item-title>Update</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-menu>
-        </v-col>
         <v-row class="pa-4" align="center" justify="center">
           <v-col class="text-center">
+            <h1 class="text-h5">
+              {{ label }}
+            </h1>
             <h3 class="text-h5">
               {{ name }}
             </h3>
@@ -41,147 +26,221 @@
           </v-col>
         </v-row>
       </v-row>
-    </v-img>
-    <v-form>
-      <v-container>
-        <v-row>
-          <v-col cols="12" md="6">
-            <v-text-field
-              v-model="name"
-              :disabled="isUpdating"
-              filled
-              color="blue-grey lighten-2"
-              label="Name"
-            ></v-text-field>
-          </v-col>
-          <v-col cols="12" md="6">
-            <v-text-field
-              v-model="title"
-              :disabled="isUpdating"
-              filled
-              color="blue-grey lighten-2"
-              label="Title"
-            ></v-text-field>
-          </v-col>
-          <v-col cols="12">
-            <v-autocomplete
-              v-model="friends"
-              :disabled="isUpdating"
-              :items="people"
-              filled
-              chips
-              color="blue-grey lighten-2"
-              label="Select"
-              item-text="name"
-              item-value="name"
-              multiple
-            >
-              <template v-slot:selection="data">
-                <v-chip
-                  v-bind="data.attrs"
-                  :input-value="data.selected"
-                  close
-                  @click="data.select"
-                  @click:close="remove(data.item)"
-                >
-                  <v-avatar left>
-                    <v-img :src="data.item.avatar"></v-img>
-                  </v-avatar>
-                  {{ data.item.name }}
-                </v-chip>
-              </template>
-              <template v-slot:item="data">
-                <template v-if="typeof data.item !== 'object'">
-                  <v-list-item-content v-text="data.item"></v-list-item-content>
-                </template>
-                <template v-else>
-                  <v-list-item-avatar>
-                    <img :src="data.item.avatar" />
-                  </v-list-item-avatar>
-                  <v-list-item-content>
-                    <v-list-item-title
-                      v-html="data.item.name"
-                    ></v-list-item-title>
-                    <v-list-item-subtitle
-                      v-html="data.item.group"
-                    ></v-list-item-subtitle>
-                  </v-list-item-content>
-                </template>
-              </template>
-            </v-autocomplete>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-form>
-    <v-divider></v-divider>
-    <v-card-actions>
-      <v-switch
-        v-model="autoUpdate"
-        :disabled="isUpdating"
-        class="mt-0"
-        color="green lighten-2"
-        hide-details
-        label="Auto Update"
-      ></v-switch>
-      <v-spacer></v-spacer>
-      <v-btn
-        :disabled="autoUpdate"
-        :loading="isUpdating"
-        color="blue-grey darken-3"
-        depressed
-        @click="isUpdating = true"
+      <v-form
+        ref="form"
+        class="form-signin"
+        lazy-validation
+        @submit.prevent="createGroup"
       >
-        <v-icon left> mdi-update </v-icon>
-        Update Now
-      </v-btn>
-    </v-card-actions>
-  </v-card>
-</template>
-<script>
-export default {
-  data() {
-    const srcs = {
-      1: "https://cdn.vuetifyjs.com/images/lists/1.jpg",
-      2: "https://cdn.vuetifyjs.com/images/lists/2.jpg",
-      3: "https://cdn.vuetifyjs.com/images/lists/3.jpg",
-      4: "https://cdn.vuetifyjs.com/images/lists/4.jpg",
-      5: "https://cdn.vuetifyjs.com/images/lists/5.jpg",
-    };
+        <v-container>
+          <v-row
+            ><v-col cols="12" md="6">
+              <v-text-field
+                v-model="group.name"
+                :disabled="isUpdating"
+                :rules="nameRules"
+                filled
+                required
+                color="blue-grey lighten-2"
+                label="Name of the group"
+              ></v-text-field>
+              <v-text-field
+                v-model="group.description"
+                :disabled="isUpdating"
+                :rules="nameRules"
+                filled
+                required
+                color="blue-grey lighten-2"
+                label="Description"
+              ></v-text-field>
+            </v-col>
+            <v-col cols="12" md="6">
+              <h1>Choose a Color {{ group.color }}</h1>
+              <v-color-picker
+                dot-size="25"
+                hide-inputs
+                hide-mode-switch
+                :disabled="isUpdating"
+                mode="hexa"
+                swatches-max-height="200"
+                v-model="group.color"
+              ></v-color-picker>
+            </v-col>
 
+            <v-col cols="12">
+              <v-autocomplete
+                v-model="group.users"
+                :disabled="isUpdating"
+                :items="users"
+                filled
+                chips
+                color="blue-grey lighten-2"
+                label="Select users to add to the group"
+                item-text="name"
+                item-value="name"
+                multiple
+              >
+                <template v-slot:selection="data">
+                  <v-chip
+                    v-bind="data.attrs"
+                    :input-value="data.selected"
+                    close
+                    @click="data.select"
+                    @click:close="remove(data.item)"
+                  >
+                    <v-avatar left :color="user.color">
+                      <span class="white--text text-h5">{{
+                        data.item.name[0]
+                      }}</span>
+                    </v-avatar>
+                    {{ data.item.name }}
+                  </v-chip>
+                </template>
+                <template v-slot:item="data">
+                  <template v-if="typeof data.item !== 'object'">
+                    <v-list-item-content
+                      v-text="data.item"
+                    ></v-list-item-content>
+                  </template>
+                  <template v-else>
+                    <v-list-item-avatar>
+                      <img :src="data.item.avatar" />
+                    </v-list-item-avatar>
+                    <v-list-item-content>
+                      <v-list-item-title
+                        v-html="data.item.name"
+                      ></v-list-item-title>
+                      <v-list-item-subtitle
+                        v-html="data.item.group"
+                      ></v-list-item-subtitle>
+                    </v-list-item-content>
+                  </template>
+                </template>
+              </v-autocomplete>
+            </v-col>
+          </v-row>
+        </v-container>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="blue darken-1" text @click="dialog = false">
+            Close
+          </v-btn>
+          <v-btn
+            :loading="isUpdating"
+            color="blue-grey darken-3"
+            depressed
+            type="submit"
+            @click="isUpdating = true"
+          >
+            <v-icon left> mdi-update </v-icon>
+            Save
+          </v-btn>
+        </v-card-actions>
+      </v-form>
+    </v-card>
+    <v-snackbar v-model="snack" :timeout="3000" :color="snackColor" right top>
+      {{ snackText }}
+      <template v-slot:action="{ attrs }">
+        <v-btn v-bind="attrs" text @click="snack = false"> Close </v-btn>
+      </template>
+    </v-snackbar>
+  </v-dialog>
+</template>
+
+<script>
+import axios from "axios";
+export default {
+  props: ["label"],
+  data() {
     return {
+      dialog: false,
       autoUpdate: true,
-      friends: ["Sandra Adams", "Britta Holt"],
       isUpdating: false,
-      name: "Midnight Crew",
-      people: [
-        { header: "Group 1" },
-        { name: "Sandra Adams", group: "Group 1", avatar: srcs[1] },
-        { name: "Ali Connors", group: "Group 1", avatar: srcs[2] },
-        { name: "Trevor Hansen", group: "Group 1", avatar: srcs[3] },
-        { name: "Tucker Smith", group: "Group 1", avatar: srcs[2] },
-        { divider: true },
-        { header: "Group 2" },
-        { name: "Britta Holt", group: "Group 2", avatar: srcs[4] },
-        { name: "Jane Smith ", group: "Group 2", avatar: srcs[5] },
-        { name: "John Smith", group: "Group 2", avatar: srcs[1] },
-        { name: "Sandra Williams", group: "Group 2", avatar: srcs[3] },
+      snack: false,
+      snackColor: "",
+      snackText: "",
+      valid: false,
+      name: "",
+      users: [],
+      title: "",
+      group: {
+        name: "",
+        description: "",
+        users: [],
+        usersAdmin: [],
+        color: "#448AD1",
+        created_by: "Created by : ",
+      },
+      nameRules: [
+        (v) => !!v || "This field is required",
+        (v) => v.length >= 8 || "This field is required",
       ],
-      title: "The summer breeze",
     };
   },
 
   watch: {
     isUpdating(val) {
-      if (val) {
+      if (this.$refs.form.validate() && val) {
         setTimeout(() => (this.isUpdating = false), 3000);
+      } else {
+        this.isUpdating = false;
       }
+
+      //TODO Update group
     },
   },
-
+  created() {
+    if (localStorage.getItem("token")) {
+      axios
+        .get(
+          this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,
+          {
+            headers: { token: localStorage.getItem("token") },
+          }
+        )
+        .then((res) => {
+          this.users = res.data;
+        });
+    }
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+  },
   methods: {
     remove(item) {
-      const index = this.friends.indexOf(item.name);
-      if (index >= 0) this.friends.splice(index, 1);
+      const index = this.group.users.indexOf(item.name);
+      if (index >= 0) this.group.users.splice(index, 1);
+    },
+    async createGroup() {
+      if (this.$refs.form.validate()) {
+        this.group.usersAdmin.push(this.user);
+        this.group.created_by =
+          "Created by" + this.user.email + " at " + Date.now();
+        console.log(this.group.users[0]._id);
+        console.log(this.user._id);
+        this.group.users.push(this.user);
+        try {
+          await axios.post(this.$store.state.apiURL + "/group", {
+            headers: { token: localStorage.getItem("token") },
+            group: this.group,
+          });
+          this.snack = true;
+          this.snackColor = "succes";
+          this.snackText = "Succesfully created Group";
+        } catch (err) {
+          console.log(err);
+          console.log(err.response);
+          this.snack = true;
+          this.snackColor = "error";
+          this.snackText = "User or password wrong";
+        }
+      } else {
+        this.snack = true;
+        this.snackColor = "error";
+        this.snackText = "Put the required data";
+      }
     },
   },
 };

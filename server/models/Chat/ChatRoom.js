@@ -11,11 +11,13 @@ let chatRoomSchema = mongoose.Schema({
     },
     //User who are in the  room
     users: {
-        type: Array
+        type: Array,
+        default: []
     },
     //Last 30 messages
     lastMessages: {
-        type: Array
+        type: Array,
+        default: []
     },
     created_at: {
         type: Date,

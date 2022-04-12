@@ -5,62 +5,11 @@
 
 <template>
   <a>
-    <v-row v-if="mode == 1" justify="center">
-      <!-- Mode 1 -->
-      <v-dialog v-model="dialog" persistent max-width="600px">
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn color="primary" dark v-bind="attrs" v-on="on">
-            {{ label }}
-          </v-btn>
-        </template>
-        <v-card>
-          <v-card-title>
-            <span class="text-h5">Create a New Group</span>
-          </v-card-title>
-          <v-card-text>
-            <v-container>
-              <v-row>
-                <v-col cols="12" sm="6" md="4">
-                  <v-text-field
-                    label="Name of the Group*"
-                    required
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12" sm="6">
-                  <v-autocomplete
-                    :items="[
-                      'Skiing',
-                      'Ice hockey',
-                      'Soccer',
-                      'Basketball',
-                      'Hockey',
-                      'Reading',
-                      'Writing',
-                      'Coding',
-                      'Basejump',
-                    ]"
-                    label="Users"
-                    multiple
-                  ></v-autocomplete>
-                </v-col>
-              </v-row>
-            </v-container>
-            <small>*indicates required field</small>
-          </v-card-text>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn color="blue darken-1" text @click="dialog = false">
-              Close
-            </v-btn>
-            <v-btn color="blue darken-1" text @click="dialog = false">
-              Save
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-    </v-row>
+    <!-- Mode 1 -->
+
+    <AutoComplete v-if="mode == 1" :label="label"></AutoComplete>
     <v-row v-if="mode == 2" justify="center">
-      <!-- Mode 1 -->
+      <!-- Mode 2-->
       <v-dialog v-model="dialog" persistent max-width="600px">
         <template v-slot:activator="{ on, attrs }">
           <v-btn color="primary" dark v-bind="attrs" v-on="on">
@@ -147,7 +96,11 @@
   </a>
 </template>
 <script>
+import AutoComplete from "./AutoComplete";
 export default {
+  components: {
+    AutoComplete,
+  },
   data: () => ({
     dialog: false,
   }),

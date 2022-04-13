@@ -75,7 +75,7 @@
         </v-btn>
       </v-form>
     </v-container>
-    <v-snackbar v-model="snack" :timeout="3000" :color="snackColor">
+    <v-snackbar v-model="snack" top right :timeout="3000" :color="snackColor">
       {{ snackText }}
       <template v-slot:action="{ attrs }">
         <v-btn v-bind="attrs" text @click="snack = false"> Close </v-btn>
@@ -115,10 +115,11 @@ export default {
             this.user
           );
           localStorage.setItem("token", res.data.token);
+          this.$store.commit("updateUser", res.data.user);
           this.snack = true;
           this.snackColor = "succes";
           this.snackText = "Succesfully Login";
-          this.$router.replace("/home");
+          this.$router.push("/home");
         } catch (err) {
           console.log(err);
           console.log(err.response);

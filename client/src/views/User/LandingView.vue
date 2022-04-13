@@ -15,16 +15,22 @@
     <v-row>
       <v-col> <h2>Your Groups :</h2> </v-col>
     </v-row>
+    <v-row>
+      <GroupsUser></GroupsUser>
+    </v-row>
   </v-container>
 </template>
 <script>
 import UserFormDialog from "@/components/User/UserFormDialog";
+
+import GroupsUser from "@/components/User/GroupsUser";
 export default {
   data() {
     return {};
   },
   components: {
     UserFormDialog,
+    GroupsUser,
   },
   computed: {
     user() {

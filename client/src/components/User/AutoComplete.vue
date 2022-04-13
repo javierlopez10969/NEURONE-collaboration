@@ -76,8 +76,6 @@
                 chips
                 color="blue-grey lighten-2"
                 label="Select users to add to the group"
-                item-text="name"
-                item-value="name"
                 multiple
               >
                 <template v-slot:selection="data">
@@ -88,12 +86,12 @@
                     @click="data.select"
                     @click:close="remove(data.item)"
                   >
-                    <v-avatar left :color="user.color">
+                    <v-avatar left :color="data.item.color">
                       <span class="white--text text-h5">{{
                         data.item.name[0]
                       }}</span>
                     </v-avatar>
-                    {{ data.item.name }}
+                    {{ data.item.email }}
                   </v-chip>
                 </template>
                 <template v-slot:item="data">
@@ -103,15 +101,17 @@
                     ></v-list-item-content>
                   </template>
                   <template v-else>
-                    <v-list-item-avatar>
-                      <img :src="data.item.avatar" />
-                    </v-list-item-avatar>
+                    <v-avatar left :color="data.item.color">
+                      <span class="white--text text-h5">{{
+                        data.item.name[0]
+                      }}</span>
+                    </v-avatar>
                     <v-list-item-content>
                       <v-list-item-title
-                        v-html="data.item.name"
+                        v-html="data.item.email"
                       ></v-list-item-title>
                       <v-list-item-subtitle
-                        v-html="data.item.group"
+                        v-html="data.item.name + ' ' + data.item.lastName"
                       ></v-list-item-subtitle>
                     </v-list-item-content>
                   </template>
@@ -164,8 +164,8 @@ export default {
       users: [],
       title: "",
       group: {
-        name: "",
-        description: "",
+        name: "My group",
+        description: "Description of the group",
         users: [],
         usersAdmin: [],
         color: "#448AD1",
@@ -190,18 +190,16 @@ export default {
     },
   },
   created() {
-    if (localStorage.getItem("token")) {
-      axios
-        .get(
-          this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,
-          {
-            headers: { token: localStorage.getItem("token") },
-          }
-        )
-        .then((res) => {
-          this.users = res.data;
-        });
-    }
+    axios
+      .get(
+        this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,
+        {
+          headers: { token: localStorage.getItem("token") },
+        }
+      )
+      .then((res) => {
+        this.users = res.data;
+      });
   },
   computed: {
     user() {
@@ -210,7 +208,7 @@ export default {
   },
   methods: {
     remove(item) {
-      const index = this.group.users.indexOf(item.name);
+      const index = this.group.users.indexOf(item);
       if (index >= 0) this.group.users.splice(index, 1);
     },
     async createGroup() {
@@ -218,13 +216,12 @@ export default {
         this.group.usersAdmin.push(this.user);
         this.group.created_by =
           "Created by" + this.user.email + " at " + Date.now();
-        console.log(this.group.users[0]._id);
-        console.log(this.user._id);
-        this.group.users.push(this.user);
+        console.log(this.group.users);
         try {
           await axios.post(this.$store.state.apiURL + "/group", {
             headers: { token: localStorage.getItem("token") },
             group: this.group,
+            user: this.user,
           });
           this.snack = true;
           this.snackColor = "succes";
@@ -234,7 +231,7 @@ export default {
           console.log(err.response);
           this.snack = true;
           this.snackColor = "error";
-          this.snackText = "User or password wrong";
+          this.snackText = "Error has ocured";
         }
       } else {
         this.snack = true;

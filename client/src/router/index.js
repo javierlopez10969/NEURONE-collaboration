@@ -32,6 +32,11 @@ const routes = [{
     name: 'Edit Profile',
     component: () => import('../views/User/EditProfile.vue')
   },
+  {
+    path: '/my-group/:id',
+    name: 'group',
+    component: () => import('../views/User/GroupView.vue')
+  },
   //Chat
   {
     path: '/chat',

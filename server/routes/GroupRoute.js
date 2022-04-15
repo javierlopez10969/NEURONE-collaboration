@@ -37,14 +37,15 @@ router.post('/', async (req, res) => {
         User.findByIdAndUpdate(user._id, newUser);
     })
 })
-router.get('/user/:id', async (req, res) => {
-    const user = User.findById(req.params.id);
-    const groups = await Group.find({
-        users: user
-    });
-    res.json(groups);
+
+router.get('/:id', async (req, res) => {
+    var group = await Group.findById(req.params.id)
+    res.json({
+        group
+    })
 })
-//ID of the user
+
+//Update
 router.put('/:id', async (req, res) => {
     await Group.findByIdAndUpdate(req.params.id, req.body)
     res.json({

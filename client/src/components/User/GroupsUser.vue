@@ -42,8 +42,9 @@
                 large
                 right
                 top
+                :to="{ name: 'group', params: { id: item._id } }"
               >
-                <v-icon>mdi-cart</v-icon>
+                <v-icon>mdi-account-group</v-icon>
               </v-btn>
               <div class="font-weight-light grey--text text-h6 mb-2">Group</div>
               <h3 class="text-h4 font-weight-lightmb-2" :color="item.color">

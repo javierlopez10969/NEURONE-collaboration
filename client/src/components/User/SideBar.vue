@@ -1,13 +1,25 @@
 <template>
   <v-list nav dense>
     <IconProfile :user="user"></IconProfile>
-    <v-list-item link href="#">
-      <v-list-item-icon>
-        <v-icon color="white" small>mdi-lightbulb</v-icon>
-      </v-list-item-icon>
-      <v-list-item-title class="title">Blue</v-list-item-title>
-    </v-list-item>
-    <v-list-item link href="#">
+    <v-list>
+      <v-list-item
+        v-for="(item, i) in items"
+        :key="i"
+        :to="item.to"
+        router
+        exact
+        dark
+        class="white--text"
+      >
+        <v-list-item-action>
+          <v-icon>{{ item.icon }}</v-icon>
+        </v-list-item-action>
+        <v-list-item-content>
+          <v-list-item-title v-text="item.title" />
+        </v-list-item-content>
+      </v-list-item>
+    </v-list>
+    <v-list-item bottom>
       <v-btn @click="logout"> <span>Logout </span></v-btn>
     </v-list-item>
   </v-list>
@@ -36,24 +48,20 @@ export default {
   data: () => ({
     items: [
       {
-        action: "mdi-ticket",
-        items: [{ title: "List Item" }],
+        icon: "mdi-account-group",
         title: "My groups",
+        to: "/home",
+      },
+
+      {
+        icon: "mdi-account-group-outline",
+        title: "Administer your Groups",
+        to: "/my-groups",
       },
       {
-        action: "mdi-silverware-fork-knife",
-        active: true,
-        items: [
-          { title: "Breakfast & brunch" },
-          { title: "New American" },
-          { title: "Sushi" },
-        ],
-        title: "Dining",
-      },
-      {
-        action: "mdi-school",
-        items: [{ title: "List Item" }],
-        title: "Education",
+        icon: "mdi-account",
+        title: "Edit Profile",
+        to: "/editprofile",
       },
     ],
   }),

@@ -1,5 +1,4 @@
 <script>
-import { io } from "socket.io-client";
 import MessagesChat from "../components/Chat/ChatContainer.vue";
 import ConnectedUsers from "../components/Chat/ConnectedUsers.vue";
 import { VueTyper } from "vue-typer";
@@ -33,25 +32,10 @@ export default {
     };
   },
   created() {
-    //initial connection to the server
-    var Socket = io("http://localhost:3000");
-    Socket.on("connect", () => {
-      console.log(`You connected with id : ${Socket.id}`);
-    });
-    Socket.emit("login");
-
-    this.socket = Socket;
-    this.socket.on("login", (user) => {
-      this.userProfile = user;
-    });
-    //Add new user to the chat room
-    this.socket.on("online users", (users) => {
-      this.onlineUsers = users;
-    });
+    this.socket = this.$store.state.socket;
   },
   mounted() {
     //LISTENERS OF THE SOCKET
-
     //Send a message
     this.socket.on("message", (msg) => {
       this.chat.push(msg);
@@ -66,9 +50,6 @@ export default {
     this.socket.on("stop typing", (data) => {
       console.log(data);
       this.someoneTyping = false;
-    });
-    this.socket.on("login", (user) => {
-      this.userProfile = user;
     });
     //Add new user to the chat room
     this.socket.on("online users", (users) => {

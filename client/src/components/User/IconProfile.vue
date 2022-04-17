@@ -16,7 +16,6 @@
       </v-list-item>
     </v-list>
     <h4>{{ user.email }}</h4>
-    <v-btn href="/editprofile"> edit Profile </v-btn>
   </v-container>
 </template>
 

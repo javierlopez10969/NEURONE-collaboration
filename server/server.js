@@ -54,29 +54,25 @@ var users = [];
 
 io.on('connection', (socket) => {
   //New user joined the server
-  numUsers++;
-  socket.username = "user" + numUsers;
-  socket.color = Math.floor(Math.random() * 16777215).toString(16);
+  //socket.username = "user" + numUsers;
+  //socket.color = Math.floor(Math.random() * 16777215).toString(16);
 
+  //Add to the session
   users.push({
     username: socket.username,
     color: socket.color
   })
-
-  //Basic login
-
-
-  //Joined to the chat room
-  console.log("New user :", socket.username, "actual users : ", numUsers);
-
-  //Advanced Login 
+  //Login 
   socket.on('login', (user) => {
+    numUsers++;
+    socket.user = user;
+    socket.username = user.name + ' ' + user.lastName;
     socket.emit('login', {
       username: socket.username
     });
-
     socket.emit('online users', users)
-    var msg = socket.username + " Joined"
+    var msg = socket.user._id + " Joined to the token groups"
+    //Get the groups of the user
 
     socket.broadcast.emit('message', {
       username: "system",
@@ -85,10 +81,9 @@ io.on('connection', (socket) => {
     console.log(msg)
   })
 
-  //join to the chat room 
-
   //Disconect Server
   socket.on('disconnect', () => {
+    numUsers--;
     //Delete from online users
     var removeIndex = users.map(item => item.username).indexOf(socket.username);
     ~removeIndex && users.splice(removeIndex, 1);

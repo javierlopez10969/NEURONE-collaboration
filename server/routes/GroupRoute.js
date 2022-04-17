@@ -30,12 +30,13 @@ router.post('/', async (req, res) => {
     const group = new Group(req.body.group);
     group.chatRooms.push(chatRoom._id);
     group.users.push(userCreator)
-    await group.save();
     //Update each user in the group
     group.users.forEach(user => {
         newUser = user.groups.push(group._id);
-        User.findByIdAndUpdate(user._id, newUser);
+        User.findAndUpdate(newUser);
     })
+    await group.save();
+
 })
 
 router.get('/:id', async (req, res) => {

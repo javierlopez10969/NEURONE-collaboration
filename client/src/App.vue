@@ -47,6 +47,7 @@ export default {
         .then((res) => {
           this.user = res.data.user;
           this.$store.commit("updateUser", res.data.user);
+          this.$store.commit("socketConnection");
         });
     }
   },

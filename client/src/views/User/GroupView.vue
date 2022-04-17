@@ -1,13 +1,16 @@
 <template>
   <v-container>
-    <h1>Hola</h1>
-    {{ group }}
+    <GroupDetail :group="group"></GroupDetail>
   </v-container>
 </template>
 
 <script>
 import axios from "axios";
+import GroupDetail from "@/components/User/GroupDetail";
 export default {
+  components: {
+    GroupDetail,
+  },
   data: () => ({
     group: {},
   }),
@@ -18,7 +21,7 @@ export default {
         headers: { token: localStorage.getItem("token") },
       })
       .then((res) => {
-        this.group = res.data;
+        this.group = res.data.group;
       });
   },
 };

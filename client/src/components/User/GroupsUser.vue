@@ -1,3 +1,4 @@
+<!--Component who shows all -->
 <template>
   <v-container>
     <v-col>
@@ -15,7 +16,7 @@
               src="https://cdn.vuetifyjs.com/images/cards/kitchen.png"
             >
               <v-expand-transition>
-                <div
+                <v-card
                   v-if="hover"
                   class="
                     d-flex
@@ -25,12 +26,12 @@
                     text-h2
                     white--text
                     center
-                    orange
                   "
+                  :color="item.color"
                   style="height: 100%"
                 >
-                  $14.99
-                </div>
+                  {{ item.color }}
+                </v-card>
               </v-expand-transition>
             </v-img>
             <v-card-text class="pt-6" style="position: relative">

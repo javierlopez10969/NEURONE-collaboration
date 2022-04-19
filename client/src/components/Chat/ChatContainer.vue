@@ -1,34 +1,25 @@
 <!-- Body of the messages-->
 <template>
-  <div>
-    <v-container
-      style="height: 400px; overflow: auto"
-      id="container"
-      ref="container"
+  <v-container style="height: 500px; overflow: auto" ref="container" fluid>
+    <!-- Messages -->
+    <div
+      v-for="(item, index) in chat"
+      :key="index"
+      :class="[
+        'flex-row align-right',
+        item.username == 'You' ? 'justify-end' : null,
+      ]"
     >
-      <!-- Messages -->
-      <div
-        v-for="(item, index) in chat"
-        :key="index"
-        :class="[
-          'flex-row align-right',
-          item.username == 'You' ? 'justify-end' : null,
-        ]"
-      >
-        <a v-if="item.username === 'You'">
-          <MessageChat :item="item" :color="'blue lighten-4'"></MessageChat
-        ></a>
-        <a v-if="item.username === 'system'"
-          ><div v-bind:class="item.color + '--text text-center'">
-            <h1>{{ item.message }}</h1>
-          </div>
-        </a>
-        <a v-if="item.username !== 'You' && item.username !== 'system'">
-          <MessageChat :item="item" :color="'purple lighten-4'"></MessageChat
-        ></a>
-      </div>
-    </v-container>
-  </div>
+      <a v-if="item.username === 'system'"
+        ><div v-bind:class="item.color + '--text text-center'">
+          <h1>{{ item.message }}</h1>
+        </div>
+      </a>
+      <a v-if="item.username !== 'system'">
+        <MessageChat :item="item" :color="'purple lighten-4'"></MessageChat
+      ></a>
+    </div>
+  </v-container>
 </template>
 
 <script>

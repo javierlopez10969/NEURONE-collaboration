@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <GroupDetail :group="group"></GroupDetail>
   </v-container>
 </template>

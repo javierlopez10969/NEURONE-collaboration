@@ -12,6 +12,9 @@ router.get('/', async (req, res) => {
 
 router.post('/send-message', async (req, res) => {
     Socket.sendMessage(req.body.group, 'message', req.body.message);
+    res.json({
+        status: 'message sended'
+    })
     //const message = new Message(req.body);
     //await message.save();
 })

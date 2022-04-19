@@ -12,6 +12,10 @@ let groupSchema = mongoose.Schema({
         type: String,
         default: "#5123C1FF"
     },
+    textColor: {
+        type: String,
+        default: "#FFFFFFFF"
+    },
     //ID of users
     users: {
         type: Array

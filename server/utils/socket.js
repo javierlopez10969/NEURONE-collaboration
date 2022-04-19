@@ -26,6 +26,7 @@ exports.socketConnection = (server) => {
                 if (groups) {
                     groups.forEach(group => {
                         socket.join(group._id)
+                        console.log(socket.id + " joined to room " + group._id)
                     })
                 }
                 socket.broadcast.emit('message', {
@@ -108,5 +109,11 @@ exports.socketConnection = (server) => {
 //Exports
 //Send any type of message 
 // Entry : room, key, message
-exports.sendMessage = (roomId, key, message) => io.to(roomId).emit(key, message);
+exports.sendMessage = (roomID, key, message) => {
+    if (roomID != undefined || roomID) {
+        io.to(roomID).emit(key, message)
+    } else {
+        io.emit(key, message)
+    }
+};
 exports.getRooms = () => io.sockets.adapter.rooms;

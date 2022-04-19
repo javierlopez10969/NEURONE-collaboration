@@ -1,18 +1,22 @@
 <!-- All messages-->
 <template>
-  <v-card :color="color">
-    <!-- Case is sender -->
-    <v-container fluid v-if="item.username === 'You'" style="text-align: right">
+  <v-card>
+    <!-- Case is sender is the logged user -->
+    <v-container
+      fluid
+      v-if="item.username === $store.state.user"
+      style="text-align: right"
+    >
       <v-row no-gutters>
         <v-col> </v-col>
         <v-col>
           <span class="blue--text">
-            {{ item.username }}
+            {{ item.username.name }} {{ item.username.lastName }}
           </span>
           <ProfileIcon
             :username="item.username"
             :sender="true"
-            :color="'indigo'"
+            :color="item.username.color"
           ></ProfileIcon>
           <v-spacer></v-spacer>
           {{ item.message }}
@@ -26,10 +30,10 @@
         <ProfileIcon
           :sender="false"
           :username="item.username"
-          :color="'red'"
+          :color="item.username.color"
         ></ProfileIcon>
 
-        {{ item.username }}
+        {{ item.username.name }} {{ item.username.lastName }}
         <v-spacer></v-spacer>
         <span class="red--text">
           {{ item.message }}

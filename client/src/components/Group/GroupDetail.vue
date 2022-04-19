@@ -1,9 +1,9 @@
 <template>
-  <v-card color="basil">
+  <v-card color="basil" fluid>
     <v-row>
       <v-col></v-col>
       <v-col>
-        <v-card-title class="text-center justify-center py-6">
+        <v-card-title class="text-center justify-center">
           <h1 class="font-weight-bold text-h2 basil--text">{{ group.name }}</h1>
         </v-card-title>
       </v-col>
@@ -23,7 +23,7 @@
       </v-tab>
     </v-tabs>
     <v-tabs-items v-model="tab">
-      <GroupDetailContent v-bind:tab="tab"></GroupDetailContent>
+      <GroupDetailContent :group="group"></GroupDetailContent>
     </v-tabs-items>
   </v-card>
 </template>

@@ -35,17 +35,30 @@
                 :prepend-icon="'mdi-user'"
               ></v-text-field>
             </v-col>
-            <v-col>
-              <h1>Avatar color</h1>
-              <v-color-picker
-                dot-size="25"
-                hide-inputs
-                hide-mode-switch
-                mode="hexa"
-                swatches-max-height="200"
-                v-model="user.color"
-              ></v-color-picker>
-            </v-col>
+            <v-row>
+              <v-col>
+                <h1>Avatar color</h1>
+                <v-color-picker
+                  dot-size="25"
+                  hide-inputs
+                  hide-mode-switch
+                  mode="hexa"
+                  swatches-max-height="200"
+                  v-model="user.color"
+                ></v-color-picker>
+              </v-col>
+              <v-col>
+                <h1>Text color</h1>
+                <v-color-picker
+                  dot-size="25"
+                  hide-inputs
+                  hide-mode-switch
+                  mode="hexa"
+                  swatches-max-height="200"
+                  v-model="user.textColor"
+                ></v-color-picker>
+              </v-col>
+            </v-row>
           </v-row>
 
           <v-btn

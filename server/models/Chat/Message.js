@@ -5,14 +5,14 @@ const uniqueValidator = require('mongoose-unique-validator');
 // Message schema
 let messageSchema = mongoose.Schema({
     //Description of the message
-    description: {
+    message: {
         type: String,
         required: true
     },
     //User who send the message
-    UserSender: {
-        name: String,
-        _id: String
+    username: {
+        type: Object,
+        required: true
     },
     //Type of message
     //Private message

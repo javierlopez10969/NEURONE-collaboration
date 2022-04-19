@@ -1,8 +1,8 @@
-const express = require('express');
-const router = express.Router();
-
-const ChatRoom = require('../models/Chat/ChatRoom')
-const Message = require('../models/Chat/Message')
+const express = require('express'),
+    router = express.Router(),
+    ChatRoom = require('../models/Chat/ChatRoom'),
+    Message = require('../models/Chat/Message'),
+    Socket = require('../utils/socket');
 
 router.get('/', async (req, res) => {
     const messages = await Message.find();
@@ -10,10 +10,10 @@ router.get('/', async (req, res) => {
 })
 
 
-router.post('/', async (req, res) => {
-    const message = new Message(req.body);
-    await message.save();
-    res.json('Audio procesado');
+router.post('/send-message', async (req, res) => {
+    Socket.sendMessage(req.body.group, 'message', req.body.message);
+    //const message = new Message(req.body);
+    //await message.save();
 })
 
 router.put('/:id', async (req, res) => {

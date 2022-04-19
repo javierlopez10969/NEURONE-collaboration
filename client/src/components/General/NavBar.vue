@@ -39,16 +39,13 @@
         <v-btn icon @click.stop="clipped = !clipped">
           <v-icon>mdi-application</v-icon>
         </v-btn>
-        <v-btn icon @click.stop="fixed = !fixed">
-          <v-icon>mdi-minus</v-icon>
-        </v-btn>
         <v-btn icon href="/home">
           <v-icon>mdi-home</v-icon>
         </v-btn>
         <h1>Collaboration for NEURONE</h1>
         <v-spacer />
       </v-app-bar>
-      <v-footer :absolute="!fixed" app>
+      <v-footer :absolute="false" app>
         <span>&copy; {{ new Date().getFullYear() }}</span>
       </v-footer>
     </a>
@@ -68,12 +65,5 @@ export default {
     rightDrawer: false,
   }),
   components: { SideBar },
-  methods: {
-    logout() {
-      localStorage.clear();
-      this.$store.commit("updateUser", {});
-      this.$router.push("/login");
-    },
-  },
 };
 </script>

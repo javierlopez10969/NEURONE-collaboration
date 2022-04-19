@@ -33,11 +33,7 @@ export default {
     logout() {
       localStorage.clear();
       this.$store.commit("updateUser", {});
-      if (window.location.pathname == "/") {
-        location.reload();
-      } else {
-        this.$router.push("/");
-      }
+      this.$router.go("/login");
     },
   },
   computed: {

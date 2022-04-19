@@ -47,7 +47,17 @@ export default {
         .then((res) => {
           this.user = res.data.user;
           this.$store.commit("updateUser", res.data.user);
-          this.$store.commit("socketConnection");
+          //Get the groups
+          axios
+            .get(
+              this.$store.state.apiURL +
+                "/group/user/id/" +
+                this.$store.state.user._id
+            )
+            .then((res) => {
+              this.$store.commit("updateGroups", res.data);
+              this.$store.commit("socketConnection");
+            });
         });
     }
   },

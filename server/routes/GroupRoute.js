@@ -19,6 +19,16 @@ router.get('/user/:id', async (req, res) => {
     });
     res.json(groups);
 })
+// GET all groups of certain user
+router.get('/user/id/:id', async (req, res) => {
+    user = await User.findById(req.params.id);
+    const groups = await Group.find({
+        "groups": user
+    }, {
+        _id: 1
+    });
+    res.json(groups);
+})
 
 router.post('/', async (req, res) => {
     userCreator = req.body.user;

@@ -96,7 +96,7 @@
   </a>
 </template>
 <script>
-import AutoComplete from "./AutoComplete";
+import AutoComplete from "../Group/AutoComplete";
 export default {
   components: {
     AutoComplete,

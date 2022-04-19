@@ -119,7 +119,7 @@ export default {
           this.snack = true;
           this.snackColor = "succes";
           this.snackText = "Succesfully Login";
-          this.$router.push("/home");
+          this.$router.go("/home");
         } catch (err) {
           console.log(err);
           console.log(err.response);

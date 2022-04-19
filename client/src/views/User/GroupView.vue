@@ -6,7 +6,7 @@
 
 <script>
 import axios from "axios";
-import GroupDetail from "@/components/User/GroupDetail";
+import GroupDetail from "@/components/Group/GroupDetail";
 export default {
   components: {
     GroupDetail,

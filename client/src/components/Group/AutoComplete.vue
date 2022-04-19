@@ -190,16 +190,18 @@ export default {
     },
   },
   created() {
-    axios
-      .get(
-        this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,
-        {
-          headers: { token: localStorage.getItem("token") },
-        }
-      )
-      .then((res) => {
-        this.users = res.data;
-      });
+    if (this.$store.state.user._id) {
+      axios
+        .get(
+          this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,
+          {
+            headers: { token: localStorage.getItem("token") },
+          }
+        )
+        .then((res) => {
+          this.users = res.data;
+        });
+    }
   },
   computed: {
     user() {

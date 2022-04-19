@@ -1,8 +1,48 @@
+<template>
+  <v-container fluid>
+    <v-row>
+      <v-col cols="1"> </v-col>
+      <h1>Register as :{{ user.name }} {{ user.lastName }}</h1>
+      <v-col cols="2"> </v-col>
+      <v-col cols="4">
+        <ConnectedUsers :users.sync="onlineUsers"></ConnectedUsers>
+      </v-col>
+    </v-row>
+    <MessagesChat :chat.sync="chat"></MessagesChat>
+    <v-spacer></v-spacer>
+    <vue-typer v-if="someoneTyping" text="Someone is writting..."></vue-typer>
+    <v-form ref="form" @submit.prevent="sendMessage">
+      <v-footer padless absolute>
+        <v-container>
+          <v-row>
+            <v-text-field
+              outlined
+              filled
+              auto-grow
+              v-model="message"
+              label="Send a Message"
+              placeholder="Aa"
+            ></v-text-field>
+            <v-btn depressed color="primary" type="submit"> Send </v-btn>
+          </v-row>
+        </v-container>
+        <v-col class="text-center" cols="12"> </v-col>
+      </v-footer>
+    </v-form>
+    <v-snackbar v-model="snack" top right :timeout="3000" :color="snackColor">
+      {{ snackText }}
+      <template v-slot:action="{ attrs }">
+        <v-btn v-bind="attrs" text @click="snack = false"> Close </v-btn>
+      </template>
+    </v-snackbar>
+  </v-container>
+</template>
+
 <script>
 import MessagesChat from "./ChatContainer.vue";
 import ConnectedUsers from "./ConnectedUsers.vue";
 import { VueTyper } from "vue-typer";
-
+import axios from "axios";
 export default {
   name: "ChatPage",
   components: {
@@ -10,8 +50,16 @@ export default {
     VueTyper,
     ConnectedUsers,
   },
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+  },
   data() {
     return {
+      snack: false,
+      snackColor: "",
+      snackText: "",
       //Username data
       username: "You",
       usernameSocket: "",
@@ -34,7 +82,6 @@ export default {
   },
   created() {
     this.socket = this.$store.state.socket;
-    this.socket.emit("login", this.$store.state.user);
   },
   mounted() {
     //LISTENERS OF THE SOCKET
@@ -71,9 +118,26 @@ export default {
   methods: {
     sendMessage() {
       if (this.message != "") {
+        axios
+          .post(
+            this.$store.state.apiURL +
+              "/message/send-message" +
+              this.$store.state.user._id,
+            {
+              message: {
+                message: this.message,
+              },
+              //Get de id of the group
+            }
+          )
+          .then((res) => {});
         this.socket.emit("message", this.message);
         this.chat.push({ username: this.username, message: this.message });
         this.message = "";
+      } else {
+        this.snack = true;
+        this.snackText = "Put some text pls";
+        this.snackColor = "red";
       }
     },
     updateTyping() {
@@ -97,37 +161,3 @@ export default {
   },
 };
 </script>
-
-<template>
-  <v-container fluid>
-    <v-row>
-      <v-col cols="1"> </v-col>
-      <h1>Register as :{{ usernameSocket }}</h1>
-      <v-col cols="2"> </v-col>
-      <v-col cols="4">
-        <ConnectedUsers :users.sync="onlineUsers"></ConnectedUsers>
-      </v-col>
-    </v-row>
-    <MessagesChat :chat.sync="chat"></MessagesChat>
-    <vue-typer v-if="someoneTyping" text="Someone is writting..."></vue-typer>
-    <v-form ref="form" @submit.prevent="sendMessage">
-      <v-footer padless absolute>
-        <v-container>
-          <v-row>
-            <v-text-field
-              outlined
-              filled
-              auto-grow
-              v-model="message"
-              label="Send a Message"
-              placeholder="Aa"
-            ></v-text-field>
-            <v-btn depressed color="primary" type="submit"> Send </v-btn>
-          </v-row>
-        </v-container>
-        <v-col class="text-center" cols="12"> </v-col>
-      </v-footer>
-    </v-form>
-  </v-container>
-</template>
-

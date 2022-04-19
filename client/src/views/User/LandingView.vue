@@ -22,8 +22,7 @@
 </template>
 <script>
 import UserFormDialog from "@/components/User/UserFormDialog";
-
-import GroupsUser from "@/components/User/GroupsUser";
+import GroupsUser from "@/components/Group/GroupsUser";
 export default {
   data() {
     return {};

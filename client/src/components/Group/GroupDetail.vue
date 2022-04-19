@@ -22,22 +22,16 @@
         {{ item.title }}
       </v-tab>
     </v-tabs>
-
     <v-tabs-items v-model="tab">
-      <!--Chat -->
-      <v-tab-item>
-        <v-card color="basil" flat>
-          <ChatView></ChatView>
-        </v-card>
-      </v-tab-item>
+      <GroupDetailContent v-bind:tab="tab"></GroupDetailContent>
     </v-tabs-items>
   </v-card>
 </template>
 <script>
-import ChatView from "@/components/Chat/ChatView.vue";
+import GroupDetailContent from "./GroupDetailContent.vue";
 export default {
   components: {
-    ChatView,
+    GroupDetailContent,
   },
   props: ["group"],
   data() {
@@ -46,25 +40,32 @@ export default {
       text: "hola",
       items: [
         {
-          icon: "mdi-chart-box",
-          title: "Activity",
-          to: "/home",
+          icon: "mdi-chat",
+          title: "Group Chat",
         },
         {
-          icon: "mdi-chat",
-          title: "Chat group",
-          to: "/home",
+          icon: "mdi-chart-box",
+          title: "Activity",
         },
-
+        {
+          icon: "mdi-star-outline",
+          title: "Bookmarks",
+        },
+        {
+          icon: "mdi-file",
+          title: "snippets",
+        },
+        {
+          icon: "mdi-file-document",
+          title: "Documents",
+        },
         {
           icon: "mdi-account-group-outline",
           title: "People",
-          to: "/my-groups",
         },
         {
-          icon: "mdi-account",
-          title: "Edit Profile",
-          to: "/editprofile",
+          icon: "mdi-cog",
+          title: "Settings",
         },
       ],
     };

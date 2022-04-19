@@ -1,3 +1,6 @@
+//Socket IO
+let numUsers = 0;
+var users = [];
 let io;
 exports.socketConnection = (server) => {
     io = require('socket.io')(server, {
@@ -5,18 +8,10 @@ exports.socketConnection = (server) => {
             origin: ["http://localhost:8080", "http://192.168.1.105:8080", "http://localhost:8080"],
         }
     });
+    //General events of the socket
     io.on('connection', (socket) => {
-        //New user joined the server
-        //socket.username = "user" + numUsers;
-        //socket.color = Math.floor(Math.random() * 16777215).toString(16);
-
-        //Add to the session
-        users.push({
-            username: socket.username,
-            color: socket.color
-        })
         //Login 
-        socket.on('login', (user, group) => {
+        socket.on('login', (user, groups) => {
             //If user exists already
             if (user) {
                 numUsers++;
@@ -26,13 +21,22 @@ exports.socketConnection = (server) => {
                     username: socket.username
                 });
                 socket.emit('online users', users)
-                var msg = socket.user._id + " Joined to the token groups"
-
+                var msg = socket.username + " Joined to the token groups";
+                //Suscribe socket for every group id
+                if (groups) {
+                    groups.forEach(group => {
+                        socket.join(group._id)
+                    })
+                }
                 socket.broadcast.emit('message', {
                     username: "system",
                     message: msg
                 })
                 console.log(msg)
+                users.push({
+                    username: socket.username,
+                    color: socket.color
+                })
             } else {
                 numUsers++;
                 socket.username = 'username ' + numUsers;
@@ -40,15 +44,18 @@ exports.socketConnection = (server) => {
                     username: socket.username
                 });
                 socket.emit('online users', users)
-                var msg = socket.user._id + " Joined to the token groups"
+                var msg = socket.username + " Joined to the token groups"
 
                 socket.broadcast.emit('message', {
                     username: "system",
                     message: msg
                 })
                 console.log(msg)
+                users.push({
+                    username: socket.username,
+                    color: socket.color
+                })
             }
-
         })
 
         //Disconect Server
@@ -98,13 +105,8 @@ exports.socketConnection = (server) => {
 
 };
 
-
-//Socket IO
-let numUsers = 0;
-var users = [];
-
 //Exports
-
+//Send any type of message 
+// Entry : room, key, message
 exports.sendMessage = (roomId, key, message) => io.to(roomId).emit(key, message);
-
 exports.getRooms = () => io.sockets.adapter.rooms;

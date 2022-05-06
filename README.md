@@ -24,6 +24,7 @@
 
 * Npm
 * Nodejs
+* Vue cli
 
 1. Open th client folder and run `npm install` or `npm i`  (this is needed only once)
 2. Now run `npm run serve`. Edit any files you need, they will be live-reloaded in your local web browser
@@ -43,11 +44,11 @@ Run the following command to install NPM on Linux distributions:
 
     $ sudo apt install nodejs
 
-#### Installing Angular 
+#### Installing Vue Cli
 
 Run the following command to install NPM on Linux distributions:
 
-    $ npm install -g @angular/cli
+    $ npm install -g @vue/cli
 
 #### Installing MongoDB
 

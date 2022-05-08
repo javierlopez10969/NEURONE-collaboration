@@ -48,6 +48,13 @@ const routes = [{
     name: 'test',
     component: () => import('../views/TestView.vue')
   },
+
+  //Widget
+  {
+    path: '/widget',
+    name: 'widget',
+    component: () => import('../views/Widget/WidgetView.vue')
+  },
 ]
 
 const router = new VueRouter({

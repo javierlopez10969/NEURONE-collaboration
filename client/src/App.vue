@@ -1,7 +1,17 @@
 <template>
   <v-app>
     <v-main>
-      <NavBar :show="show" :user="user"></NavBar>
+      <div v-if="widgetMode === true"></div>
+      <div v-else>
+        <NavBar :show="show" :user="user"></NavBar>
+        {{ currentRouteName }}
+        {{ widgetMode }}
+        <v-checkbox
+          v-model="checkbox"
+          :label="`Checkbox 1: ${checkbox.toString()}`"
+        ></v-checkbox>
+      </div>
+
       <router-view :user="user" />
     </v-main>
   </v-app>
@@ -16,6 +26,7 @@ export default {
   data() {
     return {
       show: true,
+      checkbox: true,
       tamanoRoute: 0,
       user: {},
       token: "",
@@ -37,6 +48,18 @@ export default {
     this.show = this.hideMethod();
     this.token = localStorage.getItem("token");
     console.log(localStorage.getItem("token"));
+  },
+  computed: {
+    currentRouteName() {
+      return this.$route.name;
+    },
+    widgetMode() {
+      if (this.$route.name == "widget") {
+        return true;
+      } else {
+        return false;
+      }
+    },
   },
   mounted() {
     if (localStorage.getItem("token")) {

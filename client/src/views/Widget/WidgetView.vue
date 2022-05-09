@@ -1,8 +1,11 @@
 <template>
-  <div>
-    <h1>Hello</h1>
-  </div>
+  <WidgetBtn></WidgetBtn>
 </template>
 <script>
-export default {};
+import WidgetBtn from "@/components/Widget/WidgetBtn";
+export default {
+  components: {
+    WidgetBtn,
+  },
+};
 </script>

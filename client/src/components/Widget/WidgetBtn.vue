@@ -1,6 +1,14 @@
 <template>
   <div>
-    <v-menu offset-y>
+    <v-menu
+      transition="fab-transition"
+      origin="center center"
+      v-model="menu"
+      :close-on-content-click="false"
+      :nudge-width="200"
+      offset-y
+      bottom
+    >
       <template #activator="{ on: onMenu }">
         <v-tooltip bottom>
           <template #activator="{ on: onTooltip }">
@@ -11,21 +19,20 @@
             </v-btn>
           </template>
 
-          <span>Notificaciones</span>
+          <span>Collaboration </span>
         </v-tooltip>
       </template>
-      <v-fab-transition origin="center center" v-if="logged === true">
-        <WidgetCard></WidgetCard>
-      </v-fab-transition>
+      <WidgetCard></WidgetCard>
+      <a origin="center center" v-if="logged === true"> </a>
 
-      <v-fade-transition v-else>
+      <a v-else>
         <v-card
           v-show="expand"
           height="100"
           width="100"
           class="mx-auto secondary"
         ></v-card>
-      </v-fade-transition>
+      </a>
     </v-menu>
   </div>
 </template>
@@ -37,6 +44,7 @@ export default {
   },
   data: () => ({
     expand: false,
+    menu: false,
   }),
   computed: {
     logged() {

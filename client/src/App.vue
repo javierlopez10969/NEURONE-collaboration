@@ -74,7 +74,7 @@ export default {
           axios
             .get(
               this.$store.state.apiURL +
-                "/group/user/id/" +
+                "/group/user/" +
                 this.$store.state.user._id
             )
             .then((res) => {

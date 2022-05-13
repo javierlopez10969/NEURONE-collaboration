@@ -40,6 +40,32 @@ let groupSchema = mongoose.Schema({
         type: Array,
         default: [],
     },
+    //Modules are the tools availible for the group
+    modules: {
+        type: Array,
+        default: [{
+            icon: "mdi-chat",
+            title: "Group Chat",
+        }, {
+            icon: "mdi-chart-box",
+            title: "Activity",
+        }, {
+            icon: "mdi-star-outline",
+            title: "Bookmarks",
+        }, {
+            icon: "mdi-file",
+            title: "snippets",
+        }, {
+            icon: "mdi-file-document",
+            title: "Documents",
+        }, {
+            icon: "mdi-account-group-outline",
+            title: "People",
+        }, {
+            icon: "mdi-cog",
+            title: "Settings",
+        }]
+    },
     active: {
         type: Boolean,
         default: true

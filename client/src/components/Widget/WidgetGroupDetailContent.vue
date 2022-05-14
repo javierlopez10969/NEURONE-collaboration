@@ -39,7 +39,7 @@
     <!--Setting -->
     <v-tab-item>
       <v-card>
-        <GroupSettings></GroupSettings>
+        <GroupSettings :groupR="group" :mode="'widget'"></GroupSettings>
       </v-card>
     </v-tab-item>
   </a>

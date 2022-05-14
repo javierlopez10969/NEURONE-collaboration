@@ -115,6 +115,7 @@ export default {
             this.user
           );
           localStorage.setItem("token", res.data.token);
+          this.$store.commit("setToken", res.data.token);
           this.$store.commit("updateUser", res.data.user);
           this.snack = true;
           this.snackColor = "succes";

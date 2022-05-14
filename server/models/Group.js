@@ -46,24 +46,31 @@ let groupSchema = mongoose.Schema({
         default: [{
             icon: "mdi-chat",
             title: "Group Chat",
+            active: true,
         }, {
             icon: "mdi-chart-box",
             title: "Activity",
+            active: true,
         }, {
             icon: "mdi-star-outline",
             title: "Bookmarks",
+            active: true,
         }, {
             icon: "mdi-file",
             title: "snippets",
+            active: true,
         }, {
             icon: "mdi-file-document",
             title: "Documents",
+            active: true,
         }, {
             icon: "mdi-account-group-outline",
             title: "People",
+            active: true,
         }, {
             icon: "mdi-cog",
             title: "Settings",
+            active: true,
         }]
     },
     active: {

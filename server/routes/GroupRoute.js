@@ -13,7 +13,10 @@ router.get('/', async (req, res) => {
 
 // GET all groups of certain user
 router.get('/user/:id', async (req, res) => {
-    if (req.params.id) {
+    if (req.params.id === undefined) {
+        console.log("UNDEFINED")
+    }
+    if (req.params.id != undefined) {
         user = await User.findById(req.params.id);
         const groups = await Group.find({
             "groups": user
@@ -21,7 +24,7 @@ router.get('/user/:id', async (req, res) => {
         res.json(groups);
     }
 })
-// GET all groups of certain user
+// GET all ID groups of certain user
 router.get('/user/id/:id', async (req, res) => {
     if (req.params.id != undefined) {
 

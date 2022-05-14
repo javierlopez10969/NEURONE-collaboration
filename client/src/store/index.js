@@ -15,7 +15,7 @@ export default new Vuex.Store({
     apiURL: "http://localhost:3000/api",
   },
   mutations: {
-    login(state, token) {
+    setToken(state, token) {
       state.token = token;
     },
     updateUser(state, user) {
@@ -34,6 +34,7 @@ export default new Vuex.Store({
     },
     logout(state) {
       state.user = {}
+      state.token = ""
     }
   }
 })

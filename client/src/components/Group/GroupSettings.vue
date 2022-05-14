@@ -144,6 +144,7 @@
 <script>
 import axios from "axios";
 export default {
+  props: ["groupR", "mode"],
   methods: {
     saveChanges() {},
   },
@@ -173,7 +174,16 @@ export default {
     ],
   }),
   created() {
-    let apiURL = `http://localhost:3000/api/group/${this.$route.params.id}`;
+    let apiURL = "";
+    //If mode widget
+    if (this.mode == "widget") {
+      apiURL = `http://localhost:3000/api/group/${this.groupR._id}`;
+    }
+    //If mode window
+    else {
+      apiURL = `http://localhost:3000/api/group/${this.$route.params.id}`;
+    }
+
     axios
       .get(apiURL, {
         headers: { token: localStorage.getItem("token") },

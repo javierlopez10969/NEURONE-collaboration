@@ -12,6 +12,7 @@ export default new Vuex.Store({
     socket: {},
     //Id of the groups
     groups: [],
+    actualGroup: {},
     apiURL: "http://localhost:3000/api",
   },
   mutations: {
@@ -23,6 +24,9 @@ export default new Vuex.Store({
     },
     updateGroups(state, groups) {
       state.groups = groups;
+    },
+    updateGroup(state, index) {
+      state.group = state.groups[index];
     },
     socketConnection(state) {
       //initial connection to the server

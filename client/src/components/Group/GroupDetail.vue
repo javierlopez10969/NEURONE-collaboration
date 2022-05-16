@@ -15,7 +15,7 @@
     </v-row>
 
     <v-tabs v-model="tab" background-color="transparent" color="basil" grow>
-      <v-tab v-for="(item, i) in items" :key="i">
+      <v-tab v-for="(item, i) in groups.modules" :key="i">
         <v-icon>
           {{ item.icon }}
         </v-icon>
@@ -38,36 +38,6 @@ export default {
     return {
       tab: null,
       text: "hola",
-      items: [
-        {
-          icon: "mdi-chat",
-          title: "Group Chat",
-        },
-        {
-          icon: "mdi-chart-box",
-          title: "Activity",
-        },
-        {
-          icon: "mdi-star-outline",
-          title: "Bookmarks",
-        },
-        {
-          icon: "mdi-file",
-          title: "snippets",
-        },
-        {
-          icon: "mdi-file-document",
-          title: "Documents",
-        },
-        {
-          icon: "mdi-account-group-outline",
-          title: "People",
-        },
-        {
-          icon: "mdi-cog",
-          title: "Settings",
-        },
-      ],
     };
   },
 };

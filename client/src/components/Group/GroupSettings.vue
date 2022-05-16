@@ -25,7 +25,7 @@
         ref="form"
         class="form-signin"
         lazy-validation
-        @submit.prevent="createGroup"
+        @submit.prevent="updateData"
       >
         <v-container>
           <v-row
@@ -61,7 +61,14 @@
                 v-model="group.color"
               ></v-color-picker>
             </v-col>
-
+            <v-col v-for="(module, index) in group.modules" v-bind:key="index">
+              {{ module.name }}
+              <v-checkbox
+                v-if="module.title != 'Settings'"
+                v-model="module.active"
+                :label="`${module.title}`"
+              ></v-checkbox>
+            </v-col>
             <v-col cols="12">
               <v-autocomplete
                 v-model="group.users"
@@ -141,12 +148,41 @@
     </v-snackbar>
   </v-card>
 </template>
+
 <script>
 import axios from "axios";
 export default {
   props: ["groupR", "mode"],
   methods: {
-    saveChanges() {},
+    remove(item) {
+      const index = this.group.users.indexOf(item);
+      if (index >= 0) this.group.users.splice(index, 1);
+    },
+    async updateData() {
+      if (this.$refs.form.validate()) {
+        console.log(this.group.users);
+        try {
+          await axios.put(this.$store.state.apiURL + "/group", {
+            headers: { token: localStorage.getItem("token") },
+            group: this.group,
+            user: this.user,
+          });
+          this.snack = true;
+          this.snackColor = "succes";
+          this.snackText = "Succesfully created Group";
+        } catch (err) {
+          console.log(err);
+          console.log(err.response);
+          this.snack = true;
+          this.snackColor = "error";
+          this.snackText = "Error has ocured";
+        }
+      } else {
+        this.snack = true;
+        this.snackColor = "error";
+        this.snackText = "Put the required data";
+      }
+    },
   },
   data: () => ({
     dialog: false,

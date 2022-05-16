@@ -4,7 +4,7 @@
     <v-window v-model="step">
       <!--home-->
       <v-window-item :value="1">
-        <!-- Men -->
+        <!-- Menu -->
         <v-list color="basil" dense>
           <v-subheader>My groups</v-subheader>
           <v-list-item-group v-model="selectedItem" color="primary">
@@ -14,7 +14,7 @@
               </v-list-item-icon>
               <v-list-item-content>
                 <v-btn
-                  @click="step = 'group'"
+                  @click="selectItem"
                   class="white--text"
                   :color="item.color"
                 >
@@ -29,7 +29,7 @@
       <v-window-item :value="'group'">
         <!-- Groups -->
         <v-btn @click="step = 1"> Back</v-btn>
-        <WidgetGroupDetail :group="group"></WidgetGroupDetail>
+        <WidgetGroupDetail></WidgetGroupDetail>
       </v-window-item>
     </v-window>
   </v-card>
@@ -43,36 +43,6 @@ export default {
       text: "hola",
       step: 1,
       selectedItem: 1,
-      items: [
-        {
-          icon: "mdi-chat",
-          title: "Group Chat",
-        },
-        {
-          icon: "mdi-chart-box",
-          title: "Activity",
-        },
-        {
-          icon: "mdi-star-outline",
-          title: "Bookmarks",
-        },
-        {
-          icon: "mdi-file",
-          title: "snippets",
-        },
-        {
-          icon: "mdi-file-document",
-          title: "Documents",
-        },
-        {
-          icon: "mdi-account-group-outline",
-          title: "People",
-        },
-        {
-          icon: "mdi-cog",
-          title: "Settings",
-        },
-      ],
     };
   },
   computed: {
@@ -81,6 +51,12 @@ export default {
     },
     group() {
       return this.groups[this.selectedItem];
+    },
+  },
+  methods: {
+    selectItem() {
+      this.$store.commit("updateGroup", this.selectedItem);
+      this.step = "group";
     },
   },
 };

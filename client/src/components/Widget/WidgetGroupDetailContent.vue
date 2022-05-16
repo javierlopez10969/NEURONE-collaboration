@@ -1,9 +1,8 @@
 <template>
   <a>
     <!--Chat -->
-    <v-tab-item>
+    <v-tab-item :disabled="group.modules[0].active">
       <v-card>
-        {{ realGroup.modules }}
         <ChatView></ChatView>
       </v-card>
     </v-tab-item>
@@ -49,24 +48,16 @@
 import ChatView from "@/components/Chat/ChatView.vue";
 import GroupSettings from "@/components/Group/GroupSettings.vue";
 import GroupPeople from "@/components/Group/GroupPeople.vue";
-import axios from "axios";
 export default {
-  props: ["group"],
   components: {
     ChatView,
     GroupSettings,
     GroupPeople,
   },
-  data: () => ({ realGroup: { modules: { active: true } } }),
-  created() {
-    let apiURL = `http://localhost:3000/api/group/${this.groupR._id}`;
-    axios
-      .get(apiURL, {
-        headers: { token: localStorage.getItem("token") },
-      })
-      .then((res) => {
-        this.realGroup = res.data.group;
-      });
+  computed: {
+    group() {
+      return this.$store.state.group;
+    },
   },
 };
 </script>

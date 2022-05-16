@@ -12,7 +12,7 @@ export default new Vuex.Store({
     socket: {},
     //Id of the groups
     groups: [],
-    actualGroup: {},
+    group: {},
     apiURL: "http://localhost:3000/api",
   },
   mutations: {

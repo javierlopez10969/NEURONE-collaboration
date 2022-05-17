@@ -24,7 +24,7 @@ let messageSchema = mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    room_id: {
+    group_id: {
         type: String
     }
 });

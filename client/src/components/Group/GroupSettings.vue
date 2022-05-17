@@ -127,12 +127,6 @@
           <v-icon left> mdi-update </v-icon>
           Save
         </v-btn>
-        <v-snackbar v-model="snack" :timeout="3000" :color="snackColor" bottom>
-          {{ snackText }}
-          <template v-slot:action="{ attrs }">
-            <v-btn v-bind="attrs" text @click="snack = false"> Close </v-btn>
-          </template>
-        </v-snackbar>
       </v-card-actions>
     </v-form>
   </v-card>
@@ -157,9 +151,10 @@ export default {
               group: this.group,
             }
           );
-          this.snack = true;
-          this.snackColor = "green";
-          this.snackText = "Succesfully updated Group";
+          this.$store.commit("setSnack", {
+            color: "green",
+            text: "Group updated successfully",
+          });
         } catch (err) {
           console.log(err);
           console.log(err.response);

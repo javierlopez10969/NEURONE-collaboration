@@ -1,5 +1,5 @@
 <template>
-  <v-card height="500" width="300" color="basil">
+  <v-card height="500" width="350" color="basil">
     <!-- Windows -->
     <v-window v-model="step">
       <!--home-->

@@ -32,7 +32,7 @@ let groupSchema = mongoose.Schema({
     description: {
         type: String,
     },
-    chatRooms: {
+    chatRoom: {
         type: Array,
         default: [],
     },

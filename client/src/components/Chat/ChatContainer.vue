@@ -1,6 +1,6 @@
 <!-- Body of the messages-->
 <template>
-  <v-container style="height: 500px; overflow: auto" ref="container" fluid>
+  <v-container style="height: 250px; overflow: auto" ref="container" fluid>
     <!-- Messages -->
     <div
       v-for="(item, index) in chat"

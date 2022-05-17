@@ -1,12 +1,11 @@
 <template>
   <v-container fluid>
-    <v-row>
-      <v-col cols="4">
-        <ConnectedUsers :users.sync="onlineUsers"></ConnectedUsers>
-      </v-col>
-    </v-row>
-    <v-col>
-      <v-form @submit.prevent="sendMessage">
+    <ConnectedUsers :users.sync="onlineUsers"></ConnectedUsers>
+
+    <Container :chat.sync="chat"></Container>
+    <vue-typer v-if="someoneTyping" text="Someone is writting..."></vue-typer>
+    <v-form @submit.prevent="sendMessage">
+      <v-col cols="8">
         <v-text-field
           outlined
           filled
@@ -15,20 +14,8 @@
           label="Send a Message"
           placeholder="Aa"
         ></v-text-field>
-        <v-btn depressed color="primary" type="submit"> Send </v-btn>
-        <vue-typer
-          v-if="someoneTyping"
-          text="Someone is writting..."
-        ></vue-typer>
-      </v-form>
-    </v-col>
-    <Container :chat.sync="chat"></Container>
-    <v-snackbar v-model="snack" top right :timeout="3000" :color="snackColor">
-      {{ snackText }}
-      <template v-slot:action="{ attrs }">
-        <v-btn v-bind="attrs" text @click="snack = false"> Close </v-btn>
-      </template>
-    </v-snackbar>
+      </v-col>
+    </v-form>
   </v-container>
 </template>
 
@@ -47,6 +34,9 @@ export default {
   computed: {
     user() {
       return this.$store.state.user;
+    },
+    group() {
+      return this.$store.state.group;
     },
   },
   data() {
@@ -119,18 +109,12 @@ export default {
         axios
           .post(this.$store.state.apiURL + "/message/send-message", {
             message,
-            group: this.$route.params.id,
+            group: this.group._id,
           })
           .then((res) => {
             console.log(res.data);
             this.message = "";
           });
-        /**
-           * 
-        this.socket.emit("message", this.message);
-        this.chat.push({ username: this.username, message: this.message });
-        this.message = "";
-           */
       } else {
         this.snack = true;
         this.snackText = "Put some text pls";

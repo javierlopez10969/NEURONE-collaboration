@@ -38,9 +38,7 @@
     </v-tab-item>
     <!--Setting -->
     <v-tab-item>
-      <v-card>
-        <GroupSettings :groupR="group" :mode="'widget'"></GroupSettings>
-      </v-card>
+      <GroupSettings :groupR="group" :mode="'widget'"></GroupSettings>
     </v-tab-item>
   </a>
 </template>

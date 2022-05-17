@@ -14,7 +14,7 @@
           <template #activator="{ on: onTooltip }">
             <v-btn v-on="{ ...onMenu, ...onTooltip }" icon>
               <v-badge color="green" overlap>
-                <v-icon large> mdi-bell </v-icon>
+                <v-icon large> mdi-account-group-outline </v-icon>
               </v-badge>
             </v-btn>
           </template>

@@ -11,7 +11,12 @@
           :label="`Checkbox 1: ${checkbox.toString()}`"
         ></v-checkbox>
       </div>
-
+      <v-snackbar v-model="snack" :timeout="3000" :color="snackColor" bottom>
+        {{ snackText }}
+        <template v-slot:action="{ attrs }">
+          <v-btn v-bind="attrs" text @click="snack = false"> Close </v-btn>
+        </template>
+      </v-snackbar>
       <router-view :user="user" />
     </v-main>
   </v-app>
@@ -59,6 +64,20 @@ export default {
       } else {
         return false;
       }
+    },
+    snack: {
+      get: function () {
+        return this.$store.state.snack;
+      },
+      set: function (value) {
+        return value;
+      },
+    },
+    snackText() {
+      return this.$store.state.snackText;
+    },
+    snackColor() {
+      return this.$store.state.snackColor;
     },
   },
   mounted() {

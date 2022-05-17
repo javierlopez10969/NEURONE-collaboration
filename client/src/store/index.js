@@ -13,6 +13,9 @@ export default new Vuex.Store({
     //Id of the groups
     groups: [],
     group: {},
+    snack: false,
+    snackText: '',
+    snackColor: '',
     apiURL: "http://localhost:3000/api",
   },
   mutations: {
@@ -39,6 +42,12 @@ export default new Vuex.Store({
     logout(state) {
       state.user = {}
       state.token = ""
+    },
+    setSnack(state, snackInfo) {
+      state.snack = true;
+      state.snackColor = snackInfo.color;
+      console.log(snackInfo.color);
+      state.snackText = snackInfo.text;
     }
   }
 })

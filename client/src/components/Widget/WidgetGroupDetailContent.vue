@@ -1,7 +1,7 @@
 <template>
   <a>
     <!--Chat -->
-    <v-tab-item :disabled="group.modules[0].active">
+    <v-tab-item>
       <v-card>
         <ChatView></ChatView>
       </v-card>
@@ -49,15 +49,11 @@ import ChatView from "@/components/Chat/ChatView.vue";
 import GroupSettings from "@/components/Group/GroupSettings.vue";
 import GroupPeople from "@/components/Group/GroupPeople.vue";
 export default {
+  props: ["group"],
   components: {
     ChatView,
     GroupSettings,
     GroupPeople,
-  },
-  computed: {
-    group() {
-      return this.$store.state.group;
-    },
   },
 };
 </script>

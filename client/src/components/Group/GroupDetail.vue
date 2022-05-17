@@ -15,7 +15,7 @@
     </v-row>
 
     <v-tabs v-model="tab" background-color="transparent" color="basil" grow>
-      <v-tab v-for="(item, i) in groups.modules" :key="i">
+      <v-tab v-for="(item, i) in group.modules" :key="i">
         <v-icon>
           {{ item.icon }}
         </v-icon>

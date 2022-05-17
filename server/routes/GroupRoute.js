@@ -66,7 +66,7 @@ router.get('/:id', async (req, res) => {
 
 //Update
 router.put('/:id', async (req, res) => {
-    await Group.findByIdAndUpdate(req.params.id, req.body)
+    await Group.findByIdAndUpdate(req.params.id, req.body.group)
     res.json({
         status: 'Group Updated'
     })

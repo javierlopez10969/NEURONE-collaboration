@@ -29,7 +29,7 @@
       <v-window-item :value="'group'">
         <!-- Groups -->
         <v-btn @click="step = 1"> Back</v-btn>
-        <WidgetGroupDetail></WidgetGroupDetail>
+        <WidgetGroupDetail :group="group"></WidgetGroupDetail>
       </v-window-item>
     </v-window>
   </v-card>
@@ -42,7 +42,7 @@ export default {
       tab: null,
       text: "hola",
       step: 1,
-      selectedItem: 1,
+      selectedItem: 0,
     };
   },
   computed: {

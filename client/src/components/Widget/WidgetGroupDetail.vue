@@ -3,7 +3,7 @@
     <v-row>
       <v-col></v-col>
       <v-col>
-        <h4></h4>
+        <h4>{{ group.name }}</h4>
       </v-col>
       <v-col>
         <v-btn icon>

@@ -66,6 +66,12 @@ export default {
   },
   created() {
     this.socket = this.$store.state.socket;
+    axios
+      .get(this.$store.state.apiURL + "/message/group/" + this.group._id)
+      .then((res) => {
+        this.chat = res.data;
+        this.message = "";
+      });
   },
   mounted() {
     //LISTENERS OF THE SOCKET

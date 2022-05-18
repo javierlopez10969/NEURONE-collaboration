@@ -25,11 +25,13 @@ app.use(cors())
 const task = require('./routes/TaskRoute'),
   user = require('./routes/UserRoute'),
   message = require('./routes/MessageRoute'),
-  group = require('./routes/GroupRoute');
+  group = require('./routes/GroupRoute'),
+  post = require('./routes/PostRoute');
 app.use("/api/task", task)
 app.use("/api/user", user)
 app.use("/api/message", message)
 app.use("/api/group", group)
+app.use("/api/post", post)
 
 //Port
 const port = process.env.PORT || 3000;

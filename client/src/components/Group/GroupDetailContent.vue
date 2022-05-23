@@ -15,7 +15,7 @@
     <!--Bookmarks-->
     <v-tab-item>
       <v-card>
-        <ChatView></ChatView>
+        <BookmarkView></BookmarkView>
       </v-card>
     </v-tab-item>
     <!--Snippets-->

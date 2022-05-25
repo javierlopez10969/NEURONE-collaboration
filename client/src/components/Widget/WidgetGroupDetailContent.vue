@@ -2,9 +2,7 @@
   <a>
     <!--Chat -->
     <v-tab-item>
-      <v-card>
-        <ChatView></ChatView>
-      </v-card>
+      <ChatView></ChatView>
     </v-tab-item>
     <!--Activity -->
     <v-tab-item>
@@ -15,7 +13,7 @@
     <!--Bookmarks-->
     <v-tab-item>
       <v-card>
-        <ChatView></ChatView>
+        <BookmarkView></BookmarkView>
       </v-card>
     </v-tab-item>
     <!--Snippets-->

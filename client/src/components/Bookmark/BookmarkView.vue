@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <vue-typer v-if="someoneTyping" text="Someone is writting..."></vue-typer>
+    <BookmarkBtn></BookmarkBtn>
     <v-form @submit.prevent="sendMessage">
       <v-col cols="8">
         <v-text-field
@@ -8,7 +8,7 @@
           filled
           auto-grow
           v-model="message"
-          label="Send a Message"
+          label="URL"
           placeholder="Aa"
         ></v-text-field>
       </v-col>
@@ -19,7 +19,7 @@
 <script>
 import axios from "axios";
 export default {
-  name: "ChatPage",
+  name: "BookmarkPage",
   computed: {
     user() {
       return this.$store.state.user;
@@ -95,7 +95,7 @@ export default {
     },
   },
   methods: {
-    sendMessage() {
+    addBookMark() {
       if (this.message != "") {
         var message = {
           message: this.message,

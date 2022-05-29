@@ -1,18 +1,43 @@
 <template>
   <v-container fluid>
-    <BookmarkBtn></BookmarkBtn>
-    <v-form @submit.prevent="sendMessage">
-      <v-col cols="8">
-        <v-text-field
-          outlined
-          filled
-          auto-grow
-          v-model="message"
-          label="URL"
-          placeholder="Aa"
-        ></v-text-field>
-      </v-col>
-    </v-form>
+    <v-window v-model="step">
+      <v-window-item :value="1">
+        <v-btn dark @click="step = 2"> New Bookmark </v-btn>
+      </v-window-item>
+
+      <v-window-item :value="2">
+        <v-form @submit.prevent="addBookMark">
+          <v-btn dark @click="step = 1"> Back </v-btn>
+          <v-btn type="submit"> Add Bookmark </v-btn>
+          <v-col cols="8">
+            <v-text-field
+              outlined
+              filled
+              auto-grow
+              v-model="bookmark.URL"
+              label="URL"
+              placeholder="Aa"
+            ></v-text-field>
+            <v-text-field
+              outlined
+              filled
+              auto-grow
+              v-model="bookmark.pageTitle"
+              label="Page Title"
+              placeholder="Aa"
+            ></v-text-field>
+            <v-text-field
+              outlined
+              filled
+              auto-grow
+              v-model="bookmark.notes"
+              label="Notes"
+              placeholder="Aa"
+            ></v-text-field>
+          </v-col>
+        </v-form>
+      </v-window-item>
+    </v-window>
   </v-container>
 </template>
 
@@ -40,26 +65,23 @@ export default {
       //Socket for connection
       socket: {},
       //All messages
-      chat: [],
-      //Message
-      message: "",
+      bookmarks: [],
+      bookmark: {
+        URL: "",
+        notes: "",
+        pageTitle: "",
+      },
       //Online user,
       onlineUsers: [],
-      //Typing process
-      isTyping: false,
-      someoneTyping: false,
-      lastTypingTime: new Date(),
-      TYPING_TIMER_LENGTH: 400,
-      messageRules: [(v) => !!v || "Message can't be empty"],
+      step: 1,
     };
   },
   created() {
     this.socket = this.$store.state.socket;
     axios
-      .get(this.$store.state.apiURL + "/message/group/" + this.group._id)
+      .get(this.$store.state.apiURL + "/bookmark/group/" + this.group._id)
       .then((res) => {
-        this.chat = res.data;
-        this.message = "";
+        this.bookmarks = res.data;
       });
   },
   mounted() {

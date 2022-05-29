@@ -4,21 +4,20 @@ const uniqueValidator = require('mongoose-unique-validator');
 
 // Bookmark schema
 let bookmarkSchema = mongoose.Schema({
-    //Description of the message
-    message: {
+    //URL
+    URL: {
         type: String,
         required: true
     },
-    //User who send the message
-    username: {
-        type: Object,
+    //URL
+    pageTitle: {
+        type: String,
         required: true
     },
-    //Type of message
-    //Private message
-    //Group message
-    message_type: {
+    //Notes
+    notes: {
         type: String,
+        required: true
     },
     created_at: {
         type: Date,

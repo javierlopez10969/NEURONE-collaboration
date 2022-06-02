@@ -5,6 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-wc": "vue-cli-service build --target wc --name my-vue-calc ./src/components/Widget/CalculatorComponent.vue ",
+    "build-web": "vue-cli-service build --target wc --name my-vue-widget './src/components/Widget/WidgetBtn.vue'",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

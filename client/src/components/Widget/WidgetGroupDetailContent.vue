@@ -42,6 +42,7 @@
 </template>
 <script>
 import ChatView from "@/components/Chat/ChatView.vue";
+import BookmarkView from "@/components/Bookmark/BookmarkView.vue";
 import GroupSettings from "@/components/Group/GroupSettings.vue";
 import GroupPeople from "@/components/Group/GroupPeople.vue";
 export default {
@@ -50,6 +51,7 @@ export default {
     ChatView,
     GroupSettings,
     GroupPeople,
+    BookmarkView,
   },
 };
 </script>

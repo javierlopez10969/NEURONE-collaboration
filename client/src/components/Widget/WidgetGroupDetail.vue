@@ -36,7 +36,11 @@
   </v-container>
 </template>
 <script>
+import WidgetGroupDetailContent from "./WidgetGroupDetailContent";
 export default {
+  components: {
+    WidgetGroupDetailContent,
+  },
   data() {
     return {
       tab: null,

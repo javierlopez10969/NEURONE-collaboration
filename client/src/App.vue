@@ -25,8 +25,9 @@
 <script>
 import NavBar from "./components/General/NavBar.vue";
 import axios from "axios";
-
+import store from "./store";
 export default {
+  store,
   name: "App",
   data() {
     return {

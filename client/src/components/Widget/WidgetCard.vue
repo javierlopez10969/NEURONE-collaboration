@@ -35,7 +35,11 @@
   </v-card>
 </template>
 <script>
+import WidgetGroupDetail from "./WidgetGroupDetail";
 export default {
+  components: {
+    WidgetGroupDetail,
+  },
   props: ["expand"],
   data() {
     return {

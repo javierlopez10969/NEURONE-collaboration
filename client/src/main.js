@@ -1,3 +1,4 @@
+//As application : 
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -12,3 +13,15 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
+
+//As Widget : 
+/*
+import Vue from "vue";
+import wrap from "@vue/web-component-wrapper";
+
+import App from "./WidgetBtn.vue";
+
+const wrappedElement = wrap(Vue, App);
+
+window.customElements.define("v-card", wrappedElement);
+*/

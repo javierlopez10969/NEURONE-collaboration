@@ -26,8 +26,11 @@
 import NavBar from "./components/General/NavBar.vue";
 import axios from "axios";
 import store from "./store";
+import vuetify from "@/plugins/vuetify";
 export default {
   store,
+  vuetify,
+  axios,
   name: "App",
   data() {
     return {

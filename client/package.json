@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build-wc": "vue-cli-service build --target wc --name my-vue-calc ./src/components/Widget/CalculatorComponent.vue ",
-    "build-web": "vue-cli-service build --target wc --name my-vue-widget './src/components/Widget/WidgetBtn.vue'",
+    "build": "vue-cli-service build --mode production --target app --no-module --dashboard",
+    "build-wc": "vue-cli-service build --target wc --inline-vue --name my-vue-calc ./src/components/CalculatorComponent.vue ",
+    "wc-build": "vue-cli-service build --target wc --inline-vue --name widget-btn src/components/Widget/WidgetBtn.vue ",
+    "wc-test": "cd dist && live-server --port=8080 --entry-file=./demo.html",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -35,7 +36,8 @@
     "unplugin-vue-components": "^0.18.5",
     "vue-cli-plugin-vuetify": "~2.4.8",
     "vue-template-compiler": "^2.6.14",
-    "vuetify-loader": "^1.7.0"
+    "vuetify-loader": "^1.7.0",
+    "webpack-bundle-analyzer": "^4.5.0"
   },
   "eslintConfig": {
     "root": true,

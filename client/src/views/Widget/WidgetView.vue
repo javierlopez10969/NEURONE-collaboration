@@ -1,16 +1,16 @@
 <template>
   <v-container>
     <WidgetBtn></WidgetBtn>
-    <CalculatorComponent></CalculatorComponent>
+    <WidgetBtn2></WidgetBtn2>
   </v-container>
 </template>
 <script>
 import WidgetBtn from "@/components/Widget/WidgetBtn";
-import CalculatorComponent from "@/components/CalculatorComponent";
+import WidgetBtn2 from "@/components/WidgetBtn";
 export default {
   components: {
     WidgetBtn,
-    CalculatorComponent,
+    WidgetBtn2,
   },
 };
 </script>

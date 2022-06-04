@@ -6,12 +6,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --mode production --target app --no-module --dashboard",
     "build-wc": "vue-cli-service build --target wc --inline-vue --name my-vue-calc ./src/components/CalculatorComponent.vue ",
-    "wc-build": "vue-cli-service build --target wc --inline-vue --name widget-btn src/components/Widget/WidgetBtn.vue ",
+    "wc-build": "vue-cli-service build --target wc --inline-vue --name widget-btn src/components/WidgetBtn.vue ",
     "wc-test": "cd dist && live-server --port=8080 --entry-file=./demo.html",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "bootstrap-vue": "^2.22.0",
     "core-js": "^3.8.3",
     "socket.io-client": "^4.4.1",
     "vue": "^2.6.14",

@@ -1,14 +1,14 @@
 const {
   defineConfig
 } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: [
-    'vuetify'
-  ]
-})
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports = {
-  transpileDependencies: ['vuetify']
+  configureWebpack: {
+    plugins: [
+      new VuetifyLoaderPlugin()
+    ],
+  },
 }
 module.exports = {
   configureWebpack: {

@@ -1,31 +1,38 @@
 <template>
   <div>
-    <link
-      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
-      rel="stylesheet"
-    />
-    <b-btn @click="hola"> Y que pasa </b-btn>
+    <v-btn @click="hola"> Y que pasa </v-btn>
 
-    <BButton @click="push" variant="outline-primary"> push</BButton>
+    <v-btn @click="push" variant="outline-primary"> push</v-btn>
     <li v-for="(element, index) in elements" :key="index">
       {{ element }}
     </li>
     {{ ditto.name }}
     <img :src="ditto.sprites.back_default" alt="" />
     <img :src="ditto.sprites.front_default" alt="" />
+    <v-menu></v-menu>
+    <v-card></v-card>
+    <v-tooltip></v-tooltip>
+    <v-btn @click="push"> COLLABORATION </v-btn>
+    <v-icon large> mdi-account-group-outline </v-icon>
+    <v-badge></v-badge>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import store from "@/store";
-import { BButton } from "bootstrap-vue";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
+import { VMenu, VBtn, VBadge, VIcon, VCard, VTooltip } from "vuetify/lib";
 export default {
+  components: {
+    VMenu,
+    VBtn,
+    VBadge,
+    VIcon,
+    VCard,
+    VTooltip,
+  },
   props: ["msg"],
   store,
-  components: { BButton },
   data() {
     return {
       elements: [],
@@ -45,6 +52,12 @@ export default {
     axios.get(apiURL).then((res) => {
       this.ditto = res.data;
     });
+    this.$store.commit("");
   },
 };
 </script>
+ <style>
+@import "vuetify/dist/vuetify.min.css";
+@import "@mdi/font/css/materialdesignicons.css";
+@import "typeface-roboto/index.css";
+</style> 

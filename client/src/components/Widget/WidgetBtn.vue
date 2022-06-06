@@ -38,10 +38,19 @@
 </template>
 <script>
 import WidgetCard from "./WidgetCard.vue";
+import { VMenu, VBtn, VBadge, VIcon, VCard, VTooltip } from "vuetify/lib";
+import store from "@/store";
 export default {
   components: {
     WidgetCard,
+    VMenu,
+    VBtn,
+    VBadge,
+    VIcon,
+    VCard,
+    VTooltip,
   },
+  store,
   data: () => ({
     expand: false,
     menu: false,

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-btn @click="hola"> Y que pasa </v-btn>
+    <v-btn :attach="$parent.$el" @click="hola"> Y que pasa </v-btn>
 
     <v-btn @click="push" variant="outline-primary"> push</v-btn>
     <li v-for="(element, index) in elements" :key="index">
@@ -13,7 +13,7 @@
     <v-card></v-card>
     <v-tooltip></v-tooltip>
     <v-btn @click="push"> COLLABORATION </v-btn>
-    <v-icon large> mdi-account-group-outline </v-icon>
+    <v-icon large :attach="$parent.$el"> mdi-account-group-outline </v-icon>
     <v-badge></v-badge>
   </div>
 </template>

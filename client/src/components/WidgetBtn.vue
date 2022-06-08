@@ -21,8 +21,11 @@
 <script>
 import axios from "axios";
 import store from "@/store";
+import vuetify from "vuetify/dist/vuetify.min.js";
 import { VMenu, VBtn, VBadge, VIcon, VCard, VTooltip } from "vuetify/lib";
+
 export default {
+  vuetify,
   components: {
     VMenu,
     VBtn,

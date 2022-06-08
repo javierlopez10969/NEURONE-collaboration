@@ -8,6 +8,8 @@
     "build-wc": "vue-cli-service build --target wc --inline-vue --name my-vue-calc ./src/components/CalculatorComponent.vue ",
     "wc-build": "vue-cli-service build --target wc --inline-vue --name widget-btn src/components/WidgetBtn.vue ",
     "wc-test": "cd dist && live-server --port=8080 --entry-file=./demo.html",
+    "wc-build2": "vue-cli-service build --target wc --inline-vue --name widget-btn src/components/CurrentWeather.vue ",
+    "wc-test2": "cd dist && live-server --port=8080 --entry-file=./demo.html",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

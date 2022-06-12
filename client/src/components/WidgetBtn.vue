@@ -9,30 +9,17 @@
     {{ ditto.name }}
     <img :src="ditto.sprites.back_default" alt="" />
     <img :src="ditto.sprites.front_default" alt="" />
-    <v-menu></v-menu>
-    <v-card></v-card>
-    <v-tooltip></v-tooltip>
-    <v-btn @click="push"> COLLABORATION </v-btn>
-    <v-icon large :attach="$parent.$el"> mdi-account-group-outline </v-icon>
-    <v-badge></v-badge>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import store from "@/store";
-import vuetify from "vuetify/dist/vuetify.min.js";
-import { VMenu, VBtn, VBadge, VIcon, VCard, VTooltip } from "vuetify/lib";
+import { VBtn } from "vuetify/lib";
 
 export default {
-  vuetify,
   components: {
-    VMenu,
     VBtn,
-    VBadge,
-    VIcon,
-    VCard,
-    VTooltip,
   },
   props: ["msg"],
   store,
@@ -59,7 +46,7 @@ export default {
   },
 };
 </script>
- <style>
+ <style scoped>
 @import "vuetify/dist/vuetify.min.css";
 @import "@mdi/font/css/materialdesignicons.css";
 @import "typeface-roboto/index.css";

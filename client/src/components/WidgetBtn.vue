@@ -9,10 +9,22 @@
     {{ ditto.name }}
     <img :src="ditto.sprites.back_default" alt="" />
     <img :src="ditto.sprites.front_default" alt="" />
+    <div>
+      <b-list-group>
+        <b-list-group-item> Hola </b-list-group-item>
+      </b-list-group>
+    </div>
   </div>
 </template>
 
+
+
+
 <script>
+import { BListGroup, BListGroupItem } from "bootstrap-vue";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+
 import axios from "axios";
 import store from "@/store";
 import { VBtn } from "vuetify/lib";
@@ -20,6 +32,8 @@ import { VBtn } from "vuetify/lib";
 export default {
   components: {
     VBtn,
+    BListGroup,
+    BListGroupItem,
   },
   props: ["msg"],
   store,
@@ -46,8 +60,14 @@ export default {
   },
 };
 </script>
+
+
  <style scoped>
 @import "vuetify/dist/vuetify.min.css";
 @import "@mdi/font/css/materialdesignicons.css";
 @import "typeface-roboto/index.css";
 </style> 
+
+<style lang="stylus">
+@import '@/styles/widget.styl';
+</style>

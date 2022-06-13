@@ -40,7 +40,6 @@ export default {
   components: {
     WidgetGroupDetail,
   },
-  props: ["expand"],
   data() {
     return {
       tab: null,

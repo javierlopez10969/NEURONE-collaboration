@@ -1,10 +1,12 @@
 
 <template>
-  <div>hola</div>
+  <div>hola<Icon icon="mdi-light:home" class="big-icon" /></div>
 </template>
 
 <script>
+import { Icon } from "@iconify/vue2";
 export default {
+  components: { Icon },
   data() {
     return {
       text: "hola",
@@ -17,5 +19,6 @@ export default {
 </script>
 <style lang="stylus">
 @import '@/styles/widget.styl';
+@import '@/styles/Icon.css';
 </style>
 

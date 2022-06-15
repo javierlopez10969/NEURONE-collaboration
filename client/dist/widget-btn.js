@@ -2538,7 +2538,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "ul.tabs__header{display:block;list-style:none;margin:0 0 0 20px;padding:0}ul.tabs__header>li{padding:15px 30px;border-radius:10px;margin:0;display:inline-block;margin-right:5px;cursor:pointer}ul.tabs__header>li.tab__selected{font-weight:700;border-radius:10px 10px 0 0;border-bottom:8px solid transparent}.tab{display:inline-block;color:#000;padding:20px;min-width:800px;border-radius:10px;min-height:400px}.tabs__light .tab{background-color:#fff}.tabs__light li{background-color:#ddd;color:#aaa}.tabs__light li.tab__selected{background-color:#fff;color:#83ffb3}.tabs__dark .tab{background-color:#555;color:#eee}.tabs__dark li{background-color:#ddd;color:#aaa}.tabs__dark li.tab__selected{background-color:#555;color:#fff}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "ul.tabs__header{display:block;list-style:none;margin:0 0 0 20px;padding:0}ul.tabs__header>li{padding:15px 30px;border-radius:10px;margin:0;display:inline-block;margin-right:5px;cursor:pointer}ul.tabs__header>li.tab__selected{font-weight:700;border-radius:10px 10px 0 0;border-bottom:8px solid transparent}.tabs__light .tab{background-color:#fff}.tabs__light li{background-color:#ddd;color:#aaa}.tabs__light li.tab__selected{background-color:#fff;color:#83ffb3}.tabs__dark .tab{background-color:#555;color:#eee}.tabs__dark li{background-color:#ddd;color:#aaa}.tabs__dark li.tab__selected{background-color:#555;color:#fff}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2696,6 +2696,69 @@ var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".v-color-picker__swatches{overflow-y:auto}.v-color-picker__swatches>div{display:flex;flex-wrap:wrap;justify-content:center;padding:8px}.v-color-picker__swatch{display:flex;flex-direction:column;margin-bottom:10px}.v-color-picker__color{position:relative;height:18px;max-height:18px;width:45px;margin:2px 4px;border-radius:2px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;overflow:hidden;background:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") repeat;cursor:pointer}.v-color-picker__color>div{display:flex;align-items:center;justify-content:center;width:100%;height:100%}", ""]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 5739:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-counter{color:rgba(0,0,0,.6)}.theme--dark.v-counter{color:hsla(0,0%,100%,.7)}.v-counter{flex:0 1 auto;font-size:12px;min-height:12px;line-height:12px}", ""]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 1352:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".container{width:100%;padding:12px;margin-right:auto;margin-left:auto}@media(min-width:960px){.container{max-width:900px}}@media(min-width:1264px){.container{max-width:1185px}}@media(min-width:1904px){.container{max-width:1785px}}.container--fluid{max-width:100%}.row{display:flex;flex-wrap:wrap;flex:1 1 auto;margin:-12px}.row+.row{margin-top:12px}.row+.row--dense{margin-top:4px}.row--dense{margin:-4px}.row--dense>.col,.row--dense>[class*=col-]{padding:4px}.row.no-gutters{margin:0}.row.no-gutters>.col,.row.no-gutters>[class*=col-]{padding:0}.col,.col-1,.col-10,.col-11,.col-12,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-auto,.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-auto,.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-auto,.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-auto{width:100%;padding:12px}.col{flex-basis:0;flex-grow:1;max-width:100%}.col-auto{flex:0 0 auto;width:auto;max-width:100%}.col-1{flex:0 0 8.3333333333%;max-width:8.3333333333%}.col-2{flex:0 0 16.6666666667%;max-width:16.6666666667%}.col-3{flex:0 0 25%;max-width:25%}.col-4{flex:0 0 33.3333333333%;max-width:33.3333333333%}.col-5{flex:0 0 41.6666666667%;max-width:41.6666666667%}.col-6{flex:0 0 50%;max-width:50%}.col-7{flex:0 0 58.3333333333%;max-width:58.3333333333%}.col-8{flex:0 0 66.6666666667%;max-width:66.6666666667%}.col-9{flex:0 0 75%;max-width:75%}.col-10{flex:0 0 83.3333333333%;max-width:83.3333333333%}.col-11{flex:0 0 91.6666666667%;max-width:91.6666666667%}.col-12{flex:0 0 100%;max-width:100%}.v-application--is-ltr .offset-1{margin-left:8.3333333333%}.v-application--is-rtl .offset-1{margin-right:8.3333333333%}.v-application--is-ltr .offset-2{margin-left:16.6666666667%}.v-application--is-rtl .offset-2{margin-right:16.6666666667%}.v-application--is-ltr .offset-3{margin-left:25%}.v-application--is-rtl .offset-3{margin-right:25%}.v-application--is-ltr .offset-4{margin-left:33.3333333333%}.v-application--is-rtl .offset-4{margin-right:33.3333333333%}.v-application--is-ltr .offset-5{margin-left:41.6666666667%}.v-application--is-rtl .offset-5{margin-right:41.6666666667%}.v-application--is-ltr .offset-6{margin-left:50%}.v-application--is-rtl .offset-6{margin-right:50%}.v-application--is-ltr .offset-7{margin-left:58.3333333333%}.v-application--is-rtl .offset-7{margin-right:58.3333333333%}.v-application--is-ltr .offset-8{margin-left:66.6666666667%}.v-application--is-rtl .offset-8{margin-right:66.6666666667%}.v-application--is-ltr .offset-9{margin-left:75%}.v-application--is-rtl .offset-9{margin-right:75%}.v-application--is-ltr .offset-10{margin-left:83.3333333333%}.v-application--is-rtl .offset-10{margin-right:83.3333333333%}.v-application--is-ltr .offset-11{margin-left:91.6666666667%}.v-application--is-rtl .offset-11{margin-right:91.6666666667%}@media(min-width:600px){.col-sm{flex-basis:0;flex-grow:1;max-width:100%}.col-sm-auto{flex:0 0 auto;width:auto;max-width:100%}.col-sm-1{flex:0 0 8.3333333333%;max-width:8.3333333333%}.col-sm-2{flex:0 0 16.6666666667%;max-width:16.6666666667%}.col-sm-3{flex:0 0 25%;max-width:25%}.col-sm-4{flex:0 0 33.3333333333%;max-width:33.3333333333%}.col-sm-5{flex:0 0 41.6666666667%;max-width:41.6666666667%}.col-sm-6{flex:0 0 50%;max-width:50%}.col-sm-7{flex:0 0 58.3333333333%;max-width:58.3333333333%}.col-sm-8{flex:0 0 66.6666666667%;max-width:66.6666666667%}.col-sm-9{flex:0 0 75%;max-width:75%}.col-sm-10{flex:0 0 83.3333333333%;max-width:83.3333333333%}.col-sm-11{flex:0 0 91.6666666667%;max-width:91.6666666667%}.col-sm-12{flex:0 0 100%;max-width:100%}.v-application--is-ltr .offset-sm-0{margin-left:0}.v-application--is-rtl .offset-sm-0{margin-right:0}.v-application--is-ltr .offset-sm-1{margin-left:8.3333333333%}.v-application--is-rtl .offset-sm-1{margin-right:8.3333333333%}.v-application--is-ltr .offset-sm-2{margin-left:16.6666666667%}.v-application--is-rtl .offset-sm-2{margin-right:16.6666666667%}.v-application--is-ltr .offset-sm-3{margin-left:25%}.v-application--is-rtl .offset-sm-3{margin-right:25%}.v-application--is-ltr .offset-sm-4{margin-left:33.3333333333%}.v-application--is-rtl .offset-sm-4{margin-right:33.3333333333%}.v-application--is-ltr .offset-sm-5{margin-left:41.6666666667%}.v-application--is-rtl .offset-sm-5{margin-right:41.6666666667%}.v-application--is-ltr .offset-sm-6{margin-left:50%}.v-application--is-rtl .offset-sm-6{margin-right:50%}.v-application--is-ltr .offset-sm-7{margin-left:58.3333333333%}.v-application--is-rtl .offset-sm-7{margin-right:58.3333333333%}.v-application--is-ltr .offset-sm-8{margin-left:66.6666666667%}.v-application--is-rtl .offset-sm-8{margin-right:66.6666666667%}.v-application--is-ltr .offset-sm-9{margin-left:75%}.v-application--is-rtl .offset-sm-9{margin-right:75%}.v-application--is-ltr .offset-sm-10{margin-left:83.3333333333%}.v-application--is-rtl .offset-sm-10{margin-right:83.3333333333%}.v-application--is-ltr .offset-sm-11{margin-left:91.6666666667%}.v-application--is-rtl .offset-sm-11{margin-right:91.6666666667%}}@media(min-width:960px){.col-md{flex-basis:0;flex-grow:1;max-width:100%}.col-md-auto{flex:0 0 auto;width:auto;max-width:100%}.col-md-1{flex:0 0 8.3333333333%;max-width:8.3333333333%}.col-md-2{flex:0 0 16.6666666667%;max-width:16.6666666667%}.col-md-3{flex:0 0 25%;max-width:25%}.col-md-4{flex:0 0 33.3333333333%;max-width:33.3333333333%}.col-md-5{flex:0 0 41.6666666667%;max-width:41.6666666667%}.col-md-6{flex:0 0 50%;max-width:50%}.col-md-7{flex:0 0 58.3333333333%;max-width:58.3333333333%}.col-md-8{flex:0 0 66.6666666667%;max-width:66.6666666667%}.col-md-9{flex:0 0 75%;max-width:75%}.col-md-10{flex:0 0 83.3333333333%;max-width:83.3333333333%}.col-md-11{flex:0 0 91.6666666667%;max-width:91.6666666667%}.col-md-12{flex:0 0 100%;max-width:100%}.v-application--is-ltr .offset-md-0{margin-left:0}.v-application--is-rtl .offset-md-0{margin-right:0}.v-application--is-ltr .offset-md-1{margin-left:8.3333333333%}.v-application--is-rtl .offset-md-1{margin-right:8.3333333333%}.v-application--is-ltr .offset-md-2{margin-left:16.6666666667%}.v-application--is-rtl .offset-md-2{margin-right:16.6666666667%}.v-application--is-ltr .offset-md-3{margin-left:25%}.v-application--is-rtl .offset-md-3{margin-right:25%}.v-application--is-ltr .offset-md-4{margin-left:33.3333333333%}.v-application--is-rtl .offset-md-4{margin-right:33.3333333333%}.v-application--is-ltr .offset-md-5{margin-left:41.6666666667%}.v-application--is-rtl .offset-md-5{margin-right:41.6666666667%}.v-application--is-ltr .offset-md-6{margin-left:50%}.v-application--is-rtl .offset-md-6{margin-right:50%}.v-application--is-ltr .offset-md-7{margin-left:58.3333333333%}.v-application--is-rtl .offset-md-7{margin-right:58.3333333333%}.v-application--is-ltr .offset-md-8{margin-left:66.6666666667%}.v-application--is-rtl .offset-md-8{margin-right:66.6666666667%}.v-application--is-ltr .offset-md-9{margin-left:75%}.v-application--is-rtl .offset-md-9{margin-right:75%}.v-application--is-ltr .offset-md-10{margin-left:83.3333333333%}.v-application--is-rtl .offset-md-10{margin-right:83.3333333333%}.v-application--is-ltr .offset-md-11{margin-left:91.6666666667%}.v-application--is-rtl .offset-md-11{margin-right:91.6666666667%}}@media(min-width:1264px){.col-lg{flex-basis:0;flex-grow:1;max-width:100%}.col-lg-auto{flex:0 0 auto;width:auto;max-width:100%}.col-lg-1{flex:0 0 8.3333333333%;max-width:8.3333333333%}.col-lg-2{flex:0 0 16.6666666667%;max-width:16.6666666667%}.col-lg-3{flex:0 0 25%;max-width:25%}.col-lg-4{flex:0 0 33.3333333333%;max-width:33.3333333333%}.col-lg-5{flex:0 0 41.6666666667%;max-width:41.6666666667%}.col-lg-6{flex:0 0 50%;max-width:50%}.col-lg-7{flex:0 0 58.3333333333%;max-width:58.3333333333%}.col-lg-8{flex:0 0 66.6666666667%;max-width:66.6666666667%}.col-lg-9{flex:0 0 75%;max-width:75%}.col-lg-10{flex:0 0 83.3333333333%;max-width:83.3333333333%}.col-lg-11{flex:0 0 91.6666666667%;max-width:91.6666666667%}.col-lg-12{flex:0 0 100%;max-width:100%}.v-application--is-ltr .offset-lg-0{margin-left:0}.v-application--is-rtl .offset-lg-0{margin-right:0}.v-application--is-ltr .offset-lg-1{margin-left:8.3333333333%}.v-application--is-rtl .offset-lg-1{margin-right:8.3333333333%}.v-application--is-ltr .offset-lg-2{margin-left:16.6666666667%}.v-application--is-rtl .offset-lg-2{margin-right:16.6666666667%}.v-application--is-ltr .offset-lg-3{margin-left:25%}.v-application--is-rtl .offset-lg-3{margin-right:25%}.v-application--is-ltr .offset-lg-4{margin-left:33.3333333333%}.v-application--is-rtl .offset-lg-4{margin-right:33.3333333333%}.v-application--is-ltr .offset-lg-5{margin-left:41.6666666667%}.v-application--is-rtl .offset-lg-5{margin-right:41.6666666667%}.v-application--is-ltr .offset-lg-6{margin-left:50%}.v-application--is-rtl .offset-lg-6{margin-right:50%}.v-application--is-ltr .offset-lg-7{margin-left:58.3333333333%}.v-application--is-rtl .offset-lg-7{margin-right:58.3333333333%}.v-application--is-ltr .offset-lg-8{margin-left:66.6666666667%}.v-application--is-rtl .offset-lg-8{margin-right:66.6666666667%}.v-application--is-ltr .offset-lg-9{margin-left:75%}.v-application--is-rtl .offset-lg-9{margin-right:75%}.v-application--is-ltr .offset-lg-10{margin-left:83.3333333333%}.v-application--is-rtl .offset-lg-10{margin-right:83.3333333333%}.v-application--is-ltr .offset-lg-11{margin-left:91.6666666667%}.v-application--is-rtl .offset-lg-11{margin-right:91.6666666667%}}@media(min-width:1904px){.col-xl{flex-basis:0;flex-grow:1;max-width:100%}.col-xl-auto{flex:0 0 auto;width:auto;max-width:100%}.col-xl-1{flex:0 0 8.3333333333%;max-width:8.3333333333%}.col-xl-2{flex:0 0 16.6666666667%;max-width:16.6666666667%}.col-xl-3{flex:0 0 25%;max-width:25%}.col-xl-4{flex:0 0 33.3333333333%;max-width:33.3333333333%}.col-xl-5{flex:0 0 41.6666666667%;max-width:41.6666666667%}.col-xl-6{flex:0 0 50%;max-width:50%}.col-xl-7{flex:0 0 58.3333333333%;max-width:58.3333333333%}.col-xl-8{flex:0 0 66.6666666667%;max-width:66.6666666667%}.col-xl-9{flex:0 0 75%;max-width:75%}.col-xl-10{flex:0 0 83.3333333333%;max-width:83.3333333333%}.col-xl-11{flex:0 0 91.6666666667%;max-width:91.6666666667%}.col-xl-12{flex:0 0 100%;max-width:100%}.v-application--is-ltr .offset-xl-0{margin-left:0}.v-application--is-rtl .offset-xl-0{margin-right:0}.v-application--is-ltr .offset-xl-1{margin-left:8.3333333333%}.v-application--is-rtl .offset-xl-1{margin-right:8.3333333333%}.v-application--is-ltr .offset-xl-2{margin-left:16.6666666667%}.v-application--is-rtl .offset-xl-2{margin-right:16.6666666667%}.v-application--is-ltr .offset-xl-3{margin-left:25%}.v-application--is-rtl .offset-xl-3{margin-right:25%}.v-application--is-ltr .offset-xl-4{margin-left:33.3333333333%}.v-application--is-rtl .offset-xl-4{margin-right:33.3333333333%}.v-application--is-ltr .offset-xl-5{margin-left:41.6666666667%}.v-application--is-rtl .offset-xl-5{margin-right:41.6666666667%}.v-application--is-ltr .offset-xl-6{margin-left:50%}.v-application--is-rtl .offset-xl-6{margin-right:50%}.v-application--is-ltr .offset-xl-7{margin-left:58.3333333333%}.v-application--is-rtl .offset-xl-7{margin-right:58.3333333333%}.v-application--is-ltr .offset-xl-8{margin-left:66.6666666667%}.v-application--is-rtl .offset-xl-8{margin-right:66.6666666667%}.v-application--is-ltr .offset-xl-9{margin-left:75%}.v-application--is-rtl .offset-xl-9{margin-right:75%}.v-application--is-ltr .offset-xl-10{margin-left:83.3333333333%}.v-application--is-rtl .offset-xl-10{margin-right:83.3333333333%}.v-application--is-ltr .offset-xl-11{margin-left:91.6666666667%}.v-application--is-rtl .offset-xl-11{margin-right:91.6666666667%}}", ""]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 2024:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".container.grow-shrink-0{flex-grow:0;flex-shrink:0}.container.fill-height{align-items:center;display:flex;flex-wrap:wrap}.container.fill-height>.row{flex:1 1 100%;max-width:calc(100% + 24px)}.container.fill-height>.layout{height:100%;flex:1 1 auto}.container.fill-height>.layout.grow-shrink-0{flex-grow:0;flex-shrink:0}.container.grid-list-xs .layout .flex{padding:1px}.container.grid-list-xs .layout:only-child{margin:-1px}.container.grid-list-xs .layout:not(:only-child){margin:auto -1px}.container.grid-list-xs :not(:only-child) .layout:first-child{margin-top:-1px}.container.grid-list-xs :not(:only-child) .layout:last-child{margin-bottom:-1px}.container.grid-list-sm .layout .flex{padding:2px}.container.grid-list-sm .layout:only-child{margin:-2px}.container.grid-list-sm .layout:not(:only-child){margin:auto -2px}.container.grid-list-sm :not(:only-child) .layout:first-child{margin-top:-2px}.container.grid-list-sm :not(:only-child) .layout:last-child{margin-bottom:-2px}.container.grid-list-md .layout .flex{padding:4px}.container.grid-list-md .layout:only-child{margin:-4px}.container.grid-list-md .layout:not(:only-child){margin:auto -4px}.container.grid-list-md :not(:only-child) .layout:first-child{margin-top:-4px}.container.grid-list-md :not(:only-child) .layout:last-child{margin-bottom:-4px}.container.grid-list-lg .layout .flex{padding:8px}.container.grid-list-lg .layout:only-child{margin:-8px}.container.grid-list-lg .layout:not(:only-child){margin:auto -8px}.container.grid-list-lg :not(:only-child) .layout:first-child{margin-top:-8px}.container.grid-list-lg :not(:only-child) .layout:last-child{margin-bottom:-8px}.container.grid-list-xl .layout .flex{padding:12px}.container.grid-list-xl .layout:only-child{margin:-12px}.container.grid-list-xl .layout:not(:only-child){margin:auto -12px}.container.grid-list-xl :not(:only-child) .layout:first-child{margin-top:-12px}.container.grid-list-xl :not(:only-child) .layout:last-child{margin-bottom:-12px}.layout{display:flex;flex:1 1 auto;flex-wrap:nowrap;min-width:0}.layout.reverse{flex-direction:row-reverse}.layout.column{flex-direction:column}.layout.column.reverse{flex-direction:column-reverse}.layout.column>.flex{max-width:100%}.layout.wrap{flex-wrap:wrap}.layout.grow-shrink-0{flex-grow:0;flex-shrink:0}@media (min-width:0){.flex.xs12{flex-basis:100%;flex-grow:0;max-width:100%}.flex.order-xs12{order:12}.flex.xs11{flex-basis:91.6666666667%;flex-grow:0;max-width:91.6666666667%}.flex.order-xs11{order:11}.flex.xs10{flex-basis:83.3333333333%;flex-grow:0;max-width:83.3333333333%}.flex.order-xs10{order:10}.flex.xs9{flex-basis:75%;flex-grow:0;max-width:75%}.flex.order-xs9{order:9}.flex.xs8{flex-basis:66.6666666667%;flex-grow:0;max-width:66.6666666667%}.flex.order-xs8{order:8}.flex.xs7{flex-basis:58.3333333333%;flex-grow:0;max-width:58.3333333333%}.flex.order-xs7{order:7}.flex.xs6{flex-basis:50%;flex-grow:0;max-width:50%}.flex.order-xs6{order:6}.flex.xs5{flex-basis:41.6666666667%;flex-grow:0;max-width:41.6666666667%}.flex.order-xs5{order:5}.flex.xs4{flex-basis:33.3333333333%;flex-grow:0;max-width:33.3333333333%}.flex.order-xs4{order:4}.flex.xs3{flex-basis:25%;flex-grow:0;max-width:25%}.flex.order-xs3{order:3}.flex.xs2{flex-basis:16.6666666667%;flex-grow:0;max-width:16.6666666667%}.flex.order-xs2{order:2}.flex.xs1{flex-basis:8.3333333333%;flex-grow:0;max-width:8.3333333333%}.flex.order-xs1{order:1}.v-application--is-ltr .flex.offset-xs12{margin-left:100%}.v-application--is-rtl .flex.offset-xs12{margin-right:100%}.v-application--is-ltr .flex.offset-xs11{margin-left:91.6666666667%}.v-application--is-rtl .flex.offset-xs11{margin-right:91.6666666667%}.v-application--is-ltr .flex.offset-xs10{margin-left:83.3333333333%}.v-application--is-rtl .flex.offset-xs10{margin-right:83.3333333333%}.v-application--is-ltr .flex.offset-xs9{margin-left:75%}.v-application--is-rtl .flex.offset-xs9{margin-right:75%}.v-application--is-ltr .flex.offset-xs8{margin-left:66.6666666667%}.v-application--is-rtl .flex.offset-xs8{margin-right:66.6666666667%}.v-application--is-ltr .flex.offset-xs7{margin-left:58.3333333333%}.v-application--is-rtl .flex.offset-xs7{margin-right:58.3333333333%}.v-application--is-ltr .flex.offset-xs6{margin-left:50%}.v-application--is-rtl .flex.offset-xs6{margin-right:50%}.v-application--is-ltr .flex.offset-xs5{margin-left:41.6666666667%}.v-application--is-rtl .flex.offset-xs5{margin-right:41.6666666667%}.v-application--is-ltr .flex.offset-xs4{margin-left:33.3333333333%}.v-application--is-rtl .flex.offset-xs4{margin-right:33.3333333333%}.v-application--is-ltr .flex.offset-xs3{margin-left:25%}.v-application--is-rtl .flex.offset-xs3{margin-right:25%}.v-application--is-ltr .flex.offset-xs2{margin-left:16.6666666667%}.v-application--is-rtl .flex.offset-xs2{margin-right:16.6666666667%}.v-application--is-ltr .flex.offset-xs1{margin-left:8.3333333333%}.v-application--is-rtl .flex.offset-xs1{margin-right:8.3333333333%}.v-application--is-ltr .flex.offset-xs0{margin-left:0}.v-application--is-rtl .flex.offset-xs0{margin-right:0}}@media (min-width:600px){.flex.sm12{flex-basis:100%;flex-grow:0;max-width:100%}.flex.order-sm12{order:12}.flex.sm11{flex-basis:91.6666666667%;flex-grow:0;max-width:91.6666666667%}.flex.order-sm11{order:11}.flex.sm10{flex-basis:83.3333333333%;flex-grow:0;max-width:83.3333333333%}.flex.order-sm10{order:10}.flex.sm9{flex-basis:75%;flex-grow:0;max-width:75%}.flex.order-sm9{order:9}.flex.sm8{flex-basis:66.6666666667%;flex-grow:0;max-width:66.6666666667%}.flex.order-sm8{order:8}.flex.sm7{flex-basis:58.3333333333%;flex-grow:0;max-width:58.3333333333%}.flex.order-sm7{order:7}.flex.sm6{flex-basis:50%;flex-grow:0;max-width:50%}.flex.order-sm6{order:6}.flex.sm5{flex-basis:41.6666666667%;flex-grow:0;max-width:41.6666666667%}.flex.order-sm5{order:5}.flex.sm4{flex-basis:33.3333333333%;flex-grow:0;max-width:33.3333333333%}.flex.order-sm4{order:4}.flex.sm3{flex-basis:25%;flex-grow:0;max-width:25%}.flex.order-sm3{order:3}.flex.sm2{flex-basis:16.6666666667%;flex-grow:0;max-width:16.6666666667%}.flex.order-sm2{order:2}.flex.sm1{flex-basis:8.3333333333%;flex-grow:0;max-width:8.3333333333%}.flex.order-sm1{order:1}.v-application--is-ltr .flex.offset-sm12{margin-left:100%}.v-application--is-rtl .flex.offset-sm12{margin-right:100%}.v-application--is-ltr .flex.offset-sm11{margin-left:91.6666666667%}.v-application--is-rtl .flex.offset-sm11{margin-right:91.6666666667%}.v-application--is-ltr .flex.offset-sm10{margin-left:83.3333333333%}.v-application--is-rtl .flex.offset-sm10{margin-right:83.3333333333%}.v-application--is-ltr .flex.offset-sm9{margin-left:75%}.v-application--is-rtl .flex.offset-sm9{margin-right:75%}.v-application--is-ltr .flex.offset-sm8{margin-left:66.6666666667%}.v-application--is-rtl .flex.offset-sm8{margin-right:66.6666666667%}.v-application--is-ltr .flex.offset-sm7{margin-left:58.3333333333%}.v-application--is-rtl .flex.offset-sm7{margin-right:58.3333333333%}.v-application--is-ltr .flex.offset-sm6{margin-left:50%}.v-application--is-rtl .flex.offset-sm6{margin-right:50%}.v-application--is-ltr .flex.offset-sm5{margin-left:41.6666666667%}.v-application--is-rtl .flex.offset-sm5{margin-right:41.6666666667%}.v-application--is-ltr .flex.offset-sm4{margin-left:33.3333333333%}.v-application--is-rtl .flex.offset-sm4{margin-right:33.3333333333%}.v-application--is-ltr .flex.offset-sm3{margin-left:25%}.v-application--is-rtl .flex.offset-sm3{margin-right:25%}.v-application--is-ltr .flex.offset-sm2{margin-left:16.6666666667%}.v-application--is-rtl .flex.offset-sm2{margin-right:16.6666666667%}.v-application--is-ltr .flex.offset-sm1{margin-left:8.3333333333%}.v-application--is-rtl .flex.offset-sm1{margin-right:8.3333333333%}.v-application--is-ltr .flex.offset-sm0{margin-left:0}.v-application--is-rtl .flex.offset-sm0{margin-right:0}}@media (min-width:960px){.flex.md12{flex-basis:100%;flex-grow:0;max-width:100%}.flex.order-md12{order:12}.flex.md11{flex-basis:91.6666666667%;flex-grow:0;max-width:91.6666666667%}.flex.order-md11{order:11}.flex.md10{flex-basis:83.3333333333%;flex-grow:0;max-width:83.3333333333%}.flex.order-md10{order:10}.flex.md9{flex-basis:75%;flex-grow:0;max-width:75%}.flex.order-md9{order:9}.flex.md8{flex-basis:66.6666666667%;flex-grow:0;max-width:66.6666666667%}.flex.order-md8{order:8}.flex.md7{flex-basis:58.3333333333%;flex-grow:0;max-width:58.3333333333%}.flex.order-md7{order:7}.flex.md6{flex-basis:50%;flex-grow:0;max-width:50%}.flex.order-md6{order:6}.flex.md5{flex-basis:41.6666666667%;flex-grow:0;max-width:41.6666666667%}.flex.order-md5{order:5}.flex.md4{flex-basis:33.3333333333%;flex-grow:0;max-width:33.3333333333%}.flex.order-md4{order:4}.flex.md3{flex-basis:25%;flex-grow:0;max-width:25%}.flex.order-md3{order:3}.flex.md2{flex-basis:16.6666666667%;flex-grow:0;max-width:16.6666666667%}.flex.order-md2{order:2}.flex.md1{flex-basis:8.3333333333%;flex-grow:0;max-width:8.3333333333%}.flex.order-md1{order:1}.v-application--is-ltr .flex.offset-md12{margin-left:100%}.v-application--is-rtl .flex.offset-md12{margin-right:100%}.v-application--is-ltr .flex.offset-md11{margin-left:91.6666666667%}.v-application--is-rtl .flex.offset-md11{margin-right:91.6666666667%}.v-application--is-ltr .flex.offset-md10{margin-left:83.3333333333%}.v-application--is-rtl .flex.offset-md10{margin-right:83.3333333333%}.v-application--is-ltr .flex.offset-md9{margin-left:75%}.v-application--is-rtl .flex.offset-md9{margin-right:75%}.v-application--is-ltr .flex.offset-md8{margin-left:66.6666666667%}.v-application--is-rtl .flex.offset-md8{margin-right:66.6666666667%}.v-application--is-ltr .flex.offset-md7{margin-left:58.3333333333%}.v-application--is-rtl .flex.offset-md7{margin-right:58.3333333333%}.v-application--is-ltr .flex.offset-md6{margin-left:50%}.v-application--is-rtl .flex.offset-md6{margin-right:50%}.v-application--is-ltr .flex.offset-md5{margin-left:41.6666666667%}.v-application--is-rtl .flex.offset-md5{margin-right:41.6666666667%}.v-application--is-ltr .flex.offset-md4{margin-left:33.3333333333%}.v-application--is-rtl .flex.offset-md4{margin-right:33.3333333333%}.v-application--is-ltr .flex.offset-md3{margin-left:25%}.v-application--is-rtl .flex.offset-md3{margin-right:25%}.v-application--is-ltr .flex.offset-md2{margin-left:16.6666666667%}.v-application--is-rtl .flex.offset-md2{margin-right:16.6666666667%}.v-application--is-ltr .flex.offset-md1{margin-left:8.3333333333%}.v-application--is-rtl .flex.offset-md1{margin-right:8.3333333333%}.v-application--is-ltr .flex.offset-md0{margin-left:0}.v-application--is-rtl .flex.offset-md0{margin-right:0}}@media (min-width:1264px){.flex.lg12{flex-basis:100%;flex-grow:0;max-width:100%}.flex.order-lg12{order:12}.flex.lg11{flex-basis:91.6666666667%;flex-grow:0;max-width:91.6666666667%}.flex.order-lg11{order:11}.flex.lg10{flex-basis:83.3333333333%;flex-grow:0;max-width:83.3333333333%}.flex.order-lg10{order:10}.flex.lg9{flex-basis:75%;flex-grow:0;max-width:75%}.flex.order-lg9{order:9}.flex.lg8{flex-basis:66.6666666667%;flex-grow:0;max-width:66.6666666667%}.flex.order-lg8{order:8}.flex.lg7{flex-basis:58.3333333333%;flex-grow:0;max-width:58.3333333333%}.flex.order-lg7{order:7}.flex.lg6{flex-basis:50%;flex-grow:0;max-width:50%}.flex.order-lg6{order:6}.flex.lg5{flex-basis:41.6666666667%;flex-grow:0;max-width:41.6666666667%}.flex.order-lg5{order:5}.flex.lg4{flex-basis:33.3333333333%;flex-grow:0;max-width:33.3333333333%}.flex.order-lg4{order:4}.flex.lg3{flex-basis:25%;flex-grow:0;max-width:25%}.flex.order-lg3{order:3}.flex.lg2{flex-basis:16.6666666667%;flex-grow:0;max-width:16.6666666667%}.flex.order-lg2{order:2}.flex.lg1{flex-basis:8.3333333333%;flex-grow:0;max-width:8.3333333333%}.flex.order-lg1{order:1}.v-application--is-ltr .flex.offset-lg12{margin-left:100%}.v-application--is-rtl .flex.offset-lg12{margin-right:100%}.v-application--is-ltr .flex.offset-lg11{margin-left:91.6666666667%}.v-application--is-rtl .flex.offset-lg11{margin-right:91.6666666667%}.v-application--is-ltr .flex.offset-lg10{margin-left:83.3333333333%}.v-application--is-rtl .flex.offset-lg10{margin-right:83.3333333333%}.v-application--is-ltr .flex.offset-lg9{margin-left:75%}.v-application--is-rtl .flex.offset-lg9{margin-right:75%}.v-application--is-ltr .flex.offset-lg8{margin-left:66.6666666667%}.v-application--is-rtl .flex.offset-lg8{margin-right:66.6666666667%}.v-application--is-ltr .flex.offset-lg7{margin-left:58.3333333333%}.v-application--is-rtl .flex.offset-lg7{margin-right:58.3333333333%}.v-application--is-ltr .flex.offset-lg6{margin-left:50%}.v-application--is-rtl .flex.offset-lg6{margin-right:50%}.v-application--is-ltr .flex.offset-lg5{margin-left:41.6666666667%}.v-application--is-rtl .flex.offset-lg5{margin-right:41.6666666667%}.v-application--is-ltr .flex.offset-lg4{margin-left:33.3333333333%}.v-application--is-rtl .flex.offset-lg4{margin-right:33.3333333333%}.v-application--is-ltr .flex.offset-lg3{margin-left:25%}.v-application--is-rtl .flex.offset-lg3{margin-right:25%}.v-application--is-ltr .flex.offset-lg2{margin-left:16.6666666667%}.v-application--is-rtl .flex.offset-lg2{margin-right:16.6666666667%}.v-application--is-ltr .flex.offset-lg1{margin-left:8.3333333333%}.v-application--is-rtl .flex.offset-lg1{margin-right:8.3333333333%}.v-application--is-ltr .flex.offset-lg0{margin-left:0}.v-application--is-rtl .flex.offset-lg0{margin-right:0}}@media (min-width:1904px){.flex.xl12{flex-basis:100%;flex-grow:0;max-width:100%}.flex.order-xl12{order:12}.flex.xl11{flex-basis:91.6666666667%;flex-grow:0;max-width:91.6666666667%}.flex.order-xl11{order:11}.flex.xl10{flex-basis:83.3333333333%;flex-grow:0;max-width:83.3333333333%}.flex.order-xl10{order:10}.flex.xl9{flex-basis:75%;flex-grow:0;max-width:75%}.flex.order-xl9{order:9}.flex.xl8{flex-basis:66.6666666667%;flex-grow:0;max-width:66.6666666667%}.flex.order-xl8{order:8}.flex.xl7{flex-basis:58.3333333333%;flex-grow:0;max-width:58.3333333333%}.flex.order-xl7{order:7}.flex.xl6{flex-basis:50%;flex-grow:0;max-width:50%}.flex.order-xl6{order:6}.flex.xl5{flex-basis:41.6666666667%;flex-grow:0;max-width:41.6666666667%}.flex.order-xl5{order:5}.flex.xl4{flex-basis:33.3333333333%;flex-grow:0;max-width:33.3333333333%}.flex.order-xl4{order:4}.flex.xl3{flex-basis:25%;flex-grow:0;max-width:25%}.flex.order-xl3{order:3}.flex.xl2{flex-basis:16.6666666667%;flex-grow:0;max-width:16.6666666667%}.flex.order-xl2{order:2}.flex.xl1{flex-basis:8.3333333333%;flex-grow:0;max-width:8.3333333333%}.flex.order-xl1{order:1}.v-application--is-ltr .flex.offset-xl12{margin-left:100%}.v-application--is-rtl .flex.offset-xl12{margin-right:100%}.v-application--is-ltr .flex.offset-xl11{margin-left:91.6666666667%}.v-application--is-rtl .flex.offset-xl11{margin-right:91.6666666667%}.v-application--is-ltr .flex.offset-xl10{margin-left:83.3333333333%}.v-application--is-rtl .flex.offset-xl10{margin-right:83.3333333333%}.v-application--is-ltr .flex.offset-xl9{margin-left:75%}.v-application--is-rtl .flex.offset-xl9{margin-right:75%}.v-application--is-ltr .flex.offset-xl8{margin-left:66.6666666667%}.v-application--is-rtl .flex.offset-xl8{margin-right:66.6666666667%}.v-application--is-ltr .flex.offset-xl7{margin-left:58.3333333333%}.v-application--is-rtl .flex.offset-xl7{margin-right:58.3333333333%}.v-application--is-ltr .flex.offset-xl6{margin-left:50%}.v-application--is-rtl .flex.offset-xl6{margin-right:50%}.v-application--is-ltr .flex.offset-xl5{margin-left:41.6666666667%}.v-application--is-rtl .flex.offset-xl5{margin-right:41.6666666667%}.v-application--is-ltr .flex.offset-xl4{margin-left:33.3333333333%}.v-application--is-rtl .flex.offset-xl4{margin-right:33.3333333333%}.v-application--is-ltr .flex.offset-xl3{margin-left:25%}.v-application--is-rtl .flex.offset-xl3{margin-right:25%}.v-application--is-ltr .flex.offset-xl2{margin-left:16.6666666667%}.v-application--is-rtl .flex.offset-xl2{margin-right:16.6666666667%}.v-application--is-ltr .flex.offset-xl1{margin-left:8.3333333333%}.v-application--is-rtl .flex.offset-xl1{margin-right:8.3333333333%}.v-application--is-ltr .flex.offset-xl0{margin-left:0}.v-application--is-rtl .flex.offset-xl0{margin-right:0}}.child-flex>*,.flex{flex:1 1 auto;max-width:100%}.child-flex>.grow-shrink-0,.flex.grow-shrink-0{flex-grow:0;flex-shrink:0}.grow,.spacer{flex-grow:1!important}.grow{flex-shrink:0!important}.shrink{flex-grow:0!important;flex-shrink:1!important}.fill-height{height:100%}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2864,6 +2927,48 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-slider .v-slider__thumb,.theme--light.v-slider .v-slider__track-background,.theme--light.v-slider .v-slider__track-fill{background:rgba(0,0,0,.26)}.theme--dark.v-slider .v-slider__thumb,.theme--dark.v-slider .v-slider__track-background,.theme--dark.v-slider .v-slider__track-fill{background:hsla(0,0%,100%,.2)}.v-slider{cursor:default;display:flex;align-items:center;position:relative;flex:1;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-slider input{cursor:default;padding:0;width:100%;display:none}.v-slider__track-container{position:absolute;border-radius:0}.v-slider__thumb-container,.v-slider__track-background,.v-slider__track-fill{position:absolute;transition:.3s cubic-bezier(.25,.8,.5,1)}.v-slider__thumb-container{outline:none;top:50%}.v-slider__thumb-container:hover .v-slider__thumb:before{transform:scale(1)}.v-slider__thumb{width:12px;height:12px;left:-6px;top:50%;transform:translateY(-50%);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-slider__thumb,.v-slider__thumb:before{position:absolute;border-radius:50%;transition:.3s cubic-bezier(.25,.8,.5,1)}.v-slider__thumb:before{content:\"\";color:inherit;width:36px;height:36px;background:currentColor;opacity:.3;left:-12px;top:-12px;transform:scale(.1);pointer-events:none}.v-slider__thumb:after{content:\"\";width:42px;height:42px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.v-slider__tick,.v-slider__ticks-container{position:absolute}.v-slider__tick{opacity:0;background-color:rgba(0,0,0,.5);transition:.3s cubic-bezier(.25,.8,.5,1);border-radius:0}.v-slider__tick--filled{background-color:hsla(0,0%,100%,.5)}.v-application--is-ltr .v-slider__tick:first-child .v-slider__tick-label{transform:none}.v-application--is-rtl .v-slider__tick:first-child .v-slider__tick-label{transform:translateX(100%)}.v-application--is-ltr .v-slider__tick:last-child .v-slider__tick-label{transform:translateX(-100%)}.v-application--is-rtl .v-slider__tick:last-child .v-slider__tick-label{transform:none}.v-slider__tick-label{position:absolute;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap}.v-slider__thumb-label-container{top:0}.v-slider__thumb-label,.v-slider__thumb-label-container{position:absolute;left:0;transition:.3s cubic-bezier(.25,.8,.25,1)}.v-slider__thumb-label{display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#fff;width:32px;height:32px;border-radius:50% 50% 0;bottom:100%;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-slider--horizontal{min-height:32px;margin-left:8px;margin-right:8px}.v-slider--horizontal .v-slider__track-container{width:100%;height:2px;left:0;top:50%;transform:translateY(-50%)}.v-slider--horizontal .v-slider__track-background,.v-slider--horizontal .v-slider__track-fill{height:100%}.v-slider--horizontal .v-slider__ticks-container{left:0;height:2px;width:100%}.v-application--is-ltr .v-slider--horizontal .v-slider__tick:first-child .v-slider__tick-label,.v-application--is-rtl .v-slider--horizontal .v-slider__tick:first-child .v-slider__tick-label{transform:translateX(0)}.v-application--is-ltr .v-slider--horizontal .v-slider__tick:last-child .v-slider__tick-label{transform:translateX(-100%)}.v-application--is-rtl .v-slider--horizontal .v-slider__tick:last-child .v-slider__tick-label{transform:translateX(100%)}.v-slider--horizontal .v-slider__tick .v-slider__tick-label{top:8px}.v-application--is-ltr .v-slider--horizontal .v-slider__tick .v-slider__tick-label{transform:translateX(-50%)}.v-application--is-rtl .v-slider--horizontal .v-slider__tick .v-slider__tick-label{transform:translateX(50%)}.v-slider--horizontal .v-slider__thumb-label{transform:translateY(-20%) translateY(-12px) translateX(-50%) rotate(45deg)}.v-slider--horizontal .v-slider__thumb-label>*{transform:rotate(-45deg)}.v-slider--vertical{min-height:150px;margin-top:12px;margin-bottom:12px}.v-slider--vertical .v-slider__track-container{height:100%;width:2px;left:50%;top:0;transform:translateX(-50%)}.v-slider--vertical .v-slider__track-background,.v-slider--vertical .v-slider__track-fill{width:100%}.v-slider--vertical .v-slider__thumb-container{left:50%}.v-slider--vertical .v-slider__ticks-container{top:0;width:2px;height:100%;left:50%;transform:translateX(-50%)}.v-application--is-ltr .v-slider--vertical .v-slider__tick .v-slider__tick-label,.v-application--is-ltr .v-slider--vertical .v-slider__tick:first-child .v-slider__tick-label,.v-application--is-ltr .v-slider--vertical .v-slider__tick:last-child .v-slider__tick-label{transform:translateY(-50%);left:12px}.v-application--is-rtl .v-slider--vertical .v-slider__tick .v-slider__tick-label,.v-application--is-rtl .v-slider--vertical .v-slider__tick:first-child .v-slider__tick-label,.v-application--is-rtl .v-slider--vertical .v-slider__tick:last-child .v-slider__tick-label{transform:translateY(-50%);right:12px}.v-slider--vertical .v-slider__thumb-label>*{transform:rotate(-135deg)}.v-slider__thumb-container--focused .v-slider__thumb:before{transform:scale(1)}.v-slider--active .v-slider__tick{opacity:1}.v-slider__thumb-container--active .v-slider__thumb:before{transform:scale(1.5)!important}.v-slider--disabled{pointer-events:none}.v-slider--disabled .v-slider__thumb{width:8px;height:8px;left:-4px}.v-slider--disabled .v-slider__thumb:before{display:none}.v-slider__ticks-container--always-show .v-slider__tick{opacity:1}.v-input__slider.v-input--is-readonly>.v-input__control{pointer-events:none}.v-application--is-ltr .v-input__slider .v-input__slot .v-label{margin-left:0;margin-right:12px}.v-application--is-ltr .v-input__slider--inverse-label .v-input__slot .v-label,.v-application--is-rtl .v-input__slider .v-input__slot .v-label{margin-right:0;margin-left:12px}.v-application--is-rtl .v-input__slider--inverse-label .v-input__slot .v-label{margin-left:0;margin-right:12px}.v-input__slider--vertical{align-items:center}.v-application--is-ltr .v-input__slider--vertical{flex-direction:column-reverse}.v-application--is-rtl .v-input__slider--vertical{flex-direction:column}.v-input__slider--vertical .v-input__append-outer,.v-input__slider--vertical .v-input__prepend-outer,.v-input__slider--vertical .v-input__slot{margin:0}.v-input__slider--vertical .v-messages{display:none}.v-input--has-state .v-slider__track-background{opacity:.4}", ""]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 6824:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-snack__wrapper{color:rgba(0,0,0,.87)}.theme--dark.v-snack__wrapper{color:#fff}.v-sheet.v-snack__wrapper{border-radius:4px}.v-sheet.v-snack__wrapper:not(.v-sheet--outlined){box-shadow:0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12)}.v-sheet.v-snack__wrapper.v-sheet--shaped{border-radius:24px 4px}.v-snack{bottom:0;display:flex;font-size:.875rem;justify-content:center;left:0;pointer-events:none;right:0;top:0;width:100%}.v-snack:not(.v-snack--absolute){height:100vh;position:fixed;z-index:1000}.v-snack:not(.v-snack--centered):not(.v-snack--top){align-items:flex-end}.v-snack__wrapper{align-items:center;border-color:currentColor!important;display:flex;margin:8px;max-width:672px;min-height:48px;min-width:344px;padding:0;pointer-events:auto;position:relative;transition-duration:.15s;transition-property:opacity,transform;transition-timing-function:cubic-bezier(0,0,.2,1);z-index:1}.v-snack__wrapper.theme--dark{background-color:#333;color:hsla(0,0%,100%,.87)}.v-snack__content{flex-grow:1;font-size:.875rem;font-weight:400;letter-spacing:.0178571429em;line-height:1.25rem;margin-right:auto;padding:14px 16px;text-align:initial}.v-snack__action{align-items:center;align-self:center;display:flex}.v-snack__action .v-ripple__container{display:none}.v-application--is-ltr .v-snack__action{margin-right:8px}.v-application--is-rtl .v-snack__action{margin-left:8px}.v-snack__action>.v-snack__btn.v-btn{padding:0 8px}.v-snack__btn{margin-left:0;margin-right:0;margin:0;min-width:auto}.v-snack--absolute{height:100%;position:absolute;z-index:1}.v-snack--centered{align-items:center}.v-snack--left{justify-content:flex-start;right:auto}.v-snack--multi-line .v-snack__wrapper{min-height:68px}.v-snack--right{justify-content:flex-end;left:auto}.v-snack:not(.v-snack--has-background) .v-snack__wrapper{box-shadow:none}.v-snack--bottom{top:auto}.v-snack--text .v-snack__wrapper:before{background-color:currentColor;border-radius:inherit;bottom:0;content:\"\";left:0;opacity:.12;pointer-events:none;position:absolute;right:0;top:0;z-index:-1}.v-snack--top{align-items:flex-start;bottom:auto}.v-snack--vertical .v-snack__wrapper{flex-direction:column}.v-snack--vertical .v-snack__wrapper .v-snack__action{align-self:flex-end;margin-bottom:8px}.v-snack-transition-enter.v-snack__wrapper{transform:scale(.8)}.v-snack-transition-enter.v-snack__wrapper,.v-snack-transition-leave-to.v-snack__wrapper{opacity:0}", ""]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 6637:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-text-field>.v-input__control>.v-input__slot:before{border-color:rgba(0,0,0,.42)}.theme--light.v-text-field:not(.v-input--has-state):hover>.v-input__control>.v-input__slot:before{border-color:rgba(0,0,0,.87)}.theme--light.v-text-field.v-input--is-disabled .v-input__slot:before{-o-border-image:repeating-linear-gradient(90deg,rgba(0,0,0,.38) 0,rgba(0,0,0,.38) 2px,transparent 0,transparent 4px) 1 repeat;border-image:repeating-linear-gradient(90deg,rgba(0,0,0,.38) 0,rgba(0,0,0,.38) 2px,transparent 0,transparent 4px) 1 repeat}.theme--light.v-text-field--filled>.v-input__control>.v-input__slot{background:rgba(0,0,0,.06)}.theme--light.v-text-field--filled:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot:hover{background:rgba(0,0,0,.12)}.theme--light.v-text-field--solo>.v-input__control>.v-input__slot{background:#fff}.theme--light.v-text-field--solo-inverted>.v-input__control>.v-input__slot{background:rgba(0,0,0,.06)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot{background:#424242}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input{color:#fff}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::-moz-placeholder{color:hsla(0,0%,100%,.5)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input:-ms-input-placeholder{color:hsla(0,0%,100%,.5)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::placeholder{color:hsla(0,0%,100%,.5)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot .v-label{color:hsla(0,0%,100%,.7)}.theme--light.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot fieldset{color:rgba(0,0,0,.38)}.theme--light.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state):not(.v-input--is-disabled)>.v-input__control>.v-input__slot:hover fieldset{color:rgba(0,0,0,.86)}.theme--light.v-text-field--outlined:not(.v-input--is-focused).v-input--is-disabled>.v-input__control>.v-input__slot fieldset{color:rgba(0,0,0,.26)}.theme--dark.v-text-field>.v-input__control>.v-input__slot:before{border-color:hsla(0,0%,100%,.7)}.theme--dark.v-text-field:not(.v-input--has-state):hover>.v-input__control>.v-input__slot:before{border-color:#fff}.theme--dark.v-text-field.v-input--is-disabled .v-input__slot:before{-o-border-image:repeating-linear-gradient(90deg,hsla(0,0%,100%,.5) 0,hsla(0,0%,100%,.5) 2px,transparent 0,transparent 4px) 1 repeat;border-image:repeating-linear-gradient(90deg,hsla(0,0%,100%,.5) 0,hsla(0,0%,100%,.5) 2px,transparent 0,transparent 4px) 1 repeat}.theme--dark.v-text-field--filled>.v-input__control>.v-input__slot{background:hsla(0,0%,100%,.08)}.theme--dark.v-text-field--filled:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot:hover{background:hsla(0,0%,100%,.16)}.theme--dark.v-text-field--solo>.v-input__control>.v-input__slot{background:#1e1e1e}.theme--dark.v-text-field--solo-inverted>.v-input__control>.v-input__slot{background:hsla(0,0%,100%,.16)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot{background:#fff}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input{color:rgba(0,0,0,.87)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::-moz-placeholder{color:rgba(0,0,0,.38)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input:-ms-input-placeholder{color:rgba(0,0,0,.38)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::placeholder{color:rgba(0,0,0,.38)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot .v-label{color:rgba(0,0,0,.6)}.theme--dark.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot fieldset{color:hsla(0,0%,100%,.24)}.theme--dark.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state):not(.v-input--is-disabled)>.v-input__control>.v-input__slot:hover fieldset{color:#fff}.theme--dark.v-text-field--outlined:not(.v-input--is-focused).v-input--is-disabled>.v-input__control>.v-input__slot fieldset{color:hsla(0,0%,100%,.16)}.v-text-field{padding-top:12px;margin-top:4px}.v-text-field__prefix,.v-text-field__suffix{line-height:20px}.v-text-field input{flex:1 1 auto;line-height:20px;padding:8px 0 8px;max-width:100%;min-width:0;width:100%}.v-text-field .v-input__control,.v-text-field .v-input__slot,.v-text-field fieldset{border-radius:inherit}.v-text-field .v-input__control,.v-text-field fieldset,.v-text-field.v-input--has-state .v-input__control>.v-text-field__details>.v-counter,.v-text-field.v-input--is-disabled .v-input__control>.v-text-field__details>.v-counter,.v-text-field.v-input--is-disabled .v-input__control>.v-text-field__details>.v-messages{color:currentColor}.v-text-field.v-input--dense{padding-top:0}.v-text-field.v-input--dense .v-label{top:4px}.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__prefix,.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__suffix,.v-text-field.v-input--dense:not(.v-text-field--outlined) input{padding:4px 0 2px}.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__prefix{padding-right:4px}.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__suffix{padding-left:4px}.v-text-field.v-input--dense[type=text]::-ms-clear{display:none}.v-text-field.v-input--dense .v-input__append-inner,.v-text-field.v-input--dense .v-input__prepend-inner{margin-top:0}.v-text-field .v-input__append-inner,.v-text-field .v-input__prepend-inner{align-self:flex-start;display:inline-flex;margin-top:4px;line-height:1;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-application--is-ltr .v-text-field .v-input__prepend-inner{margin-right:auto;padding-right:4px}.v-application--is-ltr .v-text-field .v-input__append-inner,.v-application--is-rtl .v-text-field .v-input__prepend-inner{margin-left:auto;padding-left:4px}.v-application--is-rtl .v-text-field .v-input__append-inner{margin-right:auto;padding-right:4px}.v-text-field .v-counter{white-space:nowrap}.v-application--is-ltr .v-text-field .v-counter{margin-left:8px}.v-application--is-rtl .v-text-field .v-counter{margin-right:8px}.v-text-field .v-label{max-width:90%;overflow:hidden;text-overflow:ellipsis;top:6px;white-space:nowrap;pointer-events:none}.v-application--is-ltr .v-text-field .v-label{transform-origin:top left}.v-application--is-rtl .v-text-field .v-label{transform-origin:top right}.v-text-field .v-label--active{max-width:133%;transform:translateY(-18px) scale(.75);pointer-events:auto}.v-text-field>.v-input__control>.v-input__slot{cursor:text}.v-text-field>.v-input__control>.v-input__slot:after,.v-text-field>.v-input__control>.v-input__slot:before{bottom:-1px;content:\"\";left:0;position:absolute;transition:.3s cubic-bezier(.25,.8,.5,1);width:100%}.v-text-field>.v-input__control>.v-input__slot:before{border-color:inherit;border-style:solid;border-width:thin 0 0 0}.v-text-field>.v-input__control>.v-input__slot:after{background-color:currentColor;border-color:currentColor;border-style:solid;border-width:thin 0 thin 0;transform:scaleX(0)}.v-text-field__details{display:flex;flex:1 0 auto;max-width:100%;min-height:14px;overflow:hidden}.v-text-field__prefix,.v-text-field__suffix{align-self:center;cursor:default;transition:color .3s cubic-bezier(.25,.8,.5,1);white-space:nowrap}.v-application--is-ltr .v-text-field__prefix{text-align:right;padding-right:4px}.v-application--is-rtl .v-text-field__prefix{text-align:left;padding-left:4px}.v-text-field__suffix{white-space:nowrap}.v-application--is-ltr .v-text-field__suffix{padding-left:4px}.v-application--is-rtl .v-text-field__suffix{padding-right:4px}.v-application--is-ltr .v-text-field--reverse .v-text-field__prefix{text-align:left;padding-right:0;padding-left:4px}.v-application--is-rtl .v-text-field--reverse .v-text-field__prefix{text-align:right;padding-right:4px;padding-left:0}.v-application--is-ltr .v-text-field--reverse .v-text-field__suffix{padding-left:0;padding-right:4px}.v-application--is-rtl .v-text-field--reverse .v-text-field__suffix{padding-left:4px;padding-right:0}.v-text-field>.v-input__control>.v-input__slot>.v-text-field__slot{display:flex;flex:1 1 auto;position:relative}.v-text-field:not(.v-text-field--is-booted) .v-label,.v-text-field:not(.v-text-field--is-booted) legend{transition:none}.v-text-field--filled,.v-text-field--full-width,.v-text-field--outlined{position:relative}.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--full-width>.v-input__control>.v-input__slot,.v-text-field--outlined>.v-input__control>.v-input__slot{align-items:stretch;min-height:56px}.v-text-field--filled.v-input--dense>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense>.v-input__control>.v-input__slot{min-height:52px}.v-text-field--filled.v-input--dense.v-text-field--outlined.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--filled.v-input--dense.v-text-field--outlined>.v-input__control>.v-input__slot,.v-text-field--filled.v-input--dense.v-text-field--single-line>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense.v-text-field--outlined.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense.v-text-field--outlined>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense.v-text-field--single-line>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense.v-text-field--outlined.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense.v-text-field--outlined>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense.v-text-field--single-line>.v-input__control>.v-input__slot{min-height:40px}.v-text-field--outlined{border-radius:4px}.v-text-field--enclosed .v-input__append-inner,.v-text-field--enclosed .v-input__append-outer,.v-text-field--enclosed .v-input__prepend-inner,.v-text-field--enclosed .v-input__prepend-outer,.v-text-field--full-width .v-input__append-inner,.v-text-field--full-width .v-input__append-outer,.v-text-field--full-width .v-input__prepend-inner,.v-text-field--full-width .v-input__prepend-outer{margin-top:17px}.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__append-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__append-outer,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__prepend-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__prepend-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__append-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__append-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__prepend-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__prepend-outer{margin-top:14px}.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-outer,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-outer{margin-top:9px}.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-outer,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-outer{margin-top:8px}.v-text-field--filled .v-label,.v-text-field--full-width .v-label{top:18px}.v-text-field--filled .v-label--active,.v-text-field--full-width .v-label--active{transform:translateY(-6px) scale(.75)}.v-text-field--filled.v-input--dense .v-label,.v-text-field--full-width.v-input--dense .v-label{top:17px}.v-text-field--filled.v-input--dense .v-label--active,.v-text-field--full-width.v-input--dense .v-label--active{transform:translateY(-10px) scale(.75)}.v-text-field--filled.v-input--dense.v-text-field--single-line .v-label,.v-text-field--full-width.v-input--dense.v-text-field--single-line .v-label{top:11px}.v-text-field--filled{border-radius:4px 4px 0 0}.v-text-field--filled:not(.v-text-field--single-line) input{margin-top:22px}.v-text-field--filled.v-input--dense:not(.v-text-field--single-line).v-text-field--outlined input{margin-top:0}.v-text-field--filled .v-text-field__prefix,.v-text-field--filled .v-text-field__suffix{max-height:32px;margin-top:20px}.v-text-field--full-width{border-radius:0}.v-text-field--outlined .v-text-field__slot,.v-text-field--single-line .v-text-field__slot{align-items:center}.v-text-field.v-text-field--enclosed{margin:0;padding:0}.v-text-field.v-text-field--enclosed.v-text-field--single-line .v-text-field__prefix,.v-text-field.v-text-field--enclosed.v-text-field--single-line .v-text-field__suffix{margin-top:0}.v-text-field.v-text-field--enclosed:not(.v-text-field--filled) .v-progress-linear__background{display:none}.v-text-field.v-text-field--enclosed .v-text-field__details,.v-text-field.v-text-field--enclosed:not(.v-text-field--rounded)>.v-input__control>.v-input__slot{padding:0 12px}.v-text-field.v-text-field--enclosed .v-text-field__details{padding-top:0;margin-bottom:8px}.v-application--is-ltr .v-text-field--reverse input{text-align:right}.v-application--is-rtl .v-text-field--reverse input{text-align:left}.v-application--is-ltr .v-text-field--reverse .v-label{transform-origin:top right}.v-application--is-rtl .v-text-field--reverse .v-label{transform-origin:top left}.v-text-field--reverse .v-text-field__slot,.v-text-field--reverse>.v-input__control>.v-input__slot{flex-direction:row-reverse}.v-text-field--outlined>.v-input__control>.v-input__slot:after,.v-text-field--outlined>.v-input__control>.v-input__slot:before,.v-text-field--rounded>.v-input__control>.v-input__slot:after,.v-text-field--rounded>.v-input__control>.v-input__slot:before,.v-text-field--solo>.v-input__control>.v-input__slot:after,.v-text-field--solo>.v-input__control>.v-input__slot:before{display:none}.v-text-field--outlined,.v-text-field--solo{border-radius:4px}.v-text-field--outlined{margin-bottom:16px;transition:border .3s cubic-bezier(.25,.8,.5,1)}.v-text-field--outlined .v-label{top:18px}.v-text-field--outlined .v-label--active{transform:translateY(-24px) scale(.75)}.v-text-field--outlined.v-input--dense .v-label{top:10px}.v-text-field--outlined.v-input--dense .v-label--active{transform:translateY(-16px) scale(.75)}.v-text-field--outlined fieldset{border-collapse:collapse;border-color:currentColor;border-style:solid;border-width:1px;bottom:0;left:0;pointer-events:none;position:absolute;right:0;top:-5px;transition-duration:.15s;transition-property:color;transition-timing-function:cubic-bezier(.25,.8,.25,1)}.v-application--is-ltr .v-text-field--outlined fieldset{padding-left:8px}.v-application--is-ltr .v-text-field--outlined.v-text-field--reverse fieldset,.v-application--is-rtl .v-text-field--outlined fieldset{padding-right:8px}.v-application--is-rtl .v-text-field--outlined.v-text-field--reverse fieldset{padding-left:8px}.v-text-field--outlined legend{line-height:11px;padding:0;transition:width .3s cubic-bezier(.25,.8,.5,1)}.v-application--is-ltr .v-text-field--outlined legend{text-align:left}.v-application--is-rtl .v-text-field--outlined legend{text-align:right}.v-application--is-ltr .v-text-field--outlined.v-text-field--reverse legend{margin-left:auto}.v-application--is-rtl .v-text-field--outlined.v-text-field--reverse legend{margin-right:auto}.v-application--is-ltr .v-text-field--outlined.v-text-field--rounded legend{margin-left:12px}.v-application--is-rtl .v-text-field--outlined.v-text-field--rounded legend{margin-right:12px}.v-text-field--outlined>.v-input__control>.v-input__slot{background:transparent}.v-text-field--outlined .v-text-field__prefix{max-height:32px}.v-text-field--outlined .v-input__append-outer,.v-text-field--outlined .v-input__prepend-outer{margin-top:18px}.v-text-field--outlined.v-input--has-state fieldset,.v-text-field--outlined.v-input--is-focused fieldset{border:2px solid currentColor}.v-text-field--rounded{border-radius:28px}.v-text-field--rounded>.v-input__control>.v-input__slot{padding:0 24px}.v-text-field--shaped{border-radius:16px 16px 0 0}.v-text-field.v-text-field--solo .v-label{top:calc(50% - 9px)}.v-text-field.v-text-field--solo .v-input__control{min-height:48px;padding:0}.v-text-field.v-text-field--solo .v-input__control input{caret-color:auto}.v-text-field.v-text-field--solo.v-input--dense>.v-input__control{min-height:38px}.v-text-field.v-text-field--solo:not(.v-text-field--solo-flat)>.v-input__control>.v-input__slot{box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}.v-text-field.v-text-field--solo .v-input__append-inner,.v-text-field.v-text-field--solo .v-input__prepend-inner{align-self:center;margin-top:0}.v-text-field.v-text-field--solo .v-input__append-outer,.v-text-field.v-text-field--solo .v-input__prepend-outer{margin-top:12px}.v-text-field.v-text-field--solo.v-input--dense .v-input__append-outer,.v-text-field.v-text-field--solo.v-input--dense .v-input__prepend-outer{margin-top:7px}.v-text-field.v-input--is-focused>.v-input__control>.v-input__slot:after{transform:scaleX(1)}.v-text-field.v-input--has-state>.v-input__control>.v-input__slot:before{border-color:currentColor}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -3645,6 +3750,60 @@ module.exports.__inject__ = function (shadowRoot) {
 
 /***/ }),
 
+/***/ 4863:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(5739);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add CSS to Shadow Root
+var add = (__webpack_require__(2339)/* ["default"] */ .Z)
+module.exports.__inject__ = function (shadowRoot) {
+  add("624c2042", content, shadowRoot)
+};
+
+/***/ }),
+
+/***/ 448:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(1352);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add CSS to Shadow Root
+var add = (__webpack_require__(2339)/* ["default"] */ .Z)
+module.exports.__inject__ = function (shadowRoot) {
+  add("d10b24ea", content, shadowRoot)
+};
+
+/***/ }),
+
+/***/ 6554:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(2024);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add CSS to Shadow Root
+var add = (__webpack_require__(2339)/* ["default"] */ .Z)
+module.exports.__inject__ = function (shadowRoot) {
+  add("68c0d12b", content, shadowRoot)
+};
+
+/***/ }),
+
 /***/ 219:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
@@ -3785,6 +3944,42 @@ if(content.locals) module.exports = content.locals;
 var add = (__webpack_require__(2339)/* ["default"] */ .Z)
 module.exports.__inject__ = function (shadowRoot) {
   add("6cb307f0", content, shadowRoot)
+};
+
+/***/ }),
+
+/***/ 4718:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(6824);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add CSS to Shadow Root
+var add = (__webpack_require__(2339)/* ["default"] */ .Z)
+module.exports.__inject__ = function (shadowRoot) {
+  add("3c50b468", content, shadowRoot)
+};
+
+/***/ }),
+
+/***/ 3843:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(6637);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add CSS to Shadow Root
+var add = (__webpack_require__(2339)/* ["default"] */ .Z)
+module.exports.__inject__ = function (shadowRoot) {
+  add("21887bd0", content, shadowRoot)
 };
 
 /***/ }),
@@ -9088,17 +9283,17 @@ function resolveModifiedOptions (Ctor) {
   return modified
 }
 
-function vue_runtime_esm_Vue (options) {
+function Vue (options) {
   if (false
   ) {}
   this._init(options);
 }
 
-initMixin(vue_runtime_esm_Vue);
-stateMixin(vue_runtime_esm_Vue);
-eventsMixin(vue_runtime_esm_Vue);
-lifecycleMixin(vue_runtime_esm_Vue);
-renderMixin(vue_runtime_esm_Vue);
+initMixin(Vue);
+stateMixin(Vue);
+eventsMixin(Vue);
+lifecycleMixin(Vue);
+renderMixin(Vue);
 
 /*  */
 
@@ -9461,13 +9656,13 @@ function initGlobalAPI (Vue) {
   initAssetRegisters(Vue);
 }
 
-initGlobalAPI(vue_runtime_esm_Vue);
+initGlobalAPI(Vue);
 
-Object.defineProperty(vue_runtime_esm_Vue.prototype, '$isServer', {
+Object.defineProperty(Vue.prototype, '$isServer', {
   get: isServerRendering
 });
 
-Object.defineProperty(vue_runtime_esm_Vue.prototype, '$ssrContext', {
+Object.defineProperty(Vue.prototype, '$ssrContext', {
   get: function get () {
     /* istanbul ignore next */
     return this.$vnode && this.$vnode.ssrContext
@@ -9475,11 +9670,11 @@ Object.defineProperty(vue_runtime_esm_Vue.prototype, '$ssrContext', {
 });
 
 // expose FunctionalRenderContext for ssr runtime helper installation
-Object.defineProperty(vue_runtime_esm_Vue, 'FunctionalRenderContext', {
+Object.defineProperty(Vue, 'FunctionalRenderContext', {
   value: FunctionalRenderContext
 });
 
-vue_runtime_esm_Vue.version = '2.6.14';
+Vue.version = '2.6.14';
 
 /*  */
 
@@ -12351,21 +12546,21 @@ var platformComponents = {
 /*  */
 
 // install platform specific utils
-vue_runtime_esm_Vue.config.mustUseProp = mustUseProp;
-vue_runtime_esm_Vue.config.isReservedTag = isReservedTag;
-vue_runtime_esm_Vue.config.isReservedAttr = isReservedAttr;
-vue_runtime_esm_Vue.config.getTagNamespace = getTagNamespace;
-vue_runtime_esm_Vue.config.isUnknownElement = isUnknownElement;
+Vue.config.mustUseProp = mustUseProp;
+Vue.config.isReservedTag = isReservedTag;
+Vue.config.isReservedAttr = isReservedAttr;
+Vue.config.getTagNamespace = getTagNamespace;
+Vue.config.isUnknownElement = isUnknownElement;
 
 // install platform runtime directives & components
-extend(vue_runtime_esm_Vue.options.directives, platformDirectives);
-extend(vue_runtime_esm_Vue.options.components, platformComponents);
+extend(Vue.options.directives, platformDirectives);
+extend(Vue.options.components, platformComponents);
 
 // install platform patch function
-vue_runtime_esm_Vue.prototype.__patch__ = inBrowser ? patch : noop;
+Vue.prototype.__patch__ = inBrowser ? patch : noop;
 
 // public mount method
-vue_runtime_esm_Vue.prototype.$mount = function (
+Vue.prototype.$mount = function (
   el,
   hydrating
 ) {
@@ -12379,7 +12574,7 @@ if (inBrowser) {
   setTimeout(function () {
     if (config.devtools) {
       if (devtools) {
-        devtools.emit('init', vue_runtime_esm_Vue);
+        devtools.emit('init', Vue);
       } else if (
         false
       ) {}
@@ -12391,7 +12586,7 @@ if (inBrowser) {
 
 /*  */
 
-/* harmony default export */ var vue_runtime_esm = (vue_runtime_esm_Vue);
+/* harmony default export */ var vue_runtime_esm = (Vue);
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/web-component-wrapper/dist/vue-wc-wrapper.js
 const vue_wc_wrapper_camelizeRE = /-(\w)/g;
@@ -12664,8 +12859,8 @@ function wrap (Vue, Component) {
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/runtime/api.js
 var api = __webpack_require__(3645);
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/WidgetBtn.vue?vue&type=template&id=2ff2852e&shadow
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"dropdown"},[_c('Icon',{staticClass:"drowpdownbtn big-icon",attrs:{"icon":"mdi-light:home"}}),_c('div',{staticClass:"dropdown-content"},[_c('WidgetCard')],1)],1),_c('ExampleComponent'),_c('link',{attrs:{"href":"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css","rel":"stylesheet","integrity":"sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor","crossorigin":"anonymous"}}),_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"}},[_vm._v("Primary")])],1)}
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/WidgetBtn.vue?vue&type=template&id=606fb2cc&shadow
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"dropdown"},[_c('Icon',{staticClass:"drowpdownbtn big-icon",attrs:{"icon":"mdi-light:home"}}),_c('div',{staticClass:"dropdown-content"},[_c('WidgetCard')],1)],1),_c('ExampleComponent'),_vm._v(" "+_vm._s(_vm.apiURL)+" "),_c('link',{attrs:{"href":"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css","rel":"stylesheet","integrity":"sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor","crossorigin":"anonymous"}}),_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"}},[_vm._v("Primary")])],1)}
 var staticRenderFns = []
 
 
@@ -16850,2117 +17045,150 @@ vue_runtime_esm.use(vuex_esm);
 
   }
 }));
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/ExampleComponent.vue?vue&type=template&id=059307c7&
-var ExampleComponentvue_type_template_id_059307c7_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("hola"),_c('Icon',{staticClass:"big-icon",attrs:{"icon":"mdi-light:home"}})],1)}
-var ExampleComponentvue_type_template_id_059307c7_staticRenderFns = []
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/ExampleComponent.vue?vue&type=template&id=2db49928&
+var ExampleComponentvue_type_template_id_2db49928_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-container',[_c('HomeForm',{attrs:{"title":'Login'}})],1)}
+var ExampleComponentvue_type_template_id_2db49928_staticRenderFns = []
 
 
-;// CONCATENATED MODULE: ./node_modules/@iconify/vue2/dist/iconify.mjs
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/General/HomeForm.vue?vue&type=template&id=5fdf2e45&
+var HomeFormvue_type_template_id_5fdf2e45_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-card',{staticClass:"mx-auto mt-5 rounded-lg",attrs:{"width":"500px","elevation":"12"}},[_c('v-container',{staticClass:"pa-7"},[_c('v-card-title',{staticClass:"justify-center"},[_c('p',{staticClass:"text-h4 text--primary"},[_vm._v(_vm._s(_vm.title))])]),(_vm.title == 'Register')?_c('v-form',{ref:"form",staticClass:"form-signin",attrs:{"lazy-validation":""},on:{"submit":function($event){$event.preventDefault();return _vm.userLogin.apply(null, arguments)}}},[_c('v-text-field',{attrs:{"rules":_vm.emailRules,"type":"email","prepend-icon":"mdi-email","label":"Email","required":"","placeholder":'name.lastname@email.web'},model:{value:(_vm.user.email),callback:function ($$v) {_vm.$set(_vm.user, "email", $$v)},expression:"user.email"}}),_c('v-text-field',{attrs:{"type":"password","label":"Password","required":"","prepend-icon":'mdi-key',"rules":_vm.passwordRules},model:{value:(_vm.user.password),callback:function ($$v) {_vm.$set(_vm.user, "password", $$v)},expression:"user.password"}}),_c('v-btn',{staticClass:"mb-10 mt-3 text-center",attrs:{"type":"submit","rounded":"","color":"secondary","light":"","block":""}},[_vm._v(" Login ")])],1):_vm._e(),(_vm.title == 'Login')?_c('v-form',{ref:"form",staticClass:"form-signin",attrs:{"lazy-validation":""},on:{"submit":function($event){$event.preventDefault();return _vm.userLogin.apply(null, arguments)}}},[_c('v-text-field',{attrs:{"label":"Email*","rules":_vm.emailRules,"prepend-icon":"mdi-email","required":""},model:{value:(_vm.user.email),callback:function ($$v) {_vm.$set(_vm.user, "email", $$v)},expression:"user.email"}}),_c('v-text-field',{attrs:{"type":"password","label":"Password","required":"","prepend-icon":'mdi-key',"rules":_vm.passwordRules},model:{value:(_vm.user.password),callback:function ($$v) {_vm.$set(_vm.user, "password", $$v)},expression:"user.password"}}),_c('v-btn',{staticClass:"mb-10 mt-3 text-center",attrs:{"type":"submit","rounded":"","color":"secondary","light":"","block":""}},[_vm._v(" Login ")])],1):_vm._e()],1),_c('v-snackbar',{attrs:{"top":"","right":"","timeout":3000,"color":_vm.snackColor},scopedSlots:_vm._u([{key:"action",fn:function(ref){
+var attrs = ref.attrs;
+return [_c('v-btn',_vm._b({attrs:{"text":""},on:{"click":function($event){_vm.snack = false}}},'v-btn',attrs,false),[_vm._v(" Close ")])]}}]),model:{value:(_vm.snack),callback:function ($$v) {_vm.snack=$$v},expression:"snack"}},[_vm._v(" "+_vm._s(_vm.snackText)+" ")])],1)}
+var HomeFormvue_type_template_id_5fdf2e45_staticRenderFns = []
 
 
-const matchName = /^[a-z0-9]+(-[a-z0-9]+)*$/;
-const iconDefaults = Object.freeze({
-  left: 0,
-  top: 0,
-  width: 16,
-  height: 16,
-  rotate: 0,
-  vFlip: false,
-  hFlip: false
-});
-function fullIcon(data) {
-  return { ...iconDefaults, ...data };
-}
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/General/HomeForm.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-const stringToIcon = (value, validate, allowSimpleName, provider = "") => {
-  const colonSeparated = value.split(":");
-  if (value.slice(0, 1) === "@") {
-    if (colonSeparated.length < 2 || colonSeparated.length > 3) {
-      return null;
-    }
-    provider = colonSeparated.shift().slice(1);
-  }
-  if (colonSeparated.length > 3 || !colonSeparated.length) {
-    return null;
-  }
-  if (colonSeparated.length > 1) {
-    const name2 = colonSeparated.pop();
-    const prefix = colonSeparated.pop();
-    const result = {
-      provider: colonSeparated.length > 0 ? colonSeparated[0] : provider,
-      prefix,
-      name: name2
-    };
-    return validate && !validateIcon(result) ? null : result;
-  }
-  const name = colonSeparated[0];
-  const dashSeparated = name.split("-");
-  if (dashSeparated.length > 1) {
-    const result = {
-      provider,
-      prefix: dashSeparated.shift(),
-      name: dashSeparated.join("-")
-    };
-    return validate && !validateIcon(result) ? null : result;
-  }
-  if (allowSimpleName && provider === "") {
-    const result = {
-      provider,
-      prefix: "",
-      name
-    };
-    return validate && !validateIcon(result, allowSimpleName) ? null : result;
-  }
-  return null;
-};
-const validateIcon = (icon, allowSimpleName) => {
-  if (!icon) {
-    return false;
-  }
-  return !!((icon.provider === "" || icon.provider.match(matchName)) && (allowSimpleName && icon.prefix === "" || icon.prefix.match(matchName)) && icon.name.match(matchName));
-};
-
-function mergeIconData(icon, alias) {
-  const result = { ...icon };
-  for (const key in iconDefaults) {
-    const prop = key;
-    if (alias[prop] !== void 0) {
-      const value = alias[prop];
-      if (result[prop] === void 0) {
-        result[prop] = value;
-        continue;
-      }
-      switch (prop) {
-        case "rotate":
-          result[prop] = (result[prop] + value) % 4;
-          break;
-        case "hFlip":
-        case "vFlip":
-          result[prop] = value !== result[prop];
-          break;
-        default:
-          result[prop] = value;
-      }
-    }
-  }
-  return result;
-}
-
-function getIconData$1(data, name, full = false) {
-  function getIcon(name2, iteration) {
-    if (data.icons[name2] !== void 0) {
-      return Object.assign({}, data.icons[name2]);
-    }
-    if (iteration > 5) {
-      return null;
-    }
-    const aliases = data.aliases;
-    if (aliases && aliases[name2] !== void 0) {
-      const item = aliases[name2];
-      const result2 = getIcon(item.parent, iteration + 1);
-      if (result2) {
-        return mergeIconData(result2, item);
-      }
-      return result2;
-    }
-    const chars = data.chars;
-    if (!iteration && chars && chars[name2] !== void 0) {
-      return getIcon(chars[name2], iteration + 1);
-    }
-    return null;
-  }
-  const result = getIcon(name, 0);
-  if (result) {
-    for (const key in iconDefaults) {
-      if (result[key] === void 0 && data[key] !== void 0) {
-        result[key] = data[key];
-      }
-    }
-  }
-  return result && full ? fullIcon(result) : result;
-}
-
-function isVariation(item) {
-  for (const key in iconDefaults) {
-    if (item[key] !== void 0) {
-      return true;
-    }
-  }
-  return false;
-}
-function parseIconSet(data, callback, options) {
-  options = options || {};
-  const names = [];
-  if (typeof data !== "object" || typeof data.icons !== "object") {
-    return names;
-  }
-  if (data.not_found instanceof Array) {
-    data.not_found.forEach((name) => {
-      callback(name, null);
-      names.push(name);
-    });
-  }
-  const icons = data.icons;
-  Object.keys(icons).forEach((name) => {
-    const iconData = getIconData$1(data, name, true);
-    if (iconData) {
-      callback(name, iconData);
-      names.push(name);
-    }
-  });
-  const parseAliases = options.aliases || "all";
-  if (parseAliases !== "none" && typeof data.aliases === "object") {
-    const aliases = data.aliases;
-    Object.keys(aliases).forEach((name) => {
-      if (parseAliases === "variations" && isVariation(aliases[name])) {
-        return;
-      }
-      const iconData = getIconData$1(data, name, true);
-      if (iconData) {
-        callback(name, iconData);
-        names.push(name);
-      }
-    });
-  }
-  return names;
-}
-
-const optionalProperties = {
-  provider: "string",
-  aliases: "object",
-  not_found: "object"
-};
-for (const prop in iconDefaults) {
-  optionalProperties[prop] = typeof iconDefaults[prop];
-}
-function quicklyValidateIconSet(obj) {
-  if (typeof obj !== "object" || obj === null) {
-    return null;
-  }
-  const data = obj;
-  if (typeof data.prefix !== "string" || !obj.icons || typeof obj.icons !== "object") {
-    return null;
-  }
-  for (const prop in optionalProperties) {
-    if (obj[prop] !== void 0 && typeof obj[prop] !== optionalProperties[prop]) {
-      return null;
-    }
-  }
-  const icons = data.icons;
-  for (const name in icons) {
-    const icon = icons[name];
-    if (!name.match(matchName) || typeof icon.body !== "string") {
-      return null;
-    }
-    for (const prop in iconDefaults) {
-      if (icon[prop] !== void 0 && typeof icon[prop] !== typeof iconDefaults[prop]) {
-        return null;
-      }
-    }
-  }
-  const aliases = data.aliases;
-  if (aliases) {
-    for (const name in aliases) {
-      const icon = aliases[name];
-      const parent = icon.parent;
-      if (!name.match(matchName) || typeof parent !== "string" || !icons[parent] && !aliases[parent]) {
-        return null;
-      }
-      for (const prop in iconDefaults) {
-        if (icon[prop] !== void 0 && typeof icon[prop] !== typeof iconDefaults[prop]) {
-          return null;
+/* harmony default export */ var HomeFormvue_type_script_lang_js_ = ({
+  props: ["title"],
+  data: () => ({
+    snack: false,
+    snackColor: "",
+    snackText: "",
+    valid: false,
+    user: {
+      email: "",
+      password: ""
+    },
+    passwordRules: [v => !!v || "Password is required", v => v.length >= 8 || "Password is required"],
+    emailRules: [v => !!v || "The email is required", v => /.+@.+\..+/.test(v) || "Invalid email"]
+  }),
+  methods: {
+    async userLogin() {
+      if (this.$refs.form.validate()) {
+        try {
+          var res = await axios_default().post("http://localhost:3000/api/user/login", this.user);
+          localStorage.setItem("token", res.data.token);
+          this.$store.commit("setToken", res.data.token);
+          this.$store.commit("updateUser", res.data.user);
+          this.snack = true;
+          this.snackColor = "succes";
+          this.snackText = "Succesfully Login";
+          this.$router.go("/home");
+        } catch (err) {
+          console.log(err);
+          console.log(err.response);
+          this.snack = true;
+          this.snackColor = "error";
+          this.snackText = "User or password wrong";
         }
-      }
-    }
-  }
-  return data;
-}
-
-const storageVersion = 1;
-let storage$1 = /* @__PURE__ */ Object.create(null);
-try {
-  const w = window || self;
-  if (w && w._iconifyStorage.version === storageVersion) {
-    storage$1 = w._iconifyStorage.storage;
-  }
-} catch (err) {
-}
-function shareStorage() {
-  try {
-    const w = window || self;
-    if (w && !w._iconifyStorage) {
-      w._iconifyStorage = {
-        version: storageVersion,
-        storage: storage$1
-      };
-    }
-  } catch (err) {
-  }
-}
-function newStorage(provider, prefix) {
-  return {
-    provider,
-    prefix,
-    icons: /* @__PURE__ */ Object.create(null),
-    missing: /* @__PURE__ */ Object.create(null)
-  };
-}
-function getStorage(provider, prefix) {
-  if (storage$1[provider] === void 0) {
-    storage$1[provider] = /* @__PURE__ */ Object.create(null);
-  }
-  const providerStorage = storage$1[provider];
-  if (providerStorage[prefix] === void 0) {
-    providerStorage[prefix] = newStorage(provider, prefix);
-  }
-  return providerStorage[prefix];
-}
-function addIconSet(storage2, data) {
-  if (!quicklyValidateIconSet(data)) {
-    return [];
-  }
-  const t = Date.now();
-  return parseIconSet(data, (name, icon) => {
-    if (icon) {
-      storage2.icons[name] = icon;
-    } else {
-      storage2.missing[name] = t;
-    }
-  });
-}
-function addIconToStorage(storage2, name, icon) {
-  try {
-    if (typeof icon.body === "string") {
-      storage2.icons[name] = Object.freeze(fullIcon(icon));
-      return true;
-    }
-  } catch (err) {
-  }
-  return false;
-}
-function getIconFromStorage(storage2, name) {
-  const value = storage2.icons[name];
-  return value === void 0 ? null : value;
-}
-function listIcons(provider, prefix) {
-  let allIcons = [];
-  let providers;
-  if (typeof provider === "string") {
-    providers = [provider];
-  } else {
-    providers = Object.keys(storage$1);
-  }
-  providers.forEach((provider2) => {
-    let prefixes;
-    if (typeof provider2 === "string" && typeof prefix === "string") {
-      prefixes = [prefix];
-    } else {
-      prefixes = storage$1[provider2] === void 0 ? [] : Object.keys(storage$1[provider2]);
-    }
-    prefixes.forEach((prefix2) => {
-      const storage2 = getStorage(provider2, prefix2);
-      const icons = Object.keys(storage2.icons).map((name) => (provider2 !== "" ? "@" + provider2 + ":" : "") + prefix2 + ":" + name);
-      allIcons = allIcons.concat(icons);
-    });
-  });
-  return allIcons;
-}
-
-let simpleNames = false;
-function allowSimpleNames(allow) {
-  if (typeof allow === "boolean") {
-    simpleNames = allow;
-  }
-  return simpleNames;
-}
-function getIconData(name) {
-  const icon = typeof name === "string" ? stringToIcon(name, true, simpleNames) : name;
-  return icon ? getIconFromStorage(getStorage(icon.provider, icon.prefix), icon.name) : null;
-}
-function addIcon(name, data) {
-  const icon = stringToIcon(name, true, simpleNames);
-  if (!icon) {
-    return false;
-  }
-  const storage = getStorage(icon.provider, icon.prefix);
-  return addIconToStorage(storage, icon.name, data);
-}
-function addCollection(data, provider) {
-  if (typeof data !== "object") {
-    return false;
-  }
-  if (typeof provider !== "string") {
-    provider = typeof data.provider === "string" ? data.provider : "";
-  }
-  if (simpleNames && provider === "" && (typeof data.prefix !== "string" || data.prefix === "")) {
-    let added = false;
-    if (quicklyValidateIconSet(data)) {
-      data.prefix = "";
-      parseIconSet(data, (name, icon) => {
-        if (icon && addIcon(name, icon)) {
-          added = true;
-        }
-      });
-    }
-    return added;
-  }
-  if (typeof data.prefix !== "string" || !validateIcon({
-    provider,
-    prefix: data.prefix,
-    name: "a"
-  })) {
-    return false;
-  }
-  const storage = getStorage(provider, data.prefix);
-  return !!addIconSet(storage, data);
-}
-function iconExists(name) {
-  return getIconData(name) !== null;
-}
-function getIcon(name) {
-  const result = getIconData(name);
-  return result ? { ...result } : null;
-}
-
-const defaults = Object.freeze({
-  inline: false,
-  width: null,
-  height: null,
-  hAlign: "center",
-  vAlign: "middle",
-  slice: false,
-  hFlip: false,
-  vFlip: false,
-  rotate: 0
-});
-function mergeCustomisations(defaults2, item) {
-  const result = {};
-  for (const key in defaults2) {
-    const attr = key;
-    result[attr] = defaults2[attr];
-    if (item[attr] === void 0) {
-      continue;
-    }
-    const value = item[attr];
-    switch (attr) {
-      case "inline":
-      case "slice":
-        if (typeof value === "boolean") {
-          result[attr] = value;
-        }
-        break;
-      case "hFlip":
-      case "vFlip":
-        if (value === true) {
-          result[attr] = !result[attr];
-        }
-        break;
-      case "hAlign":
-      case "vAlign":
-        if (typeof value === "string" && value !== "") {
-          result[attr] = value;
-        }
-        break;
-      case "width":
-      case "height":
-        if (typeof value === "string" && value !== "" || typeof value === "number" && value || value === null) {
-          result[attr] = value;
-        }
-        break;
-      case "rotate":
-        if (typeof value === "number") {
-          result[attr] += value;
-        }
-        break;
-    }
-  }
-  return result;
-}
-
-const unitsSplit = /(-?[0-9.]*[0-9]+[0-9.]*)/g;
-const unitsTest = /^-?[0-9.]*[0-9]+[0-9.]*$/g;
-function calculateSize(size, ratio, precision) {
-  if (ratio === 1) {
-    return size;
-  }
-  precision = precision === void 0 ? 100 : precision;
-  if (typeof size === "number") {
-    return Math.ceil(size * ratio * precision) / precision;
-  }
-  if (typeof size !== "string") {
-    return size;
-  }
-  const oldParts = size.split(unitsSplit);
-  if (oldParts === null || !oldParts.length) {
-    return size;
-  }
-  const newParts = [];
-  let code = oldParts.shift();
-  let isNumber = unitsTest.test(code);
-  while (true) {
-    if (isNumber) {
-      const num = parseFloat(code);
-      if (isNaN(num)) {
-        newParts.push(code);
       } else {
-        newParts.push(Math.ceil(num * ratio * precision) / precision);
-      }
-    } else {
-      newParts.push(code);
-    }
-    code = oldParts.shift();
-    if (code === void 0) {
-      return newParts.join("");
-    }
-    isNumber = !isNumber;
-  }
-}
-
-function preserveAspectRatio(props) {
-  let result = "";
-  switch (props.hAlign) {
-    case "left":
-      result += "xMin";
-      break;
-    case "right":
-      result += "xMax";
-      break;
-    default:
-      result += "xMid";
-  }
-  switch (props.vAlign) {
-    case "top":
-      result += "YMin";
-      break;
-    case "bottom":
-      result += "YMax";
-      break;
-    default:
-      result += "YMid";
-  }
-  result += props.slice ? " slice" : " meet";
-  return result;
-}
-function iconToSVG(icon, customisations) {
-  const box = {
-    left: icon.left,
-    top: icon.top,
-    width: icon.width,
-    height: icon.height
-  };
-  let body = icon.body;
-  [icon, customisations].forEach((props) => {
-    const transformations = [];
-    const hFlip = props.hFlip;
-    const vFlip = props.vFlip;
-    let rotation = props.rotate;
-    if (hFlip) {
-      if (vFlip) {
-        rotation += 2;
-      } else {
-        transformations.push("translate(" + (box.width + box.left).toString() + " " + (0 - box.top).toString() + ")");
-        transformations.push("scale(-1 1)");
-        box.top = box.left = 0;
-      }
-    } else if (vFlip) {
-      transformations.push("translate(" + (0 - box.left).toString() + " " + (box.height + box.top).toString() + ")");
-      transformations.push("scale(1 -1)");
-      box.top = box.left = 0;
-    }
-    let tempValue;
-    if (rotation < 0) {
-      rotation -= Math.floor(rotation / 4) * 4;
-    }
-    rotation = rotation % 4;
-    switch (rotation) {
-      case 1:
-        tempValue = box.height / 2 + box.top;
-        transformations.unshift("rotate(90 " + tempValue.toString() + " " + tempValue.toString() + ")");
-        break;
-      case 2:
-        transformations.unshift("rotate(180 " + (box.width / 2 + box.left).toString() + " " + (box.height / 2 + box.top).toString() + ")");
-        break;
-      case 3:
-        tempValue = box.width / 2 + box.left;
-        transformations.unshift("rotate(-90 " + tempValue.toString() + " " + tempValue.toString() + ")");
-        break;
-    }
-    if (rotation % 2 === 1) {
-      if (box.left !== 0 || box.top !== 0) {
-        tempValue = box.left;
-        box.left = box.top;
-        box.top = tempValue;
-      }
-      if (box.width !== box.height) {
-        tempValue = box.width;
-        box.width = box.height;
-        box.height = tempValue;
+        this.snack = true;
+        this.snackColor = "error";
+        this.snackText = "Put the required data";
       }
     }
-    if (transformations.length) {
-      body = '<g transform="' + transformations.join(" ") + '">' + body + "</g>";
-    }
-  });
-  let width, height;
-  if (customisations.width === null && customisations.height === null) {
-    height = "1em";
-    width = calculateSize(height, box.width / box.height);
-  } else if (customisations.width !== null && customisations.height !== null) {
-    width = customisations.width;
-    height = customisations.height;
-  } else if (customisations.height !== null) {
-    height = customisations.height;
-    width = calculateSize(height, box.width / box.height);
-  } else {
-    width = customisations.width;
-    height = calculateSize(width, box.height / box.width);
-  }
-  if (width === "auto") {
-    width = box.width;
-  }
-  if (height === "auto") {
-    height = box.height;
-  }
-  width = typeof width === "string" ? width : width.toString() + "";
-  height = typeof height === "string" ? height : height.toString() + "";
-  const result = {
-    attributes: {
-      width,
-      height,
-      preserveAspectRatio: preserveAspectRatio(customisations),
-      viewBox: box.left.toString() + " " + box.top.toString() + " " + box.width.toString() + " " + box.height.toString()
-    },
-    body
-  };
-  if (customisations.inline) {
-    result.inline = true;
-  }
-  return result;
-}
 
-function buildIcon(icon, customisations) {
-  return iconToSVG(fullIcon(icon), customisations ? mergeCustomisations(defaults, customisations) : defaults);
-}
-
-const regex = /\sid="(\S+)"/g;
-const randomPrefix = "IconifyId" + Date.now().toString(16) + (Math.random() * 16777216 | 0).toString(16);
-let iconify_counter = 0;
-function replaceIDs(body, prefix = randomPrefix) {
-  const ids = [];
-  let match;
-  while (match = regex.exec(body)) {
-    ids.push(match[1]);
   }
-  if (!ids.length) {
-    return body;
-  }
-  ids.forEach((id) => {
-    const newID = typeof prefix === "function" ? prefix(id) : prefix + (iconify_counter++).toString();
-    const escapedID = id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    body = body.replace(new RegExp('([#;"])(' + escapedID + ')([")]|\\.[a-z])', "g"), "$1" + newID + "$3");
-  });
-  return body;
-}
-
-const storage = /* @__PURE__ */ Object.create(null);
-function setAPIModule(provider, item) {
-  storage[provider] = item;
-}
-function getAPIModule(provider) {
-  return storage[provider] || storage[""];
-}
-
-function createAPIConfig(source) {
-  let resources;
-  if (typeof source.resources === "string") {
-    resources = [source.resources];
-  } else {
-    resources = source.resources;
-    if (!(resources instanceof Array) || !resources.length) {
-      return null;
-    }
-  }
-  const result = {
-    resources,
-    path: source.path === void 0 ? "/" : source.path,
-    maxURL: source.maxURL ? source.maxURL : 500,
-    rotate: source.rotate ? source.rotate : 750,
-    timeout: source.timeout ? source.timeout : 5e3,
-    random: source.random === true,
-    index: source.index ? source.index : 0,
-    dataAfterTimeout: source.dataAfterTimeout !== false
-  };
-  return result;
-}
-const configStorage = /* @__PURE__ */ Object.create(null);
-const fallBackAPISources = [
-  "https://api.simplesvg.com",
-  "https://api.unisvg.com"
-];
-const fallBackAPI = [];
-while (fallBackAPISources.length > 0) {
-  if (fallBackAPISources.length === 1) {
-    fallBackAPI.push(fallBackAPISources.shift());
-  } else {
-    if (Math.random() > 0.5) {
-      fallBackAPI.push(fallBackAPISources.shift());
-    } else {
-      fallBackAPI.push(fallBackAPISources.pop());
-    }
-  }
-}
-configStorage[""] = createAPIConfig({
-  resources: ["https://api.iconify.design"].concat(fallBackAPI)
 });
-function addAPIProvider(provider, customConfig) {
-  const config = createAPIConfig(customConfig);
-  if (config === null) {
-    return false;
-  }
-  configStorage[provider] = config;
-  return true;
-}
-function getAPIConfig(provider) {
-  return configStorage[provider];
-}
-function listAPIProviders() {
-  return Object.keys(configStorage);
-}
-
-const mergeParams = (base, params) => {
-  let result = base, hasParams = result.indexOf("?") !== -1;
-  function paramToString(value) {
-    switch (typeof value) {
-      case "boolean":
-        return value ? "true" : "false";
-      case "number":
-        return encodeURIComponent(value);
-      case "string":
-        return encodeURIComponent(value);
-      default:
-        throw new Error("Invalid parameter");
-    }
-  }
-  Object.keys(params).forEach((key) => {
-    let value;
-    try {
-      value = paramToString(params[key]);
-    } catch (err) {
-      return;
-    }
-    result += (hasParams ? "&" : "?") + encodeURIComponent(key) + "=" + value;
-    hasParams = true;
-  });
-  return result;
-};
-
-const maxLengthCache = {};
-const pathCache = {};
-const detectFetch = () => {
-  let callback;
-  try {
-    callback = fetch;
-    if (typeof callback === "function") {
-      return callback;
-    }
-  } catch (err) {
-  }
-  return null;
-};
-let fetchModule = detectFetch();
-function setFetch(fetch2) {
-  fetchModule = fetch2;
-}
-function getFetch() {
-  return fetchModule;
-}
-function calculateMaxLength(provider, prefix) {
-  const config = getAPIConfig(provider);
-  if (!config) {
-    return 0;
-  }
-  let result;
-  if (!config.maxURL) {
-    result = 0;
-  } else {
-    let maxHostLength = 0;
-    config.resources.forEach((item) => {
-      const host = item;
-      maxHostLength = Math.max(maxHostLength, host.length);
-    });
-    const url = mergeParams(prefix + ".json", {
-      icons: ""
-    });
-    result = config.maxURL - maxHostLength - config.path.length - url.length;
-  }
-  const cacheKey = provider + ":" + prefix;
-  pathCache[provider] = config.path;
-  maxLengthCache[cacheKey] = result;
-  return result;
-}
-function shouldAbort(status) {
-  return status === 404;
-}
-const prepare = (provider, prefix, icons) => {
-  const results = [];
-  let maxLength = maxLengthCache[prefix];
-  if (maxLength === void 0) {
-    maxLength = calculateMaxLength(provider, prefix);
-  }
-  const type = "icons";
-  let item = {
-    type,
-    provider,
-    prefix,
-    icons: []
-  };
-  let length = 0;
-  icons.forEach((name, index) => {
-    length += name.length + 1;
-    if (length >= maxLength && index > 0) {
-      results.push(item);
-      item = {
-        type,
-        provider,
-        prefix,
-        icons: []
-      };
-      length = name.length;
-    }
-    item.icons.push(name);
-  });
-  results.push(item);
-  return results;
-};
-function getPath(provider) {
-  if (typeof provider === "string") {
-    if (pathCache[provider] === void 0) {
-      const config = getAPIConfig(provider);
-      if (!config) {
-        return "/";
-      }
-      pathCache[provider] = config.path;
-    }
-    return pathCache[provider];
-  }
-  return "/";
-}
-const send = (host, params, callback) => {
-  if (!fetchModule) {
-    callback("abort", 424);
-    return;
-  }
-  let path = getPath(params.provider);
-  switch (params.type) {
-    case "icons": {
-      const prefix = params.prefix;
-      const icons = params.icons;
-      const iconsList = icons.join(",");
-      path += mergeParams(prefix + ".json", {
-        icons: iconsList
-      });
-      break;
-    }
-    case "custom": {
-      const uri = params.uri;
-      path += uri.slice(0, 1) === "/" ? uri.slice(1) : uri;
-      break;
-    }
-    default:
-      callback("abort", 400);
-      return;
-  }
-  let defaultError = 503;
-  fetchModule(host + path).then((response) => {
-    const status = response.status;
-    if (status !== 200) {
-      setTimeout(() => {
-        callback(shouldAbort(status) ? "abort" : "next", status);
-      });
-      return;
-    }
-    defaultError = 501;
-    return response.json();
-  }).then((data) => {
-    if (typeof data !== "object" || data === null) {
-      setTimeout(() => {
-        callback("next", defaultError);
-      });
-      return;
-    }
-    setTimeout(() => {
-      callback("success", data);
-    });
-  }).catch(() => {
-    callback("next", defaultError);
-  });
-};
-const fetchAPIModule = {
-  prepare,
-  send
-};
-
-function sortIcons(icons) {
-  const result = {
-    loaded: [],
-    missing: [],
-    pending: []
-  };
-  const storage = /* @__PURE__ */ Object.create(null);
-  icons.sort((a, b) => {
-    if (a.provider !== b.provider) {
-      return a.provider.localeCompare(b.provider);
-    }
-    if (a.prefix !== b.prefix) {
-      return a.prefix.localeCompare(b.prefix);
-    }
-    return a.name.localeCompare(b.name);
-  });
-  let lastIcon = {
-    provider: "",
-    prefix: "",
-    name: ""
-  };
-  icons.forEach((icon) => {
-    if (lastIcon.name === icon.name && lastIcon.prefix === icon.prefix && lastIcon.provider === icon.provider) {
-      return;
-    }
-    lastIcon = icon;
-    const provider = icon.provider;
-    const prefix = icon.prefix;
-    const name = icon.name;
-    if (storage[provider] === void 0) {
-      storage[provider] = /* @__PURE__ */ Object.create(null);
-    }
-    const providerStorage = storage[provider];
-    if (providerStorage[prefix] === void 0) {
-      providerStorage[prefix] = getStorage(provider, prefix);
-    }
-    const localStorage = providerStorage[prefix];
-    let list;
-    if (localStorage.icons[name] !== void 0) {
-      list = result.loaded;
-    } else if (prefix === "" || localStorage.missing[name] !== void 0) {
-      list = result.missing;
-    } else {
-      list = result.pending;
-    }
-    const item = {
-      provider,
-      prefix,
-      name
-    };
-    list.push(item);
-  });
-  return result;
-}
-
-const iconify_callbacks = /* @__PURE__ */ Object.create(null);
-const pendingUpdates = /* @__PURE__ */ Object.create(null);
-function removeCallback(sources, id) {
-  sources.forEach((source) => {
-    const provider = source.provider;
-    if (iconify_callbacks[provider] === void 0) {
-      return;
-    }
-    const providerCallbacks = iconify_callbacks[provider];
-    const prefix = source.prefix;
-    const items = providerCallbacks[prefix];
-    if (items) {
-      providerCallbacks[prefix] = items.filter((row) => row.id !== id);
-    }
-  });
-}
-function updateCallbacks(provider, prefix) {
-  if (pendingUpdates[provider] === void 0) {
-    pendingUpdates[provider] = /* @__PURE__ */ Object.create(null);
-  }
-  const providerPendingUpdates = pendingUpdates[provider];
-  if (!providerPendingUpdates[prefix]) {
-    providerPendingUpdates[prefix] = true;
-    setTimeout(() => {
-      providerPendingUpdates[prefix] = false;
-      if (iconify_callbacks[provider] === void 0 || iconify_callbacks[provider][prefix] === void 0) {
-        return;
-      }
-      const items = iconify_callbacks[provider][prefix].slice(0);
-      if (!items.length) {
-        return;
-      }
-      const storage = getStorage(provider, prefix);
-      let hasPending = false;
-      items.forEach((item) => {
-        const icons = item.icons;
-        const oldLength = icons.pending.length;
-        icons.pending = icons.pending.filter((icon) => {
-          if (icon.prefix !== prefix) {
-            return true;
-          }
-          const name = icon.name;
-          if (storage.icons[name] !== void 0) {
-            icons.loaded.push({
-              provider,
-              prefix,
-              name
-            });
-          } else if (storage.missing[name] !== void 0) {
-            icons.missing.push({
-              provider,
-              prefix,
-              name
-            });
-          } else {
-            hasPending = true;
-            return true;
-          }
-          return false;
-        });
-        if (icons.pending.length !== oldLength) {
-          if (!hasPending) {
-            removeCallback([
-              {
-                provider,
-                prefix
-              }
-            ], item.id);
-          }
-          item.callback(icons.loaded.slice(0), icons.missing.slice(0), icons.pending.slice(0), item.abort);
-        }
-      });
-    });
-  }
-}
-let idCounter = 0;
-function storeCallback(callback, icons, pendingSources) {
-  const id = idCounter++;
-  const abort = removeCallback.bind(null, pendingSources, id);
-  if (!icons.pending.length) {
-    return abort;
-  }
-  const item = {
-    id,
-    icons,
-    callback,
-    abort
-  };
-  pendingSources.forEach((source) => {
-    const provider = source.provider;
-    const prefix = source.prefix;
-    if (iconify_callbacks[provider] === void 0) {
-      iconify_callbacks[provider] = /* @__PURE__ */ Object.create(null);
-    }
-    const providerCallbacks = iconify_callbacks[provider];
-    if (providerCallbacks[prefix] === void 0) {
-      providerCallbacks[prefix] = [];
-    }
-    providerCallbacks[prefix].push(item);
-  });
-  return abort;
-}
-
-function listToIcons(list, validate = true, simpleNames = false) {
-  const result = [];
-  list.forEach((item) => {
-    const icon = typeof item === "string" ? stringToIcon(item, false, simpleNames) : item;
-    if (!validate || validateIcon(icon, simpleNames)) {
-      result.push({
-        provider: icon.provider,
-        prefix: icon.prefix,
-        name: icon.name
-      });
-    }
-  });
-  return result;
-}
-
-// src/config.ts
-var defaultConfig = {
-  resources: [],
-  index: 0,
-  timeout: 2e3,
-  rotate: 750,
-  random: false,
-  dataAfterTimeout: false
-};
-
-// src/query.ts
-function sendQuery(config, payload, query, done) {
-  const resourcesCount = config.resources.length;
-  const startIndex = config.random ? Math.floor(Math.random() * resourcesCount) : config.index;
-  let resources;
-  if (config.random) {
-    let list = config.resources.slice(0);
-    resources = [];
-    while (list.length > 1) {
-      const nextIndex = Math.floor(Math.random() * list.length);
-      resources.push(list[nextIndex]);
-      list = list.slice(0, nextIndex).concat(list.slice(nextIndex + 1));
-    }
-    resources = resources.concat(list);
-  } else {
-    resources = config.resources.slice(startIndex).concat(config.resources.slice(0, startIndex));
-  }
-  const startTime = Date.now();
-  let status = "pending";
-  let queriesSent = 0;
-  let lastError;
-  let timer = null;
-  let queue = [];
-  let doneCallbacks = [];
-  if (typeof done === "function") {
-    doneCallbacks.push(done);
-  }
-  function resetTimer() {
-    if (timer) {
-      clearTimeout(timer);
-      timer = null;
-    }
-  }
-  function abort() {
-    if (status === "pending") {
-      status = "aborted";
-    }
-    resetTimer();
-    queue.forEach((item) => {
-      if (item.status === "pending") {
-        item.status = "aborted";
-      }
-    });
-    queue = [];
-  }
-  function subscribe(callback, overwrite) {
-    if (overwrite) {
-      doneCallbacks = [];
-    }
-    if (typeof callback === "function") {
-      doneCallbacks.push(callback);
-    }
-  }
-  function getQueryStatus() {
-    return {
-      startTime,
-      payload,
-      status,
-      queriesSent,
-      queriesPending: queue.length,
-      subscribe,
-      abort
-    };
-  }
-  function failQuery() {
-    status = "failed";
-    doneCallbacks.forEach((callback) => {
-      callback(void 0, lastError);
-    });
-  }
-  function clearQueue() {
-    queue.forEach((item) => {
-      if (item.status === "pending") {
-        item.status = "aborted";
-      }
-    });
-    queue = [];
-  }
-  function moduleResponse(item, response, data) {
-    const isError = response !== "success";
-    queue = queue.filter((queued) => queued !== item);
-    switch (status) {
-      case "pending":
-        break;
-      case "failed":
-        if (isError || !config.dataAfterTimeout) {
-          return;
-        }
-        break;
-      default:
-        return;
-    }
-    if (response === "abort") {
-      lastError = data;
-      failQuery();
-      return;
-    }
-    if (isError) {
-      lastError = data;
-      if (!queue.length) {
-        if (!resources.length) {
-          failQuery();
-        } else {
-          execNext();
-        }
-      }
-      return;
-    }
-    resetTimer();
-    clearQueue();
-    if (!config.random) {
-      const index = config.resources.indexOf(item.resource);
-      if (index !== -1 && index !== config.index) {
-        config.index = index;
-      }
-    }
-    status = "completed";
-    doneCallbacks.forEach((callback) => {
-      callback(data);
-    });
-  }
-  function execNext() {
-    if (status !== "pending") {
-      return;
-    }
-    resetTimer();
-    const resource = resources.shift();
-    if (resource === void 0) {
-      if (queue.length) {
-        timer = setTimeout(() => {
-          resetTimer();
-          if (status === "pending") {
-            clearQueue();
-            failQuery();
-          }
-        }, config.timeout);
-        return;
-      }
-      failQuery();
-      return;
-    }
-    const item = {
-      status: "pending",
-      resource,
-      callback: (status2, data) => {
-        moduleResponse(item, status2, data);
-      }
-    };
-    queue.push(item);
-    queriesSent++;
-    timer = setTimeout(execNext, config.rotate);
-    query(resource, payload, item.callback);
-  }
-  setTimeout(execNext);
-  return getQueryStatus;
-}
-
-// src/index.ts
-function setConfig(config) {
-  if (typeof config !== "object" || typeof config.resources !== "object" || !(config.resources instanceof Array) || !config.resources.length) {
-    throw new Error("Invalid Reduncancy configuration");
-  }
-  const newConfig = /* @__PURE__ */ Object.create(null);
-  let key;
-  for (key in defaultConfig) {
-    if (config[key] !== void 0) {
-      newConfig[key] = config[key];
-    } else {
-      newConfig[key] = defaultConfig[key];
-    }
-  }
-  return newConfig;
-}
-function initRedundancy(cfg) {
-  const config = setConfig(cfg);
-  let queries = [];
-  function cleanup() {
-    queries = queries.filter((item) => item().status === "pending");
-  }
-  function query(payload, queryCallback, doneCallback) {
-    const query2 = sendQuery(config, payload, queryCallback, (data, error) => {
-      cleanup();
-      if (doneCallback) {
-        doneCallback(data, error);
-      }
-    });
-    queries.push(query2);
-    return query2;
-  }
-  function find(callback) {
-    const result = queries.find((value) => {
-      return callback(value);
-    });
-    return result !== void 0 ? result : null;
-  }
-  const instance = {
-    query,
-    find,
-    setIndex: (index) => {
-      config.index = index;
-    },
-    getIndex: () => config.index,
-    cleanup
-  };
-  return instance;
-}
-
-function emptyCallback$1() {
-}
-const redundancyCache = /* @__PURE__ */ Object.create(null);
-function getRedundancyCache(provider) {
-  if (redundancyCache[provider] === void 0) {
-    const config = getAPIConfig(provider);
-    if (!config) {
-      return;
-    }
-    const redundancy = initRedundancy(config);
-    const cachedReundancy = {
-      config,
-      redundancy
-    };
-    redundancyCache[provider] = cachedReundancy;
-  }
-  return redundancyCache[provider];
-}
-function sendAPIQuery(target, query, callback) {
-  let redundancy;
-  let send;
-  if (typeof target === "string") {
-    const api = getAPIModule(target);
-    if (!api) {
-      callback(void 0, 424);
-      return emptyCallback$1;
-    }
-    send = api.send;
-    const cached = getRedundancyCache(target);
-    if (cached) {
-      redundancy = cached.redundancy;
-    }
-  } else {
-    const config = createAPIConfig(target);
-    if (config) {
-      redundancy = initRedundancy(config);
-      const moduleKey = target.resources ? target.resources[0] : "";
-      const api = getAPIModule(moduleKey);
-      if (api) {
-        send = api.send;
-      }
-    }
-  }
-  if (!redundancy || !send) {
-    callback(void 0, 424);
-    return emptyCallback$1;
-  }
-  return redundancy.query(query, send, callback)().abort;
-}
-
-const iconify_cache = {};
-
-function emptyCallback() {
-}
-const pendingIcons = /* @__PURE__ */ Object.create(null);
-const iconsToLoad = /* @__PURE__ */ Object.create(null);
-const loaderFlags = /* @__PURE__ */ Object.create(null);
-const queueFlags = /* @__PURE__ */ Object.create(null);
-function loadedNewIcons(provider, prefix) {
-  if (loaderFlags[provider] === void 0) {
-    loaderFlags[provider] = /* @__PURE__ */ Object.create(null);
-  }
-  const providerLoaderFlags = loaderFlags[provider];
-  if (!providerLoaderFlags[prefix]) {
-    providerLoaderFlags[prefix] = true;
-    setTimeout(() => {
-      providerLoaderFlags[prefix] = false;
-      updateCallbacks(provider, prefix);
-    });
-  }
-}
-const errorsCache = /* @__PURE__ */ Object.create(null);
-function loadNewIcons(provider, prefix, icons) {
-  function err() {
-    const key = (provider === "" ? "" : "@" + provider + ":") + prefix;
-    const time = Math.floor(Date.now() / 6e4);
-    if (errorsCache[key] < time) {
-      errorsCache[key] = time;
-      console.error('Unable to retrieve icons for "' + key + '" because API is not configured properly.');
-    }
-  }
-  if (iconsToLoad[provider] === void 0) {
-    iconsToLoad[provider] = /* @__PURE__ */ Object.create(null);
-  }
-  const providerIconsToLoad = iconsToLoad[provider];
-  if (queueFlags[provider] === void 0) {
-    queueFlags[provider] = /* @__PURE__ */ Object.create(null);
-  }
-  const providerQueueFlags = queueFlags[provider];
-  if (pendingIcons[provider] === void 0) {
-    pendingIcons[provider] = /* @__PURE__ */ Object.create(null);
-  }
-  const providerPendingIcons = pendingIcons[provider];
-  if (providerIconsToLoad[prefix] === void 0) {
-    providerIconsToLoad[prefix] = icons;
-  } else {
-    providerIconsToLoad[prefix] = providerIconsToLoad[prefix].concat(icons).sort();
-  }
-  if (!providerQueueFlags[prefix]) {
-    providerQueueFlags[prefix] = true;
-    setTimeout(() => {
-      providerQueueFlags[prefix] = false;
-      const icons2 = providerIconsToLoad[prefix];
-      delete providerIconsToLoad[prefix];
-      const api = getAPIModule(provider);
-      if (!api) {
-        err();
-        return;
-      }
-      const params = api.prepare(provider, prefix, icons2);
-      params.forEach((item) => {
-        sendAPIQuery(provider, item, (data, error) => {
-          const storage = getStorage(provider, prefix);
-          if (typeof data !== "object") {
-            if (error !== 404) {
-              return;
-            }
-            const t = Date.now();
-            item.icons.forEach((name) => {
-              storage.missing[name] = t;
-            });
-          } else {
-            try {
-              const parsed = addIconSet(storage, data);
-              if (!parsed.length) {
-                return;
-              }
-              const pending = providerPendingIcons[prefix];
-              parsed.forEach((name) => {
-                delete pending[name];
-              });
-              if (iconify_cache.store) {
-                iconify_cache.store(provider, data);
-              }
-            } catch (err2) {
-              console.error(err2);
-            }
-          }
-          loadedNewIcons(provider, prefix);
-        });
-      });
-    });
-  }
-}
-const loadIcons = (icons, callback) => {
-  const cleanedIcons = listToIcons(icons, true, allowSimpleNames());
-  const sortedIcons = sortIcons(cleanedIcons);
-  if (!sortedIcons.pending.length) {
-    let callCallback = true;
-    if (callback) {
-      setTimeout(() => {
-        if (callCallback) {
-          callback(sortedIcons.loaded, sortedIcons.missing, sortedIcons.pending, emptyCallback);
-        }
-      });
-    }
-    return () => {
-      callCallback = false;
-    };
-  }
-  const newIcons = /* @__PURE__ */ Object.create(null);
-  const sources = [];
-  let lastProvider, lastPrefix;
-  sortedIcons.pending.forEach((icon) => {
-    const provider = icon.provider;
-    const prefix = icon.prefix;
-    if (prefix === lastPrefix && provider === lastProvider) {
-      return;
-    }
-    lastProvider = provider;
-    lastPrefix = prefix;
-    sources.push({
-      provider,
-      prefix
-    });
-    if (pendingIcons[provider] === void 0) {
-      pendingIcons[provider] = /* @__PURE__ */ Object.create(null);
-    }
-    const providerPendingIcons = pendingIcons[provider];
-    if (providerPendingIcons[prefix] === void 0) {
-      providerPendingIcons[prefix] = /* @__PURE__ */ Object.create(null);
-    }
-    if (newIcons[provider] === void 0) {
-      newIcons[provider] = /* @__PURE__ */ Object.create(null);
-    }
-    const providerNewIcons = newIcons[provider];
-    if (providerNewIcons[prefix] === void 0) {
-      providerNewIcons[prefix] = [];
-    }
-  });
-  const time = Date.now();
-  sortedIcons.pending.forEach((icon) => {
-    const provider = icon.provider;
-    const prefix = icon.prefix;
-    const name = icon.name;
-    const pendingQueue = pendingIcons[provider][prefix];
-    if (pendingQueue[name] === void 0) {
-      pendingQueue[name] = time;
-      newIcons[provider][prefix].push(name);
-    }
-  });
-  sources.forEach((source) => {
-    const provider = source.provider;
-    const prefix = source.prefix;
-    if (newIcons[provider][prefix].length) {
-      loadNewIcons(provider, prefix, newIcons[provider][prefix]);
-    }
-  });
-  return callback ? storeCallback(callback, sortedIcons, sources) : emptyCallback;
-};
-const loadIcon = (icon) => {
-  return new Promise((fulfill, reject) => {
-    const iconObj = typeof icon === "string" ? stringToIcon(icon) : icon;
-    loadIcons([iconObj || icon], (loaded) => {
-      if (loaded.length && iconObj) {
-        const storage = getStorage(iconObj.provider, iconObj.prefix);
-        const data = getIconFromStorage(storage, iconObj.name);
-        if (data) {
-          fulfill(data);
-          return;
-        }
-      }
-      reject(icon);
-    });
-  });
-};
-
-const cacheVersion = "iconify2";
-const cachePrefix = "iconify";
-const countKey = cachePrefix + "-count";
-const versionKey = cachePrefix + "-version";
-const hour = 36e5;
-const cacheExpiration = 168;
-const iconify_config = {
-  local: true,
-  session: true
-};
-let loaded = false;
-const count = {
-  local: 0,
-  session: 0
-};
-const emptyList = {
-  local: [],
-  session: []
-};
-let _window = typeof window === "undefined" ? {} : window;
-function getGlobal(key) {
-  const attr = key + "Storage";
-  try {
-    if (_window && _window[attr] && typeof _window[attr].length === "number") {
-      return _window[attr];
-    }
-  } catch (err) {
-  }
-  iconify_config[key] = false;
-  return null;
-}
-function setCount(storage, key, value) {
-  try {
-    storage.setItem(countKey, value.toString());
-    count[key] = value;
-    return true;
-  } catch (err) {
-    return false;
-  }
-}
-function getCount(storage) {
-  const count2 = storage.getItem(countKey);
-  if (count2) {
-    const total = parseInt(count2);
-    return total ? total : 0;
-  }
-  return 0;
-}
-function initCache(storage, key) {
-  try {
-    storage.setItem(versionKey, cacheVersion);
-  } catch (err) {
-  }
-  setCount(storage, key, 0);
-}
-function destroyCache(storage) {
-  try {
-    const total = getCount(storage);
-    for (let i = 0; i < total; i++) {
-      storage.removeItem(cachePrefix + i.toString());
-    }
-  } catch (err) {
-  }
-}
-const loadCache = () => {
-  if (loaded) {
-    return;
-  }
-  loaded = true;
-  const minTime = Math.floor(Date.now() / hour) - cacheExpiration;
-  function load(key) {
-    const func = getGlobal(key);
-    if (!func) {
-      return;
-    }
-    const getItem = (index) => {
-      const name = cachePrefix + index.toString();
-      const item = func.getItem(name);
-      if (typeof item !== "string") {
-        return false;
-      }
-      let valid = true;
-      try {
-        const data = JSON.parse(item);
-        if (typeof data !== "object" || typeof data.cached !== "number" || data.cached < minTime || typeof data.provider !== "string" || typeof data.data !== "object" || typeof data.data.prefix !== "string") {
-          valid = false;
-        } else {
-          const provider = data.provider;
-          const prefix = data.data.prefix;
-          const storage = getStorage(provider, prefix);
-          valid = addIconSet(storage, data.data).length > 0;
-        }
-      } catch (err) {
-        valid = false;
-      }
-      if (!valid) {
-        func.removeItem(name);
-      }
-      return valid;
-    };
-    try {
-      const version = func.getItem(versionKey);
-      if (version !== cacheVersion) {
-        if (version) {
-          destroyCache(func);
-        }
-        initCache(func, key);
-        return;
-      }
-      let total = getCount(func);
-      for (let i = total - 1; i >= 0; i--) {
-        if (!getItem(i)) {
-          if (i === total - 1) {
-            total--;
-          } else {
-            emptyList[key].push(i);
-          }
-        }
-      }
-      setCount(func, key, total);
-    } catch (err) {
-    }
-  }
-  for (const key in iconify_config) {
-    load(key);
-  }
-};
-const storeCache = (provider, data) => {
-  if (!loaded) {
-    loadCache();
-  }
-  function store(key) {
-    if (!iconify_config[key]) {
-      return false;
-    }
-    const func = getGlobal(key);
-    if (!func) {
-      return false;
-    }
-    let index = emptyList[key].shift();
-    if (index === void 0) {
-      index = count[key];
-      if (!setCount(func, key, index + 1)) {
-        return false;
-      }
-    }
-    try {
-      const item = {
-        cached: Math.floor(Date.now() / hour),
-        provider,
-        data
-      };
-      func.setItem(cachePrefix + index.toString(), JSON.stringify(item));
-    } catch (err) {
-      return false;
-    }
-    return true;
-  }
-  if (!Object.keys(data.icons).length) {
-    return;
-  }
-  if (data.not_found) {
-    data = Object.assign({}, data);
-    delete data.not_found;
-  }
-  if (!store("local")) {
-    store("session");
-  }
-};
-
-function toggleBrowserCache(storage, value) {
-  switch (storage) {
-    case "local":
-    case "session":
-      iconify_config[storage] = value;
-      break;
-    case "all":
-      for (const key in iconify_config) {
-        iconify_config[key] = value;
-      }
-      break;
-  }
-}
-
-const separator = /[\s,]+/;
-function flipFromString(custom, flip) {
-  flip.split(separator).forEach((str) => {
-    const value = str.trim();
-    switch (value) {
-      case "horizontal":
-        custom.hFlip = true;
-        break;
-      case "vertical":
-        custom.vFlip = true;
-        break;
-    }
-  });
-}
-function alignmentFromString(custom, align) {
-  align.split(separator).forEach((str) => {
-    const value = str.trim();
-    switch (value) {
-      case "left":
-      case "center":
-      case "right":
-        custom.hAlign = value;
-        break;
-      case "top":
-      case "middle":
-      case "bottom":
-        custom.vAlign = value;
-        break;
-      case "slice":
-      case "crop":
-        custom.slice = true;
-        break;
-      case "meet":
-        custom.slice = false;
-    }
-  });
-}
-
-function rotateFromString(value, defaultValue = 0) {
-  const units = value.replace(/^-?[0-9.]*/, "");
-  function cleanup(value2) {
-    while (value2 < 0) {
-      value2 += 4;
-    }
-    return value2 % 4;
-  }
-  if (units === "") {
-    const num = parseInt(value);
-    return isNaN(num) ? 0 : cleanup(num);
-  } else if (units !== value) {
-    let split = 0;
-    switch (units) {
-      case "%":
-        split = 25;
-        break;
-      case "deg":
-        split = 90;
-    }
-    if (split) {
-      let num = parseFloat(value.slice(0, value.length - units.length));
-      if (isNaN(num)) {
-        return 0;
-      }
-      num = num / split;
-      return num % 1 === 0 ? cleanup(num) : 0;
-    }
-  }
-  return defaultValue;
-}
-
-/**
- * Default SVG attributes
- */
-const svgDefaults = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    'xmlns:xlink': 'http://www.w3.org/1999/xlink',
-    'aria-hidden': true,
-    'role': 'img',
-};
-/**
- * Aliases for customisations.
- * In Vue 'v-' properties are reserved, so v-align and v-flip must be renamed
- */
-let customisationAliases = {};
-['horizontal', 'vertical'].forEach((prefix) => {
-    ['Align', 'Flip'].forEach((suffix) => {
-        const attr = prefix.slice(0, 1) + suffix;
-        const value = {
-            attr,
-            boolean: suffix === 'Flip',
-        };
-        // vertical-align
-        customisationAliases[prefix + '-' + suffix.toLowerCase()] = value;
-        // v-align
-        customisationAliases[prefix.slice(0, 1) + '-' + suffix.toLowerCase()] =
-            value;
-        // verticalAlign
-        customisationAliases[prefix + suffix] = value;
-    });
-});
-/**
- * Render icon
- */
-const iconify_render = (createElement, 
-// context.props
-props, 
-// context.data
-contextData, 
-// Icon must be validated before calling this function
-icon) => {
-    // Split properties
-    const customisations = mergeCustomisations(defaults, props);
-    const componentProps = { ...svgDefaults };
-    // Style in Vue 2 components is always passed to rendered component, so no point in parsing it
-    const style = {};
-    // Get element properties
-    for (let key in props) {
-        const value = props[key];
-        if (value === void 0) {
-            continue;
-        }
-        switch (key) {
-            // Properties to ignore
-            case 'icon':
-            case 'style':
-            case 'onLoad':
-                break;
-            // Boolean attributes
-            case 'inline':
-            case 'hFlip':
-            case 'vFlip':
-                customisations[key] =
-                    value === true || value === 'true' || value === 1;
-                break;
-            // Flip as string: 'horizontal,vertical'
-            case 'flip':
-                if (typeof value === 'string') {
-                    flipFromString(customisations, value);
-                }
-                break;
-            // Alignment as string
-            case 'align':
-                if (typeof value === 'string') {
-                    alignmentFromString(customisations, value);
-                }
-                break;
-            // Color: override style
-            case 'color':
-                style.color = value;
-                break;
-            // Rotation as string
-            case 'rotate':
-                if (typeof value === 'string') {
-                    customisations[key] = rotateFromString(value);
-                }
-                else if (typeof value === 'number') {
-                    customisations[key] = value;
-                }
-                break;
-            // Remove aria-hidden
-            case 'ariaHidden':
-            case 'aria-hidden':
-                // Vue transforms 'aria-hidden' property to 'ariaHidden'
-                if (value !== true && value !== 'true') {
-                    delete componentProps['aria-hidden'];
-                }
-                break;
-            default:
-                if (customisationAliases[key] !== void 0) {
-                    // Aliases for customisations
-                    if (customisationAliases[key].boolean &&
-                        (value === true || value === 'true' || value === 1)) {
-                        // Check for boolean
-                        customisations[customisationAliases[key].attr] = true;
-                    }
-                    else if (!customisationAliases[key].boolean &&
-                        typeof value === 'string' &&
-                        value !== '') {
-                        // String
-                        customisations[customisationAliases[key].attr] = value;
-                    }
-                }
-                else if (defaults[key] === void 0) {
-                    // Copy missing property if it does not exist in customisations
-                    componentProps[key] = value;
-                }
-        }
-    }
-    // Generate icon
-    const item = iconToSVG(icon, customisations);
-    // Add icon stuff
-    for (let key in item.attributes) {
-        componentProps[key] = item.attributes[key];
-    }
-    if (item.inline) {
-        style.verticalAlign = '-0.125em';
-    }
-    // Counter for ids based on "id" property to render icons consistently on server and client
-    let localCounter = 0;
-    let id = props.id;
-    if (typeof id === 'string') {
-        // Convert '-' to '_' to avoid errors in animations
-        id = id.replace(/-/g, '_');
-    }
-    // Generate node data
-    const data = {
-        attrs: componentProps,
-        domProps: {
-            innerHTML: replaceIDs(item.body, id ? () => id + 'ID' + localCounter++ : 'iconifyVue'),
-        },
-    };
-    if (Object.keys(style).length > 0) {
-        data.style = style;
-    }
-    if (contextData) {
-        ['on', 'ref'].forEach((attr) => {
-            if (contextData[attr] !== void 0) {
-                data[attr] = contextData[attr];
-            }
-        });
-        ['staticClass', 'class'].forEach((attr) => {
-            if (contextData[attr] !== void 0) {
-                data.class = contextData[attr];
-            }
-        });
-    }
-    // Render icon
-    return createElement('svg', data);
-};
-
-/**
- * Enable cache
- */
-function enableCache(storage) {
-    toggleBrowserCache(storage, true);
-}
-/**
- * Disable cache
- */
-function disableCache(storage) {
-    toggleBrowserCache(storage, false);
-}
-/**
- * Initialise stuff
- */
-// Enable short names
-allowSimpleNames(true);
-// Set API module
-setAPIModule('', fetchAPIModule);
-/**
- * Browser stuff
- */
-if (typeof document !== 'undefined' && typeof window !== 'undefined') {
-    // Set cache and load existing cache
-    iconify_cache.store = storeCache;
-    loadCache();
-    const _window = window;
-    // Load icons from global "IconifyPreload"
-    if (_window.IconifyPreload !== void 0) {
-        const preload = _window.IconifyPreload;
-        const err = 'Invalid IconifyPreload syntax.';
-        if (typeof preload === 'object' && preload !== null) {
-            (preload instanceof Array ? preload : [preload]).forEach((item) => {
-                try {
-                    if (
-                    // Check if item is an object and not null/array
-                    typeof item !== 'object' ||
-                        item === null ||
-                        item instanceof Array ||
-                        // Check for 'icons' and 'prefix'
-                        typeof item.icons !== 'object' ||
-                        typeof item.prefix !== 'string' ||
-                        // Add icon set
-                        !addCollection(item)) {
-                        console.error(err);
-                    }
-                }
-                catch (e) {
-                    console.error(err);
-                }
-            });
-        }
-    }
-    // Set API from global "IconifyProviders"
-    if (_window.IconifyProviders !== void 0) {
-        const providers = _window.IconifyProviders;
-        if (typeof providers === 'object' && providers !== null) {
-            for (let key in providers) {
-                const err = 'IconifyProviders[' + key + '] is invalid.';
-                try {
-                    const value = providers[key];
-                    if (typeof value !== 'object' ||
-                        !value ||
-                        value.resources === void 0) {
-                        continue;
-                    }
-                    if (!addAPIProvider(key, value)) {
-                        console.error(err);
-                    }
-                }
-                catch (e) {
-                    console.error(err);
-                }
-            }
-        }
-    }
-}
-/**
- * Empty icon data, rendered when icon is not available
- */
-const emptyIcon = fullIcon({
-    body: '',
-});
-const Icon = vue_runtime_esm.extend({
-    // Do not inherit other attributes: it is handled by render()
-    // In Vue 2 style is still passed!
-    inheritAttrs: false,
-    // Set initial data
-    data() {
-        return {
-            // Mounted status
-            iconMounted: false,
-        };
-    },
-    beforeMount() {
-        // Current icon name
-        this._name = '';
-        // Loading
-        this._loadingIcon = null;
-        // Mark as mounted
-        this.iconMounted = true;
-    },
-    beforeDestroy() {
-        this.abortLoading();
-    },
-    methods: {
-        abortLoading() {
-            if (this._loadingIcon) {
-                this._loadingIcon.abort();
-                this._loadingIcon = null;
-            }
-        },
-        // Get data for icon to render or null
-        getIcon(icon, onload) {
-            // Icon is an object
-            if (typeof icon === 'object' &&
-                icon !== null &&
-                typeof icon.body === 'string') {
-                // Stop loading
-                this._name = '';
-                this.abortLoading();
-                return {
-                    data: fullIcon(icon),
-                };
-            }
-            // Invalid icon?
-            let iconName;
-            if (typeof icon !== 'string' ||
-                (iconName = stringToIcon(icon, false, true)) === null) {
-                this.abortLoading();
-                return null;
-            }
-            // Load icon
-            const data = getIconData(iconName);
-            if (data === null) {
-                // Icon needs to be loaded
-                if (!this._loadingIcon || this._loadingIcon.name !== icon) {
-                    // New icon to load
-                    this.abortLoading();
-                    this._name = '';
-                    this._loadingIcon = {
-                        name: icon,
-                        abort: loadIcons([iconName], () => {
-                            this.$forceUpdate();
-                        }),
-                    };
-                }
-                return null;
-            }
-            // Icon data is available
-            this.abortLoading();
-            if (this._name !== icon) {
-                this._name = icon;
-                if (onload) {
-                    onload(icon);
-                }
-            }
-            // Add classes
-            const classes = ['iconify'];
-            if (iconName.prefix !== '') {
-                classes.push('iconify--' + iconName.prefix);
-            }
-            if (iconName.provider !== '') {
-                classes.push('iconify--' + iconName.provider);
-            }
-            return { data, classes };
-        },
-    },
-    // Render icon
-    render(createElement) {
-        const props = this.$attrs;
-        let context = this.$data;
-        // Get icon data
-        const icon = this.iconMounted ? this.getIcon(props.icon, props.onLoad) : null;
-        // Validate icon object
-        if (!icon) {
-            return iconify_render(createElement, props, context, emptyIcon);
-        }
-        // Add classes
-        if (icon.classes) {
-            context = {
-                ...context,
-                class: (typeof context['class'] === 'string'
-                    ? context['class'] + ' '
-                    : '') + icon.classes.join(' '),
-            };
-        }
-        // Render icon
-        return iconify_render(createElement, props, context, icon.data);
-    },
-});
-/**
- * Internal API
- */
-const _api = {
-    getAPIConfig,
-    setAPIModule,
-    sendAPIQuery,
-    setFetch,
-    getFetch,
-    listAPIProviders,
-    mergeParams,
-};
-
-
-
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/ExampleComponent.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-
-/* harmony default export */ var ExampleComponentvue_type_script_lang_js_ = ({
-  components: {
-    Icon: Icon
-  },
-
-  data() {
-    return {
-      text: "hola",
-      steps: 3,
-      step: undefined,
-      selectedItem: 0
-    };
-  }
-
-});
-;// CONCATENATED MODULE: ./src/components/UI/ExampleComponent.vue?vue&type=script&lang=js&
- /* harmony default export */ var UI_ExampleComponentvue_type_script_lang_js_ = (ExampleComponentvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./src/components/General/HomeForm.vue?vue&type=script&lang=js&
+ /* harmony default export */ var General_HomeFormvue_type_script_lang_js_ = (HomeFormvue_type_script_lang_js_); 
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -19061,261 +17289,11 @@ function normalizeComponent (
   }
 }
 
-;// CONCATENATED MODULE: ./src/components/UI/ExampleComponent.vue
-
-
-
-function injectStyles (context) {
-  
-  var style0 = __webpack_require__(5850)
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var component = normalizeComponent(
-  UI_ExampleComponentvue_type_script_lang_js_,
-  ExampleComponentvue_type_template_id_059307c7_render,
-  ExampleComponentvue_type_template_id_059307c7_staticRenderFns,
-  false,
-  injectStyles,
-  null,
-  null
-  ,true
-)
-
-/* harmony default export */ var ExampleComponent = (component.exports);
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/WidgetWc/WidgetCard.vue?vue&type=template&id=7afeaa5d&
-var WidgetCardvue_type_template_id_7afeaa5d_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-card',{attrs:{"height":"500","width":"350","outlined":""}},[_c('CustomTabs')],1)}
-var WidgetCardvue_type_template_id_7afeaa5d_staticRenderFns = []
-
-
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/CustomTabs.vue?vue&type=template&id=407cae0f&lang=html&
-var CustomTabsvue_type_template_id_407cae0f_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"wrapper"},[_c('button',{staticClass:"change__style",on:{"click":function($event){return _vm.changeStyle()}}},[_vm._v("Change Style")]),_c('tabs',{attrs:{"mode":_vm.mode}},[_c('tab',{attrs:{"title":"Tab 1"}},[_vm._v("Hello From Tab 1")]),_c('tab',{attrs:{"title":"Tab 2"}},[_vm._v("Hello From Tab 2")]),_c('tab',{attrs:{"title":"Tab 3"}},[_vm._v("Hello From Tab 3")]),_c('tab',{attrs:{"title":"Tab 4"}},[_vm._v("Hello From Tab 4")])],1)],1)}
-var CustomTabsvue_type_template_id_407cae0f_lang_html_staticRenderFns = []
-
-
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/TabUI.vue?vue&type=template&id=0867d656&lang=html&
-var TabUIvue_type_template_id_0867d656_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isActive),expression:"isActive"}],staticClass:"tab"},[_vm._t("default")],2)}
-var TabUIvue_type_template_id_0867d656_lang_html_staticRenderFns = []
-
-
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/TabUI.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-/* harmony default export */ var TabUIvue_type_script_lang_js_ = ({
-  props: {
-    title: {
-      type: String,
-      default: "Tab"
-    }
-  },
-
-  data() {
-    return {
-      isActive: true
-    };
-  }
-
-});
-;// CONCATENATED MODULE: ./src/components/UI/TabUI.vue?vue&type=script&lang=js&
- /* harmony default export */ var UI_TabUIvue_type_script_lang_js_ = (TabUIvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./src/components/UI/TabUI.vue
-
-
-
-function TabUI_injectStyles (context) {
-  
-  
-}
-
-/* normalize component */
-
-var TabUI_component = normalizeComponent(
-  UI_TabUIvue_type_script_lang_js_,
-  TabUIvue_type_template_id_0867d656_lang_html_render,
-  TabUIvue_type_template_id_0867d656_lang_html_staticRenderFns,
-  false,
-  TabUI_injectStyles,
-  null,
-  null
-  ,true
-)
-
-/* harmony default export */ var TabUI = (TabUI_component.exports);
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/TabsUI.vue?vue&type=template&id=9c9b0e14&lang=html&
-var TabsUIvue_type_template_id_9c9b0e14_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:{"tabs__light": _vm.mode === "light", "tabs__dark": _vm.mode === "dark"}},[_c('ul',{staticClass:"tabs__header"},_vm._l((_vm.tabs),function(tab,index){return _c('li',{key:tab.title,class:{"tab__selected": (index == _vm.selectedIndex)},on:{"click":function($event){return _vm.selectTab(index)}}},[_vm._v(" "+_vm._s(tab.title)+" ")])}),0),_vm._t("default")],2)}
-var TabsUIvue_type_template_id_9c9b0e14_lang_html_staticRenderFns = []
-
-
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/TabsUI.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ var TabsUIvue_type_script_lang_js_ = ({
-  props: {
-    mode: {
-      type: String,
-      default: "light"
-    }
-  },
-
-  data() {
-    return {
-      selectedIndex: 0,
-      // the index of the selected tab,
-      tabs: [] // all of the tabs
-
-    };
-  },
-
-  created() {
-    this.tabs = this.$children;
-  },
-
-  mounted() {
-    this.selectTab(0);
-  },
-
-  methods: {
-    selectTab(i) {
-      this.selectedIndex = i; // loop over all the tabs
-
-      this.tabs.forEach((tab, index) => {
-        tab.isActive = index === i;
-      });
-    }
-
-  }
-});
-;// CONCATENATED MODULE: ./src/components/UI/TabsUI.vue?vue&type=script&lang=js&
- /* harmony default export */ var UI_TabsUIvue_type_script_lang_js_ = (TabsUIvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./src/components/UI/TabsUI.vue
-
-
-
-function TabsUI_injectStyles (context) {
-  
-  var style0 = __webpack_require__(7605)
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var TabsUI_component = normalizeComponent(
-  UI_TabsUIvue_type_script_lang_js_,
-  TabsUIvue_type_template_id_9c9b0e14_lang_html_render,
-  TabsUIvue_type_template_id_9c9b0e14_lang_html_staticRenderFns,
-  false,
-  TabsUI_injectStyles,
-  null,
-  null
-  ,true
-)
-
-/* harmony default export */ var TabsUI = (TabsUI_component.exports);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/CustomTabs.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ var CustomTabsvue_type_script_lang_js_ = ({
-  components: {
-    Tab: TabUI,
-    Tabs: TabsUI
-  },
-
-  data() {
-    return {
-      mode: "dark"
-    };
-  },
-
-  methods: {
-    changeStyle() {
-      if (this.mode === "dark") {
-        this.mode = "light";
-      } else {
-        this.mode = "dark";
-      }
-    }
-
-  }
-});
-;// CONCATENATED MODULE: ./src/components/UI/CustomTabs.vue?vue&type=script&lang=js&
- /* harmony default export */ var UI_CustomTabsvue_type_script_lang_js_ = (CustomTabsvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./src/components/UI/CustomTabs.vue
-
-
-
-function CustomTabs_injectStyles (context) {
-  
-  var style0 = __webpack_require__(9911)
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var CustomTabs_component = normalizeComponent(
-  UI_CustomTabsvue_type_script_lang_js_,
-  CustomTabsvue_type_template_id_407cae0f_lang_html_render,
-  CustomTabsvue_type_template_id_407cae0f_lang_html_staticRenderFns,
-  false,
-  CustomTabs_injectStyles,
-  null,
-  null
-  ,true
-)
-
-/* harmony default export */ var CustomTabs = (CustomTabs_component.exports);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/WidgetWc/WidgetCard.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ var WidgetCardvue_type_script_lang_js_ = ({
-  components: {
-    CustomTabs: CustomTabs
-  }
-});
-;// CONCATENATED MODULE: ./src/components/WidgetWc/WidgetCard.vue?vue&type=script&lang=js&
- /* harmony default export */ var WidgetWc_WidgetCardvue_type_script_lang_js_ = (WidgetCardvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installComponents.js
 var installComponents = __webpack_require__(3453);
 var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VCard/VCard.sass
-var VCard = __webpack_require__(2793);
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VBtn/VBtn.sass
+var VBtn = __webpack_require__(101);
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VSheet/VSheet.sass
 var VSheet = __webpack_require__(4382);
 ;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/binds-attrs/index.js
@@ -21909,413 +19887,8 @@ function mixins(...args) {
 
 /* harmony default export */ var components_VSheet = (VSheet_VSheet);
 //# sourceMappingURL=index.js.map
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VProgressLinear/VProgressLinear.sass
-var VProgressLinear = __webpack_require__(8412);
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/util/mergeData.js
-
-const pattern = {
-  styleList: /;(?![^(]*\))/g,
-  styleProp: /:(.*)/
-};
-
-function parseStyle(style) {
-  const styleMap = {};
-
-  for (const s of style.split(pattern.styleList)) {
-    let [key, val] = s.split(pattern.styleProp);
-    key = key.trim();
-
-    if (!key) {
-      continue;
-    } // May be undefined if the `key: value` pair is incomplete.
-
-
-    if (typeof val === 'string') {
-      val = val.trim();
-    }
-
-    styleMap[helpers_camelize(key)] = val;
-  }
-
-  return styleMap;
-}
-
-function mergeData_mergeData() {
-  const mergeTarget = {};
-  let i = arguments.length;
-  let prop; // Allow for variadic argument length.
-
-  while (i--) {
-    // Iterate through the data properties and execute merge strategies
-    // Object.keys eliminates need for hasOwnProperty call
-    for (prop of Object.keys(arguments[i])) {
-      switch (prop) {
-        // Array merge strategy (array concatenation)
-        case 'class':
-        case 'directives':
-          if (arguments[i][prop]) {
-            mergeTarget[prop] = mergeClasses(mergeTarget[prop], arguments[i][prop]);
-          }
-
-          break;
-
-        case 'style':
-          if (arguments[i][prop]) {
-            mergeTarget[prop] = mergeStyles(mergeTarget[prop], arguments[i][prop]);
-          }
-
-          break;
-        // Space delimited string concatenation strategy
-
-        case 'staticClass':
-          if (!arguments[i][prop]) {
-            break;
-          }
-
-          if (mergeTarget[prop] === undefined) {
-            mergeTarget[prop] = '';
-          }
-
-          if (mergeTarget[prop]) {
-            // Not an empty string, so concatenate
-            mergeTarget[prop] += ' ';
-          }
-
-          mergeTarget[prop] += arguments[i][prop].trim();
-          break;
-        // Object, the properties of which to merge via array merge strategy (array concatenation).
-        // Callback merge strategy merges callbacks to the beginning of the array,
-        // so that the last defined callback will be invoked first.
-        // This is done since to mimic how Object.assign merging
-        // uses the last given value to assign.
-
-        case 'on':
-        case 'nativeOn':
-          if (arguments[i][prop]) {
-            mergeTarget[prop] = mergeListeners(mergeTarget[prop], arguments[i][prop]);
-          }
-
-          break;
-        // Object merge strategy
-
-        case 'attrs':
-        case 'props':
-        case 'domProps':
-        case 'scopedSlots':
-        case 'staticStyle':
-        case 'hook':
-        case 'transition':
-          if (!arguments[i][prop]) {
-            break;
-          }
-
-          if (!mergeTarget[prop]) {
-            mergeTarget[prop] = {};
-          }
-
-          mergeTarget[prop] = { ...arguments[i][prop],
-            ...mergeTarget[prop]
-          };
-          break;
-        // Reassignment strategy (no merge)
-
-        default:
-          // slot, key, ref, tag, show, keepAlive
-          if (!mergeTarget[prop]) {
-            mergeTarget[prop] = arguments[i][prop];
-          }
-
-      }
-    }
-  }
-
-  return mergeTarget;
-}
-function mergeStyles(target, source) {
-  if (!target) return source;
-  if (!source) return target;
-  target = wrapInArray(typeof target === 'string' ? parseStyle(target) : target);
-  return target.concat(typeof source === 'string' ? parseStyle(source) : source);
-}
-function mergeClasses(target, source) {
-  if (!source) return target;
-  if (!target) return source;
-  return target ? wrapInArray(target).concat(source) : source;
-}
-function mergeListeners(...args) {
-  if (!args[0]) return args[1];
-  if (!args[1]) return args[0];
-  const dest = {};
-
-  for (let i = 2; i--;) {
-    const arg = args[i];
-
-    for (const event in arg) {
-      if (!arg[event]) continue;
-
-      if (dest[event]) {
-        // Merge current listeners before (because we are iterating backwards).
-        // Note that neither "target" or "source" must be altered.
-        dest[event] = [].concat(arg[event], dest[event]);
-      } else {
-        // Straight assign.
-        dest[event] = arg[event];
-      }
-    }
-  }
-
-  return dest;
-}
-//# sourceMappingURL=mergeData.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/transitions/createTransition.js
-
-
-function mergeTransitions(dest = [], ...transitions) {
-  /* eslint-disable-next-line no-array-constructor */
-  return Array().concat(dest, ...transitions);
-}
-
-function createSimpleTransition(name, origin = 'top center 0', mode) {
-  return {
-    name,
-    functional: true,
-    props: {
-      group: {
-        type: Boolean,
-        default: false
-      },
-      hideOnLeave: {
-        type: Boolean,
-        default: false
-      },
-      leaveAbsolute: {
-        type: Boolean,
-        default: false
-      },
-      mode: {
-        type: String,
-        default: mode
-      },
-      origin: {
-        type: String,
-        default: origin
-      }
-    },
-
-    render(h, context) {
-      const tag = `transition${context.props.group ? '-group' : ''}`;
-      const data = {
-        props: {
-          name,
-          mode: context.props.mode
-        },
-        on: {
-          beforeEnter(el) {
-            el.style.transformOrigin = context.props.origin;
-            el.style.webkitTransformOrigin = context.props.origin;
-          }
-
-        }
-      };
-
-      if (context.props.leaveAbsolute) {
-        data.on.leave = mergeTransitions(data.on.leave, el => {
-          const {
-            offsetTop,
-            offsetLeft,
-            offsetWidth,
-            offsetHeight
-          } = el;
-          el._transitionInitialStyles = {
-            position: el.style.position,
-            top: el.style.top,
-            left: el.style.left,
-            width: el.style.width,
-            height: el.style.height
-          };
-          el.style.position = 'absolute';
-          el.style.top = offsetTop + 'px';
-          el.style.left = offsetLeft + 'px';
-          el.style.width = offsetWidth + 'px';
-          el.style.height = offsetHeight + 'px';
-        });
-        data.on.afterLeave = mergeTransitions(data.on.afterLeave, el => {
-          if (el && el._transitionInitialStyles) {
-            const {
-              position,
-              top,
-              left,
-              width,
-              height
-            } = el._transitionInitialStyles;
-            delete el._transitionInitialStyles;
-            el.style.position = position || '';
-            el.style.top = top || '';
-            el.style.left = left || '';
-            el.style.width = width || '';
-            el.style.height = height || '';
-          }
-        });
-      }
-
-      if (context.props.hideOnLeave) {
-        data.on.leave = mergeTransitions(data.on.leave, el => {
-          el.style.setProperty('display', 'none', 'important');
-        });
-      }
-
-      return h(tag, mergeData_mergeData(context.data, data), context.children);
-    }
-
-  };
-}
-function createJavascriptTransition(name, functions, mode = 'in-out') {
-  return {
-    name,
-    functional: true,
-    props: {
-      mode: {
-        type: String,
-        default: mode
-      }
-    },
-
-    render(h, context) {
-      return h('transition', mergeData_mergeData(context.data, {
-        props: {
-          name
-        },
-        on: functions
-      }), context.children);
-    }
-
-  };
-}
-//# sourceMappingURL=createTransition.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/transitions/expand-transition.js
-
-/* harmony default export */ function expand_transition(expandedParentClass = '', x = false) {
-  const sizeProperty = x ? 'width' : 'height';
-  const offsetProperty = `offset${upperFirst(sizeProperty)}`;
-  return {
-    beforeEnter(el) {
-      el._parent = el.parentNode;
-      el._initialStyle = {
-        transition: el.style.transition,
-        overflow: el.style.overflow,
-        [sizeProperty]: el.style[sizeProperty]
-      };
-    },
-
-    enter(el) {
-      const initialStyle = el._initialStyle;
-      el.style.setProperty('transition', 'none', 'important'); // Hide overflow to account for collapsed margins in the calculated height
-
-      el.style.overflow = 'hidden';
-      const offset = `${el[offsetProperty]}px`;
-      el.style[sizeProperty] = '0';
-      void el.offsetHeight; // force reflow
-
-      el.style.transition = initialStyle.transition;
-
-      if (expandedParentClass && el._parent) {
-        el._parent.classList.add(expandedParentClass);
-      }
-
-      requestAnimationFrame(() => {
-        el.style[sizeProperty] = offset;
-      });
-    },
-
-    afterEnter: resetStyles,
-    enterCancelled: resetStyles,
-
-    leave(el) {
-      el._initialStyle = {
-        transition: '',
-        overflow: el.style.overflow,
-        [sizeProperty]: el.style[sizeProperty]
-      };
-      el.style.overflow = 'hidden';
-      el.style[sizeProperty] = `${el[offsetProperty]}px`;
-      void el.offsetHeight; // force reflow
-
-      requestAnimationFrame(() => el.style[sizeProperty] = '0');
-    },
-
-    afterLeave,
-    leaveCancelled: afterLeave
-  };
-
-  function afterLeave(el) {
-    if (expandedParentClass && el._parent) {
-      el._parent.classList.remove(expandedParentClass);
-    }
-
-    resetStyles(el);
-  }
-
-  function resetStyles(el) {
-    const size = el._initialStyle[sizeProperty];
-    el.style.overflow = el._initialStyle.overflow;
-    if (size != null) el.style[sizeProperty] = size;
-    delete el._initialStyle;
-  }
-}
-//# sourceMappingURL=expand-transition.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/transitions/index.js
-
- // Component specific transitions
-
-const VCarouselTransition = createSimpleTransition('carousel-transition');
-const VCarouselReverseTransition = createSimpleTransition('carousel-reverse-transition');
-const VTabTransition = createSimpleTransition('tab-transition');
-const VTabReverseTransition = createSimpleTransition('tab-reverse-transition');
-const VMenuTransition = createSimpleTransition('menu-transition');
-const VFabTransition = createSimpleTransition('fab-transition', 'center center', 'out-in'); // Generic transitions
-
-const VDialogTransition = createSimpleTransition('dialog-transition');
-const VDialogBottomTransition = createSimpleTransition('dialog-bottom-transition');
-const VDialogTopTransition = createSimpleTransition('dialog-top-transition');
-const VFadeTransition = createSimpleTransition('fade-transition');
-const VScaleTransition = createSimpleTransition('scale-transition');
-const VScrollXTransition = createSimpleTransition('scroll-x-transition');
-const VScrollXReverseTransition = createSimpleTransition('scroll-x-reverse-transition');
-const VScrollYTransition = createSimpleTransition('scroll-y-transition');
-const VScrollYReverseTransition = createSimpleTransition('scroll-y-reverse-transition');
-const VSlideXTransition = createSimpleTransition('slide-x-transition');
-const VSlideXReverseTransition = createSimpleTransition('slide-x-reverse-transition');
-const VSlideYTransition = createSimpleTransition('slide-y-transition');
-const VSlideYReverseTransition = createSimpleTransition('slide-y-reverse-transition'); // Javascript transitions
-
-const VExpandTransition = createJavascriptTransition('expand-transition', expand_transition());
-const VExpandXTransition = createJavascriptTransition('expand-x-transition', expand_transition('', true));
-/* harmony default export */ var transitions = ({
-  $_vuetify_subcomponents: {
-    VCarouselTransition,
-    VCarouselReverseTransition,
-    VDialogTransition,
-    VDialogBottomTransition,
-    VDialogTopTransition,
-    VFabTransition,
-    VFadeTransition,
-    VMenuTransition,
-    VScaleTransition,
-    VScrollXTransition,
-    VScrollXReverseTransition,
-    VScrollYTransition,
-    VScrollYReverseTransition,
-    VSlideXTransition,
-    VSlideXReverseTransition,
-    VSlideYTransition,
-    VSlideYReverseTransition,
-    VTabReverseTransition,
-    VTabTransition,
-    VExpandTransition,
-    VExpandXTransition
-  }
-});
-//# sourceMappingURL=index.js.map
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VProgressCircular/VProgressCircular.sass
+var VProgressCircular = __webpack_require__(2516);
 ;// CONCATENATED MODULE: ./node_modules/vuetify/lib/directives/intersect/index.js
 function inserted(el, binding, vnode) {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
@@ -22367,6 +19940,302 @@ const Intersect = {
 };
 /* harmony default export */ var intersect = (Intersect);
 //# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressCircular/VProgressCircular.js
+// Styles
+ // Directives
+
+ // Mixins
+
+ // Utils
+
+
+/* @vue/component */
+
+/* harmony default export */ var VProgressCircular_VProgressCircular = (colorable.extend({
+  name: 'v-progress-circular',
+  directives: {
+    intersect: intersect
+  },
+  props: {
+    button: Boolean,
+    indeterminate: Boolean,
+    rotate: {
+      type: [Number, String],
+      default: 0
+    },
+    size: {
+      type: [Number, String],
+      default: 32
+    },
+    width: {
+      type: [Number, String],
+      default: 4
+    },
+    value: {
+      type: [Number, String],
+      default: 0
+    }
+  },
+  data: () => ({
+    radius: 20,
+    isVisible: true
+  }),
+  computed: {
+    calculatedSize() {
+      return Number(this.size) + (this.button ? 8 : 0);
+    },
+
+    circumference() {
+      return 2 * Math.PI * this.radius;
+    },
+
+    classes() {
+      return {
+        'v-progress-circular--visible': this.isVisible,
+        'v-progress-circular--indeterminate': this.indeterminate,
+        'v-progress-circular--button': this.button
+      };
+    },
+
+    normalizedValue() {
+      if (this.value < 0) {
+        return 0;
+      }
+
+      if (this.value > 100) {
+        return 100;
+      }
+
+      return parseFloat(this.value);
+    },
+
+    strokeDashArray() {
+      return Math.round(this.circumference * 1000) / 1000;
+    },
+
+    strokeDashOffset() {
+      return (100 - this.normalizedValue) / 100 * this.circumference + 'px';
+    },
+
+    strokeWidth() {
+      return Number(this.width) / +this.size * this.viewBoxSize * 2;
+    },
+
+    styles() {
+      return {
+        height: convertToUnit(this.calculatedSize),
+        width: convertToUnit(this.calculatedSize)
+      };
+    },
+
+    svgStyles() {
+      return {
+        transform: `rotate(${Number(this.rotate)}deg)`
+      };
+    },
+
+    viewBoxSize() {
+      return this.radius / (1 - Number(this.width) / +this.size);
+    }
+
+  },
+  methods: {
+    genCircle(name, offset) {
+      return this.$createElement('circle', {
+        class: `v-progress-circular__${name}`,
+        attrs: {
+          fill: 'transparent',
+          cx: 2 * this.viewBoxSize,
+          cy: 2 * this.viewBoxSize,
+          r: this.radius,
+          'stroke-width': this.strokeWidth,
+          'stroke-dasharray': this.strokeDashArray,
+          'stroke-dashoffset': offset
+        }
+      });
+    },
+
+    genSvg() {
+      const children = [this.indeterminate || this.genCircle('underlay', 0), this.genCircle('overlay', this.strokeDashOffset)];
+      return this.$createElement('svg', {
+        style: this.svgStyles,
+        attrs: {
+          xmlns: 'http://www.w3.org/2000/svg',
+          viewBox: `${this.viewBoxSize} ${this.viewBoxSize} ${2 * this.viewBoxSize} ${2 * this.viewBoxSize}`
+        }
+      }, children);
+    },
+
+    genInfo() {
+      return this.$createElement('div', {
+        staticClass: 'v-progress-circular__info'
+      }, this.$slots.default);
+    },
+
+    onObserve(entries, observer, isIntersecting) {
+      this.isVisible = isIntersecting;
+    }
+
+  },
+
+  render(h) {
+    return h('div', this.setTextColor(this.color, {
+      staticClass: 'v-progress-circular',
+      attrs: {
+        role: 'progressbar',
+        'aria-valuemin': 0,
+        'aria-valuemax': 100,
+        'aria-valuenow': this.indeterminate ? undefined : this.normalizedValue
+      },
+      class: this.classes,
+      directives: [{
+        name: 'intersect',
+        value: this.onObserve
+      }],
+      style: this.styles,
+      on: this.$listeners
+    }), [this.genSvg(), this.genInfo()]);
+  }
+
+}));
+//# sourceMappingURL=VProgressCircular.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressCircular/index.js
+
+
+/* harmony default export */ var components_VProgressCircular = (VProgressCircular_VProgressCircular);
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/registrable/index.js
+
+
+
+function generateWarning(child, parent) {
+  return () => consoleWarn(`The ${child} component must be used inside a ${parent}`);
+}
+
+function inject(namespace, child, parent) {
+  const defaultImpl = child && parent ? {
+    register: generateWarning(child, parent),
+    unregister: generateWarning(child, parent)
+  } : null;
+  return vue_runtime_esm.extend({
+    name: 'registrable-inject',
+    inject: {
+      [namespace]: {
+        default: defaultImpl
+      }
+    }
+  });
+}
+function provide(namespace, self = false) {
+  return vue_runtime_esm.extend({
+    name: 'registrable-provide',
+
+    provide() {
+      return {
+        [namespace]: self ? this : {
+          register: this.register,
+          unregister: this.unregister
+        }
+      };
+    }
+
+  });
+}
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/groupable/index.js
+// Mixins
+
+function factory(namespace, child, parent) {
+  return inject(namespace, child, parent).extend({
+    name: 'groupable',
+    props: {
+      activeClass: {
+        type: String,
+
+        default() {
+          if (!this[namespace]) return undefined;
+          return this[namespace].activeClass;
+        }
+
+      },
+      disabled: Boolean
+    },
+
+    data() {
+      return {
+        isActive: false
+      };
+    },
+
+    computed: {
+      groupClasses() {
+        if (!this.activeClass) return {};
+        return {
+          [this.activeClass]: this.isActive
+        };
+      }
+
+    },
+
+    created() {
+      this[namespace] && this[namespace].register(this);
+    },
+
+    beforeDestroy() {
+      this[namespace] && this[namespace].unregister(this);
+    },
+
+    methods: {
+      toggle() {
+        this.$emit('change');
+      }
+
+    }
+  });
+}
+/* eslint-disable-next-line @typescript-eslint/no-redeclare */
+
+const Groupable = factory('itemGroup');
+/* harmony default export */ var groupable = ((/* unused pure expression or super */ null && (Groupable)));
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/toggleable/index.js
+
+function toggleable_factory(prop = 'value', event = 'input') {
+  return vue_runtime_esm.extend({
+    name: 'toggleable',
+    model: {
+      prop,
+      event
+    },
+    props: {
+      [prop]: {
+        required: false
+      }
+    },
+
+    data() {
+      return {
+        isActive: !!this[prop]
+      };
+    },
+
+    watch: {
+      [prop](val) {
+        this.isActive = !!val;
+      },
+
+      isActive(val) {
+        !!val !== this[prop] && this.$emit(event, val);
+      }
+
+    }
+  });
+}
+/* eslint-disable-next-line @typescript-eslint/no-redeclare */
+
+const Toggleable = toggleable_factory();
+/* harmony default export */ var toggleable = (Toggleable);
+//# sourceMappingURL=index.js.map
 ;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/positionable/index.js
 
 
@@ -22378,13 +20247,13 @@ const availableProps = {
   right: Boolean,
   top: Boolean
 };
-function factory(selected = []) {
+function positionable_factory(selected = []) {
   return vue_runtime_esm.extend({
     name: 'positionable',
     props: selected.length ? filterObjectOnKeys(availableProps, selected) : availableProps
   });
 }
-/* harmony default export */ var positionable = (factory()); // Add a `*` before the second `/`
+/* harmony default export */ var positionable = (positionable_factory()); // Add a `*` before the second `/`
 
 /* Tests /
 let single = factory(['top']).extend({
@@ -22412,353 +20281,6 @@ let all = factory().extend({
   }
 })
 /**/
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/proxyable/index.js
-
-function proxyable_factory(prop = 'value', event = 'change') {
-  return vue_runtime_esm.extend({
-    name: 'proxyable',
-    model: {
-      prop,
-      event
-    },
-    props: {
-      [prop]: {
-        required: false
-      }
-    },
-
-    data() {
-      return {
-        internalLazyValue: this[prop]
-      };
-    },
-
-    computed: {
-      internalValue: {
-        get() {
-          return this.internalLazyValue;
-        },
-
-        set(val) {
-          if (val === this.internalLazyValue) return;
-          this.internalLazyValue = val;
-          this.$emit(event, val);
-        }
-
-      }
-    },
-    watch: {
-      [prop](val) {
-        this.internalLazyValue = val;
-      }
-
-    }
-  });
-}
-/* eslint-disable-next-line @typescript-eslint/no-redeclare */
-
-const Proxyable = proxyable_factory();
-/* harmony default export */ var proxyable = (Proxyable);
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressLinear/VProgressLinear.js
- // Components
-
- // Directives
-
- // Mixins
-
-
-
-
- // Utilities
-
-
-
-const baseMixins = mixins(colorable, factory(['absolute', 'fixed', 'top', 'bottom']), proxyable, themeable);
-/* @vue/component */
-
-/* harmony default export */ var VProgressLinear_VProgressLinear = (baseMixins.extend({
-  name: 'v-progress-linear',
-  directives: {
-    intersect: intersect
-  },
-  props: {
-    active: {
-      type: Boolean,
-      default: true
-    },
-    backgroundColor: {
-      type: String,
-      default: null
-    },
-    backgroundOpacity: {
-      type: [Number, String],
-      default: null
-    },
-    bufferValue: {
-      type: [Number, String],
-      default: 100
-    },
-    color: {
-      type: String,
-      default: 'primary'
-    },
-    height: {
-      type: [Number, String],
-      default: 4
-    },
-    indeterminate: Boolean,
-    query: Boolean,
-    reverse: Boolean,
-    rounded: Boolean,
-    stream: Boolean,
-    striped: Boolean,
-    value: {
-      type: [Number, String],
-      default: 0
-    }
-  },
-
-  data() {
-    return {
-      internalLazyValue: this.value || 0,
-      isVisible: true
-    };
-  },
-
-  computed: {
-    __cachedBackground() {
-      return this.$createElement('div', this.setBackgroundColor(this.backgroundColor || this.color, {
-        staticClass: 'v-progress-linear__background',
-        style: this.backgroundStyle
-      }));
-    },
-
-    __cachedBar() {
-      return this.$createElement(this.computedTransition, [this.__cachedBarType]);
-    },
-
-    __cachedBarType() {
-      return this.indeterminate ? this.__cachedIndeterminate : this.__cachedDeterminate;
-    },
-
-    __cachedBuffer() {
-      return this.$createElement('div', {
-        staticClass: 'v-progress-linear__buffer',
-        style: this.styles
-      });
-    },
-
-    __cachedDeterminate() {
-      return this.$createElement('div', this.setBackgroundColor(this.color, {
-        staticClass: `v-progress-linear__determinate`,
-        style: {
-          width: convertToUnit(this.normalizedValue, '%')
-        }
-      }));
-    },
-
-    __cachedIndeterminate() {
-      return this.$createElement('div', {
-        staticClass: 'v-progress-linear__indeterminate',
-        class: {
-          'v-progress-linear__indeterminate--active': this.active
-        }
-      }, [this.genProgressBar('long'), this.genProgressBar('short')]);
-    },
-
-    __cachedStream() {
-      if (!this.stream) return null;
-      return this.$createElement('div', this.setTextColor(this.color, {
-        staticClass: 'v-progress-linear__stream',
-        style: {
-          width: convertToUnit(100 - this.normalizedBuffer, '%')
-        }
-      }));
-    },
-
-    backgroundStyle() {
-      const backgroundOpacity = this.backgroundOpacity == null ? this.backgroundColor ? 1 : 0.3 : parseFloat(this.backgroundOpacity);
-      return {
-        opacity: backgroundOpacity,
-        [this.isReversed ? 'right' : 'left']: convertToUnit(this.normalizedValue, '%'),
-        width: convertToUnit(Math.max(0, this.normalizedBuffer - this.normalizedValue), '%')
-      };
-    },
-
-    classes() {
-      return {
-        'v-progress-linear--absolute': this.absolute,
-        'v-progress-linear--fixed': this.fixed,
-        'v-progress-linear--query': this.query,
-        'v-progress-linear--reactive': this.reactive,
-        'v-progress-linear--reverse': this.isReversed,
-        'v-progress-linear--rounded': this.rounded,
-        'v-progress-linear--striped': this.striped,
-        'v-progress-linear--visible': this.isVisible,
-        ...this.themeClasses
-      };
-    },
-
-    computedTransition() {
-      return this.indeterminate ? VFadeTransition : VSlideXTransition;
-    },
-
-    isReversed() {
-      return this.$vuetify.rtl !== this.reverse;
-    },
-
-    normalizedBuffer() {
-      return this.normalize(this.bufferValue);
-    },
-
-    normalizedValue() {
-      return this.normalize(this.internalLazyValue);
-    },
-
-    reactive() {
-      return Boolean(this.$listeners.change);
-    },
-
-    styles() {
-      const styles = {};
-
-      if (!this.active) {
-        styles.height = 0;
-      }
-
-      if (!this.indeterminate && parseFloat(this.normalizedBuffer) !== 100) {
-        styles.width = convertToUnit(this.normalizedBuffer, '%');
-      }
-
-      return styles;
-    }
-
-  },
-  methods: {
-    genContent() {
-      const slot = getSlot(this, 'default', {
-        value: this.internalLazyValue
-      });
-      if (!slot) return null;
-      return this.$createElement('div', {
-        staticClass: 'v-progress-linear__content'
-      }, slot);
-    },
-
-    genListeners() {
-      const listeners = this.$listeners;
-
-      if (this.reactive) {
-        listeners.click = this.onClick;
-      }
-
-      return listeners;
-    },
-
-    genProgressBar(name) {
-      return this.$createElement('div', this.setBackgroundColor(this.color, {
-        staticClass: 'v-progress-linear__indeterminate',
-        class: {
-          [name]: true
-        }
-      }));
-    },
-
-    onClick(e) {
-      if (!this.reactive) return;
-      const {
-        width
-      } = this.$el.getBoundingClientRect();
-      this.internalValue = e.offsetX / width * 100;
-    },
-
-    onObserve(entries, observer, isIntersecting) {
-      this.isVisible = isIntersecting;
-    },
-
-    normalize(value) {
-      if (value < 0) return 0;
-      if (value > 100) return 100;
-      return parseFloat(value);
-    }
-
-  },
-
-  render(h) {
-    const data = {
-      staticClass: 'v-progress-linear',
-      attrs: {
-        role: 'progressbar',
-        'aria-valuemin': 0,
-        'aria-valuemax': this.normalizedBuffer,
-        'aria-valuenow': this.indeterminate ? undefined : this.normalizedValue
-      },
-      class: this.classes,
-      directives: [{
-        name: 'intersect',
-        value: this.onObserve
-      }],
-      style: {
-        bottom: this.bottom ? 0 : undefined,
-        height: this.active ? convertToUnit(this.height) : 0,
-        top: this.top ? 0 : undefined
-      },
-      on: this.genListeners()
-    };
-    return h('div', data, [this.__cachedStream, this.__cachedBackground, this.__cachedBuffer, this.__cachedBar, this.genContent()]);
-  }
-
-}));
-//# sourceMappingURL=VProgressLinear.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressLinear/index.js
-
-
-/* harmony default export */ var components_VProgressLinear = (VProgressLinear_VProgressLinear);
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/loadable/index.js
-
-
-/**
- * Loadable
- *
- * @mixin
- *
- * Used to add linear progress bar to components
- * Can use a default bar with a specific color
- * or designate a custom progress linear bar
- */
-
-/* @vue/component */
-
-/* harmony default export */ var loadable = (vue_runtime_esm.extend().extend({
-  name: 'loadable',
-  props: {
-    loading: {
-      type: [Boolean, String],
-      default: false
-    },
-    loaderHeight: {
-      type: [Number, String],
-      default: 2
-    }
-  },
-  methods: {
-    genProgress() {
-      if (this.loading === false) return null;
-      return this.$slots.progress || this.$createElement(components_VProgressLinear, {
-        props: {
-          absolute: true,
-          color: this.loading === true || this.loading === '' ? this.color || 'primary' : this.loading,
-          height: this.loaderHeight,
-          indeterminate: true
-        }
-      });
-    }
-
-  }
-}));
 //# sourceMappingURL=index.js.map
 // EXTERNAL MODULE: ./node_modules/vuetify/src/directives/ripple/VRipple.sass
 var VRipple = __webpack_require__(2850);
@@ -23238,418 +20760,6 @@ const Ripple = {
   }
 }));
 //# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VCard/VCard.js
-// Styles
- // Extensions
-
- // Mixins
-
-
- // Helpers
-
-
-/* @vue/component */
-
-/* harmony default export */ var VCard_VCard = (mixins(loadable, routable, components_VSheet).extend({
-  name: 'v-card',
-  props: {
-    flat: Boolean,
-    hover: Boolean,
-    img: String,
-    link: Boolean,
-    loaderHeight: {
-      type: [Number, String],
-      default: 4
-    },
-    raised: Boolean
-  },
-  computed: {
-    classes() {
-      return {
-        'v-card': true,
-        ...routable.options.computed.classes.call(this),
-        'v-card--flat': this.flat,
-        'v-card--hover': this.hover,
-        'v-card--link': this.isClickable,
-        'v-card--loading': this.loading,
-        'v-card--disabled': this.disabled,
-        'v-card--raised': this.raised,
-        ...components_VSheet.options.computed.classes.call(this)
-      };
-    },
-
-    styles() {
-      const style = { ...components_VSheet.options.computed.styles.call(this)
-      };
-
-      if (this.img) {
-        style.background = `url("${this.img}") center center / cover no-repeat`;
-      }
-
-      return style;
-    }
-
-  },
-  methods: {
-    genProgress() {
-      const render = loadable.options.methods.genProgress.call(this);
-      if (!render) return null;
-      return this.$createElement('div', {
-        staticClass: 'v-card__progress',
-        key: 'progress'
-      }, [render]);
-    }
-
-  },
-
-  render(h) {
-    const {
-      tag,
-      data
-    } = this.generateRouteLink();
-    data.style = this.styles;
-
-    if (this.isClickable) {
-      data.attrs = data.attrs || {};
-      data.attrs.tabindex = 0;
-    }
-
-    return h(tag, this.setBackgroundColor(this.color, data), [this.genProgress(), this.$slots.default]);
-  }
-
-}));
-//# sourceMappingURL=VCard.js.map
-;// CONCATENATED MODULE: ./src/components/WidgetWc/WidgetCard.vue
-
-
-
-function WidgetCard_injectStyles (context) {
-  
-  var style0 = __webpack_require__(6159)
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var WidgetCard_component = normalizeComponent(
-  WidgetWc_WidgetCardvue_type_script_lang_js_,
-  WidgetCardvue_type_template_id_7afeaa5d_render,
-  WidgetCardvue_type_template_id_7afeaa5d_staticRenderFns,
-  false,
-  WidgetCard_injectStyles,
-  null,
-  null
-  ,true
-)
-
-/* harmony default export */ var WidgetCard = (WidgetCard_component.exports);
-
-/* vuetify-loader */
-;
-
-installComponents_default()(WidgetCard_component, {VCard: VCard_VCard})
-
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VBtn/VBtn.sass
-var VBtn = __webpack_require__(101);
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VProgressCircular/VProgressCircular.sass
-var VProgressCircular = __webpack_require__(2516);
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressCircular/VProgressCircular.js
-// Styles
- // Directives
-
- // Mixins
-
- // Utils
-
-
-/* @vue/component */
-
-/* harmony default export */ var VProgressCircular_VProgressCircular = (colorable.extend({
-  name: 'v-progress-circular',
-  directives: {
-    intersect: intersect
-  },
-  props: {
-    button: Boolean,
-    indeterminate: Boolean,
-    rotate: {
-      type: [Number, String],
-      default: 0
-    },
-    size: {
-      type: [Number, String],
-      default: 32
-    },
-    width: {
-      type: [Number, String],
-      default: 4
-    },
-    value: {
-      type: [Number, String],
-      default: 0
-    }
-  },
-  data: () => ({
-    radius: 20,
-    isVisible: true
-  }),
-  computed: {
-    calculatedSize() {
-      return Number(this.size) + (this.button ? 8 : 0);
-    },
-
-    circumference() {
-      return 2 * Math.PI * this.radius;
-    },
-
-    classes() {
-      return {
-        'v-progress-circular--visible': this.isVisible,
-        'v-progress-circular--indeterminate': this.indeterminate,
-        'v-progress-circular--button': this.button
-      };
-    },
-
-    normalizedValue() {
-      if (this.value < 0) {
-        return 0;
-      }
-
-      if (this.value > 100) {
-        return 100;
-      }
-
-      return parseFloat(this.value);
-    },
-
-    strokeDashArray() {
-      return Math.round(this.circumference * 1000) / 1000;
-    },
-
-    strokeDashOffset() {
-      return (100 - this.normalizedValue) / 100 * this.circumference + 'px';
-    },
-
-    strokeWidth() {
-      return Number(this.width) / +this.size * this.viewBoxSize * 2;
-    },
-
-    styles() {
-      return {
-        height: convertToUnit(this.calculatedSize),
-        width: convertToUnit(this.calculatedSize)
-      };
-    },
-
-    svgStyles() {
-      return {
-        transform: `rotate(${Number(this.rotate)}deg)`
-      };
-    },
-
-    viewBoxSize() {
-      return this.radius / (1 - Number(this.width) / +this.size);
-    }
-
-  },
-  methods: {
-    genCircle(name, offset) {
-      return this.$createElement('circle', {
-        class: `v-progress-circular__${name}`,
-        attrs: {
-          fill: 'transparent',
-          cx: 2 * this.viewBoxSize,
-          cy: 2 * this.viewBoxSize,
-          r: this.radius,
-          'stroke-width': this.strokeWidth,
-          'stroke-dasharray': this.strokeDashArray,
-          'stroke-dashoffset': offset
-        }
-      });
-    },
-
-    genSvg() {
-      const children = [this.indeterminate || this.genCircle('underlay', 0), this.genCircle('overlay', this.strokeDashOffset)];
-      return this.$createElement('svg', {
-        style: this.svgStyles,
-        attrs: {
-          xmlns: 'http://www.w3.org/2000/svg',
-          viewBox: `${this.viewBoxSize} ${this.viewBoxSize} ${2 * this.viewBoxSize} ${2 * this.viewBoxSize}`
-        }
-      }, children);
-    },
-
-    genInfo() {
-      return this.$createElement('div', {
-        staticClass: 'v-progress-circular__info'
-      }, this.$slots.default);
-    },
-
-    onObserve(entries, observer, isIntersecting) {
-      this.isVisible = isIntersecting;
-    }
-
-  },
-
-  render(h) {
-    return h('div', this.setTextColor(this.color, {
-      staticClass: 'v-progress-circular',
-      attrs: {
-        role: 'progressbar',
-        'aria-valuemin': 0,
-        'aria-valuemax': 100,
-        'aria-valuenow': this.indeterminate ? undefined : this.normalizedValue
-      },
-      class: this.classes,
-      directives: [{
-        name: 'intersect',
-        value: this.onObserve
-      }],
-      style: this.styles,
-      on: this.$listeners
-    }), [this.genSvg(), this.genInfo()]);
-  }
-
-}));
-//# sourceMappingURL=VProgressCircular.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressCircular/index.js
-
-
-/* harmony default export */ var components_VProgressCircular = (VProgressCircular_VProgressCircular);
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/registrable/index.js
-
-
-
-function generateWarning(child, parent) {
-  return () => consoleWarn(`The ${child} component must be used inside a ${parent}`);
-}
-
-function inject(namespace, child, parent) {
-  const defaultImpl = child && parent ? {
-    register: generateWarning(child, parent),
-    unregister: generateWarning(child, parent)
-  } : null;
-  return vue_runtime_esm.extend({
-    name: 'registrable-inject',
-    inject: {
-      [namespace]: {
-        default: defaultImpl
-      }
-    }
-  });
-}
-function provide(namespace, self = false) {
-  return Vue.extend({
-    name: 'registrable-provide',
-
-    provide() {
-      return {
-        [namespace]: self ? this : {
-          register: this.register,
-          unregister: this.unregister
-        }
-      };
-    }
-
-  });
-}
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/groupable/index.js
-// Mixins
-
-function groupable_factory(namespace, child, parent) {
-  return inject(namespace, child, parent).extend({
-    name: 'groupable',
-    props: {
-      activeClass: {
-        type: String,
-
-        default() {
-          if (!this[namespace]) return undefined;
-          return this[namespace].activeClass;
-        }
-
-      },
-      disabled: Boolean
-    },
-
-    data() {
-      return {
-        isActive: false
-      };
-    },
-
-    computed: {
-      groupClasses() {
-        if (!this.activeClass) return {};
-        return {
-          [this.activeClass]: this.isActive
-        };
-      }
-
-    },
-
-    created() {
-      this[namespace] && this[namespace].register(this);
-    },
-
-    beforeDestroy() {
-      this[namespace] && this[namespace].unregister(this);
-    },
-
-    methods: {
-      toggle() {
-        this.$emit('change');
-      }
-
-    }
-  });
-}
-/* eslint-disable-next-line @typescript-eslint/no-redeclare */
-
-const Groupable = groupable_factory('itemGroup');
-/* harmony default export */ var groupable = ((/* unused pure expression or super */ null && (Groupable)));
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/toggleable/index.js
-
-function toggleable_factory(prop = 'value', event = 'input') {
-  return vue_runtime_esm.extend({
-    name: 'toggleable',
-    model: {
-      prop,
-      event
-    },
-    props: {
-      [prop]: {
-        required: false
-      }
-    },
-
-    data() {
-      return {
-        isActive: !!this[prop]
-      };
-    },
-
-    watch: {
-      [prop](val) {
-        this.isActive = !!val;
-      },
-
-      isActive(val) {
-        !!val !== this[prop] && this.$emit(event, val);
-      }
-
-    }
-  });
-}
-/* eslint-disable-next-line @typescript-eslint/no-redeclare */
-
-const Toggleable = toggleable_factory();
-/* harmony default export */ var toggleable = ((/* unused pure expression or super */ null && (Toggleable)));
-//# sourceMappingURL=index.js.map
 ;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/sizeable/index.js
 
 /* harmony default export */ var sizeable = (vue_runtime_esm.extend({
@@ -23695,10 +20805,10 @@ const Toggleable = toggleable_factory();
 
 
 
-const VBtn_baseMixins = mixins(components_VSheet, routable, positionable, sizeable, groupable_factory('btnToggle'), toggleable_factory('inputValue')
+const baseMixins = mixins(components_VSheet, routable, positionable, sizeable, factory('btnToggle'), toggleable_factory('inputValue')
 /* @vue/component */
 );
-/* harmony default export */ var VBtn_VBtn = (VBtn_baseMixins.extend().extend({
+/* harmony default export */ var VBtn_VBtn = (baseMixins.extend().extend({
   name: 'v-btn',
   props: {
     activeClass: {
@@ -23855,12 +20965,1316 @@ const VBtn_baseMixins = mixins(components_VSheet, routable, positionable, sizeab
 
 }));
 //# sourceMappingURL=VBtn.js.map
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VColorPicker/VColorPicker.sass
-var VColorPicker = __webpack_require__(784);
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VColorPicker/VColorPickerPreview.sass
-var VColorPickerPreview = __webpack_require__(9413);
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VSlider/VSlider.sass
-var VSlider = __webpack_require__(9639);
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VCard/VCard.sass
+var VCard = __webpack_require__(2793);
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VProgressLinear/VProgressLinear.sass
+var VProgressLinear = __webpack_require__(8412);
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/util/mergeData.js
+
+const pattern = {
+  styleList: /;(?![^(]*\))/g,
+  styleProp: /:(.*)/
+};
+
+function parseStyle(style) {
+  const styleMap = {};
+
+  for (const s of style.split(pattern.styleList)) {
+    let [key, val] = s.split(pattern.styleProp);
+    key = key.trim();
+
+    if (!key) {
+      continue;
+    } // May be undefined if the `key: value` pair is incomplete.
+
+
+    if (typeof val === 'string') {
+      val = val.trim();
+    }
+
+    styleMap[helpers_camelize(key)] = val;
+  }
+
+  return styleMap;
+}
+
+function mergeData_mergeData() {
+  const mergeTarget = {};
+  let i = arguments.length;
+  let prop; // Allow for variadic argument length.
+
+  while (i--) {
+    // Iterate through the data properties and execute merge strategies
+    // Object.keys eliminates need for hasOwnProperty call
+    for (prop of Object.keys(arguments[i])) {
+      switch (prop) {
+        // Array merge strategy (array concatenation)
+        case 'class':
+        case 'directives':
+          if (arguments[i][prop]) {
+            mergeTarget[prop] = mergeClasses(mergeTarget[prop], arguments[i][prop]);
+          }
+
+          break;
+
+        case 'style':
+          if (arguments[i][prop]) {
+            mergeTarget[prop] = mergeStyles(mergeTarget[prop], arguments[i][prop]);
+          }
+
+          break;
+        // Space delimited string concatenation strategy
+
+        case 'staticClass':
+          if (!arguments[i][prop]) {
+            break;
+          }
+
+          if (mergeTarget[prop] === undefined) {
+            mergeTarget[prop] = '';
+          }
+
+          if (mergeTarget[prop]) {
+            // Not an empty string, so concatenate
+            mergeTarget[prop] += ' ';
+          }
+
+          mergeTarget[prop] += arguments[i][prop].trim();
+          break;
+        // Object, the properties of which to merge via array merge strategy (array concatenation).
+        // Callback merge strategy merges callbacks to the beginning of the array,
+        // so that the last defined callback will be invoked first.
+        // This is done since to mimic how Object.assign merging
+        // uses the last given value to assign.
+
+        case 'on':
+        case 'nativeOn':
+          if (arguments[i][prop]) {
+            mergeTarget[prop] = mergeListeners(mergeTarget[prop], arguments[i][prop]);
+          }
+
+          break;
+        // Object merge strategy
+
+        case 'attrs':
+        case 'props':
+        case 'domProps':
+        case 'scopedSlots':
+        case 'staticStyle':
+        case 'hook':
+        case 'transition':
+          if (!arguments[i][prop]) {
+            break;
+          }
+
+          if (!mergeTarget[prop]) {
+            mergeTarget[prop] = {};
+          }
+
+          mergeTarget[prop] = { ...arguments[i][prop],
+            ...mergeTarget[prop]
+          };
+          break;
+        // Reassignment strategy (no merge)
+
+        default:
+          // slot, key, ref, tag, show, keepAlive
+          if (!mergeTarget[prop]) {
+            mergeTarget[prop] = arguments[i][prop];
+          }
+
+      }
+    }
+  }
+
+  return mergeTarget;
+}
+function mergeStyles(target, source) {
+  if (!target) return source;
+  if (!source) return target;
+  target = wrapInArray(typeof target === 'string' ? parseStyle(target) : target);
+  return target.concat(typeof source === 'string' ? parseStyle(source) : source);
+}
+function mergeClasses(target, source) {
+  if (!source) return target;
+  if (!target) return source;
+  return target ? wrapInArray(target).concat(source) : source;
+}
+function mergeListeners(...args) {
+  if (!args[0]) return args[1];
+  if (!args[1]) return args[0];
+  const dest = {};
+
+  for (let i = 2; i--;) {
+    const arg = args[i];
+
+    for (const event in arg) {
+      if (!arg[event]) continue;
+
+      if (dest[event]) {
+        // Merge current listeners before (because we are iterating backwards).
+        // Note that neither "target" or "source" must be altered.
+        dest[event] = [].concat(arg[event], dest[event]);
+      } else {
+        // Straight assign.
+        dest[event] = arg[event];
+      }
+    }
+  }
+
+  return dest;
+}
+//# sourceMappingURL=mergeData.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/transitions/createTransition.js
+
+
+function mergeTransitions(dest = [], ...transitions) {
+  /* eslint-disable-next-line no-array-constructor */
+  return Array().concat(dest, ...transitions);
+}
+
+function createSimpleTransition(name, origin = 'top center 0', mode) {
+  return {
+    name,
+    functional: true,
+    props: {
+      group: {
+        type: Boolean,
+        default: false
+      },
+      hideOnLeave: {
+        type: Boolean,
+        default: false
+      },
+      leaveAbsolute: {
+        type: Boolean,
+        default: false
+      },
+      mode: {
+        type: String,
+        default: mode
+      },
+      origin: {
+        type: String,
+        default: origin
+      }
+    },
+
+    render(h, context) {
+      const tag = `transition${context.props.group ? '-group' : ''}`;
+      const data = {
+        props: {
+          name,
+          mode: context.props.mode
+        },
+        on: {
+          beforeEnter(el) {
+            el.style.transformOrigin = context.props.origin;
+            el.style.webkitTransformOrigin = context.props.origin;
+          }
+
+        }
+      };
+
+      if (context.props.leaveAbsolute) {
+        data.on.leave = mergeTransitions(data.on.leave, el => {
+          const {
+            offsetTop,
+            offsetLeft,
+            offsetWidth,
+            offsetHeight
+          } = el;
+          el._transitionInitialStyles = {
+            position: el.style.position,
+            top: el.style.top,
+            left: el.style.left,
+            width: el.style.width,
+            height: el.style.height
+          };
+          el.style.position = 'absolute';
+          el.style.top = offsetTop + 'px';
+          el.style.left = offsetLeft + 'px';
+          el.style.width = offsetWidth + 'px';
+          el.style.height = offsetHeight + 'px';
+        });
+        data.on.afterLeave = mergeTransitions(data.on.afterLeave, el => {
+          if (el && el._transitionInitialStyles) {
+            const {
+              position,
+              top,
+              left,
+              width,
+              height
+            } = el._transitionInitialStyles;
+            delete el._transitionInitialStyles;
+            el.style.position = position || '';
+            el.style.top = top || '';
+            el.style.left = left || '';
+            el.style.width = width || '';
+            el.style.height = height || '';
+          }
+        });
+      }
+
+      if (context.props.hideOnLeave) {
+        data.on.leave = mergeTransitions(data.on.leave, el => {
+          el.style.setProperty('display', 'none', 'important');
+        });
+      }
+
+      return h(tag, mergeData_mergeData(context.data, data), context.children);
+    }
+
+  };
+}
+function createJavascriptTransition(name, functions, mode = 'in-out') {
+  return {
+    name,
+    functional: true,
+    props: {
+      mode: {
+        type: String,
+        default: mode
+      }
+    },
+
+    render(h, context) {
+      return h('transition', mergeData_mergeData(context.data, {
+        props: {
+          name
+        },
+        on: functions
+      }), context.children);
+    }
+
+  };
+}
+//# sourceMappingURL=createTransition.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/transitions/expand-transition.js
+
+/* harmony default export */ function expand_transition(expandedParentClass = '', x = false) {
+  const sizeProperty = x ? 'width' : 'height';
+  const offsetProperty = `offset${upperFirst(sizeProperty)}`;
+  return {
+    beforeEnter(el) {
+      el._parent = el.parentNode;
+      el._initialStyle = {
+        transition: el.style.transition,
+        overflow: el.style.overflow,
+        [sizeProperty]: el.style[sizeProperty]
+      };
+    },
+
+    enter(el) {
+      const initialStyle = el._initialStyle;
+      el.style.setProperty('transition', 'none', 'important'); // Hide overflow to account for collapsed margins in the calculated height
+
+      el.style.overflow = 'hidden';
+      const offset = `${el[offsetProperty]}px`;
+      el.style[sizeProperty] = '0';
+      void el.offsetHeight; // force reflow
+
+      el.style.transition = initialStyle.transition;
+
+      if (expandedParentClass && el._parent) {
+        el._parent.classList.add(expandedParentClass);
+      }
+
+      requestAnimationFrame(() => {
+        el.style[sizeProperty] = offset;
+      });
+    },
+
+    afterEnter: resetStyles,
+    enterCancelled: resetStyles,
+
+    leave(el) {
+      el._initialStyle = {
+        transition: '',
+        overflow: el.style.overflow,
+        [sizeProperty]: el.style[sizeProperty]
+      };
+      el.style.overflow = 'hidden';
+      el.style[sizeProperty] = `${el[offsetProperty]}px`;
+      void el.offsetHeight; // force reflow
+
+      requestAnimationFrame(() => el.style[sizeProperty] = '0');
+    },
+
+    afterLeave,
+    leaveCancelled: afterLeave
+  };
+
+  function afterLeave(el) {
+    if (expandedParentClass && el._parent) {
+      el._parent.classList.remove(expandedParentClass);
+    }
+
+    resetStyles(el);
+  }
+
+  function resetStyles(el) {
+    const size = el._initialStyle[sizeProperty];
+    el.style.overflow = el._initialStyle.overflow;
+    if (size != null) el.style[sizeProperty] = size;
+    delete el._initialStyle;
+  }
+}
+//# sourceMappingURL=expand-transition.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/transitions/index.js
+
+ // Component specific transitions
+
+const VCarouselTransition = createSimpleTransition('carousel-transition');
+const VCarouselReverseTransition = createSimpleTransition('carousel-reverse-transition');
+const VTabTransition = createSimpleTransition('tab-transition');
+const VTabReverseTransition = createSimpleTransition('tab-reverse-transition');
+const VMenuTransition = createSimpleTransition('menu-transition');
+const VFabTransition = createSimpleTransition('fab-transition', 'center center', 'out-in'); // Generic transitions
+
+const VDialogTransition = createSimpleTransition('dialog-transition');
+const VDialogBottomTransition = createSimpleTransition('dialog-bottom-transition');
+const VDialogTopTransition = createSimpleTransition('dialog-top-transition');
+const VFadeTransition = createSimpleTransition('fade-transition');
+const VScaleTransition = createSimpleTransition('scale-transition');
+const VScrollXTransition = createSimpleTransition('scroll-x-transition');
+const VScrollXReverseTransition = createSimpleTransition('scroll-x-reverse-transition');
+const VScrollYTransition = createSimpleTransition('scroll-y-transition');
+const VScrollYReverseTransition = createSimpleTransition('scroll-y-reverse-transition');
+const VSlideXTransition = createSimpleTransition('slide-x-transition');
+const VSlideXReverseTransition = createSimpleTransition('slide-x-reverse-transition');
+const VSlideYTransition = createSimpleTransition('slide-y-transition');
+const VSlideYReverseTransition = createSimpleTransition('slide-y-reverse-transition'); // Javascript transitions
+
+const VExpandTransition = createJavascriptTransition('expand-transition', expand_transition());
+const VExpandXTransition = createJavascriptTransition('expand-x-transition', expand_transition('', true));
+/* harmony default export */ var transitions = ({
+  $_vuetify_subcomponents: {
+    VCarouselTransition,
+    VCarouselReverseTransition,
+    VDialogTransition,
+    VDialogBottomTransition,
+    VDialogTopTransition,
+    VFabTransition,
+    VFadeTransition,
+    VMenuTransition,
+    VScaleTransition,
+    VScrollXTransition,
+    VScrollXReverseTransition,
+    VScrollYTransition,
+    VScrollYReverseTransition,
+    VSlideXTransition,
+    VSlideXReverseTransition,
+    VSlideYTransition,
+    VSlideYReverseTransition,
+    VTabReverseTransition,
+    VTabTransition,
+    VExpandTransition,
+    VExpandXTransition
+  }
+});
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/proxyable/index.js
+
+function proxyable_factory(prop = 'value', event = 'change') {
+  return vue_runtime_esm.extend({
+    name: 'proxyable',
+    model: {
+      prop,
+      event
+    },
+    props: {
+      [prop]: {
+        required: false
+      }
+    },
+
+    data() {
+      return {
+        internalLazyValue: this[prop]
+      };
+    },
+
+    computed: {
+      internalValue: {
+        get() {
+          return this.internalLazyValue;
+        },
+
+        set(val) {
+          if (val === this.internalLazyValue) return;
+          this.internalLazyValue = val;
+          this.$emit(event, val);
+        }
+
+      }
+    },
+    watch: {
+      [prop](val) {
+        this.internalLazyValue = val;
+      }
+
+    }
+  });
+}
+/* eslint-disable-next-line @typescript-eslint/no-redeclare */
+
+const Proxyable = proxyable_factory();
+/* harmony default export */ var proxyable = (Proxyable);
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressLinear/VProgressLinear.js
+ // Components
+
+ // Directives
+
+ // Mixins
+
+
+
+
+ // Utilities
+
+
+
+const VProgressLinear_baseMixins = mixins(colorable, positionable_factory(['absolute', 'fixed', 'top', 'bottom']), proxyable, themeable);
+/* @vue/component */
+
+/* harmony default export */ var VProgressLinear_VProgressLinear = (VProgressLinear_baseMixins.extend({
+  name: 'v-progress-linear',
+  directives: {
+    intersect: intersect
+  },
+  props: {
+    active: {
+      type: Boolean,
+      default: true
+    },
+    backgroundColor: {
+      type: String,
+      default: null
+    },
+    backgroundOpacity: {
+      type: [Number, String],
+      default: null
+    },
+    bufferValue: {
+      type: [Number, String],
+      default: 100
+    },
+    color: {
+      type: String,
+      default: 'primary'
+    },
+    height: {
+      type: [Number, String],
+      default: 4
+    },
+    indeterminate: Boolean,
+    query: Boolean,
+    reverse: Boolean,
+    rounded: Boolean,
+    stream: Boolean,
+    striped: Boolean,
+    value: {
+      type: [Number, String],
+      default: 0
+    }
+  },
+
+  data() {
+    return {
+      internalLazyValue: this.value || 0,
+      isVisible: true
+    };
+  },
+
+  computed: {
+    __cachedBackground() {
+      return this.$createElement('div', this.setBackgroundColor(this.backgroundColor || this.color, {
+        staticClass: 'v-progress-linear__background',
+        style: this.backgroundStyle
+      }));
+    },
+
+    __cachedBar() {
+      return this.$createElement(this.computedTransition, [this.__cachedBarType]);
+    },
+
+    __cachedBarType() {
+      return this.indeterminate ? this.__cachedIndeterminate : this.__cachedDeterminate;
+    },
+
+    __cachedBuffer() {
+      return this.$createElement('div', {
+        staticClass: 'v-progress-linear__buffer',
+        style: this.styles
+      });
+    },
+
+    __cachedDeterminate() {
+      return this.$createElement('div', this.setBackgroundColor(this.color, {
+        staticClass: `v-progress-linear__determinate`,
+        style: {
+          width: convertToUnit(this.normalizedValue, '%')
+        }
+      }));
+    },
+
+    __cachedIndeterminate() {
+      return this.$createElement('div', {
+        staticClass: 'v-progress-linear__indeterminate',
+        class: {
+          'v-progress-linear__indeterminate--active': this.active
+        }
+      }, [this.genProgressBar('long'), this.genProgressBar('short')]);
+    },
+
+    __cachedStream() {
+      if (!this.stream) return null;
+      return this.$createElement('div', this.setTextColor(this.color, {
+        staticClass: 'v-progress-linear__stream',
+        style: {
+          width: convertToUnit(100 - this.normalizedBuffer, '%')
+        }
+      }));
+    },
+
+    backgroundStyle() {
+      const backgroundOpacity = this.backgroundOpacity == null ? this.backgroundColor ? 1 : 0.3 : parseFloat(this.backgroundOpacity);
+      return {
+        opacity: backgroundOpacity,
+        [this.isReversed ? 'right' : 'left']: convertToUnit(this.normalizedValue, '%'),
+        width: convertToUnit(Math.max(0, this.normalizedBuffer - this.normalizedValue), '%')
+      };
+    },
+
+    classes() {
+      return {
+        'v-progress-linear--absolute': this.absolute,
+        'v-progress-linear--fixed': this.fixed,
+        'v-progress-linear--query': this.query,
+        'v-progress-linear--reactive': this.reactive,
+        'v-progress-linear--reverse': this.isReversed,
+        'v-progress-linear--rounded': this.rounded,
+        'v-progress-linear--striped': this.striped,
+        'v-progress-linear--visible': this.isVisible,
+        ...this.themeClasses
+      };
+    },
+
+    computedTransition() {
+      return this.indeterminate ? VFadeTransition : VSlideXTransition;
+    },
+
+    isReversed() {
+      return this.$vuetify.rtl !== this.reverse;
+    },
+
+    normalizedBuffer() {
+      return this.normalize(this.bufferValue);
+    },
+
+    normalizedValue() {
+      return this.normalize(this.internalLazyValue);
+    },
+
+    reactive() {
+      return Boolean(this.$listeners.change);
+    },
+
+    styles() {
+      const styles = {};
+
+      if (!this.active) {
+        styles.height = 0;
+      }
+
+      if (!this.indeterminate && parseFloat(this.normalizedBuffer) !== 100) {
+        styles.width = convertToUnit(this.normalizedBuffer, '%');
+      }
+
+      return styles;
+    }
+
+  },
+  methods: {
+    genContent() {
+      const slot = getSlot(this, 'default', {
+        value: this.internalLazyValue
+      });
+      if (!slot) return null;
+      return this.$createElement('div', {
+        staticClass: 'v-progress-linear__content'
+      }, slot);
+    },
+
+    genListeners() {
+      const listeners = this.$listeners;
+
+      if (this.reactive) {
+        listeners.click = this.onClick;
+      }
+
+      return listeners;
+    },
+
+    genProgressBar(name) {
+      return this.$createElement('div', this.setBackgroundColor(this.color, {
+        staticClass: 'v-progress-linear__indeterminate',
+        class: {
+          [name]: true
+        }
+      }));
+    },
+
+    onClick(e) {
+      if (!this.reactive) return;
+      const {
+        width
+      } = this.$el.getBoundingClientRect();
+      this.internalValue = e.offsetX / width * 100;
+    },
+
+    onObserve(entries, observer, isIntersecting) {
+      this.isVisible = isIntersecting;
+    },
+
+    normalize(value) {
+      if (value < 0) return 0;
+      if (value > 100) return 100;
+      return parseFloat(value);
+    }
+
+  },
+
+  render(h) {
+    const data = {
+      staticClass: 'v-progress-linear',
+      attrs: {
+        role: 'progressbar',
+        'aria-valuemin': 0,
+        'aria-valuemax': this.normalizedBuffer,
+        'aria-valuenow': this.indeterminate ? undefined : this.normalizedValue
+      },
+      class: this.classes,
+      directives: [{
+        name: 'intersect',
+        value: this.onObserve
+      }],
+      style: {
+        bottom: this.bottom ? 0 : undefined,
+        height: this.active ? convertToUnit(this.height) : 0,
+        top: this.top ? 0 : undefined
+      },
+      on: this.genListeners()
+    };
+    return h('div', data, [this.__cachedStream, this.__cachedBackground, this.__cachedBuffer, this.__cachedBar, this.genContent()]);
+  }
+
+}));
+//# sourceMappingURL=VProgressLinear.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressLinear/index.js
+
+
+/* harmony default export */ var components_VProgressLinear = (VProgressLinear_VProgressLinear);
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/loadable/index.js
+
+
+/**
+ * Loadable
+ *
+ * @mixin
+ *
+ * Used to add linear progress bar to components
+ * Can use a default bar with a specific color
+ * or designate a custom progress linear bar
+ */
+
+/* @vue/component */
+
+/* harmony default export */ var loadable = (vue_runtime_esm.extend().extend({
+  name: 'loadable',
+  props: {
+    loading: {
+      type: [Boolean, String],
+      default: false
+    },
+    loaderHeight: {
+      type: [Number, String],
+      default: 2
+    }
+  },
+  methods: {
+    genProgress() {
+      if (this.loading === false) return null;
+      return this.$slots.progress || this.$createElement(components_VProgressLinear, {
+        props: {
+          absolute: true,
+          color: this.loading === true || this.loading === '' ? this.color || 'primary' : this.loading,
+          height: this.loaderHeight,
+          indeterminate: true
+        }
+      });
+    }
+
+  }
+}));
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VCard/VCard.js
+// Styles
+ // Extensions
+
+ // Mixins
+
+
+ // Helpers
+
+
+/* @vue/component */
+
+/* harmony default export */ var VCard_VCard = (mixins(loadable, routable, components_VSheet).extend({
+  name: 'v-card',
+  props: {
+    flat: Boolean,
+    hover: Boolean,
+    img: String,
+    link: Boolean,
+    loaderHeight: {
+      type: [Number, String],
+      default: 4
+    },
+    raised: Boolean
+  },
+  computed: {
+    classes() {
+      return {
+        'v-card': true,
+        ...routable.options.computed.classes.call(this),
+        'v-card--flat': this.flat,
+        'v-card--hover': this.hover,
+        'v-card--link': this.isClickable,
+        'v-card--loading': this.loading,
+        'v-card--disabled': this.disabled,
+        'v-card--raised': this.raised,
+        ...components_VSheet.options.computed.classes.call(this)
+      };
+    },
+
+    styles() {
+      const style = { ...components_VSheet.options.computed.styles.call(this)
+      };
+
+      if (this.img) {
+        style.background = `url("${this.img}") center center / cover no-repeat`;
+      }
+
+      return style;
+    }
+
+  },
+  methods: {
+    genProgress() {
+      const render = loadable.options.methods.genProgress.call(this);
+      if (!render) return null;
+      return this.$createElement('div', {
+        staticClass: 'v-card__progress',
+        key: 'progress'
+      }, [render]);
+    }
+
+  },
+
+  render(h) {
+    const {
+      tag,
+      data
+    } = this.generateRouteLink();
+    data.style = this.styles;
+
+    if (this.isClickable) {
+      data.attrs = data.attrs || {};
+      data.attrs.tabindex = 0;
+    }
+
+    return h(tag, this.setBackgroundColor(this.color, data), [this.genProgress(), this.$slots.default]);
+  }
+
+}));
+//# sourceMappingURL=VCard.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VCard/index.js
+
+
+const VCardActions = createSimpleFunctional('v-card__actions');
+const VCardSubtitle = createSimpleFunctional('v-card__subtitle');
+const VCardText = createSimpleFunctional('v-card__text');
+const VCardTitle = createSimpleFunctional('v-card__title');
+
+/* harmony default export */ var components_VCard = ({
+  $_vuetify_subcomponents: {
+    VCard: VCard_VCard,
+    VCardActions,
+    VCardSubtitle,
+    VCardText,
+    VCardTitle
+  }
+});
+//# sourceMappingURL=index.js.map
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VGrid/_grid.sass
+var _grid = __webpack_require__(6554);
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VGrid/VGrid.sass
+var VGrid = __webpack_require__(448);
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VGrid/grid.js
+// Types
+
+function grid_VGrid(name) {
+  /* @vue/component */
+  return vue_runtime_esm.extend({
+    name: `v-${name}`,
+    functional: true,
+    props: {
+      id: String,
+      tag: {
+        type: String,
+        default: 'div'
+      }
+    },
+
+    render(h, {
+      props,
+      data,
+      children
+    }) {
+      data.staticClass = `${name} ${data.staticClass || ''}`.trim();
+      const {
+        attrs
+      } = data;
+
+      if (attrs) {
+        // reset attrs to extract utility clases like pa-3
+        data.attrs = {};
+        const classes = Object.keys(attrs).filter(key => {
+          // TODO: Remove once resolved
+          // https://github.com/vuejs/vue/issues/7841
+          if (key === 'slot') return false;
+          const value = attrs[key]; // add back data attributes like data-test="foo" but do not
+          // add them as classes
+
+          if (key.startsWith('data-')) {
+            data.attrs[key] = value;
+            return false;
+          }
+
+          return value || typeof value === 'string';
+        });
+        if (classes.length) data.staticClass += ` ${classes.join(' ')}`;
+      }
+
+      if (props.id) {
+        data.domProps = data.domProps || {};
+        data.domProps.id = props.id;
+      }
+
+      return h(props.tag, data, children);
+    }
+
+  });
+}
+//# sourceMappingURL=grid.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VGrid/VContainer.js
+
+
+
+
+/* @vue/component */
+
+/* harmony default export */ var VContainer = (grid_VGrid('container').extend({
+  name: 'v-container',
+  functional: true,
+  props: {
+    id: String,
+    tag: {
+      type: String,
+      default: 'div'
+    },
+    fluid: {
+      type: Boolean,
+      default: false
+    }
+  },
+
+  render(h, {
+    props,
+    data,
+    children
+  }) {
+    let classes;
+    const {
+      attrs
+    } = data;
+
+    if (attrs) {
+      // reset attrs to extract utility clases like pa-3
+      data.attrs = {};
+      classes = Object.keys(attrs).filter(key => {
+        // TODO: Remove once resolved
+        // https://github.com/vuejs/vue/issues/7841
+        if (key === 'slot') return false;
+        const value = attrs[key]; // add back data attributes like data-test="foo" but do not
+        // add them as classes
+
+        if (key.startsWith('data-')) {
+          data.attrs[key] = value;
+          return false;
+        }
+
+        return value || typeof value === 'string';
+      });
+    }
+
+    if (props.id) {
+      data.domProps = data.domProps || {};
+      data.domProps.id = props.id;
+    }
+
+    return h(props.tag, mergeData_mergeData(data, {
+      staticClass: 'container',
+      class: Array({
+        'container--fluid': props.fluid
+      }).concat(classes || [])
+    }), children);
+  }
+
+}));
+//# sourceMappingURL=VContainer.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VForm/VForm.js
+// Mixins
+
+
+
+/* @vue/component */
+
+/* harmony default export */ var VForm = (mixins(binds_attrs, provide('form')
+/* @vue/component */
+).extend({
+  name: 'v-form',
+
+  provide() {
+    return {
+      form: this
+    };
+  },
+
+  inheritAttrs: false,
+  props: {
+    disabled: Boolean,
+    lazyValidation: Boolean,
+    readonly: Boolean,
+    value: Boolean
+  },
+  data: () => ({
+    inputs: [],
+    watchers: [],
+    errorBag: {}
+  }),
+  watch: {
+    errorBag: {
+      handler(val) {
+        const errors = Object.values(val).includes(true);
+        this.$emit('input', !errors);
+      },
+
+      deep: true,
+      immediate: true
+    }
+  },
+  methods: {
+    watchInput(input) {
+      const watcher = input => {
+        return input.$watch('hasError', val => {
+          this.$set(this.errorBag, input._uid, val);
+        }, {
+          immediate: true
+        });
+      };
+
+      const watchers = {
+        _uid: input._uid,
+        valid: () => {},
+        shouldValidate: () => {}
+      };
+
+      if (this.lazyValidation) {
+        // Only start watching inputs if we need to
+        watchers.shouldValidate = input.$watch('shouldValidate', val => {
+          if (!val) return; // Only watch if we're not already doing it
+
+          if (this.errorBag.hasOwnProperty(input._uid)) return;
+          watchers.valid = watcher(input);
+        });
+      } else {
+        watchers.valid = watcher(input);
+      }
+
+      return watchers;
+    },
+
+    /** @public */
+    validate() {
+      return this.inputs.filter(input => !input.validate(true)).length === 0;
+    },
+
+    /** @public */
+    reset() {
+      this.inputs.forEach(input => input.reset());
+      this.resetErrorBag();
+    },
+
+    resetErrorBag() {
+      if (this.lazyValidation) {
+        // Account for timeout in validatable
+        setTimeout(() => {
+          this.errorBag = {};
+        }, 0);
+      }
+    },
+
+    /** @public */
+    resetValidation() {
+      this.inputs.forEach(input => input.resetValidation());
+      this.resetErrorBag();
+    },
+
+    register(input) {
+      this.inputs.push(input);
+      this.watchers.push(this.watchInput(input));
+    },
+
+    unregister(input) {
+      const found = this.inputs.find(i => i._uid === input._uid);
+      if (!found) return;
+      const unwatch = this.watchers.find(i => i._uid === found._uid);
+
+      if (unwatch) {
+        unwatch.valid();
+        unwatch.shouldValidate();
+      }
+
+      this.watchers = this.watchers.filter(i => i._uid !== found._uid);
+      this.inputs = this.inputs.filter(i => i._uid !== found._uid);
+      this.$delete(this.errorBag, found._uid);
+    }
+
+  },
+
+  render(h) {
+    return h('form', {
+      staticClass: 'v-form',
+      attrs: {
+        novalidate: true,
+        ...this.attrs$
+      },
+      on: {
+        submit: e => this.$emit('submit', e)
+      }
+    }, this.$slots.default);
+  }
+
+}));
+//# sourceMappingURL=VForm.js.map
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VSnackbar/VSnackbar.sass
+var VSnackbar = __webpack_require__(4718);
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VSnackbar/VSnackbar.js
+// Styles
+ // Components
+
+ // Mixins
+
+
+
+
+ // Utilities
+
+
+
+
+/* harmony default export */ var VSnackbar_VSnackbar = (mixins(VSheet_VSheet, colorable, toggleable, positionable_factory(['absolute', 'bottom', 'left', 'right', 'top'])
+/* @vue/component */
+).extend({
+  name: 'v-snackbar',
+  props: {
+    app: Boolean,
+    centered: Boolean,
+    contentClass: {
+      type: String,
+      default: ''
+    },
+    multiLine: Boolean,
+    text: Boolean,
+    timeout: {
+      type: [Number, String],
+      default: 5000
+    },
+    transition: {
+      type: [Boolean, String],
+      default: 'v-snack-transition',
+      validator: v => typeof v === 'string' || v === false
+    },
+    vertical: Boolean
+  },
+  data: () => ({
+    activeTimeout: -1
+  }),
+  computed: {
+    classes() {
+      return {
+        'v-snack--absolute': this.absolute,
+        'v-snack--active': this.isActive,
+        'v-snack--bottom': this.bottom || !this.top,
+        'v-snack--centered': this.centered,
+        'v-snack--has-background': this.hasBackground,
+        'v-snack--left': this.left,
+        'v-snack--multi-line': this.multiLine && !this.vertical,
+        'v-snack--right': this.right,
+        'v-snack--text': this.text,
+        'v-snack--top': this.top,
+        'v-snack--vertical': this.vertical
+      };
+    },
+
+    // Text and outlined styles both
+    // use transparent backgrounds
+    hasBackground() {
+      return !this.text && !this.outlined;
+    },
+
+    // Snackbar is dark by default
+    // override themeable logic.
+    isDark() {
+      return this.hasBackground ? !this.light : themeable.options.computed.isDark.call(this);
+    },
+
+    styles() {
+      if (this.absolute || !this.app) return {};
+      const {
+        bar,
+        bottom,
+        footer,
+        insetFooter,
+        left,
+        right,
+        top
+      } = this.$vuetify.application;
+      return {
+        paddingBottom: convertToUnit(bottom + footer + insetFooter),
+        paddingLeft: convertToUnit(left),
+        paddingRight: convertToUnit(right),
+        paddingTop: convertToUnit(bar + top)
+      };
+    }
+
+  },
+  watch: {
+    isActive: 'setTimeout',
+    timeout: 'setTimeout'
+  },
+
+  mounted() {
+    if (this.isActive) this.setTimeout();
+  },
+
+  created() {
+    /* istanbul ignore next */
+    if (this.$attrs.hasOwnProperty('auto-height')) {
+      removed('auto-height', this);
+    }
+    /* istanbul ignore next */
+    // eslint-disable-next-line eqeqeq
+
+
+    if (this.timeout == 0) {
+      deprecate('timeout="0"', '-1', this);
+    }
+  },
+
+  methods: {
+    genActions() {
+      return this.$createElement('div', {
+        staticClass: 'v-snack__action '
+      }, [getSlot(this, 'action', {
+        attrs: {
+          class: 'v-snack__btn'
+        }
+      })]);
+    },
+
+    genContent() {
+      return this.$createElement('div', {
+        staticClass: 'v-snack__content',
+        class: {
+          [this.contentClass]: true
+        },
+        attrs: {
+          role: 'status',
+          'aria-live': 'polite'
+        }
+      }, [getSlot(this)]);
+    },
+
+    genWrapper() {
+      const setColor = this.hasBackground ? this.setBackgroundColor : this.setTextColor;
+      const data = setColor(this.color, {
+        staticClass: 'v-snack__wrapper',
+        class: VSheet_VSheet.options.computed.classes.call(this),
+        style: VSheet_VSheet.options.computed.styles.call(this),
+        directives: [{
+          name: 'show',
+          value: this.isActive
+        }],
+        on: {
+          pointerenter: () => window.clearTimeout(this.activeTimeout),
+          pointerleave: this.setTimeout
+        }
+      });
+      return this.$createElement('div', data, [this.genContent(), this.genActions()]);
+    },
+
+    genTransition() {
+      return this.$createElement('transition', {
+        props: {
+          name: this.transition
+        }
+      }, [this.genWrapper()]);
+    },
+
+    setTimeout() {
+      window.clearTimeout(this.activeTimeout);
+      const timeout = Number(this.timeout);
+
+      if (!this.isActive || // TODO: remove 0 in v3
+      [0, -1].includes(timeout)) {
+        return;
+      }
+
+      this.activeTimeout = window.setTimeout(() => {
+        this.isActive = false;
+      }, timeout);
+    }
+
+  },
+
+  render(h) {
+    return h('div', {
+      staticClass: 'v-snack',
+      class: this.classes,
+      style: this.styles
+    }, [this.transition !== false ? this.genTransition() : this.genWrapper()]);
+  }
+
+}));
+//# sourceMappingURL=VSnackbar.js.map
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VTextField/VTextField.sass
+var VTextField = __webpack_require__(3843);
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VInput/VInput.sass
 var VInput = __webpack_require__(7895);
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VIcon/VIcon.sass
@@ -24790,6 +23204,136 @@ const VInput_baseMixins = mixins(binds_attrs, validatable);
 
 /* harmony default export */ var components_VInput = (VInput_VInput);
 //# sourceMappingURL=index.js.map
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VCounter/VCounter.sass
+var VCounter = __webpack_require__(4863);
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VCounter/VCounter.js
+// Styles
+ // Mixins
+
+
+
+/* @vue/component */
+
+/* harmony default export */ var VCounter_VCounter = (mixins(themeable).extend({
+  name: 'v-counter',
+  functional: true,
+  props: {
+    value: {
+      type: [Number, String],
+      default: ''
+    },
+    max: [Number, String]
+  },
+
+  render(h, ctx) {
+    const {
+      props
+    } = ctx;
+    const max = parseInt(props.max, 10);
+    const value = parseInt(props.value, 10);
+    const content = max ? `${value} / ${max}` : String(props.value);
+    const isGreater = max && value > max;
+    return h('div', {
+      staticClass: 'v-counter',
+      class: {
+        'error--text': isGreater,
+        ...functionalThemeClasses(ctx)
+      }
+    }, content);
+  }
+
+}));
+//# sourceMappingURL=VCounter.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VCounter/index.js
+
+
+/* harmony default export */ var components_VCounter = (VCounter_VCounter);
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/intersectable/index.js
+// Directives
+ // Utilities
+
+ // Types
+
+
+function intersectable(options) {
+  return vue_runtime_esm.extend({
+    name: 'intersectable',
+    data: () => ({
+      isIntersecting: false
+    }),
+
+    mounted() {
+      intersect.inserted(this.$el, {
+        name: 'intersect',
+        value: this.onObserve
+      }, this.$vnode);
+    },
+
+    destroyed() {
+      intersect.unbind(this.$el, {
+        name: 'intersect',
+        value: this.onObserve
+      }, this.$vnode);
+    },
+
+    methods: {
+      onObserve(entries, observer, isIntersecting) {
+        this.isIntersecting = isIntersecting;
+        if (!isIntersecting) return;
+
+        for (let i = 0, length = options.onVisible.length; i < length; i++) {
+          const callback = this[options.onVisible[i]];
+
+          if (typeof callback === 'function') {
+            callback();
+            continue;
+          }
+
+          consoleWarn(options.onVisible[i] + ' method is not available on the instance but referenced in intersectable mixin options');
+        }
+      }
+
+    }
+  });
+}
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/directives/resize/index.js
+function resize_inserted(el, binding, vnode) {
+  const callback = binding.value;
+  const options = binding.options || {
+    passive: true
+  };
+  window.addEventListener('resize', callback, options);
+  el._onResize = Object(el._onResize);
+  el._onResize[vnode.context._uid] = {
+    callback,
+    options
+  };
+
+  if (!binding.modifiers || !binding.modifiers.quiet) {
+    callback();
+  }
+}
+
+function resize_unbind(el, binding, vnode) {
+  var _el$_onResize;
+
+  if (!((_el$_onResize = el._onResize) != null && _el$_onResize[vnode.context._uid])) return;
+  const {
+    callback,
+    options
+  } = el._onResize[vnode.context._uid];
+  window.removeEventListener('resize', callback, options);
+  delete el._onResize[vnode.context._uid];
+}
+
+const Resize = {
+  inserted: resize_inserted,
+  unbind: resize_unbind
+};
+/* harmony default export */ var resize = (Resize);
+//# sourceMappingURL=index.js.map
 ;// CONCATENATED MODULE: ./node_modules/vuetify/lib/util/dom.js
 /**
  * Returns:
@@ -24815,6 +23359,2959 @@ function attachedRoot(node) {
   return root;
 }
 //# sourceMappingURL=dom.js.map
+;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VTextField/VTextField.js
+// Styles
+ // Extensions
+
+ // Components
+
+
+ // Mixins
+
+
+
+ // Directives
+
+
+ // Utilities
+
+
+
+ // Types
+
+
+const VTextField_baseMixins = mixins(components_VInput, intersectable({
+  onVisible: ['onResize', 'tryAutofocus']
+}), loadable);
+const dirtyTypes = ['color', 'file', 'time', 'date', 'datetime-local', 'week', 'month'];
+/* @vue/component */
+
+/* harmony default export */ var VTextField_VTextField = (VTextField_baseMixins.extend().extend({
+  name: 'v-text-field',
+  directives: {
+    resize: resize,
+    ripple: ripple
+  },
+  inheritAttrs: false,
+  props: {
+    appendOuterIcon: String,
+    autofocus: Boolean,
+    clearable: Boolean,
+    clearIcon: {
+      type: String,
+      default: '$clear'
+    },
+    counter: [Boolean, Number, String],
+    counterValue: Function,
+    filled: Boolean,
+    flat: Boolean,
+    fullWidth: Boolean,
+    label: String,
+    outlined: Boolean,
+    placeholder: String,
+    prefix: String,
+    prependInnerIcon: String,
+    persistentPlaceholder: Boolean,
+    reverse: Boolean,
+    rounded: Boolean,
+    shaped: Boolean,
+    singleLine: Boolean,
+    solo: Boolean,
+    soloInverted: Boolean,
+    suffix: String,
+    type: {
+      type: String,
+      default: 'text'
+    }
+  },
+  data: () => ({
+    badInput: false,
+    labelWidth: 0,
+    prefixWidth: 0,
+    prependWidth: 0,
+    initialValue: null,
+    isBooted: false,
+    isClearing: false
+  }),
+  computed: {
+    classes() {
+      return { ...components_VInput.options.computed.classes.call(this),
+        'v-text-field': true,
+        'v-text-field--full-width': this.fullWidth,
+        'v-text-field--prefix': this.prefix,
+        'v-text-field--single-line': this.isSingle,
+        'v-text-field--solo': this.isSolo,
+        'v-text-field--solo-inverted': this.soloInverted,
+        'v-text-field--solo-flat': this.flat,
+        'v-text-field--filled': this.filled,
+        'v-text-field--is-booted': this.isBooted,
+        'v-text-field--enclosed': this.isEnclosed,
+        'v-text-field--reverse': this.reverse,
+        'v-text-field--outlined': this.outlined,
+        'v-text-field--placeholder': this.placeholder,
+        'v-text-field--rounded': this.rounded,
+        'v-text-field--shaped': this.shaped
+      };
+    },
+
+    computedColor() {
+      const computedColor = validatable.options.computed.computedColor.call(this);
+      if (!this.soloInverted || !this.isFocused) return computedColor;
+      return this.color || 'primary';
+    },
+
+    computedCounterValue() {
+      if (typeof this.counterValue === 'function') {
+        return this.counterValue(this.internalValue);
+      }
+
+      return [...(this.internalValue || '').toString()].length;
+    },
+
+    hasCounter() {
+      return this.counter !== false && this.counter != null;
+    },
+
+    hasDetails() {
+      return components_VInput.options.computed.hasDetails.call(this) || this.hasCounter;
+    },
+
+    internalValue: {
+      get() {
+        return this.lazyValue;
+      },
+
+      set(val) {
+        this.lazyValue = val;
+        this.$emit('input', this.lazyValue);
+      }
+
+    },
+
+    isDirty() {
+      var _this$lazyValue;
+
+      return ((_this$lazyValue = this.lazyValue) == null ? void 0 : _this$lazyValue.toString().length) > 0 || this.badInput;
+    },
+
+    isEnclosed() {
+      return this.filled || this.isSolo || this.outlined;
+    },
+
+    isLabelActive() {
+      return this.isDirty || dirtyTypes.includes(this.type);
+    },
+
+    isSingle() {
+      return this.isSolo || this.singleLine || this.fullWidth || // https://material.io/components/text-fields/#filled-text-field
+      this.filled && !this.hasLabel;
+    },
+
+    isSolo() {
+      return this.solo || this.soloInverted;
+    },
+
+    labelPosition() {
+      let offset = this.prefix && !this.labelValue ? this.prefixWidth : 0;
+      if (this.labelValue && this.prependWidth) offset -= this.prependWidth;
+      return this.$vuetify.rtl === this.reverse ? {
+        left: offset,
+        right: 'auto'
+      } : {
+        left: 'auto',
+        right: offset
+      };
+    },
+
+    showLabel() {
+      return this.hasLabel && !(this.isSingle && this.labelValue);
+    },
+
+    labelValue() {
+      return this.isFocused || this.isLabelActive || this.persistentPlaceholder;
+    }
+
+  },
+  watch: {
+    // labelValue: 'setLabelWidth', // moved to mounted, see #11533
+    outlined: 'setLabelWidth',
+
+    label() {
+      this.$nextTick(this.setLabelWidth);
+    },
+
+    prefix() {
+      this.$nextTick(this.setPrefixWidth);
+    },
+
+    isFocused: 'updateValue',
+
+    value(val) {
+      this.lazyValue = val;
+    }
+
+  },
+
+  created() {
+    /* istanbul ignore next */
+    if (this.$attrs.hasOwnProperty('box')) {
+      breaking('box', 'filled', this);
+    }
+    /* istanbul ignore next */
+
+
+    if (this.$attrs.hasOwnProperty('browser-autocomplete')) {
+      breaking('browser-autocomplete', 'autocomplete', this);
+    }
+    /* istanbul ignore if */
+
+
+    if (this.shaped && !(this.filled || this.outlined || this.isSolo)) {
+      consoleWarn('shaped should be used with either filled or outlined', this);
+    }
+  },
+
+  mounted() {
+    // #11533
+    this.$watch(() => this.labelValue, this.setLabelWidth);
+    this.autofocus && this.tryAutofocus();
+    requestAnimationFrame(() => {
+      this.isBooted = true;
+      requestAnimationFrame(() => {
+        if (!this.isIntersecting) {
+          this.onResize();
+        }
+      });
+    });
+  },
+
+  methods: {
+    /** @public */
+    focus() {
+      this.onFocus();
+    },
+
+    /** @public */
+    blur(e) {
+      // https://github.com/vuetifyjs/vuetify/issues/5913
+      // Safari tab order gets broken if called synchronous
+      window.requestAnimationFrame(() => {
+        this.$refs.input && this.$refs.input.blur();
+      });
+    },
+
+    clearableCallback() {
+      this.$refs.input && this.$refs.input.focus();
+      this.$nextTick(() => this.internalValue = null);
+    },
+
+    genAppendSlot() {
+      const slot = [];
+
+      if (this.$slots['append-outer']) {
+        slot.push(this.$slots['append-outer']);
+      } else if (this.appendOuterIcon) {
+        slot.push(this.genIcon('appendOuter'));
+      }
+
+      return this.genSlot('append', 'outer', slot);
+    },
+
+    genPrependInnerSlot() {
+      const slot = [];
+
+      if (this.$slots['prepend-inner']) {
+        slot.push(this.$slots['prepend-inner']);
+      } else if (this.prependInnerIcon) {
+        slot.push(this.genIcon('prependInner'));
+      }
+
+      return this.genSlot('prepend', 'inner', slot);
+    },
+
+    genIconSlot() {
+      const slot = [];
+
+      if (this.$slots.append) {
+        slot.push(this.$slots.append);
+      } else if (this.appendIcon) {
+        slot.push(this.genIcon('append'));
+      }
+
+      return this.genSlot('append', 'inner', slot);
+    },
+
+    genInputSlot() {
+      const input = components_VInput.options.methods.genInputSlot.call(this);
+      const prepend = this.genPrependInnerSlot();
+
+      if (prepend) {
+        input.children = input.children || [];
+        input.children.unshift(prepend);
+      }
+
+      return input;
+    },
+
+    genClearIcon() {
+      if (!this.clearable) return null; // if the text field has no content then don't display the clear icon.
+      // We add an empty div because other controls depend on a ref to append inner
+
+      if (!this.isDirty) {
+        return this.genSlot('append', 'inner', [this.$createElement('div')]);
+      }
+
+      return this.genSlot('append', 'inner', [this.genIcon('clear', this.clearableCallback)]);
+    },
+
+    genCounter() {
+      var _this$$scopedSlots$co, _this$$scopedSlots$co2, _this$$scopedSlots;
+
+      if (!this.hasCounter) return null;
+      const max = this.counter === true ? this.attrs$.maxlength : this.counter;
+      const props = {
+        dark: this.dark,
+        light: this.light,
+        max,
+        value: this.computedCounterValue
+      };
+      return (_this$$scopedSlots$co = (_this$$scopedSlots$co2 = (_this$$scopedSlots = this.$scopedSlots).counter) == null ? void 0 : _this$$scopedSlots$co2.call(_this$$scopedSlots, {
+        props
+      })) != null ? _this$$scopedSlots$co : this.$createElement(components_VCounter, {
+        props
+      });
+    },
+
+    genControl() {
+      return components_VInput.options.methods.genControl.call(this);
+    },
+
+    genDefaultSlot() {
+      return [this.genFieldset(), this.genTextFieldSlot(), this.genClearIcon(), this.genIconSlot(), this.genProgress()];
+    },
+
+    genFieldset() {
+      if (!this.outlined) return null;
+      return this.$createElement('fieldset', {
+        attrs: {
+          'aria-hidden': true
+        }
+      }, [this.genLegend()]);
+    },
+
+    genLabel() {
+      if (!this.showLabel) return null;
+      const data = {
+        props: {
+          absolute: true,
+          color: this.validationState,
+          dark: this.dark,
+          disabled: this.isDisabled,
+          focused: !this.isSingle && (this.isFocused || !!this.validationState),
+          for: this.computedId,
+          left: this.labelPosition.left,
+          light: this.light,
+          right: this.labelPosition.right,
+          value: this.labelValue
+        }
+      };
+      return this.$createElement(components_VLabel, data, this.$slots.label || this.label);
+    },
+
+    genLegend() {
+      const width = !this.singleLine && (this.labelValue || this.isDirty) ? this.labelWidth : 0;
+      const span = this.$createElement('span', {
+        domProps: {
+          innerHTML: '&#8203;'
+        },
+        staticClass: 'notranslate'
+      });
+      return this.$createElement('legend', {
+        style: {
+          width: !this.isSingle ? convertToUnit(width) : undefined
+        }
+      }, [span]);
+    },
+
+    genInput() {
+      const listeners = Object.assign({}, this.listeners$);
+      delete listeners.change; // Change should not be bound externally
+
+      const {
+        title,
+        ...inputAttrs
+      } = this.attrs$;
+      return this.$createElement('input', {
+        style: {},
+        domProps: {
+          value: this.type === 'number' && Object.is(this.lazyValue, -0) ? '-0' : this.lazyValue
+        },
+        attrs: { ...inputAttrs,
+          autofocus: this.autofocus,
+          disabled: this.isDisabled,
+          id: this.computedId,
+          placeholder: this.persistentPlaceholder || this.isFocused || !this.hasLabel ? this.placeholder : undefined,
+          readonly: this.isReadonly,
+          type: this.type
+        },
+        on: Object.assign(listeners, {
+          blur: this.onBlur,
+          input: this.onInput,
+          focus: this.onFocus,
+          keydown: this.onKeyDown
+        }),
+        ref: 'input',
+        directives: [{
+          name: 'resize',
+          modifiers: {
+            quiet: true
+          },
+          value: this.onResize
+        }]
+      });
+    },
+
+    genMessages() {
+      if (!this.showDetails) return null;
+      const messagesNode = components_VInput.options.methods.genMessages.call(this);
+      const counterNode = this.genCounter();
+      return this.$createElement('div', {
+        staticClass: 'v-text-field__details'
+      }, [messagesNode, counterNode]);
+    },
+
+    genTextFieldSlot() {
+      return this.$createElement('div', {
+        staticClass: 'v-text-field__slot'
+      }, [this.genLabel(), this.prefix ? this.genAffix('prefix') : null, this.genInput(), this.suffix ? this.genAffix('suffix') : null]);
+    },
+
+    genAffix(type) {
+      return this.$createElement('div', {
+        class: `v-text-field__${type}`,
+        ref: type
+      }, this[type]);
+    },
+
+    onBlur(e) {
+      this.isFocused = false;
+      e && this.$nextTick(() => this.$emit('blur', e));
+    },
+
+    onClick() {
+      if (this.isFocused || this.isDisabled || !this.$refs.input) return;
+      this.$refs.input.focus();
+    },
+
+    onFocus(e) {
+      if (!this.$refs.input) return;
+      const root = attachedRoot(this.$el);
+      if (!root) return;
+
+      if (root.activeElement !== this.$refs.input) {
+        return this.$refs.input.focus();
+      }
+
+      if (!this.isFocused) {
+        this.isFocused = true;
+        e && this.$emit('focus', e);
+      }
+    },
+
+    onInput(e) {
+      const target = e.target;
+      this.internalValue = target.value;
+      this.badInput = target.validity && target.validity.badInput;
+    },
+
+    onKeyDown(e) {
+      if (e.keyCode === keyCodes.enter && this.lazyValue !== this.initialValue) {
+        this.initialValue = this.lazyValue;
+        this.$emit('change', this.initialValue);
+      }
+
+      this.$emit('keydown', e);
+    },
+
+    onMouseDown(e) {
+      // Prevent input from being blurred
+      if (e.target !== this.$refs.input) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+
+      components_VInput.options.methods.onMouseDown.call(this, e);
+    },
+
+    onMouseUp(e) {
+      if (this.hasMouseDown) this.focus();
+      components_VInput.options.methods.onMouseUp.call(this, e);
+    },
+
+    setLabelWidth() {
+      if (!this.outlined) return;
+      this.labelWidth = this.$refs.label ? Math.min(this.$refs.label.scrollWidth * 0.75 + 6, this.$el.offsetWidth - 24) : 0;
+    },
+
+    setPrefixWidth() {
+      if (!this.$refs.prefix) return;
+      this.prefixWidth = this.$refs.prefix.offsetWidth;
+    },
+
+    setPrependWidth() {
+      if (!this.outlined || !this.$refs['prepend-inner']) return;
+      this.prependWidth = this.$refs['prepend-inner'].offsetWidth;
+    },
+
+    tryAutofocus() {
+      if (!this.autofocus || typeof document === 'undefined' || !this.$refs.input) return false;
+      const root = attachedRoot(this.$el);
+      if (!root || root.activeElement === this.$refs.input) return false;
+      this.$refs.input.focus();
+      return true;
+    },
+
+    updateValue(val) {
+      // Sets validationState from validatable
+      this.hasColor = val;
+
+      if (val) {
+        this.initialValue = this.lazyValue;
+      } else if (this.initialValue !== this.lazyValue) {
+        this.$emit('change', this.lazyValue);
+      }
+    },
+
+    onResize() {
+      this.setLabelWidth();
+      this.setPrefixWidth();
+      this.setPrependWidth();
+    }
+
+  }
+}));
+//# sourceMappingURL=VTextField.js.map
+;// CONCATENATED MODULE: ./src/components/General/HomeForm.vue
+
+
+
+
+
+/* normalize component */
+;
+var component = normalizeComponent(
+  General_HomeFormvue_type_script_lang_js_,
+  HomeFormvue_type_template_id_5fdf2e45_render,
+  HomeFormvue_type_template_id_5fdf2e45_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  ,true
+)
+
+/* harmony default export */ var HomeForm = (component.exports);
+
+/* vuetify-loader */
+;
+
+
+
+
+
+
+
+installComponents_default()(component, {VBtn: VBtn_VBtn,VCard: VCard_VCard,VCardTitle: VCardTitle,VContainer: VContainer,VForm: VForm,VSnackbar: VSnackbar_VSnackbar,VTextField: VTextField_VTextField})
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/ExampleComponent.vue?vue&type=script&lang=js&
+//
+//
+//
+
+/* harmony default export */ var ExampleComponentvue_type_script_lang_js_ = ({
+  components: {
+    HomeForm: HomeForm
+  }
+});
+;// CONCATENATED MODULE: ./src/components/UI/ExampleComponent.vue?vue&type=script&lang=js&
+ /* harmony default export */ var UI_ExampleComponentvue_type_script_lang_js_ = (ExampleComponentvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./src/components/UI/ExampleComponent.vue
+
+
+
+function injectStyles (context) {
+  
+  var style0 = __webpack_require__(5850)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var ExampleComponent_component = normalizeComponent(
+  UI_ExampleComponentvue_type_script_lang_js_,
+  ExampleComponentvue_type_template_id_2db49928_render,
+  ExampleComponentvue_type_template_id_2db49928_staticRenderFns,
+  false,
+  injectStyles,
+  null,
+  null
+  ,true
+)
+
+/* harmony default export */ var ExampleComponent = (ExampleComponent_component.exports);
+
+/* vuetify-loader */
+;
+
+installComponents_default()(ExampleComponent_component, {VContainer: VContainer})
+
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/WidgetWc/WidgetCard.vue?vue&type=template&id=0d6efe3a&
+var WidgetCardvue_type_template_id_0d6efe3a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-card',{attrs:{"height":"400","width":"350","outlined":""}},[_c('CustomTabs')],1)}
+var WidgetCardvue_type_template_id_0d6efe3a_staticRenderFns = []
+
+
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/CustomTabs.vue?vue&type=template&id=407cae0f&lang=html&
+var CustomTabsvue_type_template_id_407cae0f_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"wrapper"},[_c('button',{staticClass:"change__style",on:{"click":function($event){return _vm.changeStyle()}}},[_vm._v("Change Style")]),_c('tabs',{attrs:{"mode":_vm.mode}},[_c('tab',{attrs:{"title":"Tab 1"}},[_vm._v("Hello From Tab 1")]),_c('tab',{attrs:{"title":"Tab 2"}},[_vm._v("Hello From Tab 2")]),_c('tab',{attrs:{"title":"Tab 3"}},[_vm._v("Hello From Tab 3")]),_c('tab',{attrs:{"title":"Tab 4"}},[_vm._v("Hello From Tab 4")])],1)],1)}
+var CustomTabsvue_type_template_id_407cae0f_lang_html_staticRenderFns = []
+
+
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/TabUI.vue?vue&type=template&id=416dfd0a&lang=html&
+var TabUIvue_type_template_id_416dfd0a_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isActive),expression:"isActive"}],staticClass:"tab"},[_vm._t("default")],2)}
+var TabUIvue_type_template_id_416dfd0a_lang_html_staticRenderFns = []
+
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/TabUI.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var TabUIvue_type_script_lang_js_ = ({
+  props: {
+    title: {
+      type: String,
+      default: "Tab"
+    },
+    icon: {
+      type: String,
+      default: "Tab"
+    }
+  },
+
+  data() {
+    return {
+      isActive: true
+    };
+  }
+
+});
+;// CONCATENATED MODULE: ./src/components/UI/TabUI.vue?vue&type=script&lang=js&
+ /* harmony default export */ var UI_TabUIvue_type_script_lang_js_ = (TabUIvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./src/components/UI/TabUI.vue
+
+
+
+
+
+/* normalize component */
+;
+var TabUI_component = normalizeComponent(
+  UI_TabUIvue_type_script_lang_js_,
+  TabUIvue_type_template_id_416dfd0a_lang_html_render,
+  TabUIvue_type_template_id_416dfd0a_lang_html_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  ,true
+)
+
+/* harmony default export */ var TabUI = (TabUI_component.exports);
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/TabsUI.vue?vue&type=template&id=2cb385c2&lang=html&
+var TabsUIvue_type_template_id_2cb385c2_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:{"tabs__light": _vm.mode === "light", "tabs__dark": _vm.mode === "dark"}},[_c('ul',{staticClass:"tabs__header"},_vm._l((_vm.tabs),function(tab,index){return _c('li',{key:tab.title,class:{"tab__selected": (index == _vm.selectedIndex)},on:{"click":function($event){return _vm.selectTab(index)}}},[_vm._v(" "+_vm._s(tab.title)+" ")])}),0),_vm._t("default")],2)}
+var TabsUIvue_type_template_id_2cb385c2_lang_html_staticRenderFns = []
+
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/TabsUI.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var TabsUIvue_type_script_lang_js_ = ({
+  props: {
+    mode: {
+      type: String,
+      default: "light"
+    }
+  },
+
+  data() {
+    return {
+      selectedIndex: 0,
+      // the index of the selected tab,
+      tabs: [] // all of the tabs
+
+    };
+  },
+
+  created() {
+    this.tabs = this.$children;
+  },
+
+  mounted() {
+    this.selectTab(0);
+  },
+
+  methods: {
+    selectTab(i) {
+      this.selectedIndex = i; // loop over all the tabs
+
+      this.tabs.forEach((tab, index) => {
+        tab.isActive = index === i;
+      });
+    }
+
+  }
+});
+;// CONCATENATED MODULE: ./src/components/UI/TabsUI.vue?vue&type=script&lang=js&
+ /* harmony default export */ var UI_TabsUIvue_type_script_lang_js_ = (TabsUIvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./src/components/UI/TabsUI.vue
+
+
+
+function TabsUI_injectStyles (context) {
+  
+  var style0 = __webpack_require__(7605)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var TabsUI_component = normalizeComponent(
+  UI_TabsUIvue_type_script_lang_js_,
+  TabsUIvue_type_template_id_2cb385c2_lang_html_render,
+  TabsUIvue_type_template_id_2cb385c2_lang_html_staticRenderFns,
+  false,
+  TabsUI_injectStyles,
+  null,
+  null
+  ,true
+)
+
+/* harmony default export */ var TabsUI = (TabsUI_component.exports);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/UI/CustomTabs.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ var CustomTabsvue_type_script_lang_js_ = ({
+  components: {
+    Tab: TabUI,
+    Tabs: TabsUI
+  },
+
+  data() {
+    return {
+      mode: "dark"
+    };
+  },
+
+  methods: {
+    changeStyle() {
+      if (this.mode === "dark") {
+        this.mode = "light";
+      } else {
+        this.mode = "dark";
+      }
+    }
+
+  }
+});
+;// CONCATENATED MODULE: ./src/components/UI/CustomTabs.vue?vue&type=script&lang=js&
+ /* harmony default export */ var UI_CustomTabsvue_type_script_lang_js_ = (CustomTabsvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./src/components/UI/CustomTabs.vue
+
+
+
+function CustomTabs_injectStyles (context) {
+  
+  var style0 = __webpack_require__(9911)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var CustomTabs_component = normalizeComponent(
+  UI_CustomTabsvue_type_script_lang_js_,
+  CustomTabsvue_type_template_id_407cae0f_lang_html_render,
+  CustomTabsvue_type_template_id_407cae0f_lang_html_staticRenderFns,
+  false,
+  CustomTabs_injectStyles,
+  null,
+  null
+  ,true
+)
+
+/* harmony default export */ var CustomTabs = (CustomTabs_component.exports);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/WidgetWc/WidgetCard.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var WidgetCardvue_type_script_lang_js_ = ({
+  components: {
+    CustomTabs: CustomTabs
+  }
+});
+;// CONCATENATED MODULE: ./src/components/WidgetWc/WidgetCard.vue?vue&type=script&lang=js&
+ /* harmony default export */ var WidgetWc_WidgetCardvue_type_script_lang_js_ = (WidgetCardvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./src/components/WidgetWc/WidgetCard.vue
+
+
+
+function WidgetCard_injectStyles (context) {
+  
+  var style0 = __webpack_require__(6159)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var WidgetCard_component = normalizeComponent(
+  WidgetWc_WidgetCardvue_type_script_lang_js_,
+  WidgetCardvue_type_template_id_0d6efe3a_render,
+  WidgetCardvue_type_template_id_0d6efe3a_staticRenderFns,
+  false,
+  WidgetCard_injectStyles,
+  null,
+  null
+  ,true
+)
+
+/* harmony default export */ var WidgetCard = (WidgetCard_component.exports);
+
+/* vuetify-loader */
+;
+
+installComponents_default()(WidgetCard_component, {VCard: VCard_VCard})
+
+;// CONCATENATED MODULE: ./node_modules/@iconify/vue2/dist/iconify.mjs
+
+
+const matchName = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const iconDefaults = Object.freeze({
+  left: 0,
+  top: 0,
+  width: 16,
+  height: 16,
+  rotate: 0,
+  vFlip: false,
+  hFlip: false
+});
+function fullIcon(data) {
+  return { ...iconDefaults, ...data };
+}
+
+const stringToIcon = (value, validate, allowSimpleName, provider = "") => {
+  const colonSeparated = value.split(":");
+  if (value.slice(0, 1) === "@") {
+    if (colonSeparated.length < 2 || colonSeparated.length > 3) {
+      return null;
+    }
+    provider = colonSeparated.shift().slice(1);
+  }
+  if (colonSeparated.length > 3 || !colonSeparated.length) {
+    return null;
+  }
+  if (colonSeparated.length > 1) {
+    const name2 = colonSeparated.pop();
+    const prefix = colonSeparated.pop();
+    const result = {
+      provider: colonSeparated.length > 0 ? colonSeparated[0] : provider,
+      prefix,
+      name: name2
+    };
+    return validate && !validateIcon(result) ? null : result;
+  }
+  const name = colonSeparated[0];
+  const dashSeparated = name.split("-");
+  if (dashSeparated.length > 1) {
+    const result = {
+      provider,
+      prefix: dashSeparated.shift(),
+      name: dashSeparated.join("-")
+    };
+    return validate && !validateIcon(result) ? null : result;
+  }
+  if (allowSimpleName && provider === "") {
+    const result = {
+      provider,
+      prefix: "",
+      name
+    };
+    return validate && !validateIcon(result, allowSimpleName) ? null : result;
+  }
+  return null;
+};
+const validateIcon = (icon, allowSimpleName) => {
+  if (!icon) {
+    return false;
+  }
+  return !!((icon.provider === "" || icon.provider.match(matchName)) && (allowSimpleName && icon.prefix === "" || icon.prefix.match(matchName)) && icon.name.match(matchName));
+};
+
+function mergeIconData(icon, alias) {
+  const result = { ...icon };
+  for (const key in iconDefaults) {
+    const prop = key;
+    if (alias[prop] !== void 0) {
+      const value = alias[prop];
+      if (result[prop] === void 0) {
+        result[prop] = value;
+        continue;
+      }
+      switch (prop) {
+        case "rotate":
+          result[prop] = (result[prop] + value) % 4;
+          break;
+        case "hFlip":
+        case "vFlip":
+          result[prop] = value !== result[prop];
+          break;
+        default:
+          result[prop] = value;
+      }
+    }
+  }
+  return result;
+}
+
+function getIconData$1(data, name, full = false) {
+  function getIcon(name2, iteration) {
+    if (data.icons[name2] !== void 0) {
+      return Object.assign({}, data.icons[name2]);
+    }
+    if (iteration > 5) {
+      return null;
+    }
+    const aliases = data.aliases;
+    if (aliases && aliases[name2] !== void 0) {
+      const item = aliases[name2];
+      const result2 = getIcon(item.parent, iteration + 1);
+      if (result2) {
+        return mergeIconData(result2, item);
+      }
+      return result2;
+    }
+    const chars = data.chars;
+    if (!iteration && chars && chars[name2] !== void 0) {
+      return getIcon(chars[name2], iteration + 1);
+    }
+    return null;
+  }
+  const result = getIcon(name, 0);
+  if (result) {
+    for (const key in iconDefaults) {
+      if (result[key] === void 0 && data[key] !== void 0) {
+        result[key] = data[key];
+      }
+    }
+  }
+  return result && full ? fullIcon(result) : result;
+}
+
+function isVariation(item) {
+  for (const key in iconDefaults) {
+    if (item[key] !== void 0) {
+      return true;
+    }
+  }
+  return false;
+}
+function parseIconSet(data, callback, options) {
+  options = options || {};
+  const names = [];
+  if (typeof data !== "object" || typeof data.icons !== "object") {
+    return names;
+  }
+  if (data.not_found instanceof Array) {
+    data.not_found.forEach((name) => {
+      callback(name, null);
+      names.push(name);
+    });
+  }
+  const icons = data.icons;
+  Object.keys(icons).forEach((name) => {
+    const iconData = getIconData$1(data, name, true);
+    if (iconData) {
+      callback(name, iconData);
+      names.push(name);
+    }
+  });
+  const parseAliases = options.aliases || "all";
+  if (parseAliases !== "none" && typeof data.aliases === "object") {
+    const aliases = data.aliases;
+    Object.keys(aliases).forEach((name) => {
+      if (parseAliases === "variations" && isVariation(aliases[name])) {
+        return;
+      }
+      const iconData = getIconData$1(data, name, true);
+      if (iconData) {
+        callback(name, iconData);
+        names.push(name);
+      }
+    });
+  }
+  return names;
+}
+
+const optionalProperties = {
+  provider: "string",
+  aliases: "object",
+  not_found: "object"
+};
+for (const prop in iconDefaults) {
+  optionalProperties[prop] = typeof iconDefaults[prop];
+}
+function quicklyValidateIconSet(obj) {
+  if (typeof obj !== "object" || obj === null) {
+    return null;
+  }
+  const data = obj;
+  if (typeof data.prefix !== "string" || !obj.icons || typeof obj.icons !== "object") {
+    return null;
+  }
+  for (const prop in optionalProperties) {
+    if (obj[prop] !== void 0 && typeof obj[prop] !== optionalProperties[prop]) {
+      return null;
+    }
+  }
+  const icons = data.icons;
+  for (const name in icons) {
+    const icon = icons[name];
+    if (!name.match(matchName) || typeof icon.body !== "string") {
+      return null;
+    }
+    for (const prop in iconDefaults) {
+      if (icon[prop] !== void 0 && typeof icon[prop] !== typeof iconDefaults[prop]) {
+        return null;
+      }
+    }
+  }
+  const aliases = data.aliases;
+  if (aliases) {
+    for (const name in aliases) {
+      const icon = aliases[name];
+      const parent = icon.parent;
+      if (!name.match(matchName) || typeof parent !== "string" || !icons[parent] && !aliases[parent]) {
+        return null;
+      }
+      for (const prop in iconDefaults) {
+        if (icon[prop] !== void 0 && typeof icon[prop] !== typeof iconDefaults[prop]) {
+          return null;
+        }
+      }
+    }
+  }
+  return data;
+}
+
+const storageVersion = 1;
+let storage$1 = /* @__PURE__ */ Object.create(null);
+try {
+  const w = window || self;
+  if (w && w._iconifyStorage.version === storageVersion) {
+    storage$1 = w._iconifyStorage.storage;
+  }
+} catch (err) {
+}
+function shareStorage() {
+  try {
+    const w = window || self;
+    if (w && !w._iconifyStorage) {
+      w._iconifyStorage = {
+        version: storageVersion,
+        storage: storage$1
+      };
+    }
+  } catch (err) {
+  }
+}
+function newStorage(provider, prefix) {
+  return {
+    provider,
+    prefix,
+    icons: /* @__PURE__ */ Object.create(null),
+    missing: /* @__PURE__ */ Object.create(null)
+  };
+}
+function getStorage(provider, prefix) {
+  if (storage$1[provider] === void 0) {
+    storage$1[provider] = /* @__PURE__ */ Object.create(null);
+  }
+  const providerStorage = storage$1[provider];
+  if (providerStorage[prefix] === void 0) {
+    providerStorage[prefix] = newStorage(provider, prefix);
+  }
+  return providerStorage[prefix];
+}
+function addIconSet(storage2, data) {
+  if (!quicklyValidateIconSet(data)) {
+    return [];
+  }
+  const t = Date.now();
+  return parseIconSet(data, (name, icon) => {
+    if (icon) {
+      storage2.icons[name] = icon;
+    } else {
+      storage2.missing[name] = t;
+    }
+  });
+}
+function addIconToStorage(storage2, name, icon) {
+  try {
+    if (typeof icon.body === "string") {
+      storage2.icons[name] = Object.freeze(fullIcon(icon));
+      return true;
+    }
+  } catch (err) {
+  }
+  return false;
+}
+function getIconFromStorage(storage2, name) {
+  const value = storage2.icons[name];
+  return value === void 0 ? null : value;
+}
+function listIcons(provider, prefix) {
+  let allIcons = [];
+  let providers;
+  if (typeof provider === "string") {
+    providers = [provider];
+  } else {
+    providers = Object.keys(storage$1);
+  }
+  providers.forEach((provider2) => {
+    let prefixes;
+    if (typeof provider2 === "string" && typeof prefix === "string") {
+      prefixes = [prefix];
+    } else {
+      prefixes = storage$1[provider2] === void 0 ? [] : Object.keys(storage$1[provider2]);
+    }
+    prefixes.forEach((prefix2) => {
+      const storage2 = getStorage(provider2, prefix2);
+      const icons = Object.keys(storage2.icons).map((name) => (provider2 !== "" ? "@" + provider2 + ":" : "") + prefix2 + ":" + name);
+      allIcons = allIcons.concat(icons);
+    });
+  });
+  return allIcons;
+}
+
+let simpleNames = false;
+function allowSimpleNames(allow) {
+  if (typeof allow === "boolean") {
+    simpleNames = allow;
+  }
+  return simpleNames;
+}
+function getIconData(name) {
+  const icon = typeof name === "string" ? stringToIcon(name, true, simpleNames) : name;
+  return icon ? getIconFromStorage(getStorage(icon.provider, icon.prefix), icon.name) : null;
+}
+function addIcon(name, data) {
+  const icon = stringToIcon(name, true, simpleNames);
+  if (!icon) {
+    return false;
+  }
+  const storage = getStorage(icon.provider, icon.prefix);
+  return addIconToStorage(storage, icon.name, data);
+}
+function addCollection(data, provider) {
+  if (typeof data !== "object") {
+    return false;
+  }
+  if (typeof provider !== "string") {
+    provider = typeof data.provider === "string" ? data.provider : "";
+  }
+  if (simpleNames && provider === "" && (typeof data.prefix !== "string" || data.prefix === "")) {
+    let added = false;
+    if (quicklyValidateIconSet(data)) {
+      data.prefix = "";
+      parseIconSet(data, (name, icon) => {
+        if (icon && addIcon(name, icon)) {
+          added = true;
+        }
+      });
+    }
+    return added;
+  }
+  if (typeof data.prefix !== "string" || !validateIcon({
+    provider,
+    prefix: data.prefix,
+    name: "a"
+  })) {
+    return false;
+  }
+  const storage = getStorage(provider, data.prefix);
+  return !!addIconSet(storage, data);
+}
+function iconExists(name) {
+  return getIconData(name) !== null;
+}
+function getIcon(name) {
+  const result = getIconData(name);
+  return result ? { ...result } : null;
+}
+
+const defaults = Object.freeze({
+  inline: false,
+  width: null,
+  height: null,
+  hAlign: "center",
+  vAlign: "middle",
+  slice: false,
+  hFlip: false,
+  vFlip: false,
+  rotate: 0
+});
+function mergeCustomisations(defaults2, item) {
+  const result = {};
+  for (const key in defaults2) {
+    const attr = key;
+    result[attr] = defaults2[attr];
+    if (item[attr] === void 0) {
+      continue;
+    }
+    const value = item[attr];
+    switch (attr) {
+      case "inline":
+      case "slice":
+        if (typeof value === "boolean") {
+          result[attr] = value;
+        }
+        break;
+      case "hFlip":
+      case "vFlip":
+        if (value === true) {
+          result[attr] = !result[attr];
+        }
+        break;
+      case "hAlign":
+      case "vAlign":
+        if (typeof value === "string" && value !== "") {
+          result[attr] = value;
+        }
+        break;
+      case "width":
+      case "height":
+        if (typeof value === "string" && value !== "" || typeof value === "number" && value || value === null) {
+          result[attr] = value;
+        }
+        break;
+      case "rotate":
+        if (typeof value === "number") {
+          result[attr] += value;
+        }
+        break;
+    }
+  }
+  return result;
+}
+
+const unitsSplit = /(-?[0-9.]*[0-9]+[0-9.]*)/g;
+const unitsTest = /^-?[0-9.]*[0-9]+[0-9.]*$/g;
+function calculateSize(size, ratio, precision) {
+  if (ratio === 1) {
+    return size;
+  }
+  precision = precision === void 0 ? 100 : precision;
+  if (typeof size === "number") {
+    return Math.ceil(size * ratio * precision) / precision;
+  }
+  if (typeof size !== "string") {
+    return size;
+  }
+  const oldParts = size.split(unitsSplit);
+  if (oldParts === null || !oldParts.length) {
+    return size;
+  }
+  const newParts = [];
+  let code = oldParts.shift();
+  let isNumber = unitsTest.test(code);
+  while (true) {
+    if (isNumber) {
+      const num = parseFloat(code);
+      if (isNaN(num)) {
+        newParts.push(code);
+      } else {
+        newParts.push(Math.ceil(num * ratio * precision) / precision);
+      }
+    } else {
+      newParts.push(code);
+    }
+    code = oldParts.shift();
+    if (code === void 0) {
+      return newParts.join("");
+    }
+    isNumber = !isNumber;
+  }
+}
+
+function preserveAspectRatio(props) {
+  let result = "";
+  switch (props.hAlign) {
+    case "left":
+      result += "xMin";
+      break;
+    case "right":
+      result += "xMax";
+      break;
+    default:
+      result += "xMid";
+  }
+  switch (props.vAlign) {
+    case "top":
+      result += "YMin";
+      break;
+    case "bottom":
+      result += "YMax";
+      break;
+    default:
+      result += "YMid";
+  }
+  result += props.slice ? " slice" : " meet";
+  return result;
+}
+function iconToSVG(icon, customisations) {
+  const box = {
+    left: icon.left,
+    top: icon.top,
+    width: icon.width,
+    height: icon.height
+  };
+  let body = icon.body;
+  [icon, customisations].forEach((props) => {
+    const transformations = [];
+    const hFlip = props.hFlip;
+    const vFlip = props.vFlip;
+    let rotation = props.rotate;
+    if (hFlip) {
+      if (vFlip) {
+        rotation += 2;
+      } else {
+        transformations.push("translate(" + (box.width + box.left).toString() + " " + (0 - box.top).toString() + ")");
+        transformations.push("scale(-1 1)");
+        box.top = box.left = 0;
+      }
+    } else if (vFlip) {
+      transformations.push("translate(" + (0 - box.left).toString() + " " + (box.height + box.top).toString() + ")");
+      transformations.push("scale(1 -1)");
+      box.top = box.left = 0;
+    }
+    let tempValue;
+    if (rotation < 0) {
+      rotation -= Math.floor(rotation / 4) * 4;
+    }
+    rotation = rotation % 4;
+    switch (rotation) {
+      case 1:
+        tempValue = box.height / 2 + box.top;
+        transformations.unshift("rotate(90 " + tempValue.toString() + " " + tempValue.toString() + ")");
+        break;
+      case 2:
+        transformations.unshift("rotate(180 " + (box.width / 2 + box.left).toString() + " " + (box.height / 2 + box.top).toString() + ")");
+        break;
+      case 3:
+        tempValue = box.width / 2 + box.left;
+        transformations.unshift("rotate(-90 " + tempValue.toString() + " " + tempValue.toString() + ")");
+        break;
+    }
+    if (rotation % 2 === 1) {
+      if (box.left !== 0 || box.top !== 0) {
+        tempValue = box.left;
+        box.left = box.top;
+        box.top = tempValue;
+      }
+      if (box.width !== box.height) {
+        tempValue = box.width;
+        box.width = box.height;
+        box.height = tempValue;
+      }
+    }
+    if (transformations.length) {
+      body = '<g transform="' + transformations.join(" ") + '">' + body + "</g>";
+    }
+  });
+  let width, height;
+  if (customisations.width === null && customisations.height === null) {
+    height = "1em";
+    width = calculateSize(height, box.width / box.height);
+  } else if (customisations.width !== null && customisations.height !== null) {
+    width = customisations.width;
+    height = customisations.height;
+  } else if (customisations.height !== null) {
+    height = customisations.height;
+    width = calculateSize(height, box.width / box.height);
+  } else {
+    width = customisations.width;
+    height = calculateSize(width, box.height / box.width);
+  }
+  if (width === "auto") {
+    width = box.width;
+  }
+  if (height === "auto") {
+    height = box.height;
+  }
+  width = typeof width === "string" ? width : width.toString() + "";
+  height = typeof height === "string" ? height : height.toString() + "";
+  const result = {
+    attributes: {
+      width,
+      height,
+      preserveAspectRatio: preserveAspectRatio(customisations),
+      viewBox: box.left.toString() + " " + box.top.toString() + " " + box.width.toString() + " " + box.height.toString()
+    },
+    body
+  };
+  if (customisations.inline) {
+    result.inline = true;
+  }
+  return result;
+}
+
+function buildIcon(icon, customisations) {
+  return iconToSVG(fullIcon(icon), customisations ? mergeCustomisations(defaults, customisations) : defaults);
+}
+
+const regex = /\sid="(\S+)"/g;
+const randomPrefix = "IconifyId" + Date.now().toString(16) + (Math.random() * 16777216 | 0).toString(16);
+let iconify_counter = 0;
+function replaceIDs(body, prefix = randomPrefix) {
+  const ids = [];
+  let match;
+  while (match = regex.exec(body)) {
+    ids.push(match[1]);
+  }
+  if (!ids.length) {
+    return body;
+  }
+  ids.forEach((id) => {
+    const newID = typeof prefix === "function" ? prefix(id) : prefix + (iconify_counter++).toString();
+    const escapedID = id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    body = body.replace(new RegExp('([#;"])(' + escapedID + ')([")]|\\.[a-z])', "g"), "$1" + newID + "$3");
+  });
+  return body;
+}
+
+const storage = /* @__PURE__ */ Object.create(null);
+function setAPIModule(provider, item) {
+  storage[provider] = item;
+}
+function getAPIModule(provider) {
+  return storage[provider] || storage[""];
+}
+
+function createAPIConfig(source) {
+  let resources;
+  if (typeof source.resources === "string") {
+    resources = [source.resources];
+  } else {
+    resources = source.resources;
+    if (!(resources instanceof Array) || !resources.length) {
+      return null;
+    }
+  }
+  const result = {
+    resources,
+    path: source.path === void 0 ? "/" : source.path,
+    maxURL: source.maxURL ? source.maxURL : 500,
+    rotate: source.rotate ? source.rotate : 750,
+    timeout: source.timeout ? source.timeout : 5e3,
+    random: source.random === true,
+    index: source.index ? source.index : 0,
+    dataAfterTimeout: source.dataAfterTimeout !== false
+  };
+  return result;
+}
+const configStorage = /* @__PURE__ */ Object.create(null);
+const fallBackAPISources = [
+  "https://api.simplesvg.com",
+  "https://api.unisvg.com"
+];
+const fallBackAPI = [];
+while (fallBackAPISources.length > 0) {
+  if (fallBackAPISources.length === 1) {
+    fallBackAPI.push(fallBackAPISources.shift());
+  } else {
+    if (Math.random() > 0.5) {
+      fallBackAPI.push(fallBackAPISources.shift());
+    } else {
+      fallBackAPI.push(fallBackAPISources.pop());
+    }
+  }
+}
+configStorage[""] = createAPIConfig({
+  resources: ["https://api.iconify.design"].concat(fallBackAPI)
+});
+function addAPIProvider(provider, customConfig) {
+  const config = createAPIConfig(customConfig);
+  if (config === null) {
+    return false;
+  }
+  configStorage[provider] = config;
+  return true;
+}
+function getAPIConfig(provider) {
+  return configStorage[provider];
+}
+function listAPIProviders() {
+  return Object.keys(configStorage);
+}
+
+const mergeParams = (base, params) => {
+  let result = base, hasParams = result.indexOf("?") !== -1;
+  function paramToString(value) {
+    switch (typeof value) {
+      case "boolean":
+        return value ? "true" : "false";
+      case "number":
+        return encodeURIComponent(value);
+      case "string":
+        return encodeURIComponent(value);
+      default:
+        throw new Error("Invalid parameter");
+    }
+  }
+  Object.keys(params).forEach((key) => {
+    let value;
+    try {
+      value = paramToString(params[key]);
+    } catch (err) {
+      return;
+    }
+    result += (hasParams ? "&" : "?") + encodeURIComponent(key) + "=" + value;
+    hasParams = true;
+  });
+  return result;
+};
+
+const maxLengthCache = {};
+const pathCache = {};
+const detectFetch = () => {
+  let callback;
+  try {
+    callback = fetch;
+    if (typeof callback === "function") {
+      return callback;
+    }
+  } catch (err) {
+  }
+  return null;
+};
+let fetchModule = detectFetch();
+function setFetch(fetch2) {
+  fetchModule = fetch2;
+}
+function getFetch() {
+  return fetchModule;
+}
+function calculateMaxLength(provider, prefix) {
+  const config = getAPIConfig(provider);
+  if (!config) {
+    return 0;
+  }
+  let result;
+  if (!config.maxURL) {
+    result = 0;
+  } else {
+    let maxHostLength = 0;
+    config.resources.forEach((item) => {
+      const host = item;
+      maxHostLength = Math.max(maxHostLength, host.length);
+    });
+    const url = mergeParams(prefix + ".json", {
+      icons: ""
+    });
+    result = config.maxURL - maxHostLength - config.path.length - url.length;
+  }
+  const cacheKey = provider + ":" + prefix;
+  pathCache[provider] = config.path;
+  maxLengthCache[cacheKey] = result;
+  return result;
+}
+function shouldAbort(status) {
+  return status === 404;
+}
+const prepare = (provider, prefix, icons) => {
+  const results = [];
+  let maxLength = maxLengthCache[prefix];
+  if (maxLength === void 0) {
+    maxLength = calculateMaxLength(provider, prefix);
+  }
+  const type = "icons";
+  let item = {
+    type,
+    provider,
+    prefix,
+    icons: []
+  };
+  let length = 0;
+  icons.forEach((name, index) => {
+    length += name.length + 1;
+    if (length >= maxLength && index > 0) {
+      results.push(item);
+      item = {
+        type,
+        provider,
+        prefix,
+        icons: []
+      };
+      length = name.length;
+    }
+    item.icons.push(name);
+  });
+  results.push(item);
+  return results;
+};
+function getPath(provider) {
+  if (typeof provider === "string") {
+    if (pathCache[provider] === void 0) {
+      const config = getAPIConfig(provider);
+      if (!config) {
+        return "/";
+      }
+      pathCache[provider] = config.path;
+    }
+    return pathCache[provider];
+  }
+  return "/";
+}
+const send = (host, params, callback) => {
+  if (!fetchModule) {
+    callback("abort", 424);
+    return;
+  }
+  let path = getPath(params.provider);
+  switch (params.type) {
+    case "icons": {
+      const prefix = params.prefix;
+      const icons = params.icons;
+      const iconsList = icons.join(",");
+      path += mergeParams(prefix + ".json", {
+        icons: iconsList
+      });
+      break;
+    }
+    case "custom": {
+      const uri = params.uri;
+      path += uri.slice(0, 1) === "/" ? uri.slice(1) : uri;
+      break;
+    }
+    default:
+      callback("abort", 400);
+      return;
+  }
+  let defaultError = 503;
+  fetchModule(host + path).then((response) => {
+    const status = response.status;
+    if (status !== 200) {
+      setTimeout(() => {
+        callback(shouldAbort(status) ? "abort" : "next", status);
+      });
+      return;
+    }
+    defaultError = 501;
+    return response.json();
+  }).then((data) => {
+    if (typeof data !== "object" || data === null) {
+      setTimeout(() => {
+        callback("next", defaultError);
+      });
+      return;
+    }
+    setTimeout(() => {
+      callback("success", data);
+    });
+  }).catch(() => {
+    callback("next", defaultError);
+  });
+};
+const fetchAPIModule = {
+  prepare,
+  send
+};
+
+function sortIcons(icons) {
+  const result = {
+    loaded: [],
+    missing: [],
+    pending: []
+  };
+  const storage = /* @__PURE__ */ Object.create(null);
+  icons.sort((a, b) => {
+    if (a.provider !== b.provider) {
+      return a.provider.localeCompare(b.provider);
+    }
+    if (a.prefix !== b.prefix) {
+      return a.prefix.localeCompare(b.prefix);
+    }
+    return a.name.localeCompare(b.name);
+  });
+  let lastIcon = {
+    provider: "",
+    prefix: "",
+    name: ""
+  };
+  icons.forEach((icon) => {
+    if (lastIcon.name === icon.name && lastIcon.prefix === icon.prefix && lastIcon.provider === icon.provider) {
+      return;
+    }
+    lastIcon = icon;
+    const provider = icon.provider;
+    const prefix = icon.prefix;
+    const name = icon.name;
+    if (storage[provider] === void 0) {
+      storage[provider] = /* @__PURE__ */ Object.create(null);
+    }
+    const providerStorage = storage[provider];
+    if (providerStorage[prefix] === void 0) {
+      providerStorage[prefix] = getStorage(provider, prefix);
+    }
+    const localStorage = providerStorage[prefix];
+    let list;
+    if (localStorage.icons[name] !== void 0) {
+      list = result.loaded;
+    } else if (prefix === "" || localStorage.missing[name] !== void 0) {
+      list = result.missing;
+    } else {
+      list = result.pending;
+    }
+    const item = {
+      provider,
+      prefix,
+      name
+    };
+    list.push(item);
+  });
+  return result;
+}
+
+const iconify_callbacks = /* @__PURE__ */ Object.create(null);
+const pendingUpdates = /* @__PURE__ */ Object.create(null);
+function removeCallback(sources, id) {
+  sources.forEach((source) => {
+    const provider = source.provider;
+    if (iconify_callbacks[provider] === void 0) {
+      return;
+    }
+    const providerCallbacks = iconify_callbacks[provider];
+    const prefix = source.prefix;
+    const items = providerCallbacks[prefix];
+    if (items) {
+      providerCallbacks[prefix] = items.filter((row) => row.id !== id);
+    }
+  });
+}
+function updateCallbacks(provider, prefix) {
+  if (pendingUpdates[provider] === void 0) {
+    pendingUpdates[provider] = /* @__PURE__ */ Object.create(null);
+  }
+  const providerPendingUpdates = pendingUpdates[provider];
+  if (!providerPendingUpdates[prefix]) {
+    providerPendingUpdates[prefix] = true;
+    setTimeout(() => {
+      providerPendingUpdates[prefix] = false;
+      if (iconify_callbacks[provider] === void 0 || iconify_callbacks[provider][prefix] === void 0) {
+        return;
+      }
+      const items = iconify_callbacks[provider][prefix].slice(0);
+      if (!items.length) {
+        return;
+      }
+      const storage = getStorage(provider, prefix);
+      let hasPending = false;
+      items.forEach((item) => {
+        const icons = item.icons;
+        const oldLength = icons.pending.length;
+        icons.pending = icons.pending.filter((icon) => {
+          if (icon.prefix !== prefix) {
+            return true;
+          }
+          const name = icon.name;
+          if (storage.icons[name] !== void 0) {
+            icons.loaded.push({
+              provider,
+              prefix,
+              name
+            });
+          } else if (storage.missing[name] !== void 0) {
+            icons.missing.push({
+              provider,
+              prefix,
+              name
+            });
+          } else {
+            hasPending = true;
+            return true;
+          }
+          return false;
+        });
+        if (icons.pending.length !== oldLength) {
+          if (!hasPending) {
+            removeCallback([
+              {
+                provider,
+                prefix
+              }
+            ], item.id);
+          }
+          item.callback(icons.loaded.slice(0), icons.missing.slice(0), icons.pending.slice(0), item.abort);
+        }
+      });
+    });
+  }
+}
+let idCounter = 0;
+function storeCallback(callback, icons, pendingSources) {
+  const id = idCounter++;
+  const abort = removeCallback.bind(null, pendingSources, id);
+  if (!icons.pending.length) {
+    return abort;
+  }
+  const item = {
+    id,
+    icons,
+    callback,
+    abort
+  };
+  pendingSources.forEach((source) => {
+    const provider = source.provider;
+    const prefix = source.prefix;
+    if (iconify_callbacks[provider] === void 0) {
+      iconify_callbacks[provider] = /* @__PURE__ */ Object.create(null);
+    }
+    const providerCallbacks = iconify_callbacks[provider];
+    if (providerCallbacks[prefix] === void 0) {
+      providerCallbacks[prefix] = [];
+    }
+    providerCallbacks[prefix].push(item);
+  });
+  return abort;
+}
+
+function listToIcons(list, validate = true, simpleNames = false) {
+  const result = [];
+  list.forEach((item) => {
+    const icon = typeof item === "string" ? stringToIcon(item, false, simpleNames) : item;
+    if (!validate || validateIcon(icon, simpleNames)) {
+      result.push({
+        provider: icon.provider,
+        prefix: icon.prefix,
+        name: icon.name
+      });
+    }
+  });
+  return result;
+}
+
+// src/config.ts
+var defaultConfig = {
+  resources: [],
+  index: 0,
+  timeout: 2e3,
+  rotate: 750,
+  random: false,
+  dataAfterTimeout: false
+};
+
+// src/query.ts
+function sendQuery(config, payload, query, done) {
+  const resourcesCount = config.resources.length;
+  const startIndex = config.random ? Math.floor(Math.random() * resourcesCount) : config.index;
+  let resources;
+  if (config.random) {
+    let list = config.resources.slice(0);
+    resources = [];
+    while (list.length > 1) {
+      const nextIndex = Math.floor(Math.random() * list.length);
+      resources.push(list[nextIndex]);
+      list = list.slice(0, nextIndex).concat(list.slice(nextIndex + 1));
+    }
+    resources = resources.concat(list);
+  } else {
+    resources = config.resources.slice(startIndex).concat(config.resources.slice(0, startIndex));
+  }
+  const startTime = Date.now();
+  let status = "pending";
+  let queriesSent = 0;
+  let lastError;
+  let timer = null;
+  let queue = [];
+  let doneCallbacks = [];
+  if (typeof done === "function") {
+    doneCallbacks.push(done);
+  }
+  function resetTimer() {
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+  }
+  function abort() {
+    if (status === "pending") {
+      status = "aborted";
+    }
+    resetTimer();
+    queue.forEach((item) => {
+      if (item.status === "pending") {
+        item.status = "aborted";
+      }
+    });
+    queue = [];
+  }
+  function subscribe(callback, overwrite) {
+    if (overwrite) {
+      doneCallbacks = [];
+    }
+    if (typeof callback === "function") {
+      doneCallbacks.push(callback);
+    }
+  }
+  function getQueryStatus() {
+    return {
+      startTime,
+      payload,
+      status,
+      queriesSent,
+      queriesPending: queue.length,
+      subscribe,
+      abort
+    };
+  }
+  function failQuery() {
+    status = "failed";
+    doneCallbacks.forEach((callback) => {
+      callback(void 0, lastError);
+    });
+  }
+  function clearQueue() {
+    queue.forEach((item) => {
+      if (item.status === "pending") {
+        item.status = "aborted";
+      }
+    });
+    queue = [];
+  }
+  function moduleResponse(item, response, data) {
+    const isError = response !== "success";
+    queue = queue.filter((queued) => queued !== item);
+    switch (status) {
+      case "pending":
+        break;
+      case "failed":
+        if (isError || !config.dataAfterTimeout) {
+          return;
+        }
+        break;
+      default:
+        return;
+    }
+    if (response === "abort") {
+      lastError = data;
+      failQuery();
+      return;
+    }
+    if (isError) {
+      lastError = data;
+      if (!queue.length) {
+        if (!resources.length) {
+          failQuery();
+        } else {
+          execNext();
+        }
+      }
+      return;
+    }
+    resetTimer();
+    clearQueue();
+    if (!config.random) {
+      const index = config.resources.indexOf(item.resource);
+      if (index !== -1 && index !== config.index) {
+        config.index = index;
+      }
+    }
+    status = "completed";
+    doneCallbacks.forEach((callback) => {
+      callback(data);
+    });
+  }
+  function execNext() {
+    if (status !== "pending") {
+      return;
+    }
+    resetTimer();
+    const resource = resources.shift();
+    if (resource === void 0) {
+      if (queue.length) {
+        timer = setTimeout(() => {
+          resetTimer();
+          if (status === "pending") {
+            clearQueue();
+            failQuery();
+          }
+        }, config.timeout);
+        return;
+      }
+      failQuery();
+      return;
+    }
+    const item = {
+      status: "pending",
+      resource,
+      callback: (status2, data) => {
+        moduleResponse(item, status2, data);
+      }
+    };
+    queue.push(item);
+    queriesSent++;
+    timer = setTimeout(execNext, config.rotate);
+    query(resource, payload, item.callback);
+  }
+  setTimeout(execNext);
+  return getQueryStatus;
+}
+
+// src/index.ts
+function setConfig(config) {
+  if (typeof config !== "object" || typeof config.resources !== "object" || !(config.resources instanceof Array) || !config.resources.length) {
+    throw new Error("Invalid Reduncancy configuration");
+  }
+  const newConfig = /* @__PURE__ */ Object.create(null);
+  let key;
+  for (key in defaultConfig) {
+    if (config[key] !== void 0) {
+      newConfig[key] = config[key];
+    } else {
+      newConfig[key] = defaultConfig[key];
+    }
+  }
+  return newConfig;
+}
+function initRedundancy(cfg) {
+  const config = setConfig(cfg);
+  let queries = [];
+  function cleanup() {
+    queries = queries.filter((item) => item().status === "pending");
+  }
+  function query(payload, queryCallback, doneCallback) {
+    const query2 = sendQuery(config, payload, queryCallback, (data, error) => {
+      cleanup();
+      if (doneCallback) {
+        doneCallback(data, error);
+      }
+    });
+    queries.push(query2);
+    return query2;
+  }
+  function find(callback) {
+    const result = queries.find((value) => {
+      return callback(value);
+    });
+    return result !== void 0 ? result : null;
+  }
+  const instance = {
+    query,
+    find,
+    setIndex: (index) => {
+      config.index = index;
+    },
+    getIndex: () => config.index,
+    cleanup
+  };
+  return instance;
+}
+
+function emptyCallback$1() {
+}
+const redundancyCache = /* @__PURE__ */ Object.create(null);
+function getRedundancyCache(provider) {
+  if (redundancyCache[provider] === void 0) {
+    const config = getAPIConfig(provider);
+    if (!config) {
+      return;
+    }
+    const redundancy = initRedundancy(config);
+    const cachedReundancy = {
+      config,
+      redundancy
+    };
+    redundancyCache[provider] = cachedReundancy;
+  }
+  return redundancyCache[provider];
+}
+function sendAPIQuery(target, query, callback) {
+  let redundancy;
+  let send;
+  if (typeof target === "string") {
+    const api = getAPIModule(target);
+    if (!api) {
+      callback(void 0, 424);
+      return emptyCallback$1;
+    }
+    send = api.send;
+    const cached = getRedundancyCache(target);
+    if (cached) {
+      redundancy = cached.redundancy;
+    }
+  } else {
+    const config = createAPIConfig(target);
+    if (config) {
+      redundancy = initRedundancy(config);
+      const moduleKey = target.resources ? target.resources[0] : "";
+      const api = getAPIModule(moduleKey);
+      if (api) {
+        send = api.send;
+      }
+    }
+  }
+  if (!redundancy || !send) {
+    callback(void 0, 424);
+    return emptyCallback$1;
+  }
+  return redundancy.query(query, send, callback)().abort;
+}
+
+const iconify_cache = {};
+
+function emptyCallback() {
+}
+const pendingIcons = /* @__PURE__ */ Object.create(null);
+const iconsToLoad = /* @__PURE__ */ Object.create(null);
+const loaderFlags = /* @__PURE__ */ Object.create(null);
+const queueFlags = /* @__PURE__ */ Object.create(null);
+function loadedNewIcons(provider, prefix) {
+  if (loaderFlags[provider] === void 0) {
+    loaderFlags[provider] = /* @__PURE__ */ Object.create(null);
+  }
+  const providerLoaderFlags = loaderFlags[provider];
+  if (!providerLoaderFlags[prefix]) {
+    providerLoaderFlags[prefix] = true;
+    setTimeout(() => {
+      providerLoaderFlags[prefix] = false;
+      updateCallbacks(provider, prefix);
+    });
+  }
+}
+const errorsCache = /* @__PURE__ */ Object.create(null);
+function loadNewIcons(provider, prefix, icons) {
+  function err() {
+    const key = (provider === "" ? "" : "@" + provider + ":") + prefix;
+    const time = Math.floor(Date.now() / 6e4);
+    if (errorsCache[key] < time) {
+      errorsCache[key] = time;
+      console.error('Unable to retrieve icons for "' + key + '" because API is not configured properly.');
+    }
+  }
+  if (iconsToLoad[provider] === void 0) {
+    iconsToLoad[provider] = /* @__PURE__ */ Object.create(null);
+  }
+  const providerIconsToLoad = iconsToLoad[provider];
+  if (queueFlags[provider] === void 0) {
+    queueFlags[provider] = /* @__PURE__ */ Object.create(null);
+  }
+  const providerQueueFlags = queueFlags[provider];
+  if (pendingIcons[provider] === void 0) {
+    pendingIcons[provider] = /* @__PURE__ */ Object.create(null);
+  }
+  const providerPendingIcons = pendingIcons[provider];
+  if (providerIconsToLoad[prefix] === void 0) {
+    providerIconsToLoad[prefix] = icons;
+  } else {
+    providerIconsToLoad[prefix] = providerIconsToLoad[prefix].concat(icons).sort();
+  }
+  if (!providerQueueFlags[prefix]) {
+    providerQueueFlags[prefix] = true;
+    setTimeout(() => {
+      providerQueueFlags[prefix] = false;
+      const icons2 = providerIconsToLoad[prefix];
+      delete providerIconsToLoad[prefix];
+      const api = getAPIModule(provider);
+      if (!api) {
+        err();
+        return;
+      }
+      const params = api.prepare(provider, prefix, icons2);
+      params.forEach((item) => {
+        sendAPIQuery(provider, item, (data, error) => {
+          const storage = getStorage(provider, prefix);
+          if (typeof data !== "object") {
+            if (error !== 404) {
+              return;
+            }
+            const t = Date.now();
+            item.icons.forEach((name) => {
+              storage.missing[name] = t;
+            });
+          } else {
+            try {
+              const parsed = addIconSet(storage, data);
+              if (!parsed.length) {
+                return;
+              }
+              const pending = providerPendingIcons[prefix];
+              parsed.forEach((name) => {
+                delete pending[name];
+              });
+              if (iconify_cache.store) {
+                iconify_cache.store(provider, data);
+              }
+            } catch (err2) {
+              console.error(err2);
+            }
+          }
+          loadedNewIcons(provider, prefix);
+        });
+      });
+    });
+  }
+}
+const loadIcons = (icons, callback) => {
+  const cleanedIcons = listToIcons(icons, true, allowSimpleNames());
+  const sortedIcons = sortIcons(cleanedIcons);
+  if (!sortedIcons.pending.length) {
+    let callCallback = true;
+    if (callback) {
+      setTimeout(() => {
+        if (callCallback) {
+          callback(sortedIcons.loaded, sortedIcons.missing, sortedIcons.pending, emptyCallback);
+        }
+      });
+    }
+    return () => {
+      callCallback = false;
+    };
+  }
+  const newIcons = /* @__PURE__ */ Object.create(null);
+  const sources = [];
+  let lastProvider, lastPrefix;
+  sortedIcons.pending.forEach((icon) => {
+    const provider = icon.provider;
+    const prefix = icon.prefix;
+    if (prefix === lastPrefix && provider === lastProvider) {
+      return;
+    }
+    lastProvider = provider;
+    lastPrefix = prefix;
+    sources.push({
+      provider,
+      prefix
+    });
+    if (pendingIcons[provider] === void 0) {
+      pendingIcons[provider] = /* @__PURE__ */ Object.create(null);
+    }
+    const providerPendingIcons = pendingIcons[provider];
+    if (providerPendingIcons[prefix] === void 0) {
+      providerPendingIcons[prefix] = /* @__PURE__ */ Object.create(null);
+    }
+    if (newIcons[provider] === void 0) {
+      newIcons[provider] = /* @__PURE__ */ Object.create(null);
+    }
+    const providerNewIcons = newIcons[provider];
+    if (providerNewIcons[prefix] === void 0) {
+      providerNewIcons[prefix] = [];
+    }
+  });
+  const time = Date.now();
+  sortedIcons.pending.forEach((icon) => {
+    const provider = icon.provider;
+    const prefix = icon.prefix;
+    const name = icon.name;
+    const pendingQueue = pendingIcons[provider][prefix];
+    if (pendingQueue[name] === void 0) {
+      pendingQueue[name] = time;
+      newIcons[provider][prefix].push(name);
+    }
+  });
+  sources.forEach((source) => {
+    const provider = source.provider;
+    const prefix = source.prefix;
+    if (newIcons[provider][prefix].length) {
+      loadNewIcons(provider, prefix, newIcons[provider][prefix]);
+    }
+  });
+  return callback ? storeCallback(callback, sortedIcons, sources) : emptyCallback;
+};
+const loadIcon = (icon) => {
+  return new Promise((fulfill, reject) => {
+    const iconObj = typeof icon === "string" ? stringToIcon(icon) : icon;
+    loadIcons([iconObj || icon], (loaded) => {
+      if (loaded.length && iconObj) {
+        const storage = getStorage(iconObj.provider, iconObj.prefix);
+        const data = getIconFromStorage(storage, iconObj.name);
+        if (data) {
+          fulfill(data);
+          return;
+        }
+      }
+      reject(icon);
+    });
+  });
+};
+
+const cacheVersion = "iconify2";
+const cachePrefix = "iconify";
+const countKey = cachePrefix + "-count";
+const versionKey = cachePrefix + "-version";
+const hour = 36e5;
+const cacheExpiration = 168;
+const iconify_config = {
+  local: true,
+  session: true
+};
+let loaded = false;
+const count = {
+  local: 0,
+  session: 0
+};
+const emptyList = {
+  local: [],
+  session: []
+};
+let _window = typeof window === "undefined" ? {} : window;
+function getGlobal(key) {
+  const attr = key + "Storage";
+  try {
+    if (_window && _window[attr] && typeof _window[attr].length === "number") {
+      return _window[attr];
+    }
+  } catch (err) {
+  }
+  iconify_config[key] = false;
+  return null;
+}
+function setCount(storage, key, value) {
+  try {
+    storage.setItem(countKey, value.toString());
+    count[key] = value;
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
+function getCount(storage) {
+  const count2 = storage.getItem(countKey);
+  if (count2) {
+    const total = parseInt(count2);
+    return total ? total : 0;
+  }
+  return 0;
+}
+function initCache(storage, key) {
+  try {
+    storage.setItem(versionKey, cacheVersion);
+  } catch (err) {
+  }
+  setCount(storage, key, 0);
+}
+function destroyCache(storage) {
+  try {
+    const total = getCount(storage);
+    for (let i = 0; i < total; i++) {
+      storage.removeItem(cachePrefix + i.toString());
+    }
+  } catch (err) {
+  }
+}
+const loadCache = () => {
+  if (loaded) {
+    return;
+  }
+  loaded = true;
+  const minTime = Math.floor(Date.now() / hour) - cacheExpiration;
+  function load(key) {
+    const func = getGlobal(key);
+    if (!func) {
+      return;
+    }
+    const getItem = (index) => {
+      const name = cachePrefix + index.toString();
+      const item = func.getItem(name);
+      if (typeof item !== "string") {
+        return false;
+      }
+      let valid = true;
+      try {
+        const data = JSON.parse(item);
+        if (typeof data !== "object" || typeof data.cached !== "number" || data.cached < minTime || typeof data.provider !== "string" || typeof data.data !== "object" || typeof data.data.prefix !== "string") {
+          valid = false;
+        } else {
+          const provider = data.provider;
+          const prefix = data.data.prefix;
+          const storage = getStorage(provider, prefix);
+          valid = addIconSet(storage, data.data).length > 0;
+        }
+      } catch (err) {
+        valid = false;
+      }
+      if (!valid) {
+        func.removeItem(name);
+      }
+      return valid;
+    };
+    try {
+      const version = func.getItem(versionKey);
+      if (version !== cacheVersion) {
+        if (version) {
+          destroyCache(func);
+        }
+        initCache(func, key);
+        return;
+      }
+      let total = getCount(func);
+      for (let i = total - 1; i >= 0; i--) {
+        if (!getItem(i)) {
+          if (i === total - 1) {
+            total--;
+          } else {
+            emptyList[key].push(i);
+          }
+        }
+      }
+      setCount(func, key, total);
+    } catch (err) {
+    }
+  }
+  for (const key in iconify_config) {
+    load(key);
+  }
+};
+const storeCache = (provider, data) => {
+  if (!loaded) {
+    loadCache();
+  }
+  function store(key) {
+    if (!iconify_config[key]) {
+      return false;
+    }
+    const func = getGlobal(key);
+    if (!func) {
+      return false;
+    }
+    let index = emptyList[key].shift();
+    if (index === void 0) {
+      index = count[key];
+      if (!setCount(func, key, index + 1)) {
+        return false;
+      }
+    }
+    try {
+      const item = {
+        cached: Math.floor(Date.now() / hour),
+        provider,
+        data
+      };
+      func.setItem(cachePrefix + index.toString(), JSON.stringify(item));
+    } catch (err) {
+      return false;
+    }
+    return true;
+  }
+  if (!Object.keys(data.icons).length) {
+    return;
+  }
+  if (data.not_found) {
+    data = Object.assign({}, data);
+    delete data.not_found;
+  }
+  if (!store("local")) {
+    store("session");
+  }
+};
+
+function toggleBrowserCache(storage, value) {
+  switch (storage) {
+    case "local":
+    case "session":
+      iconify_config[storage] = value;
+      break;
+    case "all":
+      for (const key in iconify_config) {
+        iconify_config[key] = value;
+      }
+      break;
+  }
+}
+
+const separator = /[\s,]+/;
+function flipFromString(custom, flip) {
+  flip.split(separator).forEach((str) => {
+    const value = str.trim();
+    switch (value) {
+      case "horizontal":
+        custom.hFlip = true;
+        break;
+      case "vertical":
+        custom.vFlip = true;
+        break;
+    }
+  });
+}
+function alignmentFromString(custom, align) {
+  align.split(separator).forEach((str) => {
+    const value = str.trim();
+    switch (value) {
+      case "left":
+      case "center":
+      case "right":
+        custom.hAlign = value;
+        break;
+      case "top":
+      case "middle":
+      case "bottom":
+        custom.vAlign = value;
+        break;
+      case "slice":
+      case "crop":
+        custom.slice = true;
+        break;
+      case "meet":
+        custom.slice = false;
+    }
+  });
+}
+
+function rotateFromString(value, defaultValue = 0) {
+  const units = value.replace(/^-?[0-9.]*/, "");
+  function cleanup(value2) {
+    while (value2 < 0) {
+      value2 += 4;
+    }
+    return value2 % 4;
+  }
+  if (units === "") {
+    const num = parseInt(value);
+    return isNaN(num) ? 0 : cleanup(num);
+  } else if (units !== value) {
+    let split = 0;
+    switch (units) {
+      case "%":
+        split = 25;
+        break;
+      case "deg":
+        split = 90;
+    }
+    if (split) {
+      let num = parseFloat(value.slice(0, value.length - units.length));
+      if (isNaN(num)) {
+        return 0;
+      }
+      num = num / split;
+      return num % 1 === 0 ? cleanup(num) : 0;
+    }
+  }
+  return defaultValue;
+}
+
+/**
+ * Default SVG attributes
+ */
+const svgDefaults = {
+    'xmlns': 'http://www.w3.org/2000/svg',
+    'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+    'aria-hidden': true,
+    'role': 'img',
+};
+/**
+ * Aliases for customisations.
+ * In Vue 'v-' properties are reserved, so v-align and v-flip must be renamed
+ */
+let customisationAliases = {};
+['horizontal', 'vertical'].forEach((prefix) => {
+    ['Align', 'Flip'].forEach((suffix) => {
+        const attr = prefix.slice(0, 1) + suffix;
+        const value = {
+            attr,
+            boolean: suffix === 'Flip',
+        };
+        // vertical-align
+        customisationAliases[prefix + '-' + suffix.toLowerCase()] = value;
+        // v-align
+        customisationAliases[prefix.slice(0, 1) + '-' + suffix.toLowerCase()] =
+            value;
+        // verticalAlign
+        customisationAliases[prefix + suffix] = value;
+    });
+});
+/**
+ * Render icon
+ */
+const iconify_render = (createElement, 
+// context.props
+props, 
+// context.data
+contextData, 
+// Icon must be validated before calling this function
+icon) => {
+    // Split properties
+    const customisations = mergeCustomisations(defaults, props);
+    const componentProps = { ...svgDefaults };
+    // Style in Vue 2 components is always passed to rendered component, so no point in parsing it
+    const style = {};
+    // Get element properties
+    for (let key in props) {
+        const value = props[key];
+        if (value === void 0) {
+            continue;
+        }
+        switch (key) {
+            // Properties to ignore
+            case 'icon':
+            case 'style':
+            case 'onLoad':
+                break;
+            // Boolean attributes
+            case 'inline':
+            case 'hFlip':
+            case 'vFlip':
+                customisations[key] =
+                    value === true || value === 'true' || value === 1;
+                break;
+            // Flip as string: 'horizontal,vertical'
+            case 'flip':
+                if (typeof value === 'string') {
+                    flipFromString(customisations, value);
+                }
+                break;
+            // Alignment as string
+            case 'align':
+                if (typeof value === 'string') {
+                    alignmentFromString(customisations, value);
+                }
+                break;
+            // Color: override style
+            case 'color':
+                style.color = value;
+                break;
+            // Rotation as string
+            case 'rotate':
+                if (typeof value === 'string') {
+                    customisations[key] = rotateFromString(value);
+                }
+                else if (typeof value === 'number') {
+                    customisations[key] = value;
+                }
+                break;
+            // Remove aria-hidden
+            case 'ariaHidden':
+            case 'aria-hidden':
+                // Vue transforms 'aria-hidden' property to 'ariaHidden'
+                if (value !== true && value !== 'true') {
+                    delete componentProps['aria-hidden'];
+                }
+                break;
+            default:
+                if (customisationAliases[key] !== void 0) {
+                    // Aliases for customisations
+                    if (customisationAliases[key].boolean &&
+                        (value === true || value === 'true' || value === 1)) {
+                        // Check for boolean
+                        customisations[customisationAliases[key].attr] = true;
+                    }
+                    else if (!customisationAliases[key].boolean &&
+                        typeof value === 'string' &&
+                        value !== '') {
+                        // String
+                        customisations[customisationAliases[key].attr] = value;
+                    }
+                }
+                else if (defaults[key] === void 0) {
+                    // Copy missing property if it does not exist in customisations
+                    componentProps[key] = value;
+                }
+        }
+    }
+    // Generate icon
+    const item = iconToSVG(icon, customisations);
+    // Add icon stuff
+    for (let key in item.attributes) {
+        componentProps[key] = item.attributes[key];
+    }
+    if (item.inline) {
+        style.verticalAlign = '-0.125em';
+    }
+    // Counter for ids based on "id" property to render icons consistently on server and client
+    let localCounter = 0;
+    let id = props.id;
+    if (typeof id === 'string') {
+        // Convert '-' to '_' to avoid errors in animations
+        id = id.replace(/-/g, '_');
+    }
+    // Generate node data
+    const data = {
+        attrs: componentProps,
+        domProps: {
+            innerHTML: replaceIDs(item.body, id ? () => id + 'ID' + localCounter++ : 'iconifyVue'),
+        },
+    };
+    if (Object.keys(style).length > 0) {
+        data.style = style;
+    }
+    if (contextData) {
+        ['on', 'ref'].forEach((attr) => {
+            if (contextData[attr] !== void 0) {
+                data[attr] = contextData[attr];
+            }
+        });
+        ['staticClass', 'class'].forEach((attr) => {
+            if (contextData[attr] !== void 0) {
+                data.class = contextData[attr];
+            }
+        });
+    }
+    // Render icon
+    return createElement('svg', data);
+};
+
+/**
+ * Enable cache
+ */
+function enableCache(storage) {
+    toggleBrowserCache(storage, true);
+}
+/**
+ * Disable cache
+ */
+function disableCache(storage) {
+    toggleBrowserCache(storage, false);
+}
+/**
+ * Initialise stuff
+ */
+// Enable short names
+allowSimpleNames(true);
+// Set API module
+setAPIModule('', fetchAPIModule);
+/**
+ * Browser stuff
+ */
+if (typeof document !== 'undefined' && typeof window !== 'undefined') {
+    // Set cache and load existing cache
+    iconify_cache.store = storeCache;
+    loadCache();
+    const _window = window;
+    // Load icons from global "IconifyPreload"
+    if (_window.IconifyPreload !== void 0) {
+        const preload = _window.IconifyPreload;
+        const err = 'Invalid IconifyPreload syntax.';
+        if (typeof preload === 'object' && preload !== null) {
+            (preload instanceof Array ? preload : [preload]).forEach((item) => {
+                try {
+                    if (
+                    // Check if item is an object and not null/array
+                    typeof item !== 'object' ||
+                        item === null ||
+                        item instanceof Array ||
+                        // Check for 'icons' and 'prefix'
+                        typeof item.icons !== 'object' ||
+                        typeof item.prefix !== 'string' ||
+                        // Add icon set
+                        !addCollection(item)) {
+                        console.error(err);
+                    }
+                }
+                catch (e) {
+                    console.error(err);
+                }
+            });
+        }
+    }
+    // Set API from global "IconifyProviders"
+    if (_window.IconifyProviders !== void 0) {
+        const providers = _window.IconifyProviders;
+        if (typeof providers === 'object' && providers !== null) {
+            for (let key in providers) {
+                const err = 'IconifyProviders[' + key + '] is invalid.';
+                try {
+                    const value = providers[key];
+                    if (typeof value !== 'object' ||
+                        !value ||
+                        value.resources === void 0) {
+                        continue;
+                    }
+                    if (!addAPIProvider(key, value)) {
+                        console.error(err);
+                    }
+                }
+                catch (e) {
+                    console.error(err);
+                }
+            }
+        }
+    }
+}
+/**
+ * Empty icon data, rendered when icon is not available
+ */
+const emptyIcon = fullIcon({
+    body: '',
+});
+const Icon = vue_runtime_esm.extend({
+    // Do not inherit other attributes: it is handled by render()
+    // In Vue 2 style is still passed!
+    inheritAttrs: false,
+    // Set initial data
+    data() {
+        return {
+            // Mounted status
+            iconMounted: false,
+        };
+    },
+    beforeMount() {
+        // Current icon name
+        this._name = '';
+        // Loading
+        this._loadingIcon = null;
+        // Mark as mounted
+        this.iconMounted = true;
+    },
+    beforeDestroy() {
+        this.abortLoading();
+    },
+    methods: {
+        abortLoading() {
+            if (this._loadingIcon) {
+                this._loadingIcon.abort();
+                this._loadingIcon = null;
+            }
+        },
+        // Get data for icon to render or null
+        getIcon(icon, onload) {
+            // Icon is an object
+            if (typeof icon === 'object' &&
+                icon !== null &&
+                typeof icon.body === 'string') {
+                // Stop loading
+                this._name = '';
+                this.abortLoading();
+                return {
+                    data: fullIcon(icon),
+                };
+            }
+            // Invalid icon?
+            let iconName;
+            if (typeof icon !== 'string' ||
+                (iconName = stringToIcon(icon, false, true)) === null) {
+                this.abortLoading();
+                return null;
+            }
+            // Load icon
+            const data = getIconData(iconName);
+            if (data === null) {
+                // Icon needs to be loaded
+                if (!this._loadingIcon || this._loadingIcon.name !== icon) {
+                    // New icon to load
+                    this.abortLoading();
+                    this._name = '';
+                    this._loadingIcon = {
+                        name: icon,
+                        abort: loadIcons([iconName], () => {
+                            this.$forceUpdate();
+                        }),
+                    };
+                }
+                return null;
+            }
+            // Icon data is available
+            this.abortLoading();
+            if (this._name !== icon) {
+                this._name = icon;
+                if (onload) {
+                    onload(icon);
+                }
+            }
+            // Add classes
+            const classes = ['iconify'];
+            if (iconName.prefix !== '') {
+                classes.push('iconify--' + iconName.prefix);
+            }
+            if (iconName.provider !== '') {
+                classes.push('iconify--' + iconName.provider);
+            }
+            return { data, classes };
+        },
+    },
+    // Render icon
+    render(createElement) {
+        const props = this.$attrs;
+        let context = this.$data;
+        // Get icon data
+        const icon = this.iconMounted ? this.getIcon(props.icon, props.onLoad) : null;
+        // Validate icon object
+        if (!icon) {
+            return iconify_render(createElement, props, context, emptyIcon);
+        }
+        // Add classes
+        if (icon.classes) {
+            context = {
+                ...context,
+                class: (typeof context['class'] === 'string'
+                    ? context['class'] + ' '
+                    : '') + icon.classes.join(' '),
+            };
+        }
+        // Render icon
+        return iconify_render(createElement, props, context, icon.data);
+    },
+});
+/**
+ * Internal API
+ */
+const _api = {
+    getAPIConfig,
+    setAPIModule,
+    sendAPIQuery,
+    setFetch,
+    getFetch,
+    listAPIProviders,
+    mergeParams,
+};
+
+
+
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VColorPicker/VColorPicker.sass
+var VColorPicker = __webpack_require__(784);
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VColorPicker/VColorPickerPreview.sass
+var VColorPickerPreview = __webpack_require__(9413);
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VSlider/VSlider.sass
+var VSlider = __webpack_require__(9639);
 ;// CONCATENATED MODULE: ./node_modules/vuetify/lib/directives/click-outside/index.js
 
 
@@ -26620,25 +28117,8 @@ const black = fromHex('#000000').rgba;
 
 }));
 //# sourceMappingURL=VColorPicker.js.map
-;// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VCard/index.js
-
-
-const VCardActions = createSimpleFunctional('v-card__actions');
-const VCardSubtitle = createSimpleFunctional('v-card__subtitle');
-const VCardText = createSimpleFunctional('v-card__text');
-const VCardTitle = createSimpleFunctional('v-card__title');
-
-/* harmony default export */ var components_VCard = ({
-  $_vuetify_subcomponents: {
-    VCard: VCard_VCard,
-    VCardActions,
-    VCardSubtitle,
-    VCardText,
-    VCardTitle
-  }
-});
-//# sourceMappingURL=index.js.map
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40[0].rules[0].use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/WidgetBtn.vue?vue&type=script&lang=js&shadow
+//
 //
 //
 //
@@ -26678,7 +28158,10 @@ const VCardTitle = createSimpleFunctional('v-card__title');
     VCardActions: VCardActions,
     ExampleComponent: ExampleComponent,
     WidgetCard: WidgetCard,
-    Icon: Icon
+    Icon: Icon,
+    VContainer: VContainer,
+    VTextField: VTextField_VTextField,
+    VForm: VForm
     /*
     VMenu 
     VList,
@@ -26712,6 +28195,12 @@ const VCardTitle = createSimpleFunctional('v-card__title');
 
     push() {
       this.elements.push("hola");
+    }
+
+  },
+  computed: {
+    apiURL() {
+      return this.$store.state.apiURL;
     }
 
   },

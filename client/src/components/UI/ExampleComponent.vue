@@ -1,20 +1,10 @@
-
 <template>
-  <div>hola<Icon icon="mdi-light:home" class="big-icon" /></div>
+  <v-container> <HomeForm :title="'Login'"></HomeForm> </v-container>
 </template>
-
 <script>
-import { Icon } from "@iconify/vue2";
+import HomeForm from "@/components/General/HomeForm.vue";
 export default {
-  components: { Icon },
-  data() {
-    return {
-      text: "hola",
-      steps: 3,
-      step: undefined,
-      selectedItem: 0,
-    };
-  },
+  components: { HomeForm },
 };
 </script>
 <style lang="stylus">

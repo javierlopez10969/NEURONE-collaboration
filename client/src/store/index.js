@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    user: {},
+    user: 'none',
     token: "",
     socket: {},
     //Id of the groups

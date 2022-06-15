@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="dropdown">
-      <Icon icon="mdi-light:home" class="drowpdownbtn big-icon" />
+      <Icon icon="mdi:account-group-outline" class="drowpdownbtn big-icon" />
       <div class="dropdown-content">
         <!--content -->
         <WidgetCard></WidgetCard>

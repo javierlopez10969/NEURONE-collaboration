@@ -7,21 +7,17 @@
         <WidgetCard></WidgetCard>
       </div>
     </div>
-    <ExampleComponent></ExampleComponent>
-    {{ apiURL }}
   </div>
 </template>
 <script>
 import axios from "axios";
 import store from "@/store";
-import ExampleComponent from "./UI/ExampleComponent.vue";
 import WidgetCard from "./WidgetWc/WidgetCard.vue";
 import "vuetify/dist/vuetify.min.js";
 import { Icon } from "@iconify/vue2";
 
 export default {
   components: {
-    ExampleComponent,
     WidgetCard,
     Icon /*
     VMenu 

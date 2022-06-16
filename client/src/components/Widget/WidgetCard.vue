@@ -7,14 +7,14 @@
         <!-- Menu -->
         <v-list color="basil" dense>
           <v-subheader>My groups</v-subheader>
-          <v-list-item-group v-model="selectedItem" color="primary">
+          <v-list-item-group v-model="selectedGroup" color="primary">
             <v-list-item v-for="(item, i) in groups" :key="i">
               <v-list-item-icon :color="item.color">
                 <v-icon> mdi-account-group</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 <v-btn
-                  @click="selectItem"
+                  @click="selectGroup(i)"
                   class="white--text"
                   :color="item.color"
                 >
@@ -45,20 +45,23 @@ export default {
       tab: null,
       text: "hola",
       step: 1,
-      selectedItem: 0,
+      token: "",
+      selectedGroup: 0,
     };
   },
+
   computed: {
     groups() {
       return this.$store.state.groups;
     },
     group() {
-      return this.groups[this.selectedItem];
+      return this.groups[this.selectedGroup];
     },
   },
   methods: {
-    selectItem() {
-      this.$store.commit("updateGroup", this.selectedItem);
+    selectGroup(index) {
+      this.selectedGroup = index;
+      this.$store.commit("updateGroup", this.selectedGroup);
       this.step = "group";
     },
   },

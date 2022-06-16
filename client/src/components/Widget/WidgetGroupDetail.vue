@@ -48,9 +48,6 @@ export default {
     };
   },
   computed: {
-    groups() {
-      return this.$store.state.groups;
-    },
     group() {
       return this.$store.state.group;
     },

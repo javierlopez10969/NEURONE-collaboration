@@ -15,8 +15,11 @@ import store from "@/store";
 import WidgetCard from "./WidgetWc/WidgetCard.vue";
 import "vuetify/dist/vuetify.min.js";
 import { Icon } from "@iconify/vue2";
-
+import {
+  io
+} from "socket.io-client";
 export default {
+  io,
   components: {
     WidgetCard,
     Icon /*

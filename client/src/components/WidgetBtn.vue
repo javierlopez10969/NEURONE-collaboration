@@ -15,20 +15,14 @@ import store from "@/store";
 import WidgetCard from "./WidgetWc/WidgetCard.vue";
 import "vuetify/dist/vuetify.min.js";
 import { Icon } from "@iconify/vue2";
-import {
-  io
-} from "socket.io-client";
+import { io } from "socket.io-client";
 export default {
   io,
   components: {
     WidgetCard,
-    Icon /*
-    VMenu 
-    VList,
-    VListItem,
-    VListItemTitle,*/,
+    Icon,
   },
-  props: ["msg"],
+  props: ["msg", "chat", "bookmark"],
   store,
   data() {
     return {

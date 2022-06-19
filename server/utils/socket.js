@@ -5,10 +5,7 @@ let io;
 exports.socketConnection = (server) => {
     io = require('socket.io')(server, {
         cors: {
-            origin: ["http://localhost:8080", "http://192.168.1.105:8080", "http://localhost:8080",
-            "http://localhost:4200/",
-                "file:///home/javierlopez/Documentos/U/titulacion/prototipos/propios/collaboration-NEURONE/client/exampleWidgetBtn.html"
-            ],
+            origin: ["http://localhost:8080", "http://127.0.0.1:5500"],
         }
     });
     //General events of the socket

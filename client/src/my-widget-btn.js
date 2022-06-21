@@ -2,9 +2,7 @@ import Vue from 'vue';
 
 import wrap from '@vue/web-component-wrapper';
 import MyWebComponent from './components/WidgetBtn';
-import MyWebComponentReal from './components/Widget/WidgetBtn';
-//import vuetify from './plugins/vuetify'
+//import MyWebComponentReal from './components/Widget/WidgetBtn';
 Vue.config.productionTip = false
-//Vue.use(vuetify);
 window.customElements.define('widget-btn', wrap(Vue, MyWebComponent));
-window.customElements.define('widget-btn2', wrap(Vue, MyWebComponentReal));
+//window.customElements.define('widget-btn2', wrap(Vue, MyWebComponentReal));

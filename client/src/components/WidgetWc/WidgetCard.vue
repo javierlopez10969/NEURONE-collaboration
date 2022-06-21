@@ -18,29 +18,54 @@
                 <v-icon> mdi-account-group</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-btn
+                <m-button
+                  raised
                   @click="selectGroup(i), (view = 'group')"
                   class="white--text"
-                  :color="item.color"
+                  :style="{ 'background-color': item.color }"
                 >
                   {{ item.name }}
-                </v-btn>
+                </m-button>
               </v-list-item-content>
             </v-list-item>
           </v-list-item-group>
-          <v-btn @click="view = 'editProfile'"> Edit Your Profile </v-btn>
+          <m-button
+            raised
+            style="color: black; background-color: white"
+            @click="view = 'editProfile'"
+          >
+            Edit Your Profile
+          </m-button>
           <p></p>
-          <v-btn class="red" @click="logout()">Log out</v-btn>
+          <m-button
+            style="color: black; background-color: red"
+            @click="logout()"
+            unelevated
+          >
+            Log out
+          </m-button>
         </div>
         <v-container v-show="view == 'group'">
-          <v-btn @click="view = 'normal'">Back</v-btn>
+          <m-button
+            raised
+            style="color: black; background-color: white"
+            @click="view = 'normal'"
+          >
+            Back
+          </m-button>
 
           <GroupDetail></GroupDetail>
         </v-container>
 
         <div v-show="view == 'editProfile'">
-          <v-btn @click="view = 'normal'">Back</v-btn>
-          Grupito UwU
+          <m-button
+            raised
+            style="color: black; background-color: white"
+            @click="view = 'normal'"
+          >
+            Back
+          </m-button>
+          Edit your profile
         </div>
       </div>
     </v-container>
@@ -50,10 +75,9 @@
 <script>
 import Form from "@/components/UI/FormUI";
 import GroupDetail from "./GroupDetail";
-import { VBtn } from "vuetify/dist/vuetify.min.js";
 import axios from "axios";
 export default {
-  components: { VBtn, Form, GroupDetail },
+  components: { Form, GroupDetail },
   data() {
     return { selectedView: 0, selectedGroup: 0, view: "normal", step: 1 };
   },
@@ -108,7 +132,6 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '@/styles/widget.styl';
 @import '@/styles/Icon.css';
 </style>
 <style>

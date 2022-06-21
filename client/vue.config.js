@@ -13,7 +13,7 @@ module.exports = {
   pluginOptions: {
     quasar: {
       importStrategy: 'kebab',
-      rtlSupport: true
+      rtlSupport: false
     }
   },
 
@@ -33,7 +33,7 @@ module.exports = {
   pluginOptions: {
     quasar: {
       importStrategy: 'kebab',
-      rtlSupport: true
+      rtlSupport: false
     }
   },
 
@@ -52,7 +52,7 @@ module.exports = {
   pluginOptions: {
     quasar: {
       importStrategy: 'kebab',
-      rtlSupport: true
+      rtlSupport: false
     }
   },
 

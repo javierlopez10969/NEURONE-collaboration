@@ -1,5 +1,14 @@
 <template>
-  <m-button theming="secondary-bg" unelevated> Secondary-Button </m-button>
+  <div>
+    <m-tab-bar>
+      <m-tab-scroller>
+        <m-tab active> Home </m-tab>
+        <m-tab> Like me </m-tab>
+        <m-tab> About me </m-tab>
+      </m-tab-scroller>
+      <m-tab-indicator active> Hola </m-tab-indicator>
+    </m-tab-bar>
+  </div>
 </template>
 
 <script>

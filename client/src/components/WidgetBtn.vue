@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="dropdown notification">
-      <Icon icon="mdi:account-group-outline" class="drowpdownbtn big-icon" />
+      <Icon
+        :style="{ color: 'black' }"
+        icon="mdi:account-group-outline"
+        class="drowpdownbtn big-icon"
+      />
 
       <span class="badge">3</span>
       <div class="dropdown-content">
@@ -9,8 +13,12 @@
         <WidgetCard></WidgetCard>
       </div>
     </div>
-    <m-menu-surface fixed></m-menu-surface>
-    <m-icon-button icon="favorite"></m-icon-button>
+    <m-menu-anchor>
+      <m-button @click="open = true" unelevated> Open Menu Surface </m-button>
+      <m-menu-surface style="max-height: 291.969px" v-model="open">
+        buenos dias como estan
+      </m-menu-surface>
+    </m-menu-anchor>
   </div>
 </template>
 <script>
@@ -21,11 +29,19 @@ import { Icon } from "@iconify/vue2";
 import { io } from "socket.io-client";
 import Button from "material-components-vue/dist/button";
 import Menu from "material-components-vue/dist/menu";
+import List from "material-components-vue/dist/list";
+import Tab from "material-components-vue/dist/tabs";
+import Card from "material-components-vue/dist/card";
 import IconButton from "material-components-vue/dist/icon-button";
+import IconM from "material-components-vue/dist/icon";
 import Vue from "vue";
 Vue.use(Button);
+Vue.use(Tab);
+Vue.use(Card);
+Vue.use(List);
 Vue.use(Menu);
 Vue.use(IconButton);
+Vue.use(IconM);
 export default {
   io,
   components: {
@@ -82,7 +98,10 @@ $mdc-theme-background: #f5f5f5;
 @import "material-components-vue/dist/theme/styles";
 @import "material-components-vue/dist/button/styles";
 @import "material-components-vue/dist/menu/styles";
+@import "material-components-vue/dist/list/styles";
+@import "material-components-vue/dist/card/styles";
 @import "material-components-vue/dist/icon-button/styles";
+@import "material-components-vue/dist/tabs/styles";
 </style>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");

@@ -17,7 +17,6 @@
       <input
         v-model="user.password"
         type="password"
-        id="inputPassword5"
         class="form-control"
         aria-describedby="passwordHelpBlock"
       />

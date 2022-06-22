@@ -109,8 +109,3 @@ export default {
   },
 };
 </script>
-
- <style>
-@import "vuetify/dist/vuetify.min.css";
-@import "@mdi/font/css/materialdesignicons.css";
-</style> 

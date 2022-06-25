@@ -13,12 +13,6 @@
         <WidgetCard></WidgetCard>
       </div>
     </div>
-    <m-menu-anchor>
-      <m-button @click="open = true" unelevated> Open Menu Surface </m-button>
-      <m-menu-surface style="max-height: 291.969px" v-model="open">
-        buenos dias como estan
-      </m-menu-surface>
-    </m-menu-anchor>
   </div>
 </template>
 <script>
@@ -35,6 +29,7 @@ import Card from "material-components-vue/dist/card";
 import IconButton from "material-components-vue/dist/icon-button";
 import IconM from "material-components-vue/dist/icon";
 import Vue from "vue";
+Vue.use(axios);
 Vue.use(Button);
 Vue.use(Tab);
 Vue.use(Card);
@@ -76,17 +71,10 @@ export default {
       return this.$store.state.apiURL;
     },
   },
-  created() {
-    let apiURL = "https://pokeapi.co/api/v2/pokemon/ditto";
-    axios.get(apiURL).then((res) => {
-      this.ditto = res.data;
-    });
-  },
 };
 </script>
 
 <style lang="stylus">
-@import '@/styles/widget.styl';
 @import '@/styles/DropDown.css';
 @import '@/styles/Icon.css';
 @import '@/styles/Notificacion.css';

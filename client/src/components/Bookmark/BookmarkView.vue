@@ -87,28 +87,12 @@ export default {
   mounted() {
     //LISTENERS OF THE SOCKET
     //Send a message
-    this.socket.on("message", (msg) => {
-      this.chat.push(msg);
-    });
-    // Whenever the server emits 'typing', show the typing message
-    this.socket.on("typing", (data) => {
-      console.log(data);
-      this.someoneTyping = true;
+    this.socket.on("bookmark", (bkmrk) => {
+      this.bookmarks.push(bkmrk);
     });
     this.socket.on("login", (data) => {
       this.usernameSocket = data.username;
     });
-
-    // Whenever the server emits 'stop typing', kill the typing message
-    this.socket.on("stop typing", (data) => {
-      console.log(data);
-      this.someoneTyping = false;
-    });
-    //Add new user to the chat room
-    this.socket.on("online users", (users) => {
-      this.onlineUsers = users;
-    });
-    //disconnect of the chat room
   },
   watch: {
     // whenever question changes, this function will run

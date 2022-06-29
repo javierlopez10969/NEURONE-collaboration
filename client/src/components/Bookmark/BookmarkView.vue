@@ -38,12 +38,15 @@
         </v-form>
       </v-window-item>
     </v-window>
+    <BookmarkContainer :bookmarks = "bookmarks"/>
   </v-container>
 </template>
 
 <script>
 import axios from "axios";
+import BookmarkContainer from "./BookmarkContainer.vue"
 export default {
+  components:{BookmarkContainer},
   name: "BookmarkPage",
   computed: {
     user() {

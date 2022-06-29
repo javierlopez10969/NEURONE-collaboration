@@ -50,7 +50,7 @@ Now run in http server:
 npx http-server ./dist
 ```
 
-Ecample of calculator :
+Example for calculator :
 
 ### Customize configuration
 

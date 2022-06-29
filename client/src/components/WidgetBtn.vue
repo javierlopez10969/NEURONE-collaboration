@@ -43,7 +43,7 @@ export default {
     WidgetCard,
     Icon,
   },
-  props: ["msg", "chat", "bookmark"],
+  props: ["msg", "chat", "bookmark","settings",],
   store,
   data() {
     return {

@@ -1,59 +1,57 @@
 const express = require('express'),
     router = express.Router(),
-    ChatRoom = require('../models/Chat/ChatRoom'),
-    Message = require('../models/Chat/Message'),
+    Bookmark = require('../models/Bookmark'),
     Socket = require('../utils/socket');
 
 //Get all
 router.get('/', async (req, res) => {
-    const messages = await Message.find();
-    res.json(messages);
+    const bookmarks = await Bookmark.find();
+    res.json(bookmarks);
 })
 
-// GET all mesasages of certain group
+// GET all bookmarks of certain group
 router.get('/group/:id', async (req, res) => {
     if (req.params.id === undefined) {
         console.log("UNDEFINED")
     } else if (req.params.id != undefined) {
-        const messages = await Message.find({
+        const bookmarks = await Bookmark.find({
             "group_id": req.params.id
         });
-        res.json(messages);
+        res.json(bookmarks);
     }
 })
 
-router.post('/send-message', async (req, res) => {
-    var message = req.body.message;
-    delete message.username.password;
-    message.group_id = req.body.group;
-    message.message_type = "private"
-    Socket.sendMessage(req.body.group, 'message', message);
-    console.log(req.body.message)
+router.post('/send-bookmark', async (req, res) => {
+    var Bookmark = req.body.Bookmark;
+    delete Bookmark.username.password;
+    Bookmark.group_id = req.body.group;
+    Socket.sendMessage(req.body.group, 'bookmark', Bookmark);
+    //console.log(req.body.Bookmark)
     res.json({
-        status: 'message sended'
+        status: 'Bookmark sended'
     })
-    const messageBD = new Message(message);
-    await messageBD.save();
+    const BookmarkBD = new Bookmark(Bookmark);
+    await BookmarkBD.save();
 })
 
 router.put('/:id', async (req, res) => {
-    await Message.findByIdAndUpdate(req.params.id, req.body)
+    await Bookmark.findByIdAndUpdate(req.params.id, req.body)
     res.json({
-        status: 'message Updated'
+        status: 'Bookmark Updated'
     })
 })
 
 router.delete('/:id', async (req, res) => {
-    await Message.findByIdAndRemove(req.params.id, req.body)
+    await Bookmark.findByIdAndRemove(req.params.id, req.body)
     res.json({
-        status: 'message Deleted'
+        status: 'Bookmark Deleted'
     })
 })
 
 router.delete('/all/all/', async (req, res) => {
-    await Message.deleteMany()
+    await Bookmark.deleteMany()
     return res.status(200).json({
-        message: 'All message are deleted successfully'
+        Bookmark: 'All Bookmark are deleted successfully'
     })
 })
 

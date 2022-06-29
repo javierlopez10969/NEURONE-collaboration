@@ -10,20 +10,16 @@
         item.username == 'You' ? 'justify-end' : null,
       ]"
     >
-      <a v-if="item.username === 'system'"
-        ><div v-bind:class="item.color + '--text text-center'">
-          <h1>{{ item.message }}</h1>
-        </div>
-      </a>
-      <a v-if="item.username !== 'system'">
-
-</a>
+    <li>
+      {{item}}
+    </li>
     </div>
   </v-container>
 </template>
 
 <script>
 export default {
+  props : ["bookmarks"],
   updated() {
     //Scroll to the bottom
     this.scrollToBottom();

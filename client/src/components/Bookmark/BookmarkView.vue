@@ -82,7 +82,7 @@ export default {
   created() {
     this.socket = this.$store.state.socket;
     axios
-      .get(this.$store.state.apiURL + "/bookmark/group/" + this.group._id)
+      .get(this.$store.state.apiURL + "/bookmark/group/" + this.$store.state.group._id)
       .then((res) => {
         this.bookmarks = res.data;
       });
@@ -105,7 +105,7 @@ export default {
   },
   methods: {
     addBookMark() {
-      if (this.message != "") {
+      if (this.bookmark.URL != "") {
         var message = {
           message: this.message,
           username: this.$store.state.user,

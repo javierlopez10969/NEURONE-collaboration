@@ -38,12 +38,15 @@
         </v-form>
       </v-window-item>
     </v-window>
+    <BookmarkContainer :bookmarks = "bookmarks"/>
   </v-container>
 </template>
 
 <script>
 import axios from "axios";
+import BookmarkContainer from "./BookmarkContainer.vue"
 export default {
+  components:{BookmarkContainer},
   name: "BookmarkPage",
   computed: {
     user() {
@@ -79,7 +82,7 @@ export default {
   created() {
     this.socket = this.$store.state.socket;
     axios
-      .get(this.$store.state.apiURL + "/bookmark/group/" + this.group._id)
+      .get(this.$store.state.apiURL + "/bookmark/group/" + this.$store.state.group._id)
       .then((res) => {
         this.bookmarks = res.data;
       });
@@ -87,28 +90,12 @@ export default {
   mounted() {
     //LISTENERS OF THE SOCKET
     //Send a message
-    this.socket.on("message", (msg) => {
-      this.chat.push(msg);
-    });
-    // Whenever the server emits 'typing', show the typing message
-    this.socket.on("typing", (data) => {
-      console.log(data);
-      this.someoneTyping = true;
+    this.socket.on("bookmark", (bkmrk) => {
+      this.bookmarks.push(bkmrk);
     });
     this.socket.on("login", (data) => {
       this.usernameSocket = data.username;
     });
-
-    // Whenever the server emits 'stop typing', kill the typing message
-    this.socket.on("stop typing", (data) => {
-      console.log(data);
-      this.someoneTyping = false;
-    });
-    //Add new user to the chat room
-    this.socket.on("online users", (users) => {
-      this.onlineUsers = users;
-    });
-    //disconnect of the chat room
   },
   watch: {
     // whenever question changes, this function will run
@@ -118,7 +105,7 @@ export default {
   },
   methods: {
     addBookMark() {
-      if (this.message != "") {
+      if (this.bookmark.URL != "") {
         var message = {
           message: this.message,
           username: this.$store.state.user,

@@ -13,12 +13,6 @@
         <WidgetCard></WidgetCard>
       </div>
     </div>
-    <m-menu-anchor>
-      <m-button @click="open = true" unelevated> Open Menu Surface </m-button>
-      <m-menu-surface style="max-height: 291.969px" v-model="open">
-        buenos dias como estan
-      </m-menu-surface>
-    </m-menu-anchor>
   </div>
 </template>
 <script>

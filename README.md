@@ -40,10 +40,11 @@ npm run wc-build
 Now copy the widget-btn-min.js and copy in your project. Import de script as this: 
 
 ### Setup the enviroments for your Web component : props
-
+```
 <!-- Include the propety without a value is equals to `true` -->
 <widget-btn bookmarks chat=false ></widget-btn>
 
+```
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|

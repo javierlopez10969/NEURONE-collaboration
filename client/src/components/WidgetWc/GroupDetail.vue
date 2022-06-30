@@ -46,9 +46,12 @@
     </v-container>
 
     <div v-show="view == 'Activity'"></div>
-    <div v-show="view == 'Bookmarks'">
-      <BookmarkView></BookmarkView>
+    <div v-show="(view = 'Bookmarks')">
+      <v-container style="height: 350px; overflow: auto" fluid>
+        <BookmarkView></BookmarkView>
+      </v-container>
     </div>
+
     <div v-show="view == 'Snippets'"></div>
     <div v-show="view == 'Document'"></div>
     <div v-if="view == 'Pepole'">

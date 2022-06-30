@@ -55,12 +55,12 @@
             ></v-color-picker>
           </v-col>
           <v-col v-for="(module, index) in group.modules" v-bind:key="index">
-            {{ module.name }}
-            <v-checkbox
+            <m-checkbox
               v-if="module.title != 'Settings'"
               v-model="module.active"
               :label="`${module.title}`"
-            ></v-checkbox>
+            />
+            <label for="checkbox2"> {{ module.title }}</label>
           </v-col>
           <v-col cols="12">
             <v-autocomplete

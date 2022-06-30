@@ -46,13 +46,16 @@
           </m-button>
         </div>
         <v-container v-show="view == 'group'">
-          <m-button
-            raised
-            style="color: black; background-color: white"
-            @click="view = 'normal'"
-          >
-            Back
-          </m-button>
+          <div style="font-size: 10px">
+            <m-button
+              raised
+              style="color: black; background-color: white"
+              @click="view = 'normal'"
+            >
+              Back
+            </m-button>
+            Use the click,arrows and enter to move.
+          </div>
 
           <GroupDetail></GroupDetail>
         </v-container>

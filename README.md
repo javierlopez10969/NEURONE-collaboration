@@ -10,10 +10,9 @@
 ### Requiriments
 
 * Npm
-* Vue-cli
 * Nodejs
 * mongodb
-* MongoDB TOOLS
+* MongoDB TOOLS (Only for windows)
 
 
 1. Open Server folder and run `npm install` (this is needed only once)

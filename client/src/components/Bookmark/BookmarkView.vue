@@ -11,7 +11,7 @@
       <BookmarkContainer :bookmarks="bookmarks" />
     </div>
     <v-container v-show="view == 'form'">
-      <v-form @submit.prevent="addBookMark">
+      <v-form ref="form" @submit.prevent="addBookMark">
         <m-button
           raised
           style="color: black; background-color: white"
@@ -27,30 +27,30 @@
           Add Bookmark
         </m-button>
         <v-col cols="8">
-          <v-text-field
-            outlined
-            filled
-            auto-grow
+          <m-text-field
             v-model="bookmark.URL"
             label="URL"
-            placeholder="Aa"
-          ></v-text-field>
-          <v-text-field
-            outlined
-            filled
-            auto-grow
+            placeholder="www.mywebsite.com"
+            id="URL"
+          >
+            <m-floating-label for="textfield">URL</m-floating-label>
+          </m-text-field>
+          <p></p>
+          <m-text-field
             v-model="bookmark.pageTitle"
-            label="Page Title"
-            placeholder="Aa"
-          ></v-text-field>
-          <v-text-field
-            outlined
-            filled
-            auto-grow
+            placeholder="My website"
+            id="URL"
+          >
+            <m-floating-label for="textfield">Page Title</m-floating-label>
+          </m-text-field>
+          <p></p>
+          <m-text-field
             v-model="bookmark.notes"
-            label="Notes"
-            placeholder="Aa"
-          ></v-text-field>
+            placeholder="This website talks about my website"
+            id="URL"
+          >
+            <m-floating-label for="textfield">Notes</m-floating-label>
+          </m-text-field>
         </v-col>
       </v-form>
     </v-container>
@@ -125,43 +125,23 @@ export default {
   },
   methods: {
     addBookMark() {
-      if (this.bookmark.URL != "") {
-        var message = {
+      if (this.$refs.form.validate()) {
+        var bookmark = {
           message: this.message,
           username: this.$store.state.user,
         };
         axios
-          .post(this.$store.state.apiURL + "/message/send-message", {
-            message,
+          .post(this.$store.state.apiURL + "/bookmark/send-bookmark", {
+            bookmark,
             group: this.group._id,
           })
           .then((res) => {
             console.log(res.data);
-            this.message = "";
+            this.view = "normal";
           });
       } else {
-        this.snack = true;
-        this.snackText = "Put some text pls";
-        this.snackColor = "red";
+        alert("please put the required data");
       }
-    },
-    updateTyping() {
-      //TODO : put if is connected or not
-      if (this.isTyping === false) {
-        this.isTyping = true;
-        this.socket.emit("typing");
-        console.log("typing");
-      }
-      this.lastTypingTime = new Date().getTime();
-
-      setTimeout(() => {
-        const typingTimer = new Date().getTime();
-        const timeDiff = typingTimer - this.lastTypingTime;
-        if (timeDiff >= this.TYPING_TIMER_LENGTH && this.isTyping) {
-          this.socket.emit("stop typing");
-          this.isTyping = false;
-        }
-      }, this.TYPING_TIMER_LENGTH);
     },
   },
 };

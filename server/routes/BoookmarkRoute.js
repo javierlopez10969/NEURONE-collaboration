@@ -23,15 +23,23 @@ router.get('/group/:id', async (req, res) => {
 
 router.post('/send-bookmark', async (req, res) => {
     var Bookmark = req.body.Bookmark;
-    delete Bookmark.username.password;
-    Bookmark.group_id = req.body.group;
-    Socket.sendMessage(req.body.group, 'bookmark', Bookmark);
-    //console.log(req.body.Bookmark)
-    res.json({
-        status: 'Bookmark sended'
-    })
-    const BookmarkBD = new Bookmark(Bookmark);
-    await BookmarkBD.save();
+    if (Bookmark.username != undefined && Bookmark.group_id != undefined && Bookmark.URL != undefined) {
+        delete Bookmark.username.password;
+        Bookmark.group_id = req.body.group;
+        Socket.sendMessage(req.body.group, 'bookmark', Bookmark);
+        //console.log(req.body.Bookmark)
+        res.json({
+            status: 'Bookmark sended' + Bookmark.URL
+        })
+        const BookmarkBD = new Bookmark(Bookmark);
+        await BookmarkBD.save();
+    } else {
+        return res.status(400).json({
+            message: 'Error in ssending the bookmark'
+        })
+    }
+
+
 })
 
 router.put('/:id', async (req, res) => {
@@ -51,7 +59,7 @@ router.delete('/:id', async (req, res) => {
 router.delete('/all/all/', async (req, res) => {
     await Bookmark.deleteMany()
     return res.status(200).json({
-        Bookmark: 'All Bookmark are deleted successfully'
+        message: 'All Bookmark are deleted successfully'
     })
 })
 

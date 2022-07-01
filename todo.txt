@@ -1,0 +1,8 @@
+Hacer el test unitario con jest o mocha para darle una test
+Test unitario al frontend de testoptimizacionde los modulos de frontend
+
+H
+
+Verificar cuando las rutas vengan con id que venga un id.
+
+Cuando la ruta sea un post verificar todos los datos con los que se van a procesar vengan en el cuerpo de la request

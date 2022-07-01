@@ -9,17 +9,6 @@ module.exports = {
       new VuetifyLoaderPlugin()
     ],
   },
-
-  pluginOptions: {
-    quasar: {
-      importStrategy: 'kebab',
-      rtlSupport: false
-    }
-  },
-
-  transpileDependencies: [
-    'quasar'
-  ]
 }
 module.exports = {
   configureWebpack: {
@@ -30,16 +19,6 @@ module.exports = {
     ],
   },
 
-  pluginOptions: {
-    quasar: {
-      importStrategy: 'kebab',
-      rtlSupport: false
-    }
-  },
-
-  transpileDependencies: [
-    'quasar'
-  ]
 }
 
 module.exports = {
@@ -49,14 +28,5 @@ module.exports = {
       .maxAssetSize(400000)
   },
 
-  pluginOptions: {
-    quasar: {
-      importStrategy: 'kebab',
-      rtlSupport: false
-    }
-  },
 
-  transpileDependencies: [
-    'quasar'
-  ]
 }

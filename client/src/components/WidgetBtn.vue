@@ -1,8 +1,20 @@
 <template>
   <div>
     <div>
-      <div class="notification">
-        <span class="badge">3</span>
+      <div class="notification dropdown">
+        <span v-if="notifications != 0" class="badge">{{ notifications }}</span>
+        <div class="">
+          <button @click="myFunction()">
+            <Icon
+              :style="{ color: 'black' }"
+              icon="mdi:account-group-outline"
+              class="drowpdownbtn big-icon"
+            />
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <WidgetCard></WidgetCard>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -11,39 +23,21 @@
       :label-text="snackText"
       style="back-ground: color: green"
     ></m-snackbar>
-    <button id="menu-surface-button" @click="open = true">
-      <Icon
-        :style="{ color: 'black' }"
-        icon="mdi:account-group-outline"
-        class="drowpdownbtn big-icon"
-      />
-    </button>
-    <Dropdown></Dropdown>
-    <m-menu-anchor>
-      <m-menu-surface :anchorCorner="'BOTTOM_END'" v-model="open">
-        <WidgetCard></WidgetCard>
-      </m-menu-surface>
-    </m-menu-anchor>
   </div>
 </template>
 <script>
 import axios from "axios";
 import store from "@/store";
 import WidgetCard from "./WidgetWc/WidgetCard.vue";
-import Dropdown from "./UI/DropdownE.vue";
-Vue.use(Dropdown);
 import { Icon } from "@iconify/vue2";
 import { io } from "socket.io-client";
 import Button from "material-components-vue/dist/button";
 import Snackbar from "material-components-vue/dist/snackbar";
 import Checkbox from "material-components-vue/dist/checkbox";
-import Menu from "material-components-vue/dist/menu";
 import List from "material-components-vue/dist/list";
 import Tab from "material-components-vue/dist/tabs";
 import Card from "material-components-vue/dist/card";
-import IconButton from "material-components-vue/dist/icon-button";
 import TextField from "material-components-vue/dist/text-field";
-import IconM from "material-components-vue/dist/icon";
 import LineRipple from "material-components-vue/dist/line-ripple";
 import FloatingLabel from "material-components-vue/dist/floating-label";
 import Vue from "vue";
@@ -53,9 +47,6 @@ Vue.use(Checkbox);
 Vue.use(Tab);
 Vue.use(Card);
 Vue.use(List);
-Vue.use(Menu);
-Vue.use(IconButton);
-Vue.use(IconM);
 Vue.use(TextField);
 Vue.use(LineRipple);
 Vue.use(FloatingLabel);
@@ -85,6 +76,9 @@ export default {
     },
     apiURL() {
       return this.$store.state.apiURL;
+    },
+    notifications() {
+      return this.$store.state.notifications;
     },
   },
   props: {
@@ -136,11 +130,31 @@ export default {
       ],
     };
   },
+  methods: {
+    myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    },
+  },
+  updated() {
+    window.onclick = function (event) {
+      if (!event.target.matches(".dropbtn")) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+          }
+        }
+      }
+    };
+  },
 };
 </script>
 
 <style lang="stylus">
 @import '@/styles/widget.styl';
+@import '@/styles/Tooltip.css'
 @import '@/styles/DropDown.css';
 @import '@/styles/Icon.css';
 @import '@/styles/Notificacion.css';
@@ -151,10 +165,8 @@ $mdc-theme-secondary: black;
 $mdc-theme-background: #f5f5f5;
 @import "material-components-vue/dist/theme/styles";
 @import "material-components-vue/dist/button/styles";
-@import "material-components-vue/dist/menu/styles";
 @import "material-components-vue/dist/list/styles";
 @import "material-components-vue/dist/card/styles";
-@import "material-components-vue/dist/icon-button/styles";
 @import "material-components-vue/dist/tabs/styles";
 @import "material-components-vue/dist/snackbar/styles";
 @import "material-components-vue/dist/checkbox/styles";

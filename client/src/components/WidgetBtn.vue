@@ -1,37 +1,37 @@
 <template>
   <div>
-    <div class="dropdown notification">
-      <Icon
-        :style="{ color: 'black' }"
-        icon="mdi:account-group-outline"
-        class="drowpdownbtn big-icon"
-      />
-      <span class="badge">3</span>
-      <div class="dropdown-content">
-        <!--content -->
-        <WidgetCard></WidgetCard>
+    <div>
+      <div class="notification">
+        <span class="badge">3</span>
       </div>
     </div>
-    <!--
-    <v-snackbar v-model="snack" :timeout="3000" :color="snackColor" bottom>
-      {{ snackText }}
-      <template v-slot:action="{ attrs }">
-        <v-btn v-bind="attrs" text @click="snack = false"> Close </v-btn>
-      </template>
-    </v-snackbar>
-    -->
 
     <m-snackbar
       v-model="snack"
       :label-text="snackText"
       style="back-ground: color: green"
     ></m-snackbar>
+    <button id="menu-surface-button" @click="open = true">
+      <Icon
+        :style="{ color: 'black' }"
+        icon="mdi:account-group-outline"
+        class="drowpdownbtn big-icon"
+      />
+    </button>
+    <Dropdown></Dropdown>
+    <m-menu-anchor>
+      <m-menu-surface :anchorCorner="'BOTTOM_END'" v-model="open">
+        <WidgetCard></WidgetCard>
+      </m-menu-surface>
+    </m-menu-anchor>
   </div>
 </template>
 <script>
 import axios from "axios";
 import store from "@/store";
 import WidgetCard from "./WidgetWc/WidgetCard.vue";
+import Dropdown from "./UI/DropdownE.vue";
+Vue.use(Dropdown);
 import { Icon } from "@iconify/vue2";
 import { io } from "socket.io-client";
 import Button from "material-components-vue/dist/button";
@@ -127,9 +127,7 @@ export default {
   },
   data() {
     return {
-      elements: [],
       open: false,
-      ditto: {},
       items: [
         { title: "Click Me" },
         { title: "Click Me" },

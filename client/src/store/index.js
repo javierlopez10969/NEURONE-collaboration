@@ -13,6 +13,7 @@ export default new Vuex.Store({
     //Id of the groups
     groups: [],
     group: {},
+    modules: [],
     snack: false,
     snackText: '',
     snackColor: '',
@@ -50,6 +51,9 @@ export default new Vuex.Store({
       state.snack = true;
       state.snackColor = snackInfo.color;
       state.snackText = snackInfo.text;
+    },
+    setModules(state, modules) {
+      state.modules = modules;
     }
   }
 })

@@ -3,21 +3,27 @@
     <div>
       <div class="notification dropdown">
         <span v-if="notifications != 0" class="badge">{{ notifications }}</span>
-        <div class="">
-          <button @click="myFunction()">
-            <Icon
-              :style="{ color: 'black' }"
-              icon="mdi:account-group-outline"
-              class="drowpdownbtn big-icon"
-            />
-          </button>
-          <div id="myDropdown" class="dropdown-content">
-            <WidgetCard></WidgetCard>
-          </div>
+        <button class="toolt1p" @click="myFunction()">
+          <Icon
+            :style="{ color: 'black' }"
+            icon="mdi:account-group-outline"
+            class="drowpdownbtn big-icon"
+          />
+          <span class="toolt1ptext">Collaboration</span>
+        </button>
+        <div id="myDropdown" ref="myDropdown" class="dropdown-content">
+          <WidgetCard></WidgetCard>
         </div>
       </div>
     </div>
-
+    <div class="dropdown">
+      <button @click="myFunction()" class="dropbtn">Dropdown</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
     <m-snackbar
       v-model="snack"
       :label-text="snackText"
@@ -132,7 +138,9 @@ export default {
   },
   methods: {
     myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
+      var element = document.getElementById("myDropdown");
+      element.classList.toggle("show");
+      //element.style.display = "block";
     },
   },
   updated() {
@@ -154,7 +162,7 @@ export default {
 
 <style lang="stylus">
 @import '@/styles/widget.styl';
-@import '@/styles/Tooltip.css'
+@import '@/styles/Tooltip.css';
 @import '@/styles/DropDown.css';
 @import '@/styles/Icon.css';
 @import '@/styles/Notificacion.css';

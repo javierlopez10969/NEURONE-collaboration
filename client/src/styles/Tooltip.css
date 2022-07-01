@@ -1,10 +1,9 @@
-.tooltip {
+.toolt1p {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
 }
 
-.tooltip .tooltiptext {
+.toolt1p .toolt1ptext {
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -12,12 +11,24 @@
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-
-    /* Position the tooltip */
     position: absolute;
     z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
 }
 
-.tooltip:hover .tooltiptext {
+.toolt1p .toolt1ptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.toolt1p:hover .toolt1ptext {
     visibility: visible;
 }

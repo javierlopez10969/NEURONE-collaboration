@@ -1,6 +1,6 @@
 <template>
   <div>
-    <m-tab-bar v-if="group">
+    <m-tab-bar>
       <m-tab-scroller>
         <!-- chat -->
         <button active @click="view = group.modules[0].title">
@@ -46,7 +46,7 @@
     </v-container>
 
     <div v-show="view == 'Activity'"></div>
-    <div v-show="(view = 'Bookmarks')">
+    <div v-show="view == 'Bookmarks'">
       <v-container style="height: 350px; overflow: auto" fluid>
         <BookmarkView></BookmarkView>
       </v-container>
@@ -83,9 +83,19 @@ export default {
       view: "Group Chat",
     };
   },
+  created() {
+    this.group = this.$store.state.group;
+  },
   computed: {
-    group() {
-      return this.$store.state.group;
+    group: {
+      // getter
+      get() {
+        return this.$store.state.group;
+      },
+      // setter
+      set(newValue) {
+        return newValue;
+      },
     },
   },
 };

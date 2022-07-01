@@ -5,13 +5,13 @@
       <h1>Collaboration for NEURONE</h1>
       <v-spacer></v-spacer>
       <v-btn href="/register">
-        <v-span>Register </v-span>
+        <span>Register </span>
       </v-btn>
       <v-btn href="/login">
-        <v-span>Login </v-span>
+        <span>Login </span>
       </v-btn>
       <v-btn href="/chat">
-        <v-span>Chat room </v-span>
+        <span>Chat room </span>
       </v-btn>
     </v-app-bar>
 

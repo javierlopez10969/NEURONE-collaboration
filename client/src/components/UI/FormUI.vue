@@ -6,40 +6,27 @@
       class="form-signin"
       @submit.prevent="userLogin"
     >
-      <label class="form-label">Email</label>
-      <input
-        v-model="user.email"
-        type="email"
-        class="form-control"
-        aria-describedby="passwordHelpBlock"
-      />
-      <label class="form-label">Password</label>
-      <input
-        v-model="user.password"
-        type="password"
-        class="form-control"
-        aria-describedby="passwordHelpBlock"
-      />
-
-      <button type="submit" class="btn btn-primary">Login</button>
-      <v-snackbar v-model="snack" top right :timeout="3000" :color="snackColor">
-        {{ snackText }}
-        <template v-slot:action="{ attrs }">
-          <v-btn v-bind="attrs" text @click="snack = false"> Close </v-btn>
-        </template>
-      </v-snackbar>
+      <m-text-field v-model="user.email" type="email" id="textfield">
+        <m-floating-label for="textfield">Email</m-floating-label>
+        <m-line-ripple slot="bottomLine" />
+      </m-text-field>
+      <p></p>
+      <m-text-field v-model="user.password" type="password" id="textfield">
+        <m-floating-label for="textfield">Password</m-floating-label>
+        <m-line-ripple slot="bottomLine" />
+      </m-text-field>
+      <p></p>
+      <div class="text-center">
+        <m-button
+          raised
+          style="color: white; background-color: blue"
+          type="submit"
+          >Login</m-button
+        >
+      </div>
     </v-form>
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
   </div>
 </template>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 <script>
 import axios from "axios";
@@ -74,20 +61,35 @@ export default {
           localStorage.setItem("token", res.data.token);
           this.$store.commit("setToken", res.data.token);
           this.$store.commit("updateUser", res.data.user);
-          this.snack = true;
-          this.snackColor = "succes";
-          this.snackText = "Succesfully Login";
+          this.$store.commit("setSnack", {
+            color: "green",
+            text: "Successfully Login",
+          });
+          //Get the groups
+          axios
+            .get(
+              this.$store.state.apiURL +
+                "/group/user/" +
+                this.$store.state.user._id
+            )
+            .then((res) => {
+              this.$store.commit("updateGroups", res.data);
+              this.$store.commit("socketConnection");
+            });
         } catch (err) {
           console.log(err);
           console.log(err.response);
-          this.snack = true;
-          this.snackColor = "error";
-          this.snackText = "User or password wrong";
+          this.$store.commit("setSnack", {
+            color: "red",
+            text: "Error",
+          });
         }
       } else {
         this.snack = true;
-        this.snackColor = "error";
-        this.snackText = "Put the required data";
+        this.$store.commit("setSnack", {
+          color: "red",
+          text: "Error",
+        });
       }
     },
   },

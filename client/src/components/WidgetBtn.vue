@@ -6,13 +6,26 @@
         icon="mdi:account-group-outline"
         class="drowpdownbtn big-icon"
       />
-
       <span class="badge">3</span>
       <div class="dropdown-content">
         <!--content -->
         <WidgetCard></WidgetCard>
       </div>
     </div>
+    <!--
+    <v-snackbar v-model="snack" :timeout="3000" :color="snackColor" bottom>
+      {{ snackText }}
+      <template v-slot:action="{ attrs }">
+        <v-btn v-bind="attrs" text @click="snack = false"> Close </v-btn>
+      </template>
+    </v-snackbar>
+    -->
+
+    <m-snackbar
+      v-model="snack"
+      :label-text="snackText"
+      style="back-ground: color: green"
+    ></m-snackbar>
   </div>
 </template>
 <script>
@@ -29,7 +42,10 @@ import List from "material-components-vue/dist/list";
 import Tab from "material-components-vue/dist/tabs";
 import Card from "material-components-vue/dist/card";
 import IconButton from "material-components-vue/dist/icon-button";
+import TextField from "material-components-vue/dist/text-field";
 import IconM from "material-components-vue/dist/icon";
+import LineRipple from "material-components-vue/dist/line-ripple";
+import FloatingLabel from "material-components-vue/dist/floating-label";
 import Vue from "vue";
 Vue.use(Button);
 Vue.use(Snackbar);
@@ -40,11 +56,36 @@ Vue.use(List);
 Vue.use(Menu);
 Vue.use(IconButton);
 Vue.use(IconM);
+Vue.use(TextField);
+Vue.use(LineRipple);
+Vue.use(FloatingLabel);
 export default {
   io,
+  axios,
+  store,
   components: {
     WidgetCard,
     Icon,
+  },
+  computed: {
+    snack: {
+      get() {
+        return this.$store.state.snack;
+      },
+      set(newValue) {
+        this.$store.commit("setSnackFalse");
+        return newValue;
+      },
+    },
+    snackText() {
+      return this.$store.state.snackText;
+    },
+    snackColor() {
+      return this.$store.state.snackColor;
+    },
+    apiURL() {
+      return this.$store.state.apiURL;
+    },
   },
   props: {
     //Modules as framework
@@ -73,7 +114,17 @@ export default {
       default: true,
     },
   },
-  store,
+  mounted() {
+    //Set the the modules values
+    this.$store.commit("setModules", {
+      chat: this.chat,
+      bookmarks: this.bookmarks,
+      settings: this.settings,
+      tasks: this.tasks,
+      snippets: this.snippets,
+      activity: this.activity,
+    });
+  },
   data() {
     return {
       elements: [],
@@ -86,25 +137,6 @@ export default {
         { title: "Click Me 2" },
       ],
     };
-  },
-  methods: {
-    hola() {
-      alert("hello");
-    },
-    push() {
-      this.elements.push("hola");
-    },
-  },
-  computed: {
-    apiURL() {
-      return this.$store.state.apiURL;
-    },
-  },
-  created() {
-    let apiURL = "https://pokeapi.co/api/v2/pokemon/ditto";
-    axios.get(apiURL).then((res) => {
-      this.ditto = res.data;
-    });
   },
 };
 </script>
@@ -128,9 +160,11 @@ $mdc-theme-background: #f5f5f5;
 @import "material-components-vue/dist/tabs/styles";
 @import "material-components-vue/dist/snackbar/styles";
 @import "material-components-vue/dist/checkbox/styles";
+@import "material-components-vue/dist/text-field/styles";
+@import "material-components-vue/dist/floating-label/styles";
+@import "material-components-vue/dist/line-ripple/styles";
 </style>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 </style>
-

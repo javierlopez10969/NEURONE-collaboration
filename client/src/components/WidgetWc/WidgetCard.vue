@@ -4,11 +4,11 @@
     <!--Main-->
     <!--If user is not logged-->
     <v-container>
-      <div v-show="user === 'none'">
+      <div v-if="user === 'none'">
         <Form></Form>
       </div>
-      <div v-show="user != 'none'">
-        <div v-show="view == 'normal'">
+      <div v-if="user != 'none'">
+        <div v-if="view == 'normal'">
           Welcome
           {{ user.email }}
           <v-subheader>My groups</v-subheader>
@@ -60,7 +60,7 @@
           <GroupDetail></GroupDetail>
         </v-container>
 
-        <div v-show="view == 'editProfile'">
+        <div v-if="view == 'editProfile'">
           <m-button
             raised
             style="color: black; background-color: white"

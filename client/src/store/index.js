@@ -43,10 +43,12 @@ export default new Vuex.Store({
       state.user = {}
       state.token = ""
     },
+    setSnackFalse(state) {
+      state.snack = false;
+    },
     setSnack(state, snackInfo) {
       state.snack = true;
       state.snackColor = snackInfo.color;
-      console.log(snackInfo.color);
       state.snackText = snackInfo.text;
     }
   }

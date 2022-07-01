@@ -1,39 +1,59 @@
 <template>
   <v-container fluid>
-    <v-btn dark @click="step = 2"> New Bookmark </v-btn>
-
-    <v-form @submit.prevent="addBookMark">
-      <v-btn dark @click="step = 1"> Back </v-btn>
-      <v-btn type="submit"> Add Bookmark </v-btn>
-      <v-col cols="8">
-        <v-text-field
-          outlined
-          filled
-          auto-grow
-          v-model="bookmark.URL"
-          label="URL"
-          placeholder="Aa"
-        ></v-text-field>
-        <v-text-field
-          outlined
-          filled
-          auto-grow
-          v-model="bookmark.pageTitle"
-          label="Page Title"
-          placeholder="Aa"
-        ></v-text-field>
-        <v-text-field
-          outlined
-          filled
-          auto-grow
-          v-model="bookmark.notes"
-          label="Notes"
-          placeholder="Aa"
-        ></v-text-field>
-      </v-col>
-    </v-form>
-
-    <BookmarkContainer :bookmarks="bookmarks" />
+    <div v-show="view == 'normal'">
+      <m-button
+        raised
+        style="color: black; background-color: white"
+        @click="view = 'form'"
+      >
+        New Bookmark
+      </m-button>
+      <BookmarkContainer :bookmarks="bookmarks" />
+    </div>
+    <v-container v-show="view == 'form'">
+      <v-form @submit.prevent="addBookMark">
+        <m-button
+          raised
+          style="color: black; background-color: white"
+          @click="view = 'normal'"
+        >
+          Back
+        </m-button>
+        <m-button
+          type="submit"
+          raised
+          style="color: white; background-color: green"
+        >
+          Add Bookmark
+        </m-button>
+        <v-col cols="8">
+          <v-text-field
+            outlined
+            filled
+            auto-grow
+            v-model="bookmark.URL"
+            label="URL"
+            placeholder="Aa"
+          ></v-text-field>
+          <v-text-field
+            outlined
+            filled
+            auto-grow
+            v-model="bookmark.pageTitle"
+            label="Page Title"
+            placeholder="Aa"
+          ></v-text-field>
+          <v-text-field
+            outlined
+            filled
+            auto-grow
+            v-model="bookmark.notes"
+            label="Notes"
+            placeholder="Aa"
+          ></v-text-field>
+        </v-col>
+      </v-form>
+    </v-container>
   </v-container>
 </template>
 

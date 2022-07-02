@@ -22,11 +22,12 @@ router.get('/group/:id', async (req, res) => {
 })
 
 router.post('/send-bookmark', async (req, res) => {
-    var Bookmark = req.body.Bookmark;
-    if (Bookmark.username != undefined && Bookmark.group_id != undefined && Bookmark.URL != undefined) {
+    var Bookmark = req.body.bookmark;
+    var group = req.body.group;
+    if (Bookmark && Bookmark.username && group && Bookmark.URL && Bookmark.title) {
         delete Bookmark.username.password;
-        Bookmark.group_id = req.body.group;
-        Socket.sendMessage(req.body.group, 'bookmark', Bookmark);
+        Bookmark.group_id = group;
+        Socket.sendMessage(group, 'bookmark', Bookmark);
         //console.log(req.body.Bookmark)
         res.json({
             status: 'Bookmark sended' + Bookmark.URL

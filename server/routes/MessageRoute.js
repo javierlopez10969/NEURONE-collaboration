@@ -24,16 +24,20 @@ router.get('/group/:id', async (req, res) => {
 
 router.post('/send-message', async (req, res) => {
     var message = req.body.message;
-    delete message.username.password;
-    message.group_id = req.body.group;
-    message.message_type = "private"
-    Socket.sendMessage(req.body.group, 'message', message);
-    console.log(req.body.message)
-    res.json({
-        status: 'message sended'
-    })
-    const messageBD = new Message(message);
-    await messageBD.save();
+    var group = req.body.group;
+    if (message && message.username && message.group_id && message.text) {
+        delete message.username.password;
+        message.group_id = group;
+        message.message_type = "private"
+        Socket.sendMessage(req.body.group, 'message', message);
+        console.log(req.body.message)
+        res.json({
+            status: 'message sended'
+        })
+        const messageBD = new Message(message);
+        await messageBD.save();
+    }
+
 })
 
 router.put('/:id', async (req, res) => {

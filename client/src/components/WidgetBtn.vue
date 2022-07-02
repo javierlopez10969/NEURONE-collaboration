@@ -11,17 +11,9 @@
           />
           <span class="toolt1ptext">Collaboration</span>
         </button>
-        <div id="myDropdown" ref="myDropdown" class="dropdown-content">
+        <div id="myDropdown" ref="myDropdown" style="display: none">
           <WidgetCard></WidgetCard>
         </div>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button @click="myFunction()" class="dropbtn">Dropdown</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
       </div>
     </div>
     <m-snackbar
@@ -138,34 +130,33 @@ export default {
   },
   methods: {
     myFunction() {
-      var element = document.getElementById("myDropdown");
-      element.classList.toggle("show");
-      //element.style.display = "block";
-    },
-  },
-  updated() {
-    window.onclick = function (event) {
-      if (!event.target.matches(".dropbtn")) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains("show")) {
-            openDropdown.classList.remove("show");
-          }
+      var element = this.$refs.myDropdown;
+      console.log(element);
+      if (element) {
+        if (this.open == false) {
+          element.style.display = "block";
+          this.open = true;
+        } else {
+          element.style.display = "none";
+          this.open = false;
         }
+        element.classList.toggle("show");
+      } else {
+        alert("Failed to load");
       }
-    };
+    },
   },
 };
 </script>
 
 <style lang="stylus">
 @import '@/styles/widget.styl';
-@import '@/styles/Tooltip.css';
-@import '@/styles/DropDown.css';
-@import '@/styles/Icon.css';
-@import '@/styles/Notificacion.css';
+</style>
+<style>
+@import "@/styles/Tooltip.css";
+@import "@/styles/DropDown.css";
+@import "@/styles/Icon.css";
+@import "@/styles/Notificacion.css";
 </style>
 <style lang="scss">
 $mdc-theme-primary: #2196f3;

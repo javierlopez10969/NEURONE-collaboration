@@ -117,12 +117,6 @@ export default {
       this.usernameSocket = data.username;
     });
   },
-  watch: {
-    // whenever question changes, this function will run
-    message() {
-      this.updateTyping();
-    },
-  },
   methods: {
     addBookMark() {
       if (this.$refs.form.validate()) {

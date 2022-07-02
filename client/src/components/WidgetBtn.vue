@@ -131,19 +131,14 @@ export default {
   methods: {
     myFunction() {
       var element = this.$refs.myDropdown;
-      console.log(element);
-      if (element) {
-        if (this.open == false) {
-          element.style.display = "block";
-          this.open = true;
-        } else {
-          element.style.display = "none";
-          this.open = false;
-        }
-        element.classList.toggle("show");
+      if (this.open == false) {
+        element.style.display = "block";
+        this.open = true;
       } else {
-        alert("Failed to load");
+        element.style.display = "none";
+        this.open = false;
       }
+      element.classList.toggle("show");
     },
   },
 };

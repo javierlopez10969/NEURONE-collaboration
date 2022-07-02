@@ -121,7 +121,9 @@ export default {
     addBookMark() {
       if (this.$refs.form.validate()) {
         var bookmark = {
-          message: this.message,
+          URL: this.bookmark.URL,
+          notes: this.bookmark.notes,
+          pageTitle: this.bookmark.pageTitle,
           username: this.$store.state.user,
         };
         axios
@@ -130,11 +132,11 @@ export default {
             group: this.group._id,
           })
           .then((res) => {
-            console.log(res.data);
-            this.view = "normal";
+            console.log(res.status);
+          })
+          .catch(function (error) {
+            console.log(error.response.data);
           });
-      } else {
-        alert("please put the required data");
       }
     },
   },

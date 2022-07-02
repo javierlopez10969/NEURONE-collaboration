@@ -10,16 +10,21 @@
         item.username == 'You' ? 'justify-end' : null,
       ]"
     >
-    <li>
-      {{item}}
-    </li>
+      <m-card outlined style="background-color: lightsalmon">
+        URL : {{ item.URL }}
+        <p></p>
+        Page Title : {{ item.pageTitle }}
+        <p></p>
+        Notes : {{ item.notes }} Date : {{ item }}
+      </m-card>
+      <p></p>
     </div>
   </v-container>
 </template>
 
 <script>
 export default {
-  props : ["bookmarks"],
+  props: ["bookmarks"],
   updated() {
     //Scroll to the bottom
     this.scrollToBottom();
@@ -31,8 +36,6 @@ export default {
       container.scrollTop = container.scrollHeight;
     },
   },
-  created(){
-
-  }
+  created() {},
 };
 </script>

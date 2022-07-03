@@ -19,6 +19,10 @@ let bookmarkSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    username: {
+        type: Object,
+        required: true
+    },
     created_at: {
         type: Date,
         default: Date.now

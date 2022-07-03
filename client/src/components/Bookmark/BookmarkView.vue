@@ -11,14 +11,14 @@
       <BookmarkContainer :bookmarks="bookmarks" />
     </div>
     <v-container v-show="view == 'form'">
+      <m-button
+        raised
+        style="color: black; background-color: white"
+        @click="view = 'normal'"
+      >
+        Back
+      </m-button>
       <v-form ref="form" @submit.prevent="addBookMark">
-        <m-button
-          raised
-          style="color: black; background-color: white"
-          @click="view = 'normal'"
-        >
-          Back
-        </m-button>
         <m-button
           type="submit"
           raised
@@ -126,17 +126,26 @@ export default {
           pageTitle: this.bookmark.pageTitle,
           username: this.$store.state.user,
         };
+        var error = true;
         axios
           .post(this.$store.state.apiURL + "/bookmark/send-bookmark", {
             bookmark,
             group: this.group._id,
           })
           .then((res) => {
+            this.view = "normal";
             console.log(res.status);
+            error = false;
           })
           .catch(function (error) {
             console.log(error.response.data);
           });
+        if (error) {
+          this.$store.commit("setSnack", {
+            color: "green",
+            text: "Put the required data in the fields",
+          });
+        }
       }
     },
   },

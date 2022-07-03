@@ -10,12 +10,18 @@
         item.username == 'You' ? 'justify-end' : null,
       ]"
     >
-      <m-card outlined style="background-color: lightsalmon">
-        URL : {{ item.URL }}
-        <p></p>
-        Page Title : {{ item.pageTitle }}
-        <p></p>
-        Notes : {{ item.notes }} Date : {{ item }}
+      <m-card outlined style="background-color: lightsalmon; color: white">
+        <m-card-media square>
+          Title
+          <p></p>
+          URL : {{ item.URL }}
+          <p></p>
+          Page Title : {{ item.pageTitle }}
+          <p></p>
+          Notes : {{ item.notes }}
+          <p></p>
+          Date :
+        </m-card-media>
       </m-card>
       <p></p>
     </div>

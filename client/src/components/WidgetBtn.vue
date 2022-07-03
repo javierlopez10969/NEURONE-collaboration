@@ -19,7 +19,7 @@
     <m-snackbar
       v-model="snack"
       :label-text="snackText"
-      style="back-ground: color: green"
+      style="background-color: color: green"
     ></m-snackbar>
   </div>
 </template>

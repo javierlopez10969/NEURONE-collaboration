@@ -10,11 +10,7 @@ Archivo para traducir javascript
 
 npm i express morgan mongoose 
 
-
-
-
-
-MATAR un puero : 
+Cerrar un puerto : 
 fuser -k 8080/tcp
 
 

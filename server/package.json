@@ -20,5 +20,9 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
     "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "jest": "^28.1.2",
+    "supertest": "^6.2.4"
   }
 }

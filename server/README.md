@@ -17,14 +17,43 @@ npm i
 
 ### Compiles and hot-reloads for development
 
+## Requirments
+* Docker
+* Docker Compose
+
+## Build the image
+
 ```
-npm start
+sudo docker build -t collaborationserver .
+```
+```
+sudo chown -R $USER ./data
 ```
 
+```
+docker compose build
+```
 
 ### Compiles for production
 
+Run the server on specific port like you want
 
+```
+docker run -p 3000:3000 collaborationserver
+```
+If you have problems to connect to mongo db database desactivate mongo dbs ervice with :
+
+sudo systemctl stop mongod
+
+To restart you local mongo db :
+
+sudo systemctl enable mongod
+sudo systemctl start mongod
+
+```
+docker compose up
+```
+### Setup the CORS configuration
 
 ### Mongo restore
 

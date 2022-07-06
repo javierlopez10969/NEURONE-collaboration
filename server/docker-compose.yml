@@ -12,3 +12,7 @@ services:
     container_name: mongo
     image: mongo
     restart: always
+    logging:
+      driver: none
+    ports:
+      - "27018:27017"

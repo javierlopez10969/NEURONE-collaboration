@@ -1,27 +1,31 @@
 <template>
-  <div>
-    <div>
-      <div class="notification dropdown">
-        <span v-if="notifications != 0" class="badge">{{ notifications }}</span>
-        <button class="toolt1p" @click="myFunction()">
-          <Icon
-            :style="{ color: 'black' }"
-            icon="mdi:account-group-outline"
-            class="drowpdownbtn big-icon"
-          />
-          <span class="toolt1ptext">Collaboration</span>
-        </button>
-        <div id="myDropdown" ref="myDropdown" style="display: none">
-          <WidgetCard></WidgetCard>
+  <v-app>
+    <v-main>
+      <div>
+        <div class="notification dropdown">
+          <span v-if="notifications != 0" class="badge">{{
+            notifications
+          }}</span>
+          <button class="toolt1p" @click="myFunction()">
+            <Icon
+              :style="{ color: 'black' }"
+              icon="mdi:account-group-outline"
+              class="drowpdownbtn big-icon"
+            />
+            <span class="toolt1ptext">Collaboration</span>
+          </button>
+          <div id="myDropdown" ref="myDropdown" style="display: none">
+            <WidgetCard></WidgetCard>
+          </div>
         </div>
       </div>
-    </div>
-    <m-snackbar
-      v-model="snack"
-      :label-text="snackText"
-      style="background-color: color: green"
-    ></m-snackbar>
-  </div>
+      <m-snackbar
+        v-model="snack"
+        :label-text="snackText"
+        style="background-color: color: green"
+      ></m-snackbar>
+    </v-main>
+  </v-app>
 </template>
 <script>
 import axios from "axios";
@@ -55,6 +59,16 @@ export default {
   components: {
     WidgetCard,
     Icon,
+  },
+  created() {
+    this.$store.commit("setModules", {
+      chat: this.chat,
+      bookmarks: this.bookmarks,
+      settings: this.settings,
+      tasks: this.tasks,
+      snippets: this.snippets,
+      activity: this.activity,
+    });
   },
   computed: {
     snack: {
@@ -101,21 +115,18 @@ export default {
       type: Boolean,
       default: true,
     },
+    documents: {
+      type: Boolean,
+      default: true,
+    },
+    feed: {
+      type: Boolean,
+      default: true,
+    },
     activity: {
       type: Boolean,
       default: true,
     },
-  },
-  mounted() {
-    //Set the the modules values
-    this.$store.commit("setModules", {
-      chat: this.chat,
-      bookmarks: this.bookmarks,
-      settings: this.settings,
-      tasks: this.tasks,
-      snippets: this.snippets,
-      activity: this.activity,
-    });
   },
   data() {
     return {

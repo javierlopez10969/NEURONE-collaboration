@@ -49,6 +49,7 @@ To restart you local mongo db :
 
 sudo systemctl enable mongod
 sudo systemctl start mongod
+sudo service mongod start 
 
 ```
 docker compose up

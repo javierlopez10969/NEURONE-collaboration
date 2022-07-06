@@ -1,22 +1,19 @@
 <template>
   <v-app>
-    <v-main>
-      <div v-if="widgetMode === true"></div>
-      <div v-else>
-        <NavBar :show="show" :user="user"></NavBar>
-        {{ currentRouteName }}
-        {{ widgetMode }}
-        <v-checkbox
-          v-model="checkbox"
-          :label="`Checkbox 1: ${checkbox.toString()}`"
-        ></v-checkbox>
-      </div>
+    <div v-if="widgetMode === true">
+      <router-view :user="user" />
+    </div>
+    <v-main v-else>
+      <NavBar :show="show" :user="user"></NavBar>
+      {{ currentRouteName }}
+      {{ widgetMode }}
       <v-snackbar v-model="snack" :timeout="3000" :color="snackColor" bottom>
         {{ snackText }}
         <template v-slot:action="{ attrs }">
           <v-btn v-bind="attrs" text @click="snack = false"> Close </v-btn>
         </template>
       </v-snackbar>
+
       <router-view :user="user" />
     </v-main>
   </v-app>

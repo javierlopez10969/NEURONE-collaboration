@@ -1,6 +1,6 @@
 <!-- All messages-->
 <template>
-  <v-card>
+  <m-card>
     <!-- Case is sender is the logged user -->
     <v-container
       fluid
@@ -10,7 +10,7 @@
       <v-row no-gutters>
         <v-col> </v-col>
         <v-col>
-          <span class="blue--text">
+          <span style="color: blue">
             {{ item.username.name }} {{ item.username.lastName }}
           </span>
           <ProfileIcon
@@ -35,12 +35,12 @@
 
         {{ item.username.name }} {{ item.username.lastName }}
         <v-spacer></v-spacer>
-        <span class="red--text">
+        <span>
           {{ item.message }}
         </span>
       </v-col>
     </v-container>
-  </v-card>
+  </m-card>
 </template>
 <script>
 import ProfileIcon from "./ProfileIcon.vue";

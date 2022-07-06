@@ -1,20 +1,17 @@
 <template>
   <v-container fluid>
     <ConnectedUsers :users.sync="onlineUsers"></ConnectedUsers>
-
-    <Container :chat.sync="chat"></Container>
-    <vue-typer v-if="someoneTyping" text="Someone is writting..."></vue-typer>
+    <div>
+      <Container :chat.sync="chat"></Container>
+      <vue-typer v-if="someoneTyping" text="Someone is writting..."></vue-typer>
+    </div>
+    <p></p>
+    <v-spacer></v-spacer>
     <v-form @submit.prevent="sendMessage">
-      <v-col cols="8">
-        <v-text-field
-          outlined
-          filled
-          auto-grow
-          v-model="message"
-          label="Send a Message"
-          placeholder="Aa"
-        ></v-text-field>
-      </v-col>
+      <m-text-field v-model="message" placeholder="Aa" id="message">
+        <m-floating-label for="message">Send a message</m-floating-label>
+      </m-text-field>
+      <m-button type="submit"></m-button>
     </v-form>
   </v-container>
 </template>
@@ -106,25 +103,34 @@ export default {
     },
   },
   methods: {
-    sendMessage() {
+    async sendMessage() {
       if (this.message != "") {
         var message = {
           message: this.message,
           username: this.$store.state.user,
         };
-        axios
-          .post(this.$store.state.apiURL + "/message/send-message", {
-            message,
-            group: this.group._id,
-          })
-          .then((res) => {
-            console.log(res.data);
-            this.message = "";
-          });
+
+        console.log("message: ", message);
+        try {
+          var res = await axios.post(
+            this.$store.state.apiURL + "/message/send-message",
+            {
+              message,
+              group: this.group._id,
+            }
+          );
+          console.log(res.data);
+          this.message = "";
+        } catch (err) {
+          console.log(err);
+          console.log(err.response);
+        }
+        console.log("message sent");
       } else {
-        this.snack = true;
-        this.snackText = "Put some text pls";
-        this.snackColor = "red";
+        this.$store.commit("setSnack", {
+          color: "green",
+          text: "Put the required data in the fields",
+        });
       }
     },
     updateTyping() {

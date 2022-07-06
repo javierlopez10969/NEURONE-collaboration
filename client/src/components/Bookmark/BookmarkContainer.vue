@@ -1,6 +1,6 @@
 <!-- Body of the Bookmarks-->
 <template>
-  <v-container style="height: 250px; overflow: auto" ref="container" fluid>
+  <div style="height: 250px; overflow: auto" ref="container">
     <!-- Messages -->
     <div
       v-for="(item, index) in bookmarks"
@@ -10,8 +10,8 @@
         item.username == 'You' ? 'justify-end' : null,
       ]"
     >
-      <m-card outlined style="background-color: lightsalmon; color: white">
-        <m-card-media square>
+      <m-card>
+        <m-card-media style="color: black" square>
           Title
           <p></p>
           URL : {{ item.URL }}
@@ -25,7 +25,7 @@
       </m-card>
       <p></p>
     </div>
-  </v-container>
+  </div>
 </template>
 
 <script>

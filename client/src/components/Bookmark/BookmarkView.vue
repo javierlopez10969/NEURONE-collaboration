@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <div style="float: left; height: 270px; width: 270px">
     <div v-show="view == 'normal'">
       <m-button
         raised
@@ -8,6 +8,7 @@
       >
         New Bookmark
       </m-button>
+      <p></p>
       <BookmarkContainer :bookmarks="bookmarks" />
     </div>
     <v-container v-show="view == 'form'">
@@ -54,7 +55,7 @@
         </v-col>
       </v-form>
     </v-container>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -105,13 +106,14 @@ export default {
       )
       .then((res) => {
         this.bookmarks = res.data;
+        this.bookmarks.reverse();
       });
   },
   mounted() {
     //LISTENERS OF THE SOCKET
     //Send a message
     this.socket.on("bookmark", (bkmrk) => {
-      this.bookmarks.push(bkmrk);
+      this.bookmarks.unshift(bkmrk);
     });
     this.socket.on("login", (data) => {
       this.usernameSocket = data.username;

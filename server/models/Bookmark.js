@@ -17,7 +17,6 @@ let bookmarkSchema = mongoose.Schema({
     //Notes
     notes: {
         type: String,
-        required: true
     },
     username: {
         type: Object,

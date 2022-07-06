@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" max-width="300" tile>
+  <m-card class="mx-auto" max-width="300" tile>
     <v-list flat>
       <v-subheader>REPORTS</v-subheader>
       <v-list-item-group v-model="selectedItem" color="primary">
@@ -10,7 +10,7 @@
         </v-list-item>
       </v-list-item-group>
     </v-list>
-  </v-card>
+  </m-card>
 </template>
 <script>
 export default {

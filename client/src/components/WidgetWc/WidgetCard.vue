@@ -1,5 +1,5 @@
 <template>
-  <v-card height="500" width="350" color="basil">
+  <m-card style="max-height: 500px; max-width: 350px" class="basil">
     <!--Multiples views-->
     <!--Main-->
     <!--If user is not logged-->
@@ -72,7 +72,7 @@
         </div>
       </div>
     </v-container>
-  </v-card>
+  </m-card>
 </template>
 
 <script>
@@ -141,8 +141,5 @@ export default {
 /* Helper classes */
 .basil {
   background-color: #fffbe6 !important;
-}
-.basil--text {
-  color: #356859 !important;
 }
 </style>

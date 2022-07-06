@@ -74,7 +74,7 @@
 
     <div v-show="view == 'Snippets'"></div>
     <div v-show="view == 'Document'"></div>
-    <div v-if="view == 'Pepole'">
+    <div v-show="view == 'People'">
       <GroupPeople :group="group"></GroupPeople>
     </div>
     <div v-if="view == 'Settings'">

@@ -25,7 +25,7 @@ router.get('/group/:id', async (req, res) => {
 router.post('/send-message', async (req, res) => {
     var message = req.body.message;
     var group = req.body.group;
-    if (message && message.username && message.group_id && message.text) {
+    if (message.message && message.username && group) {
         delete message.username.password;
         message.group_id = group;
         message.message_type = "private"
@@ -36,6 +36,8 @@ router.post('/send-message', async (req, res) => {
         })
         const messageBD = new Message(message);
         await messageBD.save();
+    } else {
+        console.log("Not Naziiiiiiii")
     }
 
 })

@@ -1,6 +1,9 @@
 <!-- Body of the messages-->
 <template>
-  <v-container style="height: 250px; overflow: auto" ref="container" fluid>
+  <div
+    style="float: left; height: 250px; width: 250px; overflow-y: auto"
+    ref="container"
+  >
     <!-- Messages -->
     <div
       v-for="(item, index) in chat"
@@ -18,8 +21,9 @@
       <a v-if="item.username !== 'system'">
         <MessageChat :item="item" :color="'purple lighten-4'"></MessageChat
       ></a>
+      <p></p>
     </div>
-  </v-container>
+  </div>
 </template>
 
 <script>

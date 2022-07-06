@@ -27,13 +27,15 @@ const task = require('./routes/TaskRoute'),
   message = require('./routes/MessageRoute'),
   group = require('./routes/GroupRoute'),
   post = require('./routes/PostRoute'),
-  bookmark = require('./routes/BookmarkRoute');
+  bookmark = require('./routes/BookmarkRoute'),
+  activity = require('./routes/ActivityRoute');
 app.use("/api/task", task)
 app.use("/api/user", user)
 app.use("/api/message", message)
 app.use("/api/group", group)
 app.use("/api/post", post)
 app.use("/api/bookmark", bookmark)
+app.use("/api/activity", activity)
 
 //Port
 const port = process.env.PORT || 3000;

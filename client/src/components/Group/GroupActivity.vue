@@ -1,6 +1,11 @@
 <template>
   <div>
-    {{ activity }}
+    Users : {{ activity.users }}
+    <p></p>
+    Messages : {{ activity.messages }}
+    <p></p>
+    Messages : {{ activity.bookmarks }}
+    <p></p>
   </div>
 </template>
 
@@ -14,9 +19,9 @@ export default {
   },
   created() {
     axios
-      .get(this.$store.state.apiURL + "/activity" + this.group._id)
+      .get(this.$store.state.apiURL + "/activity/" + this.group._id)
       .then((response) => {
-        this.group = response.data.data;
+        this.activity = response.data;
       })
       .catch((error) => {
         console.log(error);

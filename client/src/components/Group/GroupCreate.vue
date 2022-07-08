@@ -4,7 +4,7 @@
       <v-row class="pa-4" align="center" justify="center">
         <v-col class="text-center">
           <h1 class="text-h5">
-            {{ group.name }}
+            {{ label }}
           </h1>
           <h3 class="text-h5">
             {{ name }}
@@ -13,8 +13,12 @@
         </v-col>
       </v-row>
     </v-row>
-
-    <v-form ref="form" lazy-validation @submit.prevent="updateData">
+    <v-form
+      ref="form"
+      class="form-signin"
+      lazy-validation
+      @submit.prevent="createGroup"
+    >
       <v-container>
         <v-row
           ><v-col cols="12" md="6">
@@ -49,14 +53,7 @@
               v-model="group.color"
             ></v-color-picker>
           </v-col>
-          <v-col v-for="(module, index) in group.modules" v-bind:key="index">
-            <m-checkbox
-              v-if="module.title != 'Settings'"
-              v-model="module.active"
-              :label="`${module.title}`"
-            />
-            <label for="checkbox2"> {{ module.title }}</label>
-          </v-col>
+
           <v-col cols="12">
             <v-autocomplete
               v-model="group.users"
@@ -110,43 +107,10 @@
       </v-container>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <m-button
-          type="button"
-          raised
-          @click="isDialogOpen = true"
-          style="background-color: red; color: white"
-          >Delete</m-button
-        >
-        <m-dialog v-model="isDialogOpen" @closed="onDialogClosed">
-          <m-typo-headline :level="5" slot="header"
-            >Delete the group</m-typo-headline
-          >
-          <m-typo-body :level="1" slot="body"
-            >Are you sure to delete the group?</m-typo-body
-          >
-          <m-button
-            type="button"
-            class="mdc-dialog__button"
-            data-mdc-dialog-action="No"
-            slot="cancelButton"
-          >
-            Cancel
-          </m-button>
-          <m-button
-            class="mdc-dialog__button"
-            type="button"
-            data-mdc-dialog-action="Yes"
-            slot="acceptButton"
-          >
-            OK
-          </m-button>
-        </m-dialog>
-        <v-btn
-          :loading="isUpdating"
-          color="blue-grey darken-3"
-          depressed
-          type="submit"
-        >
+        <v-btn color="blue darken-1" text @click="dialog = false">
+          Close
+        </v-btn>
+        <v-btn color="blue-grey darken-3" depressed type="submit">
           <v-icon left> mdi-update </v-icon>
           Save
         </v-btn>
@@ -154,114 +118,88 @@
     </v-form>
   </v-card>
 </template>
-
 <script>
 import axios from "axios";
 export default {
-  props: ["groupR", "mode"],
+  props: { mode: String, label: String },
+  data() {
+    return {
+      dialog: false,
+      autoUpdate: true,
+      isUpdating: false,
+      snack: false,
+      snackColor: "",
+      snackText: "",
+      valid: false,
+      name: "",
+      users: [],
+      title: "",
+      group: {
+        name: "My group",
+        description: "Description of the group",
+        users: [],
+        usersAdmin: [],
+        color: "#448AD1",
+        created_by: "Created by : ",
+      },
+      nameRules: [
+        (v) => !!v || "This field is required",
+        (v) => v.length >= 8 || "This field is required",
+      ],
+    };
+  },
+  created() {
+    if (this.$store.state.user._id) {
+      axios
+        .get(
+          this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,
+          {
+            headers: { token: localStorage.getItem("token") },
+          }
+        )
+        .then((res) => {
+          this.users = res.data;
+        });
+    }
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+  },
   methods: {
     remove(item) {
       const index = this.group.users.indexOf(item);
       if (index >= 0) this.group.users.splice(index, 1);
     },
-    async updateData() {
+    async createGroup() {
       if (this.$refs.form.validate()) {
+        this.group.usersAdmin.push(this.user);
+        this.group.created_by =
+          "Created by" + this.user.email + " at " + Date.now();
+        console.log(this.group.users);
         try {
-          await axios.put(
-            this.$store.state.apiURL + "/group/" + this.group._id,
-            {
-              headers: { token: localStorage.getItem("token") },
-              group: this.group,
-            }
-          );
-          this.$store.commit("setSnack", {
-            color: "green",
-            text: "Group updated successfully",
+          await axios.post(this.$store.state.apiURL + "/group", {
+            headers: { token: localStorage.getItem("token") },
+            group: this.group,
+            user: this.user,
           });
+          this.snack = true;
+          this.snackColor = "succes";
+          this.snackText = "Succesfully created Group";
         } catch (err) {
           console.log(err);
           console.log(err.response);
-          this.$store.commit("setSnack", {
-            color: "red",
-            text: "Error updating group",
-          });
+          this.snack = true;
+          this.snackColor = "error";
+          this.snackText = "Error has ocured";
         }
       } else {
-        this.$store.commit("setSnack", {
-          color: "red",
-          text: "Please fill all the required fields",
-        });
+        this.snack = true;
+        this.snackColor = "error";
+        this.snackText = "Put the required data";
       }
     },
-    async onDialogClosed(value) {
-      console.log(value);
-      if (value.action == "Yes") {
-        try {
-          await axios.delete(
-            this.$store.state.apiURL + "/group/" + this.group._id,
-            {
-              headers: { token: localStorage.getItem("token") },
-              group: this.group,
-            }
-          );
-          this.$store.commit("setSnack", {
-            color: "green",
-            text: "Group deleted successfully",
-          });
-          this.$router.go();
-        } catch (err) {
-          console.log(err);
-          console.log(err.response);
-          this.$store.commit("setSnack", {
-            color: "red",
-            text: "Error updating group",
-          });
-        }
-      }
-    },
-  },
-  data: () => ({
-    dialog: false,
-    autoUpdate: true,
-    isUpdating: false,
-    delete: false,
-    valid: false,
-    isDialogOpen: false,
-    name: "",
-    users: [],
-    title: "",
-    group: {
-      name: "",
-      description: "",
-      users: [],
-      usersAdmin: [],
-      color: "#448AD1",
-      textColor: "",
-      created_by: "",
-    },
-    nameRules: [
-      (v) => !!v || "This field is required",
-      (v) => v.length >= 8 || "This field is required",
-    ],
-  }),
-  created() {
-    let apiURL = "";
-    //If mode widget
-    if (this.mode == "widget") {
-      apiURL = `http://localhost:3000/api/group/${this.groupR._id}`;
-    }
-    //If mode window
-    else {
-      apiURL = `http://localhost:3000/api/group/${this.$route.params.id}`;
-    }
-
-    axios
-      .get(apiURL, {
-        headers: { token: localStorage.getItem("token") },
-      })
-      .then((res) => {
-        this.group = res.data.group;
-      });
   },
 };
 </script>

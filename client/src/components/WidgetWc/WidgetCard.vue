@@ -37,6 +37,16 @@
             Edit Your Profile
           </m-button>
           <p></p>
+          <!--Create a group if is admin-->
+          <m-button
+            v-if="user.role == 'ADMIN'"
+            raised
+            style="color: white; background-color: green"
+            @click="view = 'createGroup'"
+          >
+            Create Group
+          </m-button>
+          <p></p>
           <m-button
             style="color: black; background-color: red"
             @click="logout()"
@@ -45,7 +55,7 @@
             Log out
           </m-button>
         </div>
-        <v-container v-show="view == 'group'">
+        <v-container v-if="view == 'group'">
           <div style="font-size: 10px">
             <m-button
               raised
@@ -60,15 +70,32 @@
           <GroupDetail></GroupDetail>
         </v-container>
 
-        <div v-if="view == 'editProfile'">
-          <m-button
-            raised
-            style="color: black; background-color: white"
-            @click="view = 'normal'"
+        <v-container v-if="view == 'editProfile'">
+          <v-container style="height: 350px; overflow: auto" fluid>
+            <m-button
+              raised
+              style="color: black; background-color: white"
+              @click="view = 'normal'"
+            >
+              Back
+            </m-button>
+            <UserForm></UserForm>
+          </v-container>
+        </v-container>
+
+        <div v-if="view == 'createGroup'">
+          <v-container
+            style="height: 500px; max-width: 300px; overflow: auto"
+            fluid
           >
-            Back
-          </m-button>
-          Edit your profile
+            <m-button
+              raised
+              style="color: black; background-color: white"
+              @click="view = 'normal'"
+            >
+              Back </m-button
+            ><GroupForm></GroupForm>
+          </v-container>
         </div>
       </div>
     </v-container>
@@ -78,9 +105,11 @@
 <script>
 import Form from "@/components/UI/FormUI";
 import GroupDetail from "./GroupDetail";
+import UserForm from "../User/UserForm.vue";
+import GroupForm from "../UI/GroupForm";
 import axios from "axios";
 export default {
-  components: { Form, GroupDetail },
+  components: { Form, GroupDetail, UserForm, GroupForm },
   data() {
     return { selectedView: 0, selectedGroup: 0, view: "normal", step: 1 };
   },
@@ -141,5 +170,6 @@ export default {
 /* Helper classes */
 .basil {
   background-color: #fffbe6 !important;
+  color: black !important;
 }
 </style>

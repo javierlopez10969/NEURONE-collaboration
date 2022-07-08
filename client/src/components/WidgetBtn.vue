@@ -42,16 +42,20 @@ import Card from "material-components-vue/dist/card";
 import TextField from "material-components-vue/dist/text-field";
 import LineRipple from "material-components-vue/dist/line-ripple";
 import FloatingLabel from "material-components-vue/dist/floating-label";
+import Dialog from "material-components-vue/dist/dialog";
+import Typography from "material-components-vue/dist/typography";
 import Vue from "vue";
 Vue.use(Button);
 Vue.use(Snackbar);
 Vue.use(Checkbox);
+Vue.use(List);
 Vue.use(Tab);
 Vue.use(Card);
-Vue.use(List);
 Vue.use(TextField);
 Vue.use(LineRipple);
 Vue.use(FloatingLabel);
+Vue.use(Dialog);
+Vue.use(Typography);
 export default {
   io,
   axios,
@@ -178,6 +182,8 @@ $mdc-theme-background: #f5f5f5;
 @import "material-components-vue/dist/text-field/styles";
 @import "material-components-vue/dist/floating-label/styles";
 @import "material-components-vue/dist/line-ripple/styles";
+@import "material-components-vue/dist/dialog/styles";
+@import "material-components-vue/dist/typography/styles";
 </style>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");

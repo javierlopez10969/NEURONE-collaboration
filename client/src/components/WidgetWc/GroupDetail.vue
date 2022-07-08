@@ -65,7 +65,9 @@
       <ChatView></ChatView>
     </v-container>
 
-    <div v-show="view == 'Activity'"></div>
+    <div v-show="view == 'Activity'">
+      <Activity></Activity>
+    </div>
     <div v-show="view == 'Bookmarks'">
       <v-container style="height: 350px; overflow: auto" fluid>
         <BookmarkView></BookmarkView>
@@ -90,12 +92,14 @@ import ChatView from "@/components/Chat/ChatView.vue";
 import BookmarkView from "@/components/Bookmark/BookmarkView.vue";
 import GroupSettings from "@/components/Group/GroupSettings.vue";
 import GroupPeople from "@/components/Group/GroupPeople.vue";
+import Activity from "@/components/Group/GroupActivity.vue";
 export default {
   components: {
     ChatView,
     GroupSettings,
     GroupPeople,
     BookmarkView,
+    Activity,
   },
   data() {
     return {

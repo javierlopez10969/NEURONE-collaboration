@@ -42,36 +42,55 @@ let groupSchema = mongoose.Schema({
     },
     //Modules are the tools availible for the group
     modules: {
-        type: Array,
-        default: [{
-            icon: "mdi-chat",
-            title: "Group Chat",
-            active: true,
-        }, {
-            icon: "mdi-chart-box",
-            title: "Activity",
-            active: true,
-        }, {
-            icon: "mdi-star-outline",
-            title: "Bookmarks",
-            active: true,
-        }, {
-            icon: "mdi-file",
-            title: "snippets",
-            active: true,
-        }, {
-            icon: "mdi-file-document",
-            title: "Documents",
-            active: true,
-        }, {
-            icon: "mdi-account-group-outline",
-            title: "People",
-            active: true,
-        }, {
-            icon: "mdi-cog",
-            title: "Settings",
-            active: true,
-        }]
+        type: Object,
+        default: {
+            chat: {
+                icon: "mdi-chat",
+                title: "Group Chat",
+                active: true,
+            },
+            activity: {
+                icon: "mdi-chart-box",
+                title: "Activity",
+                active: true,
+            },
+            bookmarks: {
+                icon: "mdi-star-outline",
+                title: "Bookmarks",
+                active: true,
+            },
+            snippets: {
+                icon: "mdi-file",
+                title: "snippets",
+                active: true,
+            },
+            documents: {
+                icon: "mdi-file-document",
+                title: "Documents",
+                active: true,
+            },
+            people: {
+                icon: "mdi-account-group-outline",
+                title: "People",
+                active: true,
+            },
+            feed: {
+                icon: "mdi-cog",
+                title: "Settings",
+                active: true,
+            },
+            tasks: {
+                icon: "mdi-cog",
+                title: "Settings",
+                active: true,
+            },
+            settings: {
+                icon: "mdi-cog",
+                title: "Settings",
+                active: true,
+            },
+
+        }
     },
     active: {
         type: Boolean,

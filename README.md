@@ -49,10 +49,14 @@ Now copy the widget-btn-min.js and copy in your project. Import de script as thi
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | chat| Boolean | true | Allows chat module|
-| bookmarks| Boolean | true | Allows bookmarks module|
 | activity| Boolean | true | Allows activity module|
+| bookmarks| Boolean | true | Allows bookmarks module|
+| snippets| Boolean | true | Allows snippets module|
+| documents| Boolean | true | Allows documents module|
+| people| Boolean | true | Show the people in the group module|
+| feed| Boolean | true | Allows feed module|
 | tasks| Boolean | true | Allows tasks module|
-| settings| Boolean | true | Allows settings module|
+| settings| Boolean/string | true | Allows settings module, also you can put the value "admin" and only the admin can see the settings|
 
 Non prop attributes are mapped to the inner input element.
 

@@ -30,7 +30,9 @@
     </div>
 
     <div v-show="view == 'Snippets'"></div>
-    <div v-show="view == 'Document'"></div>
+    <div v-show="view == 'Documents'">
+      <DocumentView></DocumentView>
+    </div>
     <div v-show="view == 'People'">
       <GroupPeople :group="group"></GroupPeople>
     </div>
@@ -44,10 +46,11 @@
 
 <script>
 import ChatView from "@/components/Chat/ChatView.vue";
+import Activity from "@/components/Group/GroupActivity.vue";
 import BookmarkView from "@/components/Bookmark/BookmarkView.vue";
 import GroupSettings from "@/components/Group/GroupSettings.vue";
 import GroupPeople from "@/components/Group/GroupPeople.vue";
-import Activity from "@/components/Group/GroupActivity.vue";
+import DocumentView from "@/components/Document/DocumentView.vue";
 export default {
   components: {
     ChatView,
@@ -55,6 +58,7 @@ export default {
     GroupPeople,
     BookmarkView,
     Activity,
+    DocumentView,
   },
   data() {
     return {

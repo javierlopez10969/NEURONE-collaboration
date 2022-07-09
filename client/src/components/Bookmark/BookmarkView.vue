@@ -128,26 +128,26 @@ export default {
           pageTitle: this.bookmark.pageTitle,
           username: this.$store.state.user,
         };
-        var error = true;
         axios
           .post(this.$store.state.apiURL + "/bookmark/send-bookmark", {
             bookmark,
             group: this.group._id,
           })
           .then((res) => {
+            this.$store.commit("setSnack", {
+              color: "green",
+              text: "Bookmark sent",
+            });
             this.view = "normal";
             console.log(res.status);
-            error = false;
           })
-          .catch(function (error) {
+          .catch((error) => {
             console.log(error.response.data);
+            this.$store.commit("setSnack", {
+              color: "red",
+              text: "Put the required data in the fields",
+            });
           });
-        if (error) {
-          this.$store.commit("setSnack", {
-            color: "green",
-            text: "Put the required data in the fields",
-          });
-        }
       }
     },
   },

@@ -4,15 +4,19 @@
       <h1 class="text-center whit--text">Your profile</h1>
       <v-form ref="form" lazy-validation @submit.prevent="updateUser">
         <v-container fluid>
-          <v-text-field
-            :prepend-icon="`mdi-email`"
-            label="Email"
-            disabled
+          <m-text-field
             v-model="user.email"
-            :placeholder="'name.lastname@email.web'"
-          ></v-text-field>
-
-          <v-btn href="/change-password"> Change password</v-btn>
+            :rules="nameRules"
+            required
+            :placeholder="'Edit your email'"
+            disabled
+            id="email"
+          >
+            <m-floating-label for="email">Email</m-floating-label>
+          </m-text-field>
+          <m-button raised type="button" class="rounded-pill">
+            Change password</m-button
+          >
 
           <v-row>
             <v-col>
@@ -62,17 +66,17 @@
               </v-col>
             </v-row>
           </v-row>
-
-          <v-btn
-            type="submit"
-            class="mb-10 mt-3 text-center"
-            rounded
-            color="green"
-            dark
-            block
-          >
-            Save changes
-          </v-btn>
+          <v-row>
+            <v-btn
+              type="submit"
+              class="mb-10 mt-3 text-center"
+              rounded
+              :style="{ 'background-color': green }"
+              block
+            >
+              Save changes
+            </v-btn>
+          </v-row>
         </v-container>
       </v-form>
       <v-snackbar v-model="snack" :timeout="3000" :color="snackColor">

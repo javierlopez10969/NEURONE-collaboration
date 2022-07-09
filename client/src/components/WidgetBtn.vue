@@ -16,11 +16,9 @@
         </div>
       </div>
     </div>
-    <m-snackbar
-      v-model="snack"
-      :label-text="snackText"
-      style="background-color: color: green"
-    ></m-snackbar>
+    <div id="snackbar" :style="{ 'background-color': snackColor }">
+      {{ snackText }} <m-button @click="closeSnack">Close</m-button>
+    </div>
   </m-typography>
 </template>
 <script>
@@ -73,7 +71,8 @@ export default {
   computed: {
     snack: {
       get() {
-        return this.$store.state.snack;
+        const value = this.$store.state.snack;
+        return value;
       },
       set(newValue) {
         this.$store.commit("setSnackFalse");
@@ -151,6 +150,27 @@ export default {
       }
       element.classList.toggle("show");
     },
+    closeSnack() {
+      var x = document.getElementById("snackbar");
+      x.className.replace("show", "");
+      this.snack = false;
+    },
+  },
+  watch: {
+    snack(newValue) {
+      if (newValue == true) {
+        var x = document.getElementById("snackbar");
+
+        // Add the "show" class to DIV
+        x.className = "show";
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () {
+          x.className = x.className.replace("show", "");
+        }, 3000);
+        this.snack = false;
+      }
+    },
   },
 };
 </script>
@@ -164,6 +184,7 @@ export default {
 @import "@/styles/Icon.css";
 @import "@/styles/Notification.css";
 @import "@/styles/Button.css";
+@import "@/styles/Snack.css";
 </style>
 <style lang="scss">
 $mdc-theme-primary: #2196f3;

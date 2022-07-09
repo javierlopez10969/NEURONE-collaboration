@@ -20,7 +20,7 @@
           v-model="group.name"
           :rules="nameRules"
           required
-          placeholder="My Group"
+          placeholder="Edit the name of your group"
           full-width
           id="nameGroup"
         >
@@ -31,7 +31,7 @@
           :rules="nameRules"
           required
           full-width
-          placeholder="My Group"
+          placeholder="Edit the description of your group"
           id="description"
         >
           <m-floating-label for="description"> Description</m-floating-label>

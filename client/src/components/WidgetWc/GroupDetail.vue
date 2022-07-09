@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 :style="{ color: group.color }">{{ group.name }}</h1>
     <m-tab-bar v-show="group.modules">
       <m-tab-scroller>
         <!-- chat -->

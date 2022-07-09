@@ -74,7 +74,6 @@
             </m-button>
             Use the click,arrows and enter to move.
           </div>
-
           <GroupDetail></GroupDetail>
         </v-container>
 

@@ -38,25 +38,27 @@
             <v-row>
               <v-col>
                 <h1>Avatar color</h1>
-                <v-color-picker
-                  dot-size="25"
-                  hide-inputs
-                  hide-mode-switch
-                  mode="hexa"
-                  swatches-max-height="200"
-                  v-model="user.color"
-                ></v-color-picker>
+                <form>
+                  <label for="favcolor"> Click Here!!</label>
+                  <input
+                    type="color"
+                    id="favcolor"
+                    name="favcolor"
+                    v-model="user.color"
+                  />
+                </form>
               </v-col>
               <v-col>
                 <h1>Text color</h1>
-                <v-color-picker
-                  dot-size="25"
-                  hide-inputs
-                  hide-mode-switch
-                  mode="hexa"
-                  swatches-max-height="200"
-                  v-model="user.textColor"
-                ></v-color-picker>
+                <form>
+                  <label for="favcolor"> Click Here!!</label>
+                  <input
+                    type="color"
+                    id="favcolor"
+                    name="favcolor"
+                    v-model="user.textColor"
+                  />
+                </form>
               </v-col>
             </v-row>
           </v-row>
@@ -98,7 +100,12 @@ export default {
     snackColor: "",
     snackText: "",
     valid: false,
+    color: {},
   }),
+  created() {
+    this.user.color = this.user.color.toLowerCase();
+    this.user.textColor = this.user.textColor.toLowerCase();
+  },
   methods: {
     updateUser() {
       axios

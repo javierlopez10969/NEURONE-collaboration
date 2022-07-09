@@ -22,24 +22,26 @@
       <v-container>
         <v-row
           ><v-col cols="12" md="6">
-            <v-text-field
+            <m-text-field
               v-model="group.name"
-              :disabled="isUpdating"
               :rules="nameRules"
-              filled
               required
-              color="blue-grey lighten-2"
-              label="Name of the group"
-            ></v-text-field>
-            <v-text-field
+              placeholder="My Group"
+              id="nameGroup"
+            >
+              <m-floating-label for="nameGroup"
+                >Name of the Group</m-floating-label
+              >
+            </m-text-field>
+            <m-text-field
               v-model="group.description"
-              :disabled="isUpdating"
               :rules="nameRules"
-              filled
               required
-              color="blue-grey lighten-2"
-              label="Description"
-            ></v-text-field>
+              placeholder="My Group"
+              id="nameGroup"
+            >
+              <m-floating-label for="nameGroup">Description</m-floating-label>
+            </m-text-field>
           </v-col>
           <v-col cols="12" md="6">
             <h1>Choose a Color {{ group.color }}</h1>
@@ -135,8 +137,8 @@ export default {
       users: [],
       title: "",
       group: {
-        name: "My group",
-        description: "Description of the group",
+        name: "",
+        description: "",
         users: [],
         usersAdmin: [],
         color: "#448AD1",

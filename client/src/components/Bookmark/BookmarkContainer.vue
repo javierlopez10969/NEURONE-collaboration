@@ -3,33 +3,25 @@
   <div style="height: 250px; overflow: auto" ref="container">
     <!-- Messages -->
     <div
-      v-for="(item, index) in bookmarks"
+      v-for="(bookmark, index) in bookmarks"
       :key="index"
       :class="[
         'flex-row align-right',
-        item.username == 'You' ? 'justify-end' : null,
+        bookmark.username == 'You' ? 'justify-end' : null,
       ]"
     >
-      <m-card>
-        <m-card-media style="color: black" square>
-          Title
-          <p></p>
-          URL : {{ item.URL }}
-          <p></p>
-          Page Title : {{ item.pageTitle }}
-          <p></p>
-          Notes : {{ item.notes }}
-          <p></p>
-          Date :
-        </m-card-media>
-      </m-card>
+      <Bookmark :bookmark="bookmark"></Bookmark>
       <p></p>
     </div>
   </div>
 </template>
 
 <script>
+import Bookmark from "./BookmarkElement";
 export default {
+  components: {
+    Bookmark,
+  },
   props: ["bookmarks"],
   updated() {
     //Scroll to the bottom

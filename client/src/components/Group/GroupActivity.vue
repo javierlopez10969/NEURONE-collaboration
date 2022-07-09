@@ -1,12 +1,9 @@
 <template>
-  <div>
-    Users : {{ activity.users }}
-    <p></p>
-    Messages : {{ activity.messages }}
-    <p></p>
-    Messages : {{ activity.bookmarks }}
-    <p></p>
-  </div>
+  <v-container>
+    <v-row> Users : {{ activity.users }} </v-row>
+    <v-row> Messages : {{ activity.messages }}</v-row>
+    <v-row> Bookmarks : {{ activity.bookmarks }}</v-row>
+  </v-container>
 </template>
 
 <script>

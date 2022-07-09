@@ -76,12 +76,12 @@ let groupSchema = mongoose.Schema({
             },
             feed: {
                 icon: "mdi-cog",
-                title: "Settings",
+                title: "Feed",
                 active: true,
             },
             tasks: {
                 icon: "mdi-cog",
-                title: "Settings",
+                title: "Tasks",
                 active: true,
             },
             settings: {

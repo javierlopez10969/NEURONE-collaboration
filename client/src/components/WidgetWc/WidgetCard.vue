@@ -8,52 +8,60 @@
         <Form></Form>
       </div>
       <div v-if="user != 'none'">
-        <div v-if="view == 'normal'">
-          Welcome
-          {{ user.email }}
-          <v-subheader>My groups</v-subheader>
-          <v-list-item-group v-model="selectedGroup" color="primary">
-            <v-list-item v-for="(item, i) in groups" :key="i">
-              <v-list-item-icon :color="item.color">
-                <v-icon> mdi-account-group</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <m-button
-                  raised
-                  @click="selectGroup(i), (view = 'group')"
-                  class="white--text"
-                  :style="{ 'background-color': item.color }"
-                >
-                  {{ item.name }}
-                </m-button>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-item-group>
-          <m-button
-            raised
-            style="color: black; background-color: white"
-            @click="view = 'editProfile'"
-          >
-            Edit Your Profile
-          </m-button>
-          <p></p>
-          <!--Create a group if is admin-->
-          <m-button
-            v-if="user.role == 'ADMIN'"
-            raised
-            style="color: white; background-color: green"
-            @click="view = 'createGroup'"
-          >
-            Create Group
-          </m-button>
-          <p></p>
-          <m-button
-            style="color: black; background-color: red"
-            @click="logout()"
-            unelevated
-          >
-            Log out
-          </m-button>
+        <div>
+          <v-col v-if="view == 'normal'">
+            Welcome
+            {{ user.email }}
+            <v-subheader>My groups</v-subheader>
+            <v-list-item-group v-model="selectedGroup" color="primary">
+              <v-list-item v-for="(item, i) in groups" :key="i">
+                <v-list-item-icon :color="item.color">
+                  <v-icon> mdi-account-group</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <m-button
+                    raised
+                    @click="selectGroup(i), (view = 'group')"
+                    class="white--text"
+                    :style="{ 'background-color': item.color }"
+                  >
+                    {{ item.name }}
+                  </m-button>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list-item-group>
+            <v-col>
+              <!--Edit porfile-->
+              <m-button
+                raised
+                style="color: black; background-color: white"
+                @click="view = 'editProfile'"
+              >
+                Edit Your Profile
+              </m-button>
+            </v-col>
+            <v-col v-if="user.role == 'ADMIN'">
+              <!--Create a group if is admin-->
+              <m-button
+                raised
+                style="color: white; background-color: green"
+                @click="view = 'createGroup'"
+              >
+                Create Group
+              </m-button>
+            </v-col>
+
+            <v-col>
+              <!--Logout-->
+              <m-button
+                style="color: black; background-color: red"
+                @click="logout()"
+                unelevated
+              >
+                Log out
+              </m-button>
+            </v-col>
+          </v-col>
         </div>
         <v-container v-if="view == 'group'">
           <div style="font-size: 10px">
@@ -93,8 +101,10 @@
               style="color: black; background-color: white"
               @click="view = 'normal'"
             >
-              Back </m-button
-            ><GroupForm></GroupForm>
+              Back
+            </m-button>
+            <p></p>
+            <GroupForm :mode="'widget'"></GroupForm>
           </v-container>
         </div>
       </div>
@@ -106,7 +116,7 @@
 import Form from "@/components/UI/FormUI";
 import GroupDetail from "./GroupDetail";
 import UserForm from "../User/UserForm.vue";
-import GroupForm from "../UI/GroupForm";
+import GroupForm from "../Group/GroupCreate.vue";
 import axios from "axios";
 export default {
   components: { Form, GroupDetail, UserForm, GroupForm },

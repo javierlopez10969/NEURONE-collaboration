@@ -2,62 +2,17 @@
   <div>
     <m-tab-bar v-show="group.modules">
       <m-tab-scroller>
-        <!-- Feed-->
         <!-- chat -->
-        <button active @click="view = group.modules[0].title">
-          <m-tab
-            active
-            v-if="group.modules[0].active == true && modules.chat == true"
-          >
-            {{ group.modules[0].title }}
-          </m-tab>
-        </button>
-        <!-- activity  -->
-        <button @click="view = group.modules[1].title">
-          <m-tab
-            v-if="group.modules[1].active == true && modules.activity == true"
-          >
-            {{ group.modules[1].title }}
-          </m-tab>
-        </button>
-        <!-- Bookmark-->
-        <button @click="view = group.modules[2].title">
-          <m-tab
-            v-if="group.modules[2].active == true && modules.bookmarks == true"
-          >
-            {{ group.modules[2].title }}
-          </m-tab>
-        </button>
-        <!-- Documents-->
-        <button @click="view = group.modules[3].title">
-          <m-tab
-            v-if="group.modules[3].active == true && modules.documents == true"
-          >
-            {{ group.modules[3].title }}
-          </m-tab>
-        </button>
-        <!-- People-->
-        <button @click="view = group.modules[4].title">
-          <m-tab
-            v-if="group.modules[4].active == true && modules.people == true"
-          >
-            {{ group.modules[4].title }}
-          </m-tab>
-        </button>
-        <!-- Settings-->
-        <button @click="view = group.modules[5].title">
-          <!-- To DO : admin verification-->
-          <m-tab
-            v-if="group.modules[5].active == true && modules.settings == true"
-          >
-            {{ group.modules[5].title }}
-          </m-tab>
-        </button>
-        <button @click="view = group.modules[6].title">
-          <m-tab v-if="group.modules[6].active == true">
-            {{ group.modules[6].title }}
-          </m-tab>
-        </button>
+        <div v-for="(module, index) in group.modules" :key="module.title">
+          <button active @click="view = module.title">
+            <m-tab active v-if="module.active == true && index === 'chat'">
+              {{ module.title }}
+            </m-tab>
+            <m-tab v-if="module.active == true && index != 'chat'">
+              {{ module.title }}
+            </m-tab>
+          </button>
+        </div>
       </m-tab-scroller>
     </m-tab-bar>
     <!--Content-->

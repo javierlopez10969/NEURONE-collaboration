@@ -1,8 +1,6 @@
 Hacer el test unitario con jest o mocha para darle una test
 Test unitario al frontend de testoptimizacionde los modulos de frontend
 
-H
-
 Verificar cuando las rutas vengan con id que venga un id.
 
 Cuando la ruta sea un post verificar todos los datos con los que se van a procesar vengan en el cuerpo de la request
@@ -14,6 +12,7 @@ Coordinar la información recolectada por otras personas indicando si ya ha sido
 El sistema deberá tener funciones que permitan recolectar los archivos recolectados por las personas.
 Origen
 
+Al cambiar un atributo de un usuario updatear en todos los documentos que se encuentre el usuario como mensajes nookmarks, etc.
 
 Histogramas de búsqueda
 

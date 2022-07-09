@@ -16,97 +16,95 @@
 
     <v-form ref="form" lazy-validation @submit.prevent="updateData">
       <v-container>
-        <v-row
-          ><v-col cols="12" md="6">
-            <v-text-field
-              v-model="group.name"
-              :disabled="isUpdating"
-              :rules="nameRules"
-              filled
-              required
-              color="blue-grey lighten-2"
-              label="Name of the group"
-            ></v-text-field>
-            <v-text-field
-              v-model="group.description"
-              :disabled="isUpdating"
-              :rules="nameRules"
-              filled
-              required
-              color="blue-grey lighten-2"
-              label="Description"
-            ></v-text-field>
-          </v-col>
-          <v-col cols="12" md="6">
-            <h1>Choose a Color {{ group.color }}</h1>
-            <v-color-picker
-              dot-size="25"
-              hide-inputs
-              hide-mode-switch
-              :disabled="isUpdating"
-              mode="hexa"
-              swatches-max-height="200"
-              v-model="group.color"
-            ></v-color-picker>
-          </v-col>
+        <m-text-field
+          v-model="group.name"
+          :rules="nameRules"
+          required
+          placeholder="My Group"
+          full-width
+          id="nameGroup"
+        >
+          <m-floating-label for="nameGroup">Name of the Group</m-floating-label>
+        </m-text-field>
+        <m-text-field
+          v-model="group.description"
+          :rules="nameRules"
+          required
+          full-width
+          placeholder="My Group"
+          id="description"
+        >
+          <m-floating-label for="description"> Description</m-floating-label>
+        </m-text-field>
+        <h1>Choose a Color {{ group.color }}</h1>
+        <form>
+          <label for="favcolor"> Click Here!!</label>
+          <input
+            type="color"
+            id="favcolor"
+            name="favcolor"
+            v-model="group.color"
+          />
+        </form>
+
+        <v-row>
           <v-col v-for="(module, index) in group.modules" v-bind:key="index">
-            <m-checkbox
-              v-if="module.title != 'Settings'"
-              v-model="module.active"
-              :label="`${module.title}`"
-            />
-            <label for="checkbox2"> {{ module.title }}</label>
-          </v-col>
-          <v-col cols="12">
-            <v-autocomplete
-              v-model="group.users"
-              :disabled="isUpdating"
-              :items="users"
-              filled
-              chips
-              color="blue-grey lighten-2"
-              label="Select users to add to the group"
-              multiple
-            >
-              <template v-slot:selection="data">
-                <v-chip
-                  v-bind="data.attrs"
-                  :input-value="data.selected"
-                  close
-                  @click="data.select"
-                  @click:close="remove(data.item)"
-                >
-                  <v-avatar left :color="data.item.color">
-                    <span class="white--text text-h5">{{
-                      data.item.name[0]
-                    }}</span>
-                  </v-avatar>
-                  {{ data.item.email }}
-                </v-chip>
-              </template>
-              <template v-slot:item="data">
-                <template v-if="typeof data.item !== 'object'">
-                  <v-list-item-content v-text="data.item"></v-list-item-content>
-                </template>
-                <template v-else>
-                  <v-avatar left :color="data.item.color">
-                    <span class="white--text text-h5">{{
-                      data.item.name[0]
-                    }}</span>
-                  </v-avatar>
-                  <v-list-item-content>
-                    <v-list-item-title
-                      v-html="data.item.email"
-                    ></v-list-item-title>
-                    <v-list-item-subtitle
-                      v-html="data.item.name + ' ' + data.item.lastName"
-                    ></v-list-item-subtitle>
-                  </v-list-item-content>
-                </template>
-              </template>
-            </v-autocomplete>
+            <div v-if="module.title != 'Settings'">
+              <m-checkbox v-model="module.active" :label="`${module.title}`" />
+              <label for="checkbox2"> {{ module.title }}</label>
+            </div>
           </v-col>
         </v-row>
+
+        <v-col cols="12">
+          <v-autocomplete
+            v-model="group.users"
+            :disabled="isUpdating"
+            :items="users"
+            filled
+            chips
+            color="blue-grey lighten-2"
+            label="Select users to add to the group"
+            multiple
+          >
+            <template v-slot:selection="data">
+              <v-chip
+                v-bind="data.attrs"
+                :input-value="data.selected"
+                close
+                @click="data.select"
+                @click:close="remove(data.item)"
+              >
+                <v-avatar left :color="data.item.color">
+                  <span class="white--text text-h5">{{
+                    data.item.name[0]
+                  }}</span>
+                </v-avatar>
+                {{ data.item.email }}
+              </v-chip>
+            </template>
+            <template v-slot:item="data">
+              <template v-if="typeof data.item !== 'object'">
+                <v-list-item-content v-text="data.item"></v-list-item-content>
+              </template>
+              <template v-else>
+                <v-avatar left :color="data.item.color">
+                  <span class="white--text text-h5">{{
+                    data.item.name[0]
+                  }}</span>
+                </v-avatar>
+                <v-list-item-content>
+                  <v-list-item-title
+                    v-html="data.item.email"
+                  ></v-list-item-title>
+                  <v-list-item-subtitle
+                    v-html="data.item.name + ' ' + data.item.lastName"
+                  ></v-list-item-subtitle>
+                </v-list-item-content>
+              </template>
+            </template>
+          </v-autocomplete>
+        </v-col>
       </v-container>
       <v-card-actions>
         <v-spacer></v-spacer>
@@ -174,6 +172,7 @@ export default {
               group: this.group,
             }
           );
+          this.$store.commit("updateGroup", this.group);
           this.$store.commit("setSnack", {
             color: "green",
             text: "Group updated successfully",
@@ -244,8 +243,22 @@ export default {
       (v) => v.length >= 8 || "This field is required",
     ],
   }),
+  computed: {
+    colors: {
+      // getter
+      get() {
+        return { hex: this.group.color };
+      },
+      // setter
+      set(newValue) {
+        this.group.color = newValue.hex;
+        newValue;
+      },
+    },
+  },
   created() {
     let apiURL = "";
+    this.group.color = this.group.color.toLowerCase();
     //If mode widget
     if (this.mode == "widget") {
       apiURL = `http://localhost:3000/api/group/${this.groupR._id}`;
@@ -262,6 +275,18 @@ export default {
       .then((res) => {
         this.group = res.data.group;
       });
+    if (this.$store.state.user._id) {
+      axios
+        .get(
+          this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,
+          {
+            headers: { token: localStorage.getItem("token") },
+          }
+        )
+        .then((res) => {
+          this.users = res.data;
+        });
+    }
   },
 };
 </script>

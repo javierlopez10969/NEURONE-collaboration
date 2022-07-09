@@ -1,31 +1,7 @@
 <!-- All messages-->
 <template>
   <m-card>
-    <!-- Case is sender is the logged user -->
-    <v-container
-      fluid
-      v-if="item.username === $store.state.user"
-      style="text-align: right"
-    >
-      <v-row no-gutters>
-        <v-col> </v-col>
-        <v-col>
-          <span style="color: blue">
-            {{ item.username.name }} {{ item.username.lastName }}
-          </span>
-          <ProfileIcon
-            :username="item.username"
-            :sender="true"
-            :color="item.username.color"
-          ></ProfileIcon>
-          <v-spacer></v-spacer>
-          {{ item.message }}
-        </v-col>
-      </v-row>
-    </v-container>
-
-    <!-- Case is the receiver -->
-    <v-container fluid v-if="item.username !== 'You'">
+    <v-container>
       <v-col>
         <ProfileIcon
           :sender="false"

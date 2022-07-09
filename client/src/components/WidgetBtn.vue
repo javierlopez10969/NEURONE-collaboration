@@ -1,31 +1,27 @@
 <template>
-  <v-app>
-    <v-main>
-      <div>
-        <div class="notification dropdown">
-          <span v-if="notifications != 0" class="badge">{{
-            notifications
-          }}</span>
-          <button class="toolt1p" @click="myFunction()">
-            <Icon
-              :style="{ color: 'black' }"
-              icon="mdi:account-group-outline"
-              class="drowpdownbtn big-icon"
-            />
-            <span class="toolt1ptext">Collaboration</span>
-          </button>
-          <div id="myDropdown" ref="myDropdown" style="display: none">
-            <WidgetCard></WidgetCard>
-          </div>
+  <m-typography>
+    <div>
+      <div class="notification dropdown">
+        <span v-if="notifications != 0" class="badge">{{ notifications }}</span>
+        <button class="toolt1p" @click="myFunction()">
+          <Icon
+            :style="{ color: 'black' }"
+            icon="mdi:account-group-outline"
+            class="drowpdownbtn big-icon"
+          />
+          <span class="toolt1ptext">Collaboration</span>
+        </button>
+        <div id="myDropdown" ref="myDropdown" style="display: none">
+          <WidgetCard></WidgetCard>
         </div>
       </div>
-      <m-snackbar
-        v-model="snack"
-        :label-text="snackText"
-        style="background-color: color: green"
-      ></m-snackbar>
-    </v-main>
-  </v-app>
+    </div>
+    <m-snackbar
+      v-model="snack"
+      :label-text="snackText"
+      style="background-color: color: green"
+    ></m-snackbar>
+  </m-typography>
 </template>
 <script>
 import axios from "axios";
@@ -166,7 +162,8 @@ export default {
 @import "@/styles/Tooltip.css";
 @import "@/styles/DropDown.css";
 @import "@/styles/Icon.css";
-@import "@/styles/Notificacion.css";
+@import "@/styles/Notification.css";
+@import "@/styles/Button.css";
 </style>
 <style lang="scss">
 $mdc-theme-primary: #2196f3;

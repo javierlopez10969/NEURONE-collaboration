@@ -37,22 +37,26 @@ router.get('/user/id/:id', async (req, res) => {
         res.json(groups);
     }
 })
-
+//Create Group
 router.post('/', async (req, res) => {
     userCreator = req.body.user;
+    //To do multiple chat rooms
     //Create a Chat Room
+    /*
     const chatRoom = new ChatRoom({
         name: "General"
     });
     await chatRoom.save();
+    */
     const group = new Group(req.body.group);
-    group.chatRooms.push(chatRoom._id);
+    //group.chatRooms.push(chatRoom._id);
     group.users.push(userCreator)
     //Update each user in the group
+    /*
     group.users.forEach(user => {
         newUser = user.groups.push(group._id);
         User.findAndUpdate(newUser);
-    })
+    })*/
     await group.save();
 
 })

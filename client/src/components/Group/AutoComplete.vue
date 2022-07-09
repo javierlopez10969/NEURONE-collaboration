@@ -5,7 +5,7 @@
         {{ label }}
       </v-btn>
     </template>
-    <GroupCreate :label="label" :mode="page"></GroupCreate>
+    <GroupCreate :label="label" :mode="'page'"></GroupCreate>
   </v-dialog>
 </template>
 

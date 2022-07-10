@@ -1,5 +1,5 @@
 <template>
-  <m-card style="max-height: 500px; max-width: 350px" class="basil">
+  <m-card style="max-height: 500px; max-width: 400px" class="basil">
     <!--Multiples views-->
     <!--Main-->
     <!--If user is not logged-->

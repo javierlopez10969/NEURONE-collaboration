@@ -1,6 +1,5 @@
 const express = require('express'),
   cors = require('cors'),
-  mongoose = require('mongoose'),
   bodyParser = require('body-parser'),
   Group = require('./models/Group')
 
@@ -8,6 +7,8 @@ const express = require('express'),
 const app = express();
 const morgan = require('morgan');
 
+require("dotenv")
+  .config();
 //Database
 const database = require('./database');
 
@@ -53,5 +54,5 @@ socketConnection(http)
 
 //UP the server
 http.listen(port, () => {
-  console.log('Listening on port *: 3000');
+  console.log('Listening on port *:' + port)
 });

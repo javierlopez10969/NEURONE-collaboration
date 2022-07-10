@@ -1,14 +1,16 @@
 <template>
   <v-container>
-    <h1>Upload a File</h1>
     <FileUploader></FileUploader>
+    <ImageContainer></ImageContainer>
   </v-container>
 </template>
 <script>
 import FileUploader from "./FileUploader.vue";
+import ImageContainer from "./DocumentsContainer.vue";
 export default {
   components: {
     FileUploader,
+    ImageContainer,
   },
 };
 </script>

@@ -4,9 +4,8 @@
       <div class="fields">
         <input type="file" ref="file" @change="onSelect" />
       </div>
-      <div class="fields">
-        <m-button raised style="background-color: green">Submit</m-button>
-      </div>
+      <m-button raised class="rounded-pill">Upload file</m-button>
+
       <div class="message">
         <h5>{{ message }}</h5>
       </div>
@@ -42,14 +41,28 @@ export default {
       }
     },
     async onSubmit() {
-      const formData = new FormData();
-      formData.append("file", this.file);
-      try {
-        await axios.post(this.apiURL + "/document/upload", formData);
-        this.message = "Uploaded!!";
-      } catch (err) {
-        console.log(err);
-        this.message = err.response.data.error;
+      if (this.file) {
+        const formData = new FormData();
+        formData.append("file", this.file);
+        try {
+          await axios.post(this.apiURL + "/document/upload", formData);
+          this.$store.commit("setSnack", {
+            color: "green",
+            text: "File uploaded successfully",
+          });
+        } catch (err) {
+          console.log(err);
+          this.message = err.response.data.error;
+          this.$store.commit("setSnack", {
+            color: "red",
+            text: "Error uploading file",
+          });
+        }
+      } else {
+        this.$store.commit("setSnack", {
+          color: "red",
+          text: "No file selected",
+        });
       }
     },
   },

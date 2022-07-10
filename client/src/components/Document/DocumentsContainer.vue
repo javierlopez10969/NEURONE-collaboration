@@ -42,33 +42,20 @@
 </template>
 
 <script>
-import axios from "axios";
 import { Icon } from "@iconify/vue2";
 export default {
   components: {
     Icon,
   },
-  data() {
-    return {
-      files: [],
-      image: {},
-    };
-  },
   computed: {
     apiURL() {
       return this.$store.state.apiURL;
     },
+    group() {
+      return this.$store.state.group;
+    },
   },
-  created() {
-    axios.get(this.apiURL + "/document/files").then((res) => {
-      this.files = res.data;
-      axios
-        .get(this.apiURL + "/document/image/" + this.files[0].filename)
-        .then((res) => {
-          this.image = res.data;
-        });
-    });
-  },
+  props: ["files"],
   methods: {
     downloadFile(filename) {
       window.open(this.apiURL + "/document/download/" + filename, "_blank");

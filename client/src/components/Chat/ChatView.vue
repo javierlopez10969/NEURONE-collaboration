@@ -41,8 +41,6 @@ export default {
       snack: false,
       snackColor: "",
       snackText: "",
-      //Username data
-      username: "You",
       usernameSocket: "",
       userProfile: {},
       //Socket for connection
@@ -107,7 +105,7 @@ export default {
       if (this.message != "") {
         var message = {
           message: this.message,
-          username: this.$store.state.user,
+          user: this.$store.state.user,
         };
 
         console.log("message: ", message);

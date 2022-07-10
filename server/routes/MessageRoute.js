@@ -25,8 +25,8 @@ router.get('/group/:id', async (req, res) => {
 router.post('/send-message', async (req, res) => {
     var message = req.body.message;
     var group = req.body.group;
-    if (message.message && message.username && group) {
-        delete message.username.password;
+    if (message.message && message.user && group) {
+        delete message.user.password;
         message.group_id = group;
         message.message_type = "private"
         Socket.sendMessage(req.body.group, 'message', message);

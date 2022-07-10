@@ -1,5 +1,5 @@
 <template>
-  <div class="file">
+  <div>
     <form @submit.prevent="onSubmit" enctype="multipart/form-data">
       <div class="fields">
         <input type="file" ref="file" @change="onSelect" />
@@ -27,6 +27,12 @@ export default {
     apiURL() {
       return this.$store.state.apiURL;
     },
+    user() {
+      return this.$store.state.user;
+    },
+    group() {
+      return this.$store.state.group;
+    },
   },
   methods: {
     onSelect() {
@@ -44,6 +50,8 @@ export default {
       if (this.file) {
         const formData = new FormData();
         formData.append("file", this.file);
+        formData.append("user", this.user._id);
+        formData.append("group", this.group._id);
         try {
           await axios.post(this.apiURL + "/document/upload", formData);
           this.$store.commit("setSnack", {

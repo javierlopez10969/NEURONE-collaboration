@@ -1,16 +1,22 @@
 const express = require('express'),
     router = express.Router(),
-    Socket = require('../utils/socket'),
     multer = require("multer"),
     crypto = require('crypto'),
     mongoose = require('mongoose'),
     Grid = require('gridfs-stream');
 const {
+    cp
+} = require('fs/promises');
+const {
     GridFsStorage
 } = require('multer-gridfs-storage');
 const path = require('path');
+const {
+    saveDocumentDB,
+    findDocumentsByGroup
+} = require('../controllers/DocumentController');
 
-var mongoURI = 'mongodb://localhost/collaboration-db'
+var mongoURI = process.env.MONGO_URI
 
 // Create mongo connection
 const conn = mongoose.createConnection(mongoURI);
@@ -53,10 +59,20 @@ const storage = new GridFsStorage({
 const upload = multer({
     storage
 })
+
 router.post('/upload', upload.single('file'), (req, res) => {
-    res.json({
-        file: req.file
+    const file = req.file;
+    if (req.body.user && req.body.group) {
+        var document = saveDocumentDB(req.body.group, file, req.body.user);
+        return res.json({
+            document: document,
+            file: req.file
+        });
+    }
+    return res.status(402).json({
+        message: "error"
     });
+
 });
 // @route GET /
 // @desc Loads form
@@ -100,6 +116,10 @@ router.get('/files', (req, res) => {
         return res.json(files);
     });
 });
+
+// @route GET /files by group id
+// @desc  Display all files in JSON
+router.get('/files/group/:id', findDocumentsByGroup);
 
 // @route GET /files/:filename
 // @desc  Display single file object

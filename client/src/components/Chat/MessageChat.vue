@@ -5,11 +5,11 @@
       <v-col>
         <ProfileIcon
           :sender="false"
-          :username="item.username"
-          :color="item.username.color"
+          :user="item.user"
+          :color="item.user.color"
         ></ProfileIcon>
 
-        {{ item.username.name }} {{ item.username.lastName }}
+        {{ item.user.name }} {{ item.user.lastName }}
         <v-spacer></v-spacer>
         <span>
           {{ item.message }}

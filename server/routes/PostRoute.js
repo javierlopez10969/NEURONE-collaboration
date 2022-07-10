@@ -27,11 +27,12 @@ router.post('/post', async (req, res) => {
     post.group_id = req.body.group;
     Socket.sendMessage(req.body.group, 'post', post);
     console.log(req.body.post)
+    const postBD = new Post(post);
+    await postBD.save();
     res.json({
         status: 'post sended'
     })
-    const messageBD = new Post(post);
-    await messageBD.save();
+
 })
 
 router.put('/:id', async (req, res) => {

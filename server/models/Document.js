@@ -1,15 +1,37 @@
-var mongoose = require('mongoose');
+// Document.js
+const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
-var documentSchema = new mongoose.Schema({
-    name: String,
-    desc: String,
-    img: {
-        data: Buffer,
-        contentType: String
+// Document schema
+let DocumentSchema = mongoose.Schema({
+    //User who upload the file
+    username: {
+        type: Object,
+        required: true
+    },
+    realfilename: {
+        type: String,
+        required: true
+    },
+    filename: {
+        type: String,
+        required: true
+    },
+    created_at: {
+        type: Date,
+        default: Date.now
+    },
+    group_id: {
+        type: String
     }
 });
 
-//Image is a model which has a schema imageSchema
+// Export
+var Document;
 
-module.exports = new mongoose.model('Document', documentSchema);
+if (mongoose.models.Document) {
+    Document = mongoose.model('Document');
+} else {
+    Document = mongoose.model('Document', DocumentSchema);
+}
+module.exports = Document;

@@ -7,7 +7,7 @@
         <v-col>
           <ProfileIcon
             :sender="false"
-            :username="bookmark.username"
+            :user="bookmark.username"
             :color="bookmark.username.color"
           ></ProfileIcon>
 

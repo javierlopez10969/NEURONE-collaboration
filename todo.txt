@@ -5,6 +5,8 @@ Verificar cuando las rutas vengan con id que venga un id.
 
 Cuando la ruta sea un post verificar todos los datos con los que se van a procesar vengan en el cuerpo de la request
 
+Hacer un controlador universal y general del socket en la vista
+
 Proximos funcionalidades de Awareness :
 
 RF-13

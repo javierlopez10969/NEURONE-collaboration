@@ -6,10 +6,23 @@
         <!-- chat -->
         <div v-for="(module, index) in group.modules" :key="module.title">
           <button active @click="view = module.title">
-            <m-tab active v-if="module.active == true && index === 'chat'">
+            <m-tab
+              active
+              v-if="
+                module.active == true &&
+                modules.chat == true &&
+                index === 'chat'
+              "
+            >
               {{ module.title }}
             </m-tab>
-            <m-tab v-if="module.active == true && index != 'chat'">
+            <m-tab
+              v-if="
+                module.active == true &&
+                findModule(index) == true &&
+                index != 'chat'
+              "
+            >
               {{ module.title }}
             </m-tab>
           </button>
@@ -83,6 +96,11 @@ export default {
     },
     modules() {
       return this.$store.state.modules;
+    },
+  },
+  methods: {
+    findModule(module) {
+      return this.modules[module];
     },
   },
 };

@@ -1,7 +1,7 @@
 <!-- Body of the messages-->
 <template>
   <div
-    style="float: left; height: 250px; width: 250px; overflow-y: auto"
+    style="float: left; height: 250px; width: 320px; overflow-y: auto"
     ref="container"
   >
     <!-- Messages -->

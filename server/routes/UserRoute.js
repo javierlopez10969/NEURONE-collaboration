@@ -8,6 +8,10 @@ const bcrypt = require('bcrypt');
 const faker = require('faker');
 // Modelo de usuario
 const User = require('../models/User');
+const Bookmark = require('../models/Bookmark');
+const Document = require('../models/Document');
+const Message = require('../models/Chat/Message');
+const Group = require('../models/Group');
 
 
 //Routes + Controllers
@@ -126,13 +130,27 @@ router.put('/:id', async (req, res) => {
     })
 })
 router.route('/update-user/:id').post((req, res, next) => {
-    console.log(req.body)
     User.findByIdAndUpdate(req.params.id, req.body.user,
-        (error, data) => {
+        (error, user) => {
             if (error) {
                 return next(error);
             } else {
-                res.json(data)
+                Message.updateMany({
+                    "username._id": req.params.id,
+                    "username._id": req.params.id.toString(),
+                }, {
+                    "$set": {
+                        "user": req.body.user
+                    }
+                }, (error, messages) => {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        console.log(messages);
+                        console.log("Messages updated");
+                    }
+                });
+                res.json(user)
                 console.log('user successfully updated!');
             }
         })

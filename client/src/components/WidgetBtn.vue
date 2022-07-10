@@ -16,7 +16,11 @@
         </div>
       </div>
     </div>
-    <div id="snackbar" :style="{ 'background-color': snackColor }">
+    <div
+      id="snackbar"
+      ref="snackbar"
+      :style="{ 'background-color': snackColor }"
+    >
       {{ snackText }} <m-button @click="closeSnack">Close</m-button>
     </div>
   </m-typography>
@@ -66,6 +70,9 @@ export default {
       tasks: this.tasks,
       snippets: this.snippets,
       activity: this.activity,
+      people: this.people,
+      feed: this.feed,
+      documents: this.documents,
     });
   },
   computed: {
@@ -122,6 +129,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    people: {
+      type: Boolean,
+      default: true,
+    },
     activity: {
       type: Boolean,
       default: true,
@@ -156,21 +167,17 @@ export default {
       this.snack = false;
     },
   },
-  watch: {
-    snack(newValue) {
-      if (newValue == true) {
-        var x = document.getElementById("snackbar");
-
-        // Add the "show" class to DIV
-        x.className = "show";
-
-        // After 3 seconds, remove the show class from DIV
-        setTimeout(function () {
-          x.className = x.className.replace("show", "");
-        }, 3000);
-        this.snack = false;
-      }
-    },
+  updated() {
+    if (this.snack == true) {
+      var x = this.$refs.snackbar;
+      // Add the "show" class to DIV
+      x.className = "show";
+      // After 3 seconds, remove the show class from DIV
+      setTimeout(function () {
+        x.className = x.className.replace("show", "");
+      }, 3000);
+      this.snack = false;
+    }
   },
 };
 </script>

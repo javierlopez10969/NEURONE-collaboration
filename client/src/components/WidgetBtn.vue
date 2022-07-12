@@ -7,15 +7,16 @@
           <Icon
             :style="{ color: 'black' }"
             icon="mdi:account-group-outline"
-            class="drowpdownbtn big-icon"
+            class="dropbtn big-icon"
           />
           <span class="toolt1ptext">Collaboration</span>
         </button>
-        <div id="myDropdown" ref="myDropdown" style="display: none">
+        <div ref="myDropdown" class="dropdown-content" style="display: none">
           <WidgetCard></WidgetCard>
         </div>
       </div>
     </div>
+
     <div
       id="snackbar"
       ref="snackbar"

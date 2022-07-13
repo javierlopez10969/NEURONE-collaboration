@@ -10,8 +10,8 @@ if (process.env.NODE_ENV === 'production') {
 if (process.env.NODE_ENV === 'development') {
     mongoURI = process.env.MONGODB_URI_DEV;
 }
-
-mongoose.connect('mongodb://localhost/collaboration-db')
+console.log("mongoURI: " + mongoURI);
+mongoose.connect(mongoURI)
     .then(db => console.log("Database connect")).catch(err => console.log(err))
 var conn = mongoose.connection;
 conn.on('connected', function () {

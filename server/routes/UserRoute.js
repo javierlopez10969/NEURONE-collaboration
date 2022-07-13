@@ -17,7 +17,6 @@ const Group = require('../models/Group');
 //Routes + Controllers
 
 router.post('/register', async (req, res, next) => {
-    console.log(req.body.email)
     User.findOne({
         email: req.body.email
     }, function (err, user) {
@@ -27,12 +26,13 @@ router.post('/register', async (req, res, next) => {
                 const newUser = new User(req.body)
                 const password = bcrypt.hashSync(req.body.password, 10)
                 newUser.password = password
-                User.create(newUser, (error, data) => {
+                User.create(newUser, (error, user) => {
                     if (error) {
                         return next(error)
                     }
-                    return res.status(200).json({
-                        message: 'User registred successfully'
+                    return res.status(201).json({
+                        message: 'User registred successfully',
+                        user: user
                     })
 
                 })
@@ -44,6 +44,10 @@ router.post('/register', async (req, res, next) => {
             }
         } else {
             console.log('error findOne : ' + err.message);
+            return res.status(400).json({
+                title: 'Error has ocurred',
+                error: 'Error has ocurred'
+            })
         }
     })
 
@@ -176,7 +180,7 @@ router.get('/faker-user', (req, res) => {
     res.send('Creando 100 usuarios faker');
 });
 
-// Delete by id
+//Delete all
 router.delete('/all/', async (req, res) => {
     await User.deleteMany()
     return res.status(200).json({
@@ -187,6 +191,8 @@ router.get('/all', async (req, res) => {
     const users = await User.find();
     res.json(users);
 })
+
+
 router.get('/all/:id', async (req, res) => {
     const users = await User.find({
         '_id': {
@@ -195,10 +201,11 @@ router.get('/all/:id', async (req, res) => {
     });
     res.json(users);
 })
+
 // Delete by id
 router.delete('/id/:id', async (req, res) => {
     await User.findByIdAndRemove(req.params.id, req.body)
-    res.json({
+    res.status(200).json({
         status: 'User Deleted'
     })
 })

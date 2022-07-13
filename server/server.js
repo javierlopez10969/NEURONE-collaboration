@@ -56,3 +56,5 @@ socketConnection(http)
 http.listen(port, () => {
   console.log('Listening on port *:' + port)
 });
+
+module.exports = http;

@@ -16,7 +16,17 @@ const {
     findDocumentsByGroup
 } = require('../controllers/DocumentController');
 
-var mongoURI = process.env.MONGO_URI
+var mongoURI
+if (process.env.NODE_ENV === 'testing') {
+    mongoURI = process.env.MONGODB_URI_TEST;
+}
+if (process.env.NODE_ENV === 'production') {
+    mongoURI = process.env.MONGODB_URI_PROD;
+}
+if (process.env.NODE_ENV === 'development') {
+    mongoURI = process.env.MONGODB_URI_DEV;
+}
+
 
 // Create mongo connection
 const conn = mongoose.createConnection(mongoURI);

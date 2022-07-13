@@ -6,7 +6,7 @@ require("dotenv")
 
 // tells mongoose to use ES6 implementation of promises
 mongoose.Promise = global.Promise;
-const MONGODB_URI = process.env.MONGODB_URITEST;
+const MONGODB_URI = process.env.MONGODB_URI_TEST;
 mongoose.connect(MONGODB_URI);
 
 mongoose.connection

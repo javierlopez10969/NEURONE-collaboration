@@ -10,7 +10,7 @@ let messageSchema = mongoose.Schema({
         required: true
     },
     //User who send the message
-    username: {
+    user: {
         type: Object,
         required: true
     },

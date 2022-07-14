@@ -8,17 +8,12 @@ const request = require('supertest');
 
 let tempToken;
 
-before(function (done) {
-    this.timeout(3000);
-    setTimeout(done, 2000);
-});
 
 var email = process.env.USER_TEST;
 var password = process.env.PASSWORD_TEST;
 var idUser = "";
 
 describe("Auth of users", () => {
-    //Successfully Login
     it("Should register the new user ", (done) => {
         request(app)
             .post("/api/user/register")
@@ -35,13 +30,12 @@ describe("Auth of users", () => {
             })
             .catch((err) => done(err));
     });
-    //Failed register
     it("Should not return a new user because already exists ", (done) => {
         request(app)
             .post("/api/user/register")
             .send({
-                'email': email,
-                'password': password
+                'email': process.env.USER_TEST,
+                'password': process.env.PASSWORD_TEST
             })
             .expect(400)
             .then((res) => {
@@ -50,44 +44,12 @@ describe("Auth of users", () => {
             })
             .catch((err) => done(err));
     });
-    //Login
-    it("Should return a token", (done) => {
-        request(app)
-            .post("/api/user/login")
-            .send({
-                'email': email,
-                'password': password
-            })
-            .expect(200)
-            .then((res) => {
-                expect(res.body.status).to.be.eql('Login successfully');
-                expect(res.body.user.email).to.be.eql(email);
-                tempToken = res.body.token;
-                done();
-            })
-            .catch((err) => done(err));
-    });
-
-});
-
-describe("Get user", () => {
     it("should return the registred users", (done) => {
         request(app)
             .get("/api/user/all")
             .expect(200)
             .then((res) => {
-                done();
-            })
-            .catch((err) => done(err));
-    });
-    it("Should return the user by token", (done) => {
-        request(app)
-            .get("/api/user/")
-            .set('token', tempToken)
-            .expect(200)
-            .then((res) => {
-                expect(res.body.status).to.be.eql('User grabbed successfully');
-                expect(res.body.user.email).to.be.eql(email);
+                expect(typeof (res.body)).to.be.eql('object');
                 done();
             })
             .catch((err) => done(err));

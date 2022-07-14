@@ -41,7 +41,10 @@ app.use("/api/activity", activity)
 app.use("/api/document", document)
 
 //Port
-const port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
+if (process.env.NODE_ENV === 'testing') {
+  port = process.env.PORT_TEST;
+}
 
 //Global io configuration
 const {

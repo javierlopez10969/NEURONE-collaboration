@@ -5,7 +5,7 @@ const uniqueValidator = require('mongoose-unique-validator');
 // Document schema
 let DocumentSchema = mongoose.Schema({
     //User who upload the file
-    username: {
+    user: {
         type: Object,
         required: true
     },

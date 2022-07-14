@@ -8,11 +8,9 @@ const bcrypt = require('bcrypt');
 const faker = require('faker');
 // Modelo de usuario
 const User = require('../models/User');
-const Bookmark = require('../models/Bookmark');
-const Document = require('../models/Document');
-const Message = require('../models/Chat/Message');
-const Group = require('../models/Group');
-
+const {
+    updateOtherFields
+} = require('../controllers/UserController');
 
 //Routes + Controllers
 
@@ -31,7 +29,7 @@ router.post('/register', async (req, res, next) => {
                         return next(error)
                     }
                     return res.status(201).json({
-                        message: 'User registred successfully',
+                        message: 'User is registered successfully',
                         user: user
                     })
 
@@ -66,7 +64,6 @@ router.post('/login', async (req, res, next) => {
                 error: err
             })
         }
-
         if (!user) {
             console.log('User dont found');
             return res.status(401).json({
@@ -86,7 +83,7 @@ router.post('/login', async (req, res, next) => {
         }, 'secretkey');
         console.log('Login succes');
         return res.status(200).json({
-            title: 'login sucess',
+            status: 'Login successfully',
             token: token,
             user: user
         })
@@ -105,7 +102,7 @@ router.route('/').get((req, res, next) => {
         }, (err, user) => {
             if (err) return console.log(err)
             return res.status(200).json({
-                title: 'user grabbed',
+                status: 'User grabbed successfully',
                 user
             })
         })
@@ -113,72 +110,23 @@ router.route('/').get((req, res, next) => {
     })
 })
 
-
-router.route('/edit-user/:id').get((req, res) => {
-    User.findById(req.params.id, (error, data) => {
-        if (error) {
-            return next(error)
-        } else {
-            res.json(data)
-        }
-    })
-})
-
 //TODO : Change password
 //TODO : Auth on update user data
 // Update user
-router.put('/:id', async (req, res) => {
-    await User.findByIdAndUpdate(req.params.id, req.body)
-    res.json({
-        status: 'User Updated'
-    })
-})
-router.route('/update-user/:id').post((req, res, next) => {
-    User.findByIdAndUpdate(req.params.id, req.body.user,
+router.route('/update-user/:id').post((req, res) => {
+    const user = req.body.user;
+    delete user._id;
+    User.findByIdAndUpdate(req.params.id, user,
         (error, user) => {
             if (error) {
-                return next(error);
+                return res.status(400);
             } else {
-                Message.updateMany({
-                    "username._id": req.params.id,
-                    "username._id": req.params.id.toString(),
-                }, {
-                    "$set": {
-                        "user": req.body.user
-                    }
-                }, (error, messages) => {
-                    if (error) {
-                        console.log(error);
-                    } else {
-                        console.log(messages);
-                        console.log("Messages updated");
-                    }
-                });
-                res.json(user)
+                updateOtherFields(req.params.id, user)
+                res.status(200).json(user)
                 console.log('user successfully updated!');
             }
         })
 })
-
-
-//Faker usuario
-router.get('/faker-user', (req, res) => {
-    console.log("Ruta de fakers");
-    for (let i = 0; i < 100; i++) {
-        User.create({
-            name: faker.name.findName(),
-            username: faker.name.findName(),
-            nameEmpresa: faker.company.companyName(),
-            pass: faker.internet.password(),
-            email: faker.internet.email(),
-            role: faker.random.arrayElement(['Cliente', 'Especialista']),
-            especialidad: faker.name.jobTitle(),
-            phone: faker.phone.phoneNumber(),
-            idProyecto: ''
-        })
-    }
-    res.send('Creando 100 usuarios faker');
-});
 
 //Delete all
 router.delete('/all/', async (req, res) => {
@@ -204,7 +152,7 @@ router.get('/all/:id', async (req, res) => {
 
 // Delete by id
 router.delete('/id/:id', async (req, res) => {
-    await User.findByIdAndRemove(req.params.id, req.body)
+    await User.findByIdAndRemove(req.params.id, req.body, )
     res.status(200).json({
         status: 'User Deleted'
     })

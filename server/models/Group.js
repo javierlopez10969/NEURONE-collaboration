@@ -23,9 +23,6 @@ let groupSchema = mongoose.Schema({
     usersAdmin: {
         type: Array
     },
-    usersAdmin: {
-        type: Array
-    },
     created_by: {
         type: String,
     },

@@ -4,16 +4,47 @@ dotenv.config();
 const expect = require('chai').expect;
 const request = require('supertest');
 
-
-
-let tempToken;
-
 var email = process.env.USER_TEST;
 var password = process.env.PASSWORD_TEST;
 var idUser = "";
+var user = {};
+let tempToken;
+
+//Successfully Login
+request(app)
+    .post("/api/user/register")
+    .send({
+        'email': email,
+        'password': password,
+        "role": "ADMIN",
+    })
+    .expect(201)
+    .then((res) => {
+        idUser = res.body.user._id;
+        done();
+    })
+    .catch((err) => done(err));
+
+
+//Login
+request(app)
+    .post("/api/user/login")
+    .send({
+        'email': email,
+        'password': password
+    })
+    .expect(200)
+    .then((res) => {
+        user = user;
+        tempToken = res.body.token;
+        done();
+    })
+    .catch((err) => done(err));
+
+
 
 describe("Create of group", () => {
-    //Successfully Login
+    //Create a group
     it("Should register the new user ", (done) => {
         request(app)
             .post("/api/user/register")

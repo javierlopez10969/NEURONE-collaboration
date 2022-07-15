@@ -15,6 +15,9 @@ var email = process.env.USER_TEST;
 var password = process.env.PASSWORD_TEST;
 var idUser = "";
 var user = {};
+
+
+
 describe("Auth of users", () => {
     //Successfully Login
     it("Should register the new user ", (done) => {

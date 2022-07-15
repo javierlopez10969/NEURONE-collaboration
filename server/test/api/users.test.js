@@ -4,8 +4,6 @@ dotenv.config();
 const expect = require('chai').expect;
 const request = require('supertest');
 
-
-
 let tempToken;
 
 before(function (done) {
@@ -16,7 +14,7 @@ before(function (done) {
 var email = process.env.USER_TEST;
 var password = process.env.PASSWORD_TEST;
 var idUser = "";
-
+var user = {};
 describe("Auth of users", () => {
     //Successfully Login
     it("Should register the new user ", (done) => {
@@ -62,6 +60,7 @@ describe("Auth of users", () => {
             .then((res) => {
                 expect(res.body.status).to.be.eql('Login successfully');
                 expect(res.body.user.email).to.be.eql(email);
+                user = user;
                 tempToken = res.body.token;
                 done();
             })
@@ -69,6 +68,25 @@ describe("Auth of users", () => {
     });
 
 });
+
+describe("Update User", () => {
+    it("Should update the user", (done) => {
+        user.name = "John"
+        user.lastName = "Smith"
+        request(app)
+            .post("/api/user/update-user/" + idUser)
+            .send({
+                user
+            })
+            .expect(200)
+            .then((res) => {
+                console.log(res.body.user)
+                done();
+            })
+            .catch((err) => done(err));
+    });
+});
+
 
 describe("Get user", () => {
     it("should return the registred users", (done) => {

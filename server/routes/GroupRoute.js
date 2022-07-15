@@ -3,7 +3,7 @@ const router = express.Router();
 
 const Group = require('../models/Group')
 const User = require('../models/User')
-const ChatRoom = require('../models/Chat/ChatRoom')
+const jwt = require('jsonwebtoken');
 
 // GET all groups
 router.get('/', async (req, res) => {
@@ -13,15 +13,22 @@ router.get('/', async (req, res) => {
 
 // GET all groups of certain user
 router.get('/user/:id', async (req, res) => {
-    if (req.params.id === undefined) {
-        console.log("UNDEFINED")
-    }
-    if (req.params.id != undefined) {
-        user = await User.findById(req.params.id);
+    let token = req.headers.token; //token
+    var user;
+    jwt.verify(token, 'secretkey', (err, decoded) => {
+        if (err) return res.status(401).json({
+            title: 'unauthorized'
+        })
+        //token is valid
+        user = User.findOne({
+            _id: decoded.userId
+        })
+    })
+    if (user) {
         const groups = await Group.find({
             "groups": user
         });
-        res.json(groups);
+        return res.json(groups);
     }
 })
 // GET all ID groups of certain user
@@ -39,25 +46,28 @@ router.get('/user/id/:id', async (req, res) => {
 })
 //Create Group
 router.post('/', async (req, res) => {
-    userCreator = req.body.user;
-    //To do multiple chat rooms
-    //Create a Chat Room
-    /*
-    const chatRoom = new ChatRoom({
-        name: "General"
-    });
-    await chatRoom.save();
-    */
-    const group = new Group(req.body.group);
-    //group.chatRooms.push(chatRoom._id);
-    group.users.push(userCreator)
-    //Update each user in the group
-    /*
-    group.users.forEach(user => {
-        newUser = user.groups.push(group._id);
-        User.findAndUpdate(newUser);
-    })*/
-    await group.save();
+    console.log("Name group : " + req.body.group.name.length);
+    if (req.body.group.name != undefined && req.body.group.description != undefined &&
+        req.body.group.name != "" && req.body.user) {
+        userCreator = req.body.user;
+        const group = new Group(req.body.group)
+        group.users.push(userCreator)
+        //Update each user in the group
+        /*
+        group.users.forEach(user => {
+            newUser = user.groups.push(group._id);
+            User.findAndUpdate(newUser);
+        })*/
+        await group.save();
+        return res.status(201).json({
+            group: group
+        });
+    } else {
+        return res.status(400).json({
+            status: "Bad Request"
+        });
+    }
+
 
 })
 
@@ -85,7 +95,7 @@ router.delete('/:id', async (req, res) => {
 router.delete('/all/all/', async (req, res) => {
     await Group.deleteMany()
     return res.status(200).json({
-        message: 'All user is deleted successfully'
+        message: 'All groups are deleted successfully'
     })
 })
 

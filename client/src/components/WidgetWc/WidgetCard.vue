@@ -1,5 +1,5 @@
 <template>
-  <m-card style="max-height: 500px; max-width: 400px" class="basil">
+  <m-card style="height: 500px; width: 400px" class="basil">
     <!--Multiples views-->
     <!--Main-->
     <!--If user is not logged-->
@@ -135,7 +135,10 @@ export default {
             .get(
               this.$store.state.apiURL +
                 "/group/user/" +
-                this.$store.state.user._id
+                this.$store.state.user._id,
+              {
+                headers: { token: localStorage.getItem("token") },
+              }
             )
             .then((res) => {
               this.$store.commit("updateGroups", res.data);

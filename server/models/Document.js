@@ -9,7 +9,7 @@ let DocumentSchema = mongoose.Schema({
         type: Object,
         required: true
     },
-    realfilename: {
+    title: {
         type: String,
         required: true
     },

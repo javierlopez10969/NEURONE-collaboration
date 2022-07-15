@@ -1,5 +1,5 @@
 //Models
-
+const mongoose = require('mongoose');
 const User = require('../models/User');
 const Bookmark = require('../models/Bookmark');
 const Document = require('../models/Document');
@@ -9,11 +9,13 @@ const Group = require('../models/Group');
 const updateOtherFields = (id, user) => {
     //Update messages
     Message.updateMany({
-        "user._id": id,
-        "user._id": id.toString(),
+        "user._id": mongoose.Types.ObjectId(id)
     }, {
         "$set": {
-            "user": user
+            "user.name": user.name,
+            "user.color": user.color,
+            "user.lastName": user.lastName,
+            "user.textColor": user.textColor
         }
     }, (error, messages) => {
         if (error) {
@@ -25,7 +27,7 @@ const updateOtherFields = (id, user) => {
     });
     //Update documents
     Document.updateMany({
-        "user._id": id,
+        "user._id": mongoose.Types.ObjectId(id),
         "user._id": id.toString(),
     }, {
         "$set": {
@@ -36,12 +38,12 @@ const updateOtherFields = (id, user) => {
             console.log(error);
         } else {
             console.log(messages);
-            console.log("Messages updated");
+            console.log("Documents updated");
         }
     });
     //Update documents
     Bookmark.updateMany({
-        "user._id": id,
+        "user._id": mongoose.Types.ObjectId(id),
         "user._id": id.toString(),
     }, {
         "$set": {
@@ -52,7 +54,7 @@ const updateOtherFields = (id, user) => {
             console.log(error);
         } else {
             console.log(messages);
-            console.log("Messages updated");
+            console.log("Bookmarks updated");
         }
     });
 }

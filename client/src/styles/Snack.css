@@ -15,7 +15,7 @@
     /* Rounded borders */
     padding: 16px;
     /* Padding */
-    position: fixed;
+    position: absolute;
     /* Sit on top of the screen */
     z-index: 1;
     /* Add a z-index if needed */

@@ -13,12 +13,7 @@
         </v-col>
       </v-row>
     </v-row>
-    <v-form
-      ref="form"
-      class="form-signin"
-      lazy-validation
-      @submit.prevent="createGroup"
-    >
+    <v-form ref="form" class="form-signin" @submit.prevent="createGroup">
       <v-container>
         <v-row
           ><v-col cols="12" md="6">
@@ -175,7 +170,8 @@ export default {
       if (index >= 0) this.group.users.splice(index, 1);
     },
     async createGroup() {
-      if (this.$refs.form.validate()) {
+      console.log("Group name : " + this.group.name);
+      if (this.$refs.form.validate() && this.group.name.length > 5) {
         this.group.usersAdmin.push(this.user);
         this.group.created_by =
           "Created by" + this.user.email + " at " + Date.now();
@@ -186,20 +182,27 @@ export default {
             group: this.group,
             user: this.user,
           });
-          this.snack = true;
-          this.snackColor = "succes";
-          this.snackText = "Succesfully created Group";
+          this.$store.commit("setSnack", {
+            color: "green",
+            text: "Group created successfully, refresh to see it",
+          });
+          setTimeout(function () {
+            this.$router.go(0);
+          }, 2000);
         } catch (err) {
           console.log(err);
           console.log(err.response);
           this.snack = true;
-          this.snackColor = "error";
-          this.snackText = "Error has ocured";
+          this.$store.commit("setSnack", {
+            color: "red",
+            text: "Error creating group",
+          });
         }
       } else {
-        this.snack = true;
-        this.snackColor = "error";
-        this.snackText = "Put the required data";
+        this.$store.commit("setSnack", {
+          color: "red",
+          text: "Put the required fields",
+        });
       }
     },
   },

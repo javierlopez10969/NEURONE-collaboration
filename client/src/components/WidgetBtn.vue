@@ -16,7 +16,9 @@
         </div>
       </div>
     </div>
-
+    <div style="display: none">
+      {{ snack }}
+    </div>
     <div
       id="snackbar"
       ref="snackbar"

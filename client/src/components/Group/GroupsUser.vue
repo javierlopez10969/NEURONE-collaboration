@@ -18,15 +18,7 @@
               <v-expand-transition>
                 <v-card
                   v-if="hover"
-                  class="
-                    d-flex
-                    transition-fast-in-fast-out
-                    darken-2
-                    v-card--reveal
-                    text-h2
-                    white--text
-                    center
-                  "
+                  class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal text-h2 white--text center"
                   :color="item.color"
                   style="height: 100%"
                 >

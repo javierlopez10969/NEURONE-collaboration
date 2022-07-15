@@ -1,6 +1,5 @@
 //Importaciones
 const express = require('express');
-const bodyParser = require('body-parser');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
@@ -11,9 +10,7 @@ const User = require('../models/User');
 const {
     updateOtherFields
 } = require('../controllers/UserController');
-
 //Routes + Controllers
-
 router.post('/register', async (req, res, next) => {
     User.findOne({
         email: req.body.email
@@ -114,15 +111,15 @@ router.route('/').get((req, res, next) => {
 //TODO : Auth on update user data
 // Update user
 router.route('/update-user/:id').post((req, res) => {
-    const user = req.body.user;
-    delete user._id;
-    User.findByIdAndUpdate(req.params.id, user,
+    const userU = req.body.user;
+    delete userU._id;
+    User.findByIdAndUpdate(req.params.id, userU,
         (error, user) => {
             if (error) {
                 return res.status(400);
             } else {
-                updateOtherFields(req.params.id, user)
-                res.status(200).json(user)
+                updateOtherFields(req.params.id, userU);
+                res.status(200).json(userU);
                 console.log('user successfully updated!');
             }
         })

@@ -4,18 +4,15 @@ dotenv.config();
 const expect = require('chai').expect;
 const request = require('supertest');
 
-let tempToken;
 
-before(function (done) {
-    this.timeout(3000);
-    setTimeout(done, 2000);
-});
+
+let tempToken;
 
 var email = process.env.USER_TEST;
 var password = process.env.PASSWORD_TEST;
 var idUser = "";
-var user = {};
-describe("Auth of users", () => {
+
+describe("Create of group", () => {
     //Successfully Login
     it("Should register the new user ", (done) => {
         request(app)
@@ -49,44 +46,7 @@ describe("Auth of users", () => {
             .catch((err) => done(err));
     });
     //Login
-    it("Should return a token", (done) => {
-        request(app)
-            .post("/api/user/login")
-            .send({
-                'email': email,
-                'password': password
-            })
-            .expect(200)
-            .then((res) => {
-                expect(res.body.status).to.be.eql('Login successfully');
-                expect(res.body.user.email).to.be.eql(email);
-                user = user;
-                tempToken = res.body.token;
-                done();
-            })
-            .catch((err) => done(err));
-    });
-
 });
-
-describe("Update User", () => {
-    it("Should update the user", (done) => {
-        user.name = "John"
-        user.lastName = "Smith"
-        request(app)
-            .post("/api/user/update-user/" + idUser)
-            .send({
-                user
-            })
-            .expect(200)
-            .then((res) => {
-                console.log(res.body.user)
-                done();
-            })
-            .catch((err) => done(err));
-    });
-});
-
 
 describe("Get user", () => {
     it("should return the registred users", (done) => {
@@ -98,21 +58,9 @@ describe("Get user", () => {
             })
             .catch((err) => done(err));
     });
-    it("Should return the user by token", (done) => {
-        request(app)
-            .get("/api/user/")
-            .set('token', tempToken)
-            .expect(200)
-            .then((res) => {
-                expect(res.body.status).to.be.eql('User grabbed successfully');
-                expect(res.body.user.email).to.be.eql(email);
-                done();
-            })
-            .catch((err) => done(err));
-    });
 });
 
-describe("Delete users", () => {
+describe("Deleting groups", () => {
     it("Should eliminate the user ", (done) => {
         request(app)
             .delete("/api/user/id/" + idUser)
@@ -125,10 +73,10 @@ describe("Delete users", () => {
     });
     it("Should eliminate all", (done) => {
         request(app)
-            .delete("/api/user/all/")
+            .delete("/api/group/all/all/")
             .expect(200)
             .then((res) => {
-                expect(res.body.message).to.be.eql("All user is deleted successfully");
+                expect(res.body.message).to.be.eql("All groups are deleted successfully");
                 done();
             })
             .catch((err) => done(err));

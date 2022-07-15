@@ -6,7 +6,6 @@
         <v-container fluid>
           <m-text-field
             v-model="user.email"
-            :rules="nameRules"
             required
             :placeholder="'Edit your email'"
             disabled
@@ -71,7 +70,7 @@
               type="submit"
               class="mb-10 mt-3 text-center"
               rounded
-              :style="{ 'background-color': green }"
+              :style="{ 'background-color': 'green' }"
               block
             >
               Save changes

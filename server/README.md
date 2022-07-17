@@ -7,8 +7,8 @@
 ### Requirments
 * Node js 
 * Mongo DB
-* Mongo DB Tools (optional for windows)
-
+* Mongo DB Tools (for windows)
+* npm install -g win-node-env (for windows)
 ## Project setup
 
 ```

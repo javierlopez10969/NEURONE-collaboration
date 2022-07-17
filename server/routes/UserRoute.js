@@ -12,6 +12,13 @@ const {
 } = require('../controllers/UserController');
 //Routes + Controllers
 router.post('/register', async (req, res, next) => {
+    if (req.body.email == "" || req.body.password == "" 
+    || req.body.email == undefined || req.body.password== undefined) {
+        return res.status(400).json({
+            error: 'Please enter all required fields'
+        });
+}
+    //Verify if user exists
     User.findOne({
         email: req.body.email
     }, function (err, user) {

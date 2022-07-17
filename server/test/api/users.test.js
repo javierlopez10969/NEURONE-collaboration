@@ -49,6 +49,17 @@ describe("Auth of users", () => {
             })
             .catch((err) => done(err));
     });
+        //Failed register
+        it("Should returna  error when user is not registered", (done) => {
+            request(app)
+                .post("/api/user/register")
+                .expect(400)
+                .then((res) => {
+                    expect(res.body.error).to.be.eql('Please enter all required fields');
+                    done();
+                })
+                .catch((err) => done(err));
+        });
     //Login
     it("Should return a token", (done) => {
         request(app)

@@ -31,6 +31,7 @@ const task = require('./routes/TaskRoute'),
   bookmark = require('./routes/BookmarkRoute'),
   activity = require('./routes/ActivityRoute'),
   document = require('./routes/DocumentRoute');
+
 app.use("/api/task", task)
 app.use("/api/user", user)
 app.use("/api/message", message)
@@ -39,6 +40,10 @@ app.use("/api/post", post)
 app.use("/api/bookmark", bookmark)
 app.use("/api/activity", activity)
 app.use("/api/document", document)
+
+//Consume api of NEURONE_ROUTE
+const userNeurone = require('./routes/NEURONE/UserRouteNeurone');
+app.use("/api/neurone", userNeurone)
 
 //Port
 var port = process.env.PORT || 3000;

@@ -10,6 +10,7 @@ export default new Vuex.Store({
     user: 'none',
     notifications: 0,
     token: "",
+    authToken: "",
     socket: {},
     //Id of the groups
     groups: [],
@@ -23,6 +24,9 @@ export default new Vuex.Store({
   mutations: {
     setToken(state, token) {
       state.token = token;
+    },
+    setAuthToken(state, token) {
+      state.authToken = token;
     },
     updateUser(state, user) {
       state.user = user;

@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+const {
+    Schema
+} = mongoose;
 const uniqueValidator = require('mongoose-unique-validator');
 
 // Roles
@@ -9,11 +12,25 @@ const roles = {
 
 // Setup schema
 let userSchema = mongoose.Schema({
-    name: {
+    email: {
         type: String,
+        required: true,
+        unique: true
     },
-    lastName: {
+    names: {
+        type: String
+    },
+    last_names: {
+        type: String
+    },
+    password: {
         type: String,
+        required: true
+    },
+    role: {
+        type: Schema.Types.ObjectId,
+        ref: 'Role',
+        required: true
     },
     color: {
         type: String,
@@ -23,24 +40,9 @@ let userSchema = mongoose.Schema({
         type: String,
         default: "#FFFFF"
     },
-    email: {
-        type: String,
-        required: [true, 'email is required']
-    },
     password: {
         type: String,
         required: [true, 'Password is required']
-    },
-    phone: String,
-    groups: {
-        type: Array,
-        default: []
-    },
-
-    role: {
-        type: String,
-        default: 'USER',
-        enum: roles
     },
     active: {
         type: Boolean,

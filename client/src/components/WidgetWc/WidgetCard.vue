@@ -123,10 +123,13 @@ export default {
     return { selectedView: 0, selectedGroup: 0, view: "normal", step: 1 };
   },
   mounted() {
-    if (localStorage.getItem("token")) {
+    if (localStorage.getItem("token") || localStorage.getItem("auth_token")) {
       axios
         .get(this.$store.state.apiURL + "/user", {
-          headers: { token: localStorage.getItem("token") },
+          headers: {
+            token: localStorage.getItem("token"),
+            auth_token: localStorage.getItem("auth_token"),
+          },
         })
         .then((res) => {
           this.$store.commit("updateUser", res.data.user);
@@ -137,7 +140,10 @@ export default {
                 "/group/user/" +
                 this.$store.state.user._id,
               {
-                headers: { token: localStorage.getItem("token") },
+                headers: {
+                  token: localStorage.getItem("token"),
+                  auth_token: localStorage.getItem("auth_token"),
+                },
               }
             )
             .then((res) => {

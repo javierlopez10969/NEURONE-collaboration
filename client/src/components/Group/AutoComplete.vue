@@ -59,7 +59,10 @@ export default {
         .get(
           this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,
           {
-            headers: { token: localStorage.getItem("token") },
+            headers: {
+              token: localStorage.getItem("token"),
+              auth_token: localStorage.getItem("auth_token"),
+            },
           }
         )
         .then((res) => {

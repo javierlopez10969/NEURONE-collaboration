@@ -12,9 +12,9 @@ const updateOtherFields = (id, user) => {
         "user._id": mongoose.Types.ObjectId(id),
     }, {
         "$set": {
-            "user.name": user.name,
+            "user.names": user.name,
             "user.color": user.color,
-            "user.lastName": user.lastName,
+            "user.last_names": user.lastName,
             "user.textColor": user.textColor
         }
     }, (error, messages) => {

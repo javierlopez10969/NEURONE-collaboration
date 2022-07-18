@@ -3,8 +3,6 @@ const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-//Faker
-const faker = require('faker');
 // Modelo de usuario
 const User = require('../models/User');
 const {
@@ -110,7 +108,6 @@ router.route('/').get((req, res, next) => {
                 user
             })
         })
-
     })
 })
 

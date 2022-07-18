@@ -151,7 +151,10 @@ export default {
         .get(
           this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,
           {
-            headers: { token: localStorage.getItem("token") },
+            headers: {
+              token: localStorage.getItem("token"),
+              auth_token: localStorage.getItem("auth_token"),
+            },
           }
         )
         .then((res) => {
@@ -178,7 +181,10 @@ export default {
         console.log(this.group.users);
         try {
           await axios.post(this.$store.state.apiURL + "/group", {
-            headers: { token: localStorage.getItem("token") },
+            headers: {
+              token: localStorage.getItem("token"),
+              auth_token: localStorage.getItem("auth_token"),
+            },
             group: this.group,
             user: this.user,
           });

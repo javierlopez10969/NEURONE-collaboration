@@ -8,6 +8,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     user: 'none',
+    neuroneUser: 'none',
     notifications: 0,
     token: "",
     authToken: "",
@@ -30,6 +31,9 @@ export default new Vuex.Store({
     },
     updateUser(state, user) {
       state.user = user;
+    },
+    updateNeuroneUser(state, user) {
+      state.neuroneUser = user;
     },
     updateGroups(state, groups) {
       state.groups = groups;

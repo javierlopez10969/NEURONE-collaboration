@@ -15,14 +15,16 @@ router.get('/', async (req, res) => {
 router.get('/user/:id', async (req, res) => {
     let token = req.headers.token; //token
     var user;
+    /*
     jwt.verify(token, 'secretkey', (err, decoded) => {
         if (err) return res.status(401).json({
             title: 'unauthorized'
         })
-        //token is valid
-        user = User.findOne({
-            _id: decoded.userId
-        })
+
+    })*/
+    //token is valid
+    user = User.findOne({
+        _id: req.params.id
     })
     if (user) {
         const groups = await Group.find({

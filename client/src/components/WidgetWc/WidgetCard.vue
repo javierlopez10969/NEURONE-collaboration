@@ -123,16 +123,23 @@ export default {
     return { selectedView: 0, selectedGroup: 0, view: "normal", step: 1 };
   },
   mounted() {
+    /*
+    localStorage.setItem(
+      "auth_token",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQ0ODc5MTZjYjIyMTRlM2I0NGZkMjciLCJpYXQiOjE2NTgxNzIzODQsImV4cCI6MTY1ODIxNTU4NH0.kNrmx0WZ5Mu8zqrTjwPkk1wpRu4NaEktMtqkQJMeAe4"
+    );*/
     if (localStorage.getItem("token") || localStorage.getItem("auth_token")) {
       axios
-        .get(this.$store.state.apiURL + "/user", {
+        .get(this.$store.state.apiURL + "/user/", {
           headers: {
             token: localStorage.getItem("token"),
             auth_token: localStorage.getItem("auth_token"),
+            id: "62d081d9a5db618ef81ac252",
           },
         })
         .then((res) => {
           this.$store.commit("updateUser", res.data.user);
+          this.$store.commit("updateNeuroneUser", res.data.userNeurone);
           //Get the groups
           axios
             .get(

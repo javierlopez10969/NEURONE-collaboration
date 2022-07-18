@@ -45,6 +45,7 @@ import LineRipple from "material-components-vue/dist/line-ripple";
 import FloatingLabel from "material-components-vue/dist/floating-label";
 import Dialog from "material-components-vue/dist/dialog";
 import Typography from "material-components-vue/dist/typography";
+import Chips from "material-components-vue/dist/chips";
 import Vue from "vue";
 Vue.use(Button);
 Vue.use(Snackbar);
@@ -56,6 +57,7 @@ Vue.use(TextField);
 Vue.use(LineRipple);
 Vue.use(FloatingLabel);
 Vue.use(Dialog);
+Vue.use(Chips);
 Vue.use(Typography);
 export default {
   io,
@@ -197,25 +199,19 @@ export default {
 @import "@/styles/Button.css";
 @import "@/styles/Snack.css";
 </style>
-<style lang="scss">
-/* 
-$mdc-theme-primary: #2196f3;
-$mdc-theme-secondary: black;
-$mdc-theme-background: #f5f5f5;
-@import "material-components-vue/dist/theme/styles";
-*/
-
-@import "material-components-vue/dist/button/styles";
-@import "material-components-vue/dist/list/styles";
-@import "material-components-vue/dist/card/styles";
-@import "material-components-vue/dist/tabs/styles";
-@import "material-components-vue/dist/snackbar/styles";
-@import "material-components-vue/dist/checkbox/styles";
-@import "material-components-vue/dist/text-field/styles";
-@import "material-components-vue/dist/floating-label/styles";
-@import "material-components-vue/dist/line-ripple/styles";
-@import "material-components-vue/dist/dialog/styles";
-@import "material-components-vue/dist/typography/styles";
+<style>
+@import "material-components-vue/dist/button/button.min.css";
+@import "material-components-vue/dist/list/list.min.css";
+@import "material-components-vue/dist/card/card.min.css";
+@import "material-components-vue/dist/tabs/tabs.min.css";
+@import "material-components-vue/dist/snackbar/snackbar.min.css";
+@import "material-components-vue/dist/checkbox/checkbox.min.css";
+@import "material-components-vue/dist/text-field/text-field.min.css";
+@import "material-components-vue/dist/floating-label/floating-label.min.css";
+@import "material-components-vue/dist/line-ripple/line-ripple.min.css";
+@import "material-components-vue/dist/dialog/dialog.min.css";
+@import "material-components-vue/dist/typography/typography.min.css";
+@import "material-components-vue/dist/chips/chips.min.css";
 </style>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");

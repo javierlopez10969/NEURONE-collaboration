@@ -5,7 +5,9 @@ const express = require('express'),
     mongoose = require('mongoose'),
     Grid = require('gridfs-stream');
 
-const GridFsStorage = require('multer-gridfs-storage');
+const {
+    GridFsStorage
+} = require('multer-gridfs-storage');
 const path = require('path');
 const {
     saveDocumentDB,

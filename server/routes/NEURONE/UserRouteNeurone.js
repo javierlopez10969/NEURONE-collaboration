@@ -10,7 +10,7 @@ const User = require('../../models/User');
 router.get('/', async (req, res, next) => {
     let token = req.headers.token; //token
     let authToken = req.header('auth_token'); //token
-    const id = req.body._id;
+    var id = "62d487916cb2214e3b44fd27";
     var userNeurone;
     var user = {};
     if (token === undefined || authToken === undefined || id === undefined) {
@@ -18,7 +18,8 @@ router.get('/', async (req, res, next) => {
             error: 'No token provided'
         });
     }
-    let url = apiRoute + "/api/user/" +id;
+    let url = apiRoute + "/api/user/" + id;
+    console.log(url);
     superagent
         .get(url)
         .set('x-access-token', authToken) // set the token as a header
@@ -27,21 +28,28 @@ router.get('/', async (req, res, next) => {
             console.log(response.status);
             if (response.status == 200) {
                 userNeurone = response.body.user;
-                const email = userNeurone.email;
-                User.findOne({ email: email }, (err, userDB) => { 
+                console.log(userNeurone);
+                User.findOne({
+                    email: response.body.user.email
+                }, (err, userDB) => {
                     if (err) {
                         console.log(err);
-                    }else{
-                        user = userDB   
+                    } else {
+                        user = userDB
                         console.log(userNeurone);
-                        return res.status(200).json({ userNeurone,user});
-                    }})
+                        return res.status(200).json({
+                            userNeurone,
+                            user
+                        });
+                    }
+                })
+
             } else {
                 return res.status(400).json({
                     message: res.status
                 });
             }
-    });
+        });
 })
 
 //GET User info
@@ -57,26 +65,28 @@ router.post('/update-users/', async (req, res, next) => {
             console.log(response.status);
             if (response.status == 200) {
                 users = response.body.users;
-            users.forEach(element => {
-                var email= element.email;
-                User.findOne({email: email},function (err, user) {
-                    if (err) {
-                        console.log(err);
-                    }
-                    if(!user) {  
-                        var newUser =  new User(element);
-                        newUser.password = bcrypt.hashSync(element.email, 10);
-                        User.create(newUser, (error, user) => {
-                            if (error) {
-                                return next(error)
-                            }else{
-                                console.log(user);
-                            }
-                        })
-                    }
-                });
+                users.forEach(element => {
+                    var email = element.email;
+                    User.findOne({
+                        email: email
+                    }, function (err, user) {
+                        if (err) {
+                            console.log(err);
+                        }
+                        if (!user) {
+                            var newUser = new User(element);
+                            newUser.password = bcrypt.hashSync(element.email, 10);
+                            User.create(newUser, (error, user) => {
+                                if (error) {
+                                    return next(error)
+                                } else {
+                                    console.log(user);
+                                }
+                            })
+                        }
+                    });
 
-            });
+                });
                 return res.status(200).json(response.body);
             } else {
                 return res.status(400).json({

@@ -34,7 +34,6 @@ router.post('/register', async (req, res, next) => {
                         message: 'User is registered successfully',
                         user: user
                     })
-
                 })
             } else {
                 return res.status(400).json({
@@ -50,10 +49,7 @@ router.post('/register', async (req, res, next) => {
             })
         }
     })
-
-
 })
-
 router.post('/login', async (req, res, next) => {
     User.findOne({
         email: req.body.email

@@ -198,10 +198,13 @@ export default {
 @import "@/styles/Snack.css";
 </style>
 <style lang="scss">
+/* 
 $mdc-theme-primary: #2196f3;
 $mdc-theme-secondary: black;
 $mdc-theme-background: #f5f5f5;
 @import "material-components-vue/dist/theme/styles";
+*/
+
 @import "material-components-vue/dist/button/styles";
 @import "material-components-vue/dist/list/styles";
 @import "material-components-vue/dist/card/styles";

@@ -22,15 +22,6 @@ module.exports = {
       }),
     ],
   },
-  css: {
-    loaderOptions: {
-      sass: {
-        sassOptions: {
-          includePaths: ["./node_modules"]
-        }
-      }
-    }
-  },
   transpileDependencies: [
     'vuetify'
   ]
@@ -55,5 +46,25 @@ module.exports = {
       // load which style file you want to import globally
       patterns: [path.resolve(__dirname, './src/styles/_variables.scss')],
     }
-  }
+  },
+
+  transpileDependencies: [
+    'vuetify'
+  ]
 };
+
+module.exports ={
+  css: {
+    loaderOptions: {
+      sass: {
+        sassOptions: {
+          includePaths: ["./node_modules"]
+        }
+      }
+    }
+  },
+
+  transpileDependencies: [
+    'vuetify'
+  ]
+}

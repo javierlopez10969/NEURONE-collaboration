@@ -9,7 +9,7 @@ const Group = require('../models/Group');
 const updateOtherFields = (id, user) => {
     //Update messages
     Message.updateMany({
-        "user._id": mongoose.Types.ObjectId(id)
+        "user._id": mongoose.Types.ObjectId(id),
     }, {
         "$set": {
             "user.name": user.name,
@@ -22,7 +22,7 @@ const updateOtherFields = (id, user) => {
             console.log(error);
         } else {
             console.log(messages);
-            console.log("Messages updated");
+            console.log("Messages updated!");
         }
     });
     //Update documents

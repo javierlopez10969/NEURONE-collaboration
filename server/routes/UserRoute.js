@@ -12,12 +12,12 @@ const {
 } = require('../controllers/UserController');
 //Routes + Controllers
 router.post('/register', async (req, res, next) => {
-    if (req.body.email == "" || req.body.password == "" 
-    || req.body.email == undefined || req.body.password== undefined) {
+    if (req.body.email == "" || req.body.password == "" ||
+        req.body.email == undefined || req.body.password == undefined) {
         return res.status(400).json({
             error: 'Please enter all required fields'
         });
-}
+    }
     //Verify if user exists
     User.findOne({
         email: req.body.email
@@ -119,13 +119,14 @@ router.route('/').get((req, res, next) => {
 // Update user
 router.route('/update-user/:id').post((req, res) => {
     const userU = req.body.user;
+    const id = userU._id;
     delete userU._id;
     User.findByIdAndUpdate(req.params.id, userU,
         (error, user) => {
             if (error) {
                 return res.status(400);
             } else {
-                updateOtherFields(req.params.id, userU);
+                updateOtherFields(id, userU);
                 res.status(200).json(userU);
                 console.log('user successfully updated!');
             }

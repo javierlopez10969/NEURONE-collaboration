@@ -5,7 +5,7 @@
         <span v-if="notifications != 0" class="badge">{{ notifications }}</span>
         <button class="toolt1p" @click="myFunction()">
           <Icon
-            :style="{ color: 'black' }"
+            :style="{ color: color }"
             icon="mdi:account-group-outline"
             class="dropbtn big-icon"
           />
@@ -103,6 +103,7 @@ export default {
     },
   },
   props: {
+    color: { type: String, default: "white" },
     //Modules as framework
     chat: {
       type: Boolean,

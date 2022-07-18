@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -27,6 +23,7 @@
 
       <v-spacer></v-spacer>
 
+      <WidgetBtn></WidgetBtn>
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
@@ -38,15 +35,33 @@
     </v-app-bar>
 
     <v-main>
-      <router-view/>
+      <AutoComplete
+        :items="[
+          'Apple',
+          'Banana',
+          'Orange',
+          'Mango',
+          'Pear',
+          'Peach',
+          'Grape',
+          'Tangerine',
+          'Pineapple',
+        ]"
+      ></AutoComplete>
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
-
+import WidgetBtn from "./components/WidgetBtn.vue";
+import AutoComplete from "./components/UI/SearchAutoComplete.vue";
 export default {
-  name: 'App',
+  components: {
+    WidgetBtn,
+    AutoComplete,
+  },
+  name: "App",
 
   data: () => ({
     //

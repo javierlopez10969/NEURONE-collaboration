@@ -3,7 +3,7 @@ const express = require('express'),
     ChatRoom = require('../models/Chat/ChatRoom'),
     Message = require('../models/Chat/Message'),
     Socket = require('../utils/socket');
-
+const mongoose = require('mongoose');
 //Get all
 router.get('/', async (req, res) => {
     const messages = await Message.find();
@@ -27,6 +27,7 @@ router.post('/send-message', async (req, res) => {
     var group = req.body.group;
     if (message.message && message.user && group) {
         delete message.user.password;
+        message.user._id = mongoose.Types.ObjectId(message.user._id)
         message.group_id = group;
         message.message_type = "private"
         Socket.sendMessage(req.body.group, 'message', message);

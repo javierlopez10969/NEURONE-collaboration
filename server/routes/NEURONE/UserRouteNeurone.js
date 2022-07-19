@@ -10,12 +10,14 @@ const User = require('../../models/User');
 router.get('/', async (req, res, next) => {
     let token = req.headers.token; //token
     let authToken = req.header('auth_token'); //token
-    var id = "62d487916cb2214e3b44fd27";
-    var userNeurone;
+    var id = req.headers.id;
+    id = "62d4368d18c69c37c03c304e";
+
+    var userNeurone = {};
     var user = {};
     if (token === undefined || authToken === undefined || id === undefined) {
         return res.status(401).send({
-            error: 'No token provided'
+            error: 'No keys provided'
         });
     }
     let url = apiRoute + "/api/user/" + id;
@@ -35,11 +37,14 @@ router.get('/', async (req, res, next) => {
                     if (err) {
                         console.log(err);
                     } else {
-                        user = userDB
                         console.log(userNeurone);
+                        let token = jwt.sign({
+                            userId: user._id
+                        }, 'secretkey');
                         return res.status(200).json({
                             userNeurone,
-                            user
+                            user : userDB,
+                            token: token
                         });
                     }
                 })

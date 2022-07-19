@@ -245,7 +245,6 @@ export default {
         let actualUsers = users.map(user => ({ 
           _id: user._id,
         }));
-        console.log(actualUsers)
         axios
           .post(
             this.$store.state.apiURL + "/user/group/",{
@@ -256,8 +255,6 @@ export default {
             this.users = res.data;
           });
       });
-
-
   },
 };
 </script>

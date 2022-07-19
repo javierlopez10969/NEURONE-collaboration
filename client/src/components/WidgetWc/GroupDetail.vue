@@ -78,22 +78,13 @@ export default {
     return {
       tab: null,
       view: "Group Chat",
+      group : {},
     };
   },
   created() {
     this.group = this.$store.state.group;
   },
   computed: {
-    group: {
-      // getter
-      get() {
-        return this.$store.state.group;
-      },
-      // setter
-      set(newValue) {
-        return newValue;
-      },
-    },
     modules() {
       return this.$store.state.modules;
     },

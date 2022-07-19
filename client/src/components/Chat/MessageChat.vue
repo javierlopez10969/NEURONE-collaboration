@@ -2,7 +2,6 @@
 <template>
   <m-card>
     <v-container>
-{{item}}
       <v-col>
         <button type="button" class="toolt1p" >
         <ProfileIcon

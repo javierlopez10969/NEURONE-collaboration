@@ -4,8 +4,29 @@ const {
 } = mongoose;
 
 const Task = new Schema({
-    title: String,
-    description: String,
+    title:  {
+        type: String,
+        required: true
+    },
+    description:  {
+        type: String,
+        required: true
+    },
+    state:  {
+        type: String,
+        required: true
+    },
+    state:  {
+        type: String,
+        required: true
+    },
+    created_at: {
+        type: Date,
+        default: Date.now
+    },
+    group_id: {
+        type: String
+    }
 })
 
 //modelo

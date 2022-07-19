@@ -15,59 +15,39 @@ var email = process.env.USER_TEST;
 var password = process.env.PASSWORD_TEST;
 var idUser = "";
 var user = {};
-describe("Auth of users", () => {
-    //Successfully Login
-    it("Should register the new user ", (done) => {
-        request(app)
-            .post("/api/user/register")
-            .send({
-                'email': email,
-                'password': password
-            })
-            .expect(201)
-            .then((res) => {
-                idUser = res.body.user._id;
-                expect(res.body.message).to.be.eql('User is registered successfully');
-                expect(res.body.user.email).to.be.eql(email);
-                done();
-            })
-            .catch((err) => done(err));
-    });
-    //Failed register
-    it("Should not return a new user because already exists ", (done) => {
-        request(app)
-            .post("/api/user/register")
-            .send({
-                'email': email,
-                'password': password
-            })
-            .expect(400)
-            .then((res) => {
-                expect(res.body.error).to.be.eql('User already exist');
-                done();
-            })
-            .catch((err) => done(err));
-    });
-    //Login
-    it("Should return a token", (done) => {
-        request(app)
-            .post("/api/user/login")
-            .send({
-                'email': email,
-                'password': password
-            })
-            .expect(200)
-            .then((res) => {
-                expect(res.body.status).to.be.eql('Login successfully');
-                expect(res.body.user.email).to.be.eql(email);
-                user = user;
-                tempToken = res.body.token;
-                done();
-            })
-            .catch((err) => done(err));
-    });
 
-});
+//Register And Login
+request(app)
+    .post("/api/user/register")
+    .send({
+        'email': email,
+        'password': password,
+        'role' : 'admin'
+    })
+    .expect(201)
+    .then((res) => {
+        idUser = res.body.user._id;
+        expect(res.body.message).to.be.eql('User is registered successfully');
+        expect(res.body.user.email).to.be.eql(email);
+        done();
+    })
+    .catch((err) => done(err));
+
+request(app)
+    .post("/api/user/login")
+    .send({
+        'email': email,
+        'password': password
+    })
+    .expect(200)
+    .then((res) => {
+        expect(res.body.status).to.be.eql('Login successfully');
+        expect(res.body.user.email).to.be.eql(email);
+        user = user;
+        tempToken = res.body.token;
+        done();
+    })
+    .catch((err) => done(err));
 
 describe("Update User", () => {
     it("Should update the user", (done) => {

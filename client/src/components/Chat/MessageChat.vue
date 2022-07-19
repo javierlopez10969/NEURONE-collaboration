@@ -2,16 +2,25 @@
 <template>
   <m-card>
     <v-container>
+{{item}}
       <v-col>
+        <button type="button" class="toolt1p" >
         <ProfileIcon
           :sender="false"
           :user="item.user"
           :color="item.user.color"
         ></ProfileIcon>
+          <span class="toolt1ptext">{{item.user.email}}</span>
+        </button>
 
-        {{ item.user.name }} {{ item.user.lastName }}
+      <a v-if="item.user.username">
+        {{ item.user.username}} 
+      </a>
+      <a v-else>
+          {{ item.user.email}}
+      </a>
         <v-spacer></v-spacer>
-        <span>
+        <span :style="{color : item.user.textColor}">
           {{ item.message }}
         </span>
       </v-col>

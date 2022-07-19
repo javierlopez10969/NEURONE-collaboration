@@ -1,5 +1,23 @@
-Hacer el test unitario con jest o mocha para darle una test
-Test unitario al frontend de testoptimizacionde los modulos de frontend
+Para el miercoles
+
+Modulo de tareas
+
+Modulo de posts
+
+Consumir y configurar auth de neurone correctamente
+
+Notificaciones
+
+Modulo de snippets
+
+
+Para despues : 
+
+2 opciones :
+Al cambiar un atributo de un usuario updatear en todos los documentos que se encuentre el usuario como mensajes nookmarks, etc.
+Referenciar el id del objeto, y al obtenerlo incluirlo en el objeto
+
+terminar los test unitarios
 
 Verificar cuando las rutas vengan con id que venga un id.
 
@@ -7,18 +25,20 @@ Cuando la ruta sea un post verificar todos los datos con los que se van a proces
 
 Hacer un controlador universal y general del socket en la vista
 
-Proximos funcionalidades de Awareness :
-
 RF-13
 Coordinar la información recolectada por otras personas indicando si ya ha sido adjuntada por otras personas.
 El sistema deberá tener funciones que permitan recolectar los archivos recolectados por las personas.
 Origen
 
-Al cambiar un atributo de un usuario updatear en todos los documentos que se encuentre el usuario como mensajes nookmarks, etc.
+Configurar si un documento ya ha sido subido
+
+Configurar si un bookmark ya ha sido subido
+
+Métricas que le dicen a un buscador con solo mirarlo si un documento es nuevo o ha sido recuperado previamente, y si es así, por quién 
+Origen
 
 Histogramas de búsqueda
 
 
-Métricas que le dicen a un buscador con solo mirarlo si un documento es nuevo o ha sido recuperado previamente, y si es así, por quién 
-Origen
+
 

@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const expect = require('chai').expect;
 const request = require('supertest');
+const { token } = require('morgan');
 
 
 before(function (done) {
@@ -14,16 +15,17 @@ var email = process.env.USER_TEST;
 var password = process.env.PASSWORD_TEST;
 var idUser = "";
 var user = {};
-let tempToken;
+var tempToken;
 
 describe("Auth of users", () => {
-    //Successfully Login
+    //Successfully Register
     it("Should register the new user ", (done) => {
         request(app)
             .post("/api/user/register")
             .send({
                 'email': email,
-                'password': password
+                'password': password,
+                'role' : 'admin'
             })
             .expect(201)
             .then((res) => {
@@ -50,7 +52,7 @@ describe("Auth of users", () => {
             .catch((err) => done(err));
     });
         //Failed register
-        it("Should returna  error when user is not registered", (done) => {
+        it("Should return  error when user is not registered", (done) => {
             request(app)
                 .post("/api/user/register")
                 .expect(400)
@@ -92,7 +94,7 @@ describe("Update User", () => {
             })
             .expect(200)
             .then((res) => {
-                console.log(res.body.user)
+                console.log(res.body)
                 done();
             })
             .catch((err) => done(err));

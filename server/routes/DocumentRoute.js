@@ -70,8 +70,10 @@ const upload = multer({
 
 router.post('/upload', upload.single('file'), (req, res) => {
     const file = req.file;
-    if (req.body.user && req.body.group) {
-        var document = saveDocumentDB(req.body.group, file, req.body.user);
+    const user = req.body.user;
+    const group = req.body.group;
+    if (group && user) {
+        var document = saveDocumentDB(group, file, user);
         return res.json({
             document: document,
             file: req.file

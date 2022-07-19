@@ -115,9 +115,6 @@ export default {
     this.socket.on("bookmark", (bkmrk) => {
       this.bookmarks.unshift(bkmrk);
     });
-    this.socket.on("login", (data) => {
-      this.usernameSocket = data.username;
-    });
   },
   methods: {
     addBookMark() {
@@ -126,7 +123,7 @@ export default {
           URL: this.bookmark.URL,
           notes: this.bookmark.notes,
           pageTitle: this.bookmark.pageTitle,
-          username: this.$store.state.user,
+          user: this.user,
         };
         axios
           .post(this.$store.state.apiURL + "/bookmark/send-bookmark", {

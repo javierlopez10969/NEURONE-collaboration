@@ -49,8 +49,9 @@ if (process.env.NEURONE === true) {
 }else{
   //Own model methods
   //app.use("/api/user", userNeurone)
-  app.use("/api/user", user)
 }
+
+app.use("/api/user", user)
 
 //Port
 var port = process.env.PORT || 3000;

@@ -6,7 +6,14 @@ const bcrypt = require('bcrypt');
 // Modelo de usuario
 const User = require('../models/User');
 const {
-    updateOtherFields
+    getUserInfo,
+    updateUser,
+    deleteUser,
+    getAll,
+    getAllExceptOne,
+    getAllExceptGroup,
+    deleteAll
+
 } = require('../controllers/UserController');
 //Routes + Controllers
 router.post('/register', async (req, res, next) => {
@@ -88,73 +95,44 @@ router.post('/login', async (req, res, next) => {
     })
 })
 //GET User info
-router.route('/').get((req, res, next) => {
+router.get('/',async (req, res) => {
     let token = req.headers.token; //token
+    var _id;
     jwt.verify(token, 'secretkey', (err, decoded) => {
         if (err) return res.status(401).json({
             title: 'unauthorized'
         })
-        //token is valid
-        User.findOne({
-            _id: decoded.userId
-        }, (err, user) => {
-            if (err) return console.log(err)
-            return res.status(200).json({
-                status: 'User grabbed successfully',
-                user
-            })
-        })
+        _id = decoded.userId;
+
+    })
+    //token is valid
+    user = await User.findOne({
+        _id: _id
+    },{password : 0},)
+    return res.status(200).json({
+        status: 'User grabbed successfully',
+        user
     })
 })
 
 //TODO : Change password
 //TODO : Auth on update user data
 // Update user
-router.route('/update-user/:id').post((req, res) => {
-    const userU = req.body.user;
-    const id = userU._id;
-    delete userU._id;
-    User.findByIdAndUpdate(req.params.id, userU,
-        (error, user) => {
-            if (error) {
-                return res.status(400);
-            } else {
-                updateOtherFields(id, userU);
-                res.status(200).json(userU);
-                console.log('user successfully updated!');
-            }
-        })
-})
+router.post('/update-user/:id' , updateUser)
 
 //Delete all
-router.delete('/all/', async (req, res) => {
-    await User.deleteMany()
-    return res.status(200).json({
-        message: 'All user is deleted successfully'
-    })
-})
-router.get('/all', async (req, res) => {
-    const users = await User.find();
-    res.json(users);
-})
+router.delete('/all/', deleteAll)
 
-router.post('/group', async (req, res) => {
-    const actualUsers = req.body.actualUsers;
-    const users = await User.find({ _id: { $nin:actualUsers } });
-    res.json(users);
-})
+//Get all
+router.get('/all', getAll)
+
+//Get all except of groupo of ids
+router.post('/group', getAllExceptGroup);
+
 //Get all user except the current user
-router.get('/all/:id', async (req, res) => {
-    const users = await User.find({'_id': {$ne: req.params.id}},{'email':true})
-    res.json(users);
-})
+router.get('/all/:id', getAllExceptOne)
 
 // Delete by id
-router.delete('/id/:id', async (req, res) => {
-    await User.findByIdAndRemove(req.params.id, req.body, )
-    res.status(200).json({
-        status: 'User Deleted'
-    })
-})
+router.delete('/id/:id',deleteUser)
 
 module.exports = router;

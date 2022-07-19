@@ -23,7 +23,7 @@ exports.socketConnection = (server) => {
                 socket.emit('online users', users)
                 var msg = socket.username + " Joined to the token groups";
                 //Suscribe socket for every group id
-                if (groups) {
+                if (groups!= undefined && groups != null) {
                     groups.forEach(group => {
                         socket.join(group._id)
                         console.log(socket.id + " joined to room " + group._id)

@@ -1,6 +1,6 @@
 <template>
   <v-avatar :color="user.color" size="40">
-    <span style="color: white">{{ user.email[0] }}</span>
+    <span :style="{color: user.textColor}">{{ user.email[0] }}</span>
   </v-avatar>
 </template>
 

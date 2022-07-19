@@ -66,11 +66,6 @@ let groupSchema = mongoose.Schema({
                 title: "Documents",
                 active: true,
             },
-            people: {
-                icon: "mdi-account-group-outline",
-                title: "People",
-                active: true,
-            },
             feed: {
                 icon: "mdi-cog",
                 title: "Feed",
@@ -79,6 +74,11 @@ let groupSchema = mongoose.Schema({
             tasks: {
                 icon: "mdi-cog",
                 title: "Tasks",
+                active: true,
+            },
+            people: {
+                icon: "mdi-account-group-outline",
+                title: "People",
                 active: true,
             },
             settings: {

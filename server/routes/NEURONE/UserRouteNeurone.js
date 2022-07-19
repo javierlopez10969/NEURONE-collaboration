@@ -12,7 +12,6 @@ router.get('/', async (req, res, next) => {
     let authToken = req.header('auth_token'); //token
     var id = req.headers.id;
     id = "62d4368d18c69c37c03c304e";
-
     var userNeurone = {};
     var user = {};
     if (token === undefined || authToken === undefined || id === undefined) {
@@ -38,9 +37,11 @@ router.get('/', async (req, res, next) => {
                         console.log(err);
                     } else {
                         console.log(userNeurone);
-                        let token = jwt.sign({
-                            userId: user._id
-                        }, 'secretkey');
+                        if(token=== authToken){
+                            let token = jwt.sign({
+                                userId: user._id
+                            }, 'secretkey');
+                        }
                         return res.status(200).json({
                             userNeurone,
                             user : userDB,
@@ -80,6 +81,7 @@ router.post('/update-users/', async (req, res, next) => {
                         if (!user) {
                             var newUser = new User(element);
                             newUser.password = bcrypt.hashSync(element.email, 10);
+                            newUser.role = element.role.name;
                             User.create(newUser, (error, user) => {
                                 if (error) {
                                     return next(error)
@@ -89,7 +91,6 @@ router.post('/update-users/', async (req, res, next) => {
                             })
                         }
                     });
-
                 });
                 return res.status(200).json(response.body);
             } else {
@@ -98,6 +99,5 @@ router.post('/update-users/', async (req, res, next) => {
                 });
             }
         });
-
 })
 module.exports = router;

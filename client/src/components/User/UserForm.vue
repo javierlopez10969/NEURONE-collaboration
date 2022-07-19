@@ -20,18 +20,30 @@
           -->
           <v-row>
             <v-col>
-              <v-text-field
-                label="Names"
-                required
+              <m-text-field
                 v-model="user.names"
-                :prepend-icon="'mdi-user'"
-              ></v-text-field>
-              <v-text-field
-                label="Last Names"
                 required
-                v-model="user.last_names"
-                :prepend-icon="'mdi-user'"
-              ></v-text-field>
+                :placeholder="'Edit your names'"
+                id="names"
+              >
+                <m-floating-label for="names">Names</m-floating-label>
+              </m-text-field>
+          <m-text-field
+            v-model="user.last_names"
+            :placeholder="'Edit your Last Names'"
+            id="last_names"
+          >
+            <m-floating-label for="last_names">Last names</m-floating-label>
+          </m-text-field>
+          
+          <m-text-field
+            v-model="user.username"
+            :placeholder="'Edit your username'"
+            id="username"
+          >
+            <m-floating-label for="username">Username</m-floating-label>
+          </m-text-field>
+              
             </v-col>
             <v-row>
               <v-col>

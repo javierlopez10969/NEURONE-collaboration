@@ -1,7 +1,9 @@
 // Document.js
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
-
+const {
+  Schema
+} = mongoose;
 // Document schema
 let DocumentSchema = mongoose.Schema({
     //User who upload the file
@@ -9,7 +11,7 @@ let DocumentSchema = mongoose.Schema({
         type: Object,
         required: true
     },
-    title: {
+    realfilename: {
         type: String,
         required: true
     },

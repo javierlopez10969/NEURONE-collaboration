@@ -2,6 +2,7 @@ const express = require('express'),
     router = express.Router(),
     ChatRoom = require('../models/Chat/ChatRoom'),
     Message = require('../models/Chat/Message'),
+    User = require('../models/User'),
     Socket = require('../utils/socket');
 const mongoose = require('mongoose');
 //Get all
@@ -17,7 +18,10 @@ router.get('/group/:id', async (req, res) => {
     } else if (req.params.id != undefined) {
         const messages = await Message.find({
             "group_id": req.params.id
-        });
+        }).populate({
+            path: 'user',
+            model: User
+          });
         res.json(messages);
     }
 })
@@ -26,19 +30,22 @@ router.post('/send-message', async (req, res) => {
     var message = req.body.message;
     var group = req.body.group;
     if (message.message && message.user && group) {
-        delete message.user.password;
-        message.user._id = mongoose.Types.ObjectId(message.user._id)
+        message.user = mongoose.Types.ObjectId(message.user._id)
         message.group_id = group;
         message.message_type = "private"
-        Socket.sendMessage(req.body.group, 'message', message);
-        console.log(req.body.message)
+        const messageBD = new Message(message);
+        await messageBD.save();
+        const socketMessage = messageBD.populate({
+            path: 'user',
+            model: User
+          }) 
+        Socket.sendMessage(req.body.group, 'message',socketMessage);
         res.json({
             status: 'message sended'
         })
-        const messageBD = new Message(message);
-        await messageBD.save();
     } else {
-        console.log("Not Naziiiiiiii")
+        res.status(404);
+        console.log("Error")
     }
 
 })

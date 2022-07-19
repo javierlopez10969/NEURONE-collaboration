@@ -1,7 +1,7 @@
 <template>
 <div>
+    <h4>Add users</h4>
     <m-chip-set >
-
     <m-chip v-for="(user, i) in addedUsers"
         :key="i">{{user.email}}
         <button type="button" @click="removeUser(user)">
@@ -10,7 +10,8 @@
         </m-chip>
     </m-chip-set>
     <div class="autocomplete">
-    <input type="text" class="input" v-model="search" @input="onChange" />
+     <input v-if="items.length === 0" class="input" v-model="search" disabled /> 
+    <input v-if="items.length > 0" type="text" class="input" v-model="search" @input="onChange" />
     <ul v-show="isOpen" class="autocomplete-results">
       <li
         @click="setResult(result)"
@@ -41,6 +42,9 @@ export default {
     };
   },
   created() {
+    if(this.items.length == 0){
+      this.search  =" There are no users to add"
+    }
     this.results = this.items;
   },
   props: {

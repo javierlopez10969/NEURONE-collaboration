@@ -5,16 +5,26 @@
     <v-container>
       <v-row no-gutters>
         <v-col>
+          <button type="button" class="toolt1p" >
           <ProfileIcon
             :sender="false"
-            :user="bookmark.username"
-            :color="bookmark.username.color"
+            :user="bookmark.user"
+            :color="bookmark.user.color"
           ></ProfileIcon>
-
-          {{ bookmark.username.name }} {{ bookmark.username.lastName }}
+          <span class="toolt1ptext">{{bookmark.user.email}}</span>
+        </button>
+               <a v-if="bookmark.user.username">
+        {{ bookmark.user.username}} 
+      </a>
+      <a v-else>
+          {{ bookmark.user.email}}
+      </a> 
           <v-spacer></v-spacer>
-          <span> Bookmark : {{ bookmark.URL }} </span>
+          <span>
+             Bookmark : <a :href="'https://' + bookmark.URL"> {{bookmark.URL}} </a>
+          </span>
           <span> Title : {{ bookmark.pageTitle }} </span>
+          <p></p>
           <span> Notes : {{ bookmark.notes }} </span>
         </v-col>
       </v-row>

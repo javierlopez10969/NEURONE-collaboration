@@ -5,61 +5,14 @@ const Group = require('../models/Group')
 const User = require('../models/User')
 const jwt = require('jsonwebtoken');
 
-// GET all groups
-router.get('/', async (req, res) => {
-    const groups = await Group.find();
-    res.json(groups);
-})
-
-// GET all groups of certain user
-router.get('/user/:id', async (req, res) => {
-    let token = req.headers.token; //token
-    var user;
-    /*
-    jwt.verify(token, 'secretkey', (err, decoded) => {
-        if (err) return res.status(401).json({
-            title: 'unauthorized'
-        })
-
-    })*/
-    //token is valid
-    user = User.findOne({
-        _id: req.params.id
-    })
-    if (user) {
-        const groups = await Group.find({
-            "groups": user
-        });
-        return res.json(groups);
-    }
-})
-// GET all ID groups of certain user
-router.get('/user/id/:id', async (req, res) => {
-    if (req.params.id != undefined) {
-
-        user = await User.findById(req.params.id);
-        const groups = await Group.find({
-            "groups": user
-        }, {
-            _id: 1
-        });
-        res.json(groups);
-    }
-})
 //Create Group
 router.post('/', async (req, res) => {
     console.log("Name group : " + req.body.group.name.length);
-    if (req.body.group.name != undefined && req.body.group.description != undefined &&
+    if (req.body.group.name != undefined  &&
         req.body.group.name != "" && req.body.user) {
         userCreator = req.body.user;
         const group = new Group(req.body.group)
-        group.users.push(userCreator)
-        //Update each user in the group
-        /*
-        group.users.forEach(user => {
-            newUser = user.groups.push(group._id);
-            User.findAndUpdate(newUser);
-        })*/
+        group.users.push(userCreator);
         await group.save();
         return res.status(201).json({
             group: group
@@ -69,10 +22,28 @@ router.post('/', async (req, res) => {
             status: "Bad Request"
         });
     }
-
-
 })
 
+// GET all groups
+router.get('/', async (req, res) => {
+    const groups = await Group.find();
+    res.json(groups);
+})
+
+// GET all groups of certain user
+router.get('/user/:id', async (req, res) => {
+    //let token = req.headers.token; //token
+    var user;
+    user = await User.findOne({
+        _id: req.params.id
+    });
+    if (user) {
+        const groups = await Group.find({
+            "groups": user
+        });
+        return res.json(groups);
+    }
+})
 router.get('/:id', async (req, res) => {
     var group = await Group.findById(req.params.id)
     res.json({

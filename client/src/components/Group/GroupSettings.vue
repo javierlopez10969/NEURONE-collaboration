@@ -238,24 +238,26 @@ export default {
       apiURL = `http://localhost:3000/api/group/${this.$route.params.id}`;
     }
     axios
-      .get(apiURL, {
-        headers: { token: localStorage.getItem("token") },
-      })
+      .get(apiURL)
       .then((res) => {
         this.group = res.data.group;
+        var users = this.group.users;
+        let actualUsers = users.map(user => ({ 
+          _id: user._id,
+        }));
+        console.log(actualUsers)
+        axios
+          .post(
+            this.$store.state.apiURL + "/user/group/",{
+              actualUsers : actualUsers
+            }
+          )
+          .then((res) => {
+            this.users = res.data;
+          });
       });
-    if (this.$store.state.user._id) {
-      axios
-        .get(
-          this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,
-          {
-            headers: { token: localStorage.getItem("token") },
-          }
-        )
-        .then((res) => {
-          this.users = res.data;
-        });
-    }
+
+
   },
 };
 </script>

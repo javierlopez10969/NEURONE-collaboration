@@ -138,6 +138,11 @@ router.get('/all', async (req, res) => {
     res.json(users);
 })
 
+router.post('/group', async (req, res) => {
+    const actualUsers = req.body.actualUsers;
+    const users = await User.find({ _id: { $nin:actualUsers } });
+    res.json(users);
+})
 //Get all user except the current user
 router.get('/all/:id', async (req, res) => {
     const users = await User.find({'_id': {$ne: req.params.id}},{'email':true})

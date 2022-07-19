@@ -1,10 +1,9 @@
 <template>
-  <m-card style="height: 500px; width: 400px" class="basil">
+  <m-card style="height: 500px; width: 450px" class="basil">
     <!--Multiples views-->
     <!--Main-->
     <!--If user is not logged-->
     <v-container>
-      {{user}}
       <div v-if="user === 'none'">
         <Form></Form>
       </div>
@@ -41,7 +40,7 @@
                 Edit Your Profile
               </m-button>
             </v-col>
-            <v-col v-if="user.role == 'ADMIN'">
+            <v-col v-if="user.role == 'admin'">
               <!--Create a group if is admin-->
               <m-button
                 raised
@@ -79,7 +78,7 @@
         </v-container>
 
         <v-container v-if="view == 'editProfile'">
-          <v-container style="height: 350px; overflow: auto" fluid>
+          <v-container style="height: 450px; overflow: auto" fluid>
             <m-button
               raised
               style="color: black; background-color: white"
@@ -93,8 +92,7 @@
 
         <div v-if="view == 'createGroup'">
           <v-container
-            style="height: 500px; max-width: 300px; overflow: auto"
-            fluid
+            style="max-height: 600px;"
           >
             <m-button
               raised

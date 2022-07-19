@@ -56,7 +56,6 @@ router.get('/', async (req, res, next) => {
             }
         });
 })
-
 //GET User info
 router.post('/update-users/', async (req, res, next) => {
     let authToken = req.header('auth_token'); //token

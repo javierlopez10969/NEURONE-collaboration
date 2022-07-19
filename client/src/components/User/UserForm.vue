@@ -1,8 +1,8 @@
 <template>
   <a>
-    <v-card>
-      <h1 class="text-center whit--text">Your profile</h1>
-      <v-form ref="form" lazy-validation @submit.prevent="updateUser">
+    <v-card :style="{'background-color' : user.color,'color' : user.textColor}">
+      <h1  >Your profile</h1>
+      <v-form style ref="form" lazy-validation @submit.prevent="updateUser">
         <v-container fluid>
           <m-text-field
             v-model="user.email"
@@ -13,28 +13,23 @@
           >
             <m-floating-label for="email">Email</m-floating-label>
           </m-text-field>
+          <!--Create
           <m-button raised type="button" class="rounded-pill">
             Change password</m-button
           >
-
+          -->
           <v-row>
             <v-col>
               <v-text-field
-                label="Name"
+                label="Names"
                 required
-                v-model="user.name"
+                v-model="user.names"
                 :prepend-icon="'mdi-user'"
               ></v-text-field>
               <v-text-field
-                label="Last Name"
+                label="Last Names"
                 required
-                v-model="user.lastName"
-                :prepend-icon="'mdi-user'"
-              ></v-text-field>
-              <v-text-field
-                label="Phone"
-                required
-                v-model="user.phone"
+                v-model="user.last_names"
                 :prepend-icon="'mdi-user'"
               ></v-text-field>
             </v-col>

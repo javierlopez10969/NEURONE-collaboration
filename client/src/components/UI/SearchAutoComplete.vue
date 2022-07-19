@@ -1,5 +1,15 @@
 <template>
-  <div class="autocomplete">
+<div>
+    <m-chip-set >
+
+    <m-chip v-for="(user, i) in addedUsers"
+        :key="i">{{user.email}}
+        <button type="button" @click="removeUser(user)">
+          <Icon icon="mdi:close" class="dropbtn small-icon"/>
+        </button>
+        </m-chip>
+    </m-chip-set>
+    <div class="autocomplete">
     <input type="text" class="input" v-model="search" @input="onChange" />
     <ul v-show="isOpen" class="autocomplete-results">
       <li
@@ -8,14 +18,20 @@
         :key="i"
         class="autocomplete-result"
       >
-        {{ result }}
+        {{ result.email }}
       </li>
     </ul>
   </div>
+</div>
+
 </template>
 
 <script>
+import { Icon } from "@iconify/vue2";
 export default {
+  components: {
+    Icon,
+  },
   name: "SearchAutocomplete",
   data() {
     return {
@@ -24,8 +40,16 @@ export default {
       isOpen: false,
     };
   },
+  created() {
+    this.results = this.items;
+  },
   props: {
-    items: {
+    items : {
+      type: Array,
+      required: false,
+      default: () => [],
+    },
+    addedUsers : {
       type: Array,
       required: false,
       default: () => [],
@@ -34,7 +58,7 @@ export default {
   methods: {
     filterResults() {
       this.results = this.items.filter(
-        (item) => item.toLowerCase().indexOf(this.search.toLowerCase()) > -1
+        (item) => item.email.toLowerCase().indexOf(this.search.toLowerCase()) > -1
       );
     },
     onChange() {
@@ -42,8 +66,15 @@ export default {
       this.isOpen = true;
     },
     setResult(result) {
-      this.search = result;
+      this.$emit('removeU', result);
+      this.$emit('addA', result);
+      this.search = "";
       this.isOpen = false;
+      this.results = this.items;
+    },
+    removeUser(user) {
+      this.$emit('removeA', user);
+      this.$emit('addU', user);
     },
   },
 };

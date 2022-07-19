@@ -48,8 +48,8 @@ if (process.env.NEURONE === true) {
   app.use("/api/user", userNeurone)
 }else{
   //Own model methods
-  app.use("/api/user", userNeurone)
-  //app.use("/api/user", user)
+  //app.use("/api/user", userNeurone)
+  app.use("/api/user", user)
 }
 
 //Port

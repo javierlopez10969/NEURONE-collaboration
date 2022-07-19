@@ -1,5 +1,5 @@
 <template>
-  <v-card :color="group.color" dark>
+  <v-card :color="group.color">
     <v-row>
       <v-row class="pa-4" align="center" justify="center">
         <v-col class="text-center">
@@ -57,53 +57,10 @@
         </v-row>
 
         <v-col cols="12">
-          <v-autocomplete
-            v-model="group.users"
-            :disabled="isUpdating"
-            :items="users"
-            filled
-            chips
-            color="blue-grey lighten-2"
-            label="Select users to add to the group"
-            multiple
-          >
-            <template v-slot:selection="data">
-              <v-chip
-                v-bind="data.attrs"
-                :input-value="data.selected"
-                close
-                @click="data.select"
-                @click:close="remove(data.item)"
-              >
-                <v-avatar left :color="data.item.color">
-                  <span class="white--text text-h5">{{
-                    data.item.name[0]
-                  }}</span>
-                </v-avatar>
-                {{ data.item.email }}
-              </v-chip>
-            </template>
-            <template v-slot:item="data">
-              <template v-if="typeof data.item !== 'object'">
-                <v-list-item-content v-text="data.item"></v-list-item-content>
-              </template>
-              <template v-else>
-                <v-avatar left :color="data.item.color">
-                  <span class="white--text text-h5">{{
-                    data.item.name[0]
-                  }}</span>
-                </v-avatar>
-                <v-list-item-content>
-                  <v-list-item-title
-                    v-html="data.item.email"
-                  ></v-list-item-title>
-                  <v-list-item-subtitle
-                    v-html="data.item.name + ' ' + data.item.lastName"
-                  ></v-list-item-subtitle>
-                </v-list-item-content>
-              </template>
-            </template>
-          </v-autocomplete>
+          <AutoComplete :items="users" :addedUsers="group.users" 
+          v-on:removeU="removeU" v-on:addA="addA"
+          v-on:removeA="removeA" v-on:addU="addU"
+          ></AutoComplete>
         </v-col>
       </v-container>
       <v-card-actions>
@@ -140,7 +97,6 @@
           </m-button>
         </m-dialog>
         <v-btn
-          :loading="isUpdating"
           color="blue-grey darken-3"
           depressed
           type="submit"
@@ -155,10 +111,24 @@
 
 <script>
 import axios from "axios";
+import AutoComplete from "@/components/UI/SearchAutoComplete.vue";
 export default {
+  components : {
+    AutoComplete
+  },
   props: ["groupR", "mode"],
   methods: {
-    remove(item) {
+    addU(item){
+      this.users.push(item);
+    },
+    removeU(item) {
+      const index = this.users.indexOf(item);
+      if (index >= 0) this.users.splice(index, 1);
+    },
+    addA(item){
+      this.group.users.push(item);
+    },
+    removeA(item) {
       const index = this.group.users.indexOf(item);
       if (index >= 0) this.group.users.splice(index, 1);
     },
@@ -267,7 +237,6 @@ export default {
     else {
       apiURL = `http://localhost:3000/api/group/${this.$route.params.id}`;
     }
-
     axios
       .get(apiURL, {
         headers: { token: localStorage.getItem("token") },

@@ -38,67 +38,24 @@
               <m-floating-label for="nameGroup">Description</m-floating-label>
             </m-text-field>
           </v-col>
-          <v-col cols="12" md="6">
+          <v-col >
             <h1>Choose a Color {{ group.color }}</h1>
-            <v-color-picker
-              dot-size="25"
-              hide-inputs
-              hide-mode-switch
-              :disabled="isUpdating"
-              mode="hexa"
-              swatches-max-height="200"
-              v-model="group.color"
-            ></v-color-picker>
+                <form>
+                  <label for="favcolor"> Click Here!!</label>
+                  <input
+                    type="color"
+                    id="favcolor"
+                    name="favcolor"
+                    v-model="group.color"
+                  />
+                </form>
           </v-col>
 
-          <v-col cols="12">
-            <v-autocomplete
-              v-model="group.users"
-              :disabled="isUpdating"
-              :items="users"
-              filled
-              chips
-              color="blue-grey lighten-2"
-              label="Select users to add to the group"
-              multiple
-            >
-              <template v-slot:selection="data">
-                <v-chip
-                  v-bind="data.attrs"
-                  :input-value="data.selected"
-                  close
-                  @click="data.select"
-                  @click:close="remove(data.item)"
-                >
-                  <v-avatar left :color="data.item.color">
-                    <span class="white--text text-h5">{{
-                      data.item.name[0]
-                    }}</span>
-                  </v-avatar>
-                  {{ data.item.email }}
-                </v-chip>
-              </template>
-              <template v-slot:item="data">
-                <template v-if="typeof data.item !== 'object'">
-                  <v-list-item-content v-text="data.item"></v-list-item-content>
-                </template>
-                <template v-else>
-                  <v-avatar left :color="data.item.color">
-                    <span class="white--text text-h5">{{
-                      data.item.name[0]
-                    }}</span>
-                  </v-avatar>
-                  <v-list-item-content>
-                    <v-list-item-title
-                      v-html="data.item.email"
-                    ></v-list-item-title>
-                    <v-list-item-subtitle
-                      v-html="data.item.name + ' ' + data.item.lastName"
-                    ></v-list-item-subtitle>
-                  </v-list-item-content>
-                </template>
-              </template>
-            </v-autocomplete>
+        <v-col cols="12">
+          <AutoComplete :items="users" :addedUsers="group.users" 
+          v-on:removeU="removeU" v-on:addA="addA"
+          v-on:removeA="removeA" v-on:addU="addU"
+           ></AutoComplete>
           </v-col>
         </v-row>
       </v-container>
@@ -117,7 +74,11 @@
 </template>
 <script>
 import axios from "axios";
+import AutoComplete from "@/components/UI/SearchAutoComplete.vue";
 export default {
+  components : {
+    AutoComplete
+  },
   props: { mode: String, label: String },
   data() {
     return {
@@ -149,14 +110,8 @@ export default {
     if (this.$store.state.user._id) {
       axios
         .get(
-          this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,
-          {
-            headers: {
-              token: localStorage.getItem("token"),
-              auth_token: localStorage.getItem("auth_token"),
-            },
-          }
-        )
+          //Get all user except the current user
+          this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,)
         .then((res) => {
           this.users = res.data;
         });
@@ -168,13 +123,23 @@ export default {
     },
   },
   methods: {
-    remove(item) {
+    addU(item){
+      this.users.push(item);
+    },
+    removeU(item) {
+      const index = this.users.indexOf(item);
+      if (index >= 0) this.users.splice(index, 1);
+    },
+    addA(item){
+      this.group.users.push(item);
+    },
+    removeA(item) {
       const index = this.group.users.indexOf(item);
       if (index >= 0) this.group.users.splice(index, 1);
     },
     async createGroup() {
       console.log("Group name : " + this.group.name);
-      if (this.$refs.form.validate() && this.group.name.length > 5) {
+      if (this.$refs.form.validate() && this.group.name.length >= 4) {
         this.group.usersAdmin.push(this.user);
         this.group.created_by =
           "Created by" + this.user.email + " at " + Date.now();
@@ -192,9 +157,9 @@ export default {
             color: "green",
             text: "Group created successfully, refresh to see it",
           });
-          setTimeout(function () {
+
             this.$router.go(0);
-          }, 2000);
+
         } catch (err) {
           console.log(err);
           console.log(err.response);
@@ -205,10 +170,17 @@ export default {
           });
         }
       } else {
+        if(this.group.name.length < 4){
+        this.$store.commit("setSnack", {
+          color: "red",
+          text: "The name must be greater than 4 characters",
+        });
+        }else{
         this.$store.commit("setSnack", {
           color: "red",
           text: "Put the required fields",
         });
+        }
       }
     },
   },

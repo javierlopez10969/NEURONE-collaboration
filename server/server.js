@@ -43,15 +43,13 @@ app.use("/api/activity", activity)
 app.use("/api/document", document)
 
 //Auth method
-if (process.env.NEURONE === true) {
+if (process.env.NEURONE === 'true') {
   //Neurone Method
   app.use("/api/user", userNeurone)
-}else{
-  //Own model methods
-  //app.use("/api/user", userNeurone)
+} else {
+  app.use("/api/user", user)
 }
 
-app.use("/api/user", user)
 
 //Port
 var port = process.env.PORT || 3000;

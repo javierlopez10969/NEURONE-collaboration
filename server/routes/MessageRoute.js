@@ -1,6 +1,5 @@
 const express = require('express'),
     router = express.Router(),
-    ChatRoom = require('../models/Chat/ChatRoom'),
     Message = require('../models/Chat/Message'),
     User = require('../models/User'),
     Socket = require('../utils/socket');
@@ -34,6 +33,7 @@ router.post('/send-message', async (req, res) => {
         message.group_id = group;
         message.message_type = "private"
         const messageBD = new Message(message);
+        await messageBD.save();
         const socketMessage = await messageBD.populate({
             path: 'user',
             model: User

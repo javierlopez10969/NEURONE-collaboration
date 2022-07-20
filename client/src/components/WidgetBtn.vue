@@ -46,6 +46,7 @@ import FloatingLabel from "material-components-vue/dist/floating-label";
 import Dialog from "material-components-vue/dist/dialog";
 import Typography from "material-components-vue/dist/typography";
 import Chips from "material-components-vue/dist/chips";
+import Select from "material-components-vue/dist/select";
 import Vue from "vue";
 Vue.use(Button);
 Vue.use(Snackbar);
@@ -59,6 +60,7 @@ Vue.use(FloatingLabel);
 Vue.use(Dialog);
 Vue.use(Chips);
 Vue.use(Typography);
+Vue.use(Select);
 export default {
   io,
   axios,
@@ -212,6 +214,7 @@ export default {
 @import "material-components-vue/dist/dialog/dialog.min.css";
 @import "material-components-vue/dist/typography/typography.min.css";
 @import "material-components-vue/dist/chips/chips.min.css";
+@import "material-components-vue/dist/select/select.min.css";
 </style>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");

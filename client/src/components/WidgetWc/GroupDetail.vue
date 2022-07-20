@@ -43,7 +43,15 @@
       </v-container>
     </div>
 
-    <div v-show="view == 'Snippets'"></div>
+    <div v-show="view == 'Snippets'">
+      <SnippetView></SnippetView>    
+    </div>
+    <div v-show="view == 'Feed'">
+      <FeedView></FeedView>    
+    </div>
+    <div v-show="view == 'Tasks'">
+      <TaskView></TaskView>
+    </div>
     <div v-show="view == 'Documents'">
       <DocumentView></DocumentView>
     </div>
@@ -65,6 +73,9 @@ import BookmarkView from "@/components/Bookmark/BookmarkView.vue";
 import GroupSettings from "@/components/Group/GroupSettings.vue";
 import GroupPeople from "@/components/Group/GroupPeople.vue";
 import DocumentView from "@/components/Document/DocumentView.vue";
+import TaskView from "@/components/Task/TaskView.vue";
+import FeedView from "@/components/Feed/FeedView.vue";
+import SnippetView from "@/components/Snippet/SnippetView.vue";
 export default {
   components: {
     ChatView,
@@ -73,6 +84,9 @@ export default {
     BookmarkView,
     Activity,
     DocumentView,
+    SnippetView,
+    TaskView,
+    FeedView
   },
   data() {
     return {

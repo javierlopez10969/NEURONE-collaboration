@@ -35,19 +35,6 @@
     </v-app-bar>
 
     <v-main>
-      <AutoComplete
-        :items="[
-          'Apple',
-          'Banana',
-          'Orange',
-          'Mango',
-          'Pear',
-          'Peach',
-          'Grape',
-          'Tangerine',
-          'Pineapple',
-        ]"
-      ></AutoComplete>
       <router-view />
     </v-main>
   </v-app>
@@ -55,11 +42,9 @@
 
 <script>
 import WidgetBtn from "./components/WidgetBtn.vue";
-import AutoComplete from "./components/UI/SearchAutoComplete.vue";
 export default {
   components: {
     WidgetBtn,
-    AutoComplete,
   },
   name: "App",
 

@@ -10,7 +10,7 @@
         </m-chip>
     </m-chip-set>
     <div class="autocomplete">
-     <input v-if="items.length === 0" class="input" v-model="search" disabled /> 
+     <input v-if="items.length === 0" class="input" :v-model="'No data'" disabled /> 
     <input v-if="items.length > 0" type="text" class="input" v-model="search" @input="onChange" />
     <ul v-show="isOpen" class="autocomplete-results">
       <li
@@ -42,9 +42,6 @@ export default {
     };
   },
   created() {
-    if(this.items.length == 0){
-      this.search  =" There are no users to add"
-    }
     this.results = this.items;
   },
   props: {

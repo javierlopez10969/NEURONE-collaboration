@@ -16,11 +16,11 @@ exports.socketConnection = (server) => {
             if (user) {
                 numUsers++;
                 socket.user = user;
-                socket.username = user.name + ' ' + user.lastName;
+                socket.username = user.username;
                 socket.emit('login', {
                     username: socket.username
                 });
-                socket.emit('online users', users)
+                //socket.emit('online users', users)
                 var msg = socket.username + " Joined to the token groups";
                 //Suscribe socket for every group id
                 if (groups!= undefined && groups != null) {
@@ -29,10 +29,11 @@ exports.socketConnection = (server) => {
                         console.log(socket.id + " joined to room " + group._id)
                     })
                 }
+                /*
                 socket.broadcast.emit('message', {
                     username: "system",
                     message: msg
-                })
+                })*/
                 console.log(msg)
                 users.push({
                     username: socket.username,
@@ -68,12 +69,12 @@ exports.socketConnection = (server) => {
             socket.emit('online users', users)
 
             var msg = socket.username + " Disconected"
-
+            /*
             socket.broadcast.emit('message', {
                 username: "system",
                 message: msg,
                 color: "red"
-            })
+            })*/
             console.log(msg)
         });
 
@@ -84,8 +85,6 @@ exports.socketConnection = (server) => {
                 username: socket.username,
                 message: msg,
             });
-
-
             //Typing module
             // when the client emits 'typing', we broadcast it to others
             socket.on('typing', () => {

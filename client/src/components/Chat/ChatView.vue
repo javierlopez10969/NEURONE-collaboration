@@ -42,7 +42,6 @@ export default {
       snackColor: "",
       snackText: "",
       usernameSocket: "",
-      userProfile: {},
       //Socket for connection
       socket: {},
       //All messages

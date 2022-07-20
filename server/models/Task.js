@@ -16,17 +16,25 @@ const Task = new Schema({
         type: String,
         required: true
     },
-    state:  {
-        type: String,
+    asigned_to:  {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
         required: true
+    },  
+    //User who made the task
+    creator: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    group_id: {
+        type: String
     },
     created_at: {
         type: Date,
         default: Date.now
     },
-    group_id: {
-        type: String
-    }
+
 })
 
 //modelo

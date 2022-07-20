@@ -74,14 +74,8 @@ export default {
   },
   data() {
     return {
-      snack: false,
-      snackColor: "",
-      snackText: "",
-      //Username data
-      username: "You",
-      usernameSocket: "",
+      //View of the page
       view: "normal",
-      userProfile: {},
       //Socket for connection
       socket: {},
       //All messages

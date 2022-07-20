@@ -46,19 +46,9 @@ let groupSchema = mongoose.Schema({
                 title: "Group Chat",
                 active: true,
             },
-            activity: {
-                icon: "mdi-chart-box",
-                title: "Activity",
-                active: true,
-            },
             bookmarks: {
                 icon: "mdi-star-outline",
                 title: "Bookmarks",
-                active: true,
-            },
-            snippets: {
-                icon: "mdi-file",
-                title: "snippets",
                 active: true,
             },
             documents: {
@@ -66,14 +56,24 @@ let groupSchema = mongoose.Schema({
                 title: "Documents",
                 active: true,
             },
-            feed: {
-                icon: "mdi-cog",
-                title: "Feed",
-                active: true,
-            },
             tasks: {
                 icon: "mdi-cog",
                 title: "Tasks",
+                active: true,
+            },
+            feed: {
+                icon: "mdi-cog",
+                title: "Feed",
+                active: false,
+            },
+            snippets: {
+                icon: "mdi-file",
+                title: "snippets",
+                active: false,
+            },
+            activity: {
+                icon: "mdi-chart-box",
+                title: "Activity",
                 active: true,
             },
             people: {

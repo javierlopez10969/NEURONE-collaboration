@@ -26,6 +26,14 @@
     >
       {{ snackText }} <m-button @click="closeSnack">Close</m-button>
     </div>
+    <!-- 
+    <m-snackbar
+      :style="{ 'background-color': snackColor, color: snackColor }"
+      v-model="snack"
+      :label-text="snackText"
+    ></m-snackbar>
+      
+      -->
   </m-typography>
 </template>
 <script>

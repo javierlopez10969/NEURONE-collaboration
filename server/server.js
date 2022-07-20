@@ -30,7 +30,8 @@ const task = require('./routes/TaskRoute'),
   post = require('./routes/PostRoute'),
   bookmark = require('./routes/BookmarkRoute'),
   activity = require('./routes/ActivityRoute'),
-  document = require('./routes/DocumentRoute');
+  document = require('./routes/DocumentRoute'),
+  notification = require('./routes/NotificationRoute');
 const userNeurone = require('./routes/NEURONE/UserRouteNeurone');
 
 
@@ -41,6 +42,7 @@ app.use("/api/post", post)
 app.use("/api/bookmark", bookmark)
 app.use("/api/activity", activity)
 app.use("/api/document", document)
+app.use("/api/notification", notification)
 
 //Auth method
 if (process.env.NEURONE === 'true') {

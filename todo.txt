@@ -1,12 +1,18 @@
 Para el Jueves
 
-Al momento de crear el grupo refrescar los grupos existentes.
-
 Notificaciones - Awareness
 
 Arreglar snackbar
 
 Consumir bookmarks de neurone
+
+Modal para editar tareas
+
+Filtro de tareas segun estado
+
+Crer modelo de estados para las tareas de cada grupo
+
+Agregar llaves a modelos, en vez ed objetos, usar populate
 
 Modulo de posts
 
@@ -14,6 +20,7 @@ Modulo de posts
 Modulo de snippets
 
 Para despues : 
+Modal preguntando seguro que quiere borrar estos objetos
 
 2 opciones :
 Referenciar el id del objeto, y al obtenerlo incluirlo en el objeto

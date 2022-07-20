@@ -6,7 +6,6 @@ const bcrypt = require('bcrypt');
 // Modelo de usuario
 const User = require('../models/User');
 const {
-    getUserInfo,
     updateUser,
     deleteUser,
     getAll,
@@ -95,7 +94,7 @@ router.post('/login', async (req, res, next) => {
     })
 })
 //GET User info
-router.get('/',async (req, res) => {
+router.get('/', async (req, res) => {
     let token = req.headers.token; //token
     var _id;
     jwt.verify(token, 'secretkey', (err, decoded) => {
@@ -108,7 +107,9 @@ router.get('/',async (req, res) => {
     //token is valid
     user = await User.findOne({
         _id: _id
-    },{password : 0},)
+    }, {
+        password: 0
+    }, )
     return res.status(200).json({
         status: 'User grabbed successfully',
         user
@@ -118,7 +119,7 @@ router.get('/',async (req, res) => {
 //TODO : Change password
 //TODO : Auth on update user data
 // Update user
-router.post('/update-user/:id' , updateUser)
+router.post('/update-user/:id', updateUser)
 
 //Delete all
 router.delete('/all/', deleteAll)
@@ -133,6 +134,6 @@ router.post('/group', getAllExceptGroup);
 router.get('/all/:id', getAllExceptOne)
 
 // Delete by id
-router.delete('/id/:id',deleteUser)
+router.delete('/id/:id', deleteUser)
 
 module.exports = router;

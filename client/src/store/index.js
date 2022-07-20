@@ -41,6 +41,9 @@ export default new Vuex.Store({
     updateGroup(state, index) {
       state.group = state.groups[index];
     },
+    pushGroup(state, group) {
+      state.groups.push(group);
+    },
     socketConnection(state) {
       //initial connection to the server
       state.socket = io.connect("http://localhost:3000");

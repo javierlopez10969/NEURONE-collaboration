@@ -38,24 +38,28 @@
               <m-floating-label for="nameGroup">Description</m-floating-label>
             </m-text-field>
           </v-col>
-          <v-col >
+          <v-col>
             <h1>Choose a Color {{ group.color }}</h1>
-                <form>
-                  <label for="favcolor"> Click Here!!</label>
-                  <input
-                    type="color"
-                    id="favcolor"
-                    name="favcolor"
-                    v-model="group.color"
-                  />
-                </form>
+            <form>
+              <label for="favcolor"> Click Here!!</label>
+              <input
+                type="color"
+                id="favcolor"
+                name="favcolor"
+                v-model="group.color"
+              />
+            </form>
           </v-col>
 
-        <v-col cols="12">
-          <AutoComplete :items="users" :addedUsers="group.users" 
-          v-on:removeU="removeU" v-on:addA="addA"
-          v-on:removeA="removeA" v-on:addU="addU"
-           ></AutoComplete>
+          <v-col cols="12">
+            <AutoComplete
+              :items="users"
+              :addedUsers="group.users"
+              v-on:removeU="removeU"
+              v-on:addA="addA"
+              v-on:removeA="removeA"
+              v-on:addU="addU"
+            ></AutoComplete>
           </v-col>
         </v-row>
       </v-container>
@@ -76,8 +80,8 @@
 import axios from "axios";
 import AutoComplete from "@/components/UI/SearchAutoComplete.vue";
 export default {
-  components : {
-    AutoComplete
+  components: {
+    AutoComplete,
   },
   props: { mode: String, label: String },
   data() {
@@ -85,9 +89,6 @@ export default {
       dialog: false,
       autoUpdate: true,
       isUpdating: false,
-      snack: false,
-      snackColor: "",
-      snackText: "",
       valid: false,
       name: "",
       users: [],
@@ -111,7 +112,8 @@ export default {
       axios
         .get(
           //Get all user except the current user
-          this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id,)
+          this.$store.state.apiURL + "/user/all/" + this.$store.state.user._id
+        )
         .then((res) => {
           this.users = res.data;
         });
@@ -123,14 +125,14 @@ export default {
     },
   },
   methods: {
-    addU(item){
+    addU(item) {
       this.users.push(item);
     },
     removeU(item) {
       const index = this.users.indexOf(item);
       if (index >= 0) this.users.splice(index, 1);
     },
-    addA(item){
+    addA(item) {
       this.group.users.push(item);
     },
     removeA(item) {
@@ -145,7 +147,7 @@ export default {
           "Created by" + this.user.email + " at " + Date.now();
         console.log(this.group.users);
         try {
-          await axios.post(this.$store.state.apiURL + "/group", {
+          var groupRes = await axios.post(this.$store.state.apiURL + "/group", {
             headers: {
               token: localStorage.getItem("token"),
               auth_token: localStorage.getItem("auth_token"),
@@ -155,29 +157,28 @@ export default {
           });
           this.$store.commit("setSnack", {
             color: "green",
-            text: "Group created successfully, refresh to see it",
+            text: "Group created successfully",
           });
-        location.reload();
+          this.$emit("pushGroup", groupRes.data.group);
         } catch (err) {
           console.log(err);
           console.log(err.response);
-          this.snack = true;
           this.$store.commit("setSnack", {
             color: "red",
             text: "Error creating group",
           });
         }
       } else {
-        if(this.group.name.length < 4){
-        this.$store.commit("setSnack", {
-          color: "red",
-          text: "The name must be greater than 4 characters",
-        });
-        }else{
-        this.$store.commit("setSnack", {
-          color: "red",
-          text: "Put the required fields",
-        });
+        if (this.group.name.length < 4) {
+          this.$store.commit("setSnack", {
+            color: "red",
+            text: "The name must be greater than 4 characters",
+          });
+        } else {
+          this.$store.commit("setSnack", {
+            color: "red",
+            text: "Put the required fields",
+          });
         }
       }
     },

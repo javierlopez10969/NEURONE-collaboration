@@ -8,14 +8,14 @@ const jwt = require('jsonwebtoken');
 //Create Group
 router.post('/', async (req, res) => {
     console.log("Name group : " + req.body.group.name.length);
-    if (req.body.group.name != undefined  &&
+    if (req.body.group.name != undefined &&
         req.body.group.name != "" && req.body.user) {
         userCreator = req.body.user;
         const group = new Group(req.body.group)
         group.users.push(userCreator);
         await group.save();
         return res.status(201).json({
-            group: group
+            group
         });
     } else {
         return res.status(400).json({

@@ -10,57 +10,59 @@
       <div v-if="user != 'none'">
         <div>
           <v-col v-if="view == 'normal'">
-            Welcome
-            {{ user.email }}
-            <v-subheader>My groups</v-subheader>
-            <v-list-item-group v-model="selectedGroup" color="primary">
-              <v-list-item v-for="(item, i) in groups" :key="i">
-                <v-list-item-icon :color="item.color">
-                  <v-icon> mdi-account-group</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <m-button
-                    raised
-                    @click="selectGroup(i), (view = 'group')"
-                    class="white--text"
-                    :style="{ 'background-color': item.color }"
-                  >
-                    {{ item.name }}
-                  </m-button>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list-item-group>
-            <v-col>
-              <!--Edit porfile-->
-              <m-button
-                raised
-                style="color: black; background-color: white"
-                @click="view = 'editProfile'"
-              >
-                Edit Your Profile
-              </m-button>
-            </v-col>
-            <v-col v-if="user.role == 'admin'">
-              <!--Create a group if is admin-->
-              <m-button
-                raised
-                style="color: white; background-color: green"
-                @click="view = 'createGroup'"
-              >
-                Create Group
-              </m-button>
-            </v-col>
+            <v-container style="height: 470px; overflow: auto" fluid>
+              Welcome
+              {{ user.email }}
+              <v-subheader>My groups</v-subheader>
+              <v-list-item-group v-model="selectedGroup" color="primary">
+                <v-list-item v-for="(item, i) in groups" :key="i">
+                  <v-list-item-icon :color="item.color">
+                    <v-icon> mdi-account-group</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <m-button
+                      raised
+                      @click="selectGroup(i), (view = 'group')"
+                      class="white--text"
+                      :style="{ 'background-color': item.color }"
+                    >
+                      {{ item.name }}
+                    </m-button>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list-item-group>
+              <v-col>
+                <!--Edit porfile-->
+                <m-button
+                  raised
+                  style="color: black; background-color: white"
+                  @click="view = 'editProfile'"
+                >
+                  Edit Your Profile
+                </m-button>
+              </v-col>
+              <v-col v-if="user.role == 'admin'">
+                <!--Create a group if is admin-->
+                <m-button
+                  raised
+                  style="color: white; background-color: green"
+                  @click="view = 'createGroup'"
+                >
+                  Create Group
+                </m-button>
+              </v-col>
 
-            <v-col>
-              <!--Logout-->
-              <m-button
-                style="color: black; background-color: red"
-                @click="logout()"
-                unelevated
-              >
-                Log out
-              </m-button>
-            </v-col>
+              <v-col>
+                <!--Logout-->
+                <m-button
+                  style="color: black; background-color: red"
+                  @click="logout()"
+                  unelevated
+                >
+                  Log out
+                </m-button>
+              </v-col>
+            </v-container>
           </v-col>
         </div>
         <v-container v-if="view == 'group'">
@@ -91,9 +93,7 @@
         </v-container>
 
         <div v-if="view == 'createGroup'">
-          <v-container
-            style="max-height: 600px;"
-          >
+          <v-container style="max-height: 600px">
             <m-button
               raised
               style="color: black; background-color: white"
@@ -102,7 +102,7 @@
               Back
             </m-button>
             <p></p>
-            <GroupForm :mode="'widget'"></GroupForm>
+            <GroupForm v-on:pushGroup="pushGroup" :mode="'widget'"></GroupForm>
           </v-container>
         </div>
       </div>
@@ -123,7 +123,7 @@ export default {
   },
   mounted() {
     var id = "";
-    if(localStorage.getItem("auth_token")){
+    if (localStorage.getItem("auth_token")) {
       var currentUser = localStorage.getItem("currentUser");
       id = currentUser._id;
     }
@@ -133,7 +133,7 @@ export default {
           headers: {
             token: localStorage.getItem("token"),
             auth_token: localStorage.getItem("auth_token"),
-            id : id
+            id: id,
           },
         })
         .then((res) => {
@@ -185,6 +185,10 @@ export default {
       this.selectedGroup = index;
       this.$store.commit("updateGroup", this.selectedGroup);
       this.view = "group";
+    },
+    pushGroup(group) {
+      this.$store.commit("pushGroup", group);
+      this.view = "normal";
     },
   },
 };

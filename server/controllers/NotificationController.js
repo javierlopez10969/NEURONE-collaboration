@@ -50,12 +50,20 @@ const createNotification = async (req, res) => {
 }
 
 const getByUser = async (req, res) => {
-    if (!req.params.id) {
+    const id = req.params.id;
+    if (!id) {
         return res.status(400).json({
             message: 'User id is required'
         })
     }
-    const id = req.params.id;
+    const size = Buffer.byteLength(id, "utf-8");
+    if (size < 12) {
+        return res.status(400).json({
+            "message": "Incorrect id"
+        });
+    }
+    console.log('Size : ' + size);
+
     const notifications = await Notification.find({
         user: mongoose.Types.ObjectId(id)
     })

@@ -1,6 +1,13 @@
 Para el Jueves
+Al momento de crear un grupo crear sistema de notificaiones a cada a usuario
 
-Notificaciones - Awareness
+
+Al momento de crear cualquier elemento agregar la notificacion al sistema, calcular el total, updatear, 
+enviar por socket, widget btn encargarse de maniuplar notificaciones.
+
+Al momento de quitar o agregar un usuario borrar o agregar sistema de notis,
+
+Awareness
 
 Arreglar snackbar
 

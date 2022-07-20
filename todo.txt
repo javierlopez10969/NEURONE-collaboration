@@ -1,20 +1,21 @@
-Para el miercoles
+Para el Jueves
 
-Modulo de tareas
+Al momento de crear el grupo refrescar los grupos existentes.
+
+Notificaciones - Awareness
+
+Arreglar snackbar
+
+Consumir bookmarks de neurone
 
 Modulo de posts
 
-Consumir y configurar auth de neurone correctamente
-
-Notificaciones
 
 Modulo de snippets
-
 
 Para despues : 
 
 2 opciones :
-Al cambiar un atributo de un usuario updatear en todos los documentos que se encuentre el usuario como mensajes nookmarks, etc.
 Referenciar el id del objeto, y al obtenerlo incluirlo en el objeto
 
 terminar los test unitarios

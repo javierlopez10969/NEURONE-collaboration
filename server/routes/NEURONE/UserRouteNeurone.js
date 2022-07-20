@@ -5,7 +5,14 @@ const bcrypt = require('bcrypt');
 const apiRoute = process.env.NEURONE_ROUTE.toString();
 const superagent = require('superagent');
 const User = require('../../models/User');
-
+const {
+    updateUser,
+    deleteUser,
+    getAll,
+    getAllExceptOne,
+    getAllExceptGroup,
+    deleteAll
+} = require('../../controllers/UserController');
 //GET User info
 router.get('/', async (req, res, next) => {
     let token = req.headers.token; //token
@@ -100,4 +107,24 @@ router.post('/update-users/', async (req, res, next) => {
             }
         });
 })
+
+//TODO : Change password
+//TODO : Auth on update user data
+// Update user
+router.post('/update-user/:id' , updateUser)
+
+//Delete all
+router.delete('/all/', deleteAll)
+
+//Get all
+router.get('/all', getAll)
+
+//Get all users except certain user in group of ids
+router.post('/group', getAllExceptGroup);
+
+//Get all user except the current user
+router.get('/all/:id', getAllExceptOne)
+
+// Delete by id
+router.delete('/id/:id',deleteUser)
 module.exports = router;

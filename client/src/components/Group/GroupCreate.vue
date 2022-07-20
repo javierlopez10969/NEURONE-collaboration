@@ -157,9 +157,7 @@ export default {
             color: "green",
             text: "Group created successfully, refresh to see it",
           });
-
-            this.$router.go(0);
-
+        location.reload();
         } catch (err) {
           console.log(err);
           console.log(err.response);

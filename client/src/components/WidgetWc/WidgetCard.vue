@@ -122,14 +122,10 @@ export default {
     return { selectedView: 0, selectedGroup: 0, view: "normal", step: 1 };
   },
   mounted() {
-    
-    localStorage.setItem(
-      "auth_token",
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQ0MzY4ZDE4YzY5YzM3YzAzYzMwNGUiLCJpYXQiOjE2NTgxODM3NzQsImV4cCI6MTY1ODIyNjk3NH0.tNG8Gcz5_tSEfhd9DR7cSqOei-THADIgw4clg0ZAfM4"
-    );
     var id = "";
     if(localStorage.getItem("auth_token")){
-      id = localStorage.getItem("currentUser._id");
+      var currentUser = localStorage.getItem("currentUser");
+      id = currentUser._id;
     }
     if (localStorage.getItem("token") || localStorage.getItem("auth_token")) {
       axios

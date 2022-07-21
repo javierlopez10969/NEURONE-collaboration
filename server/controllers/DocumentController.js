@@ -29,7 +29,6 @@ const saveDocumentDB = async function (group, file, user_id) {
         document.save()
         sendNotificationByKey('documents', group, userDB._id)
         Socket.sendMessage(group, 'document', document);
-        Socket.sendMessage(group, 'notification', 'newDocument');
         return document;
     }
 }

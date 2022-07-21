@@ -13,22 +13,25 @@
             <v-container style="height: 470px; overflow: auto" fluid>
               Welcome
               {{ user.email }}
+              
               <v-subheader>My groups</v-subheader>
               <v-list-item-group v-model="selectedGroup" color="primary">
                 <v-list-item v-for="(item, i) in groups" :key="i">
                   <v-list-item-icon :color="item.color">
                     <v-icon> mdi-account-group</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-content>
+                  <v-list-item-content >
                     <m-button
                       raised
                       @click="selectGroup(i), (view = 'group')"
-                      class="white--text"
+                      class="white--text notification"
                       :style="{ 'background-color': item.color }"
                     >
                       {{ item.name }}
                     </m-button>
                   </v-list-item-content>
+                                      <span v-if="(notifications.find(element => element.group === item._id)).total != 0" class="badge">
+                    {{(notifications.find(element => element.group === item._id)).total }}</span>
                 </v-list-item>
               </v-list-item-group>
               <v-col>
@@ -115,6 +118,7 @@ import Form from "@/components/UI/FormUI";
 import GroupDetail from "./GroupDetail";
 import UserForm from "../User/UserForm.vue";
 import GroupForm from "../Group/GroupCreate.vue";
+
 export default {
   components: { Form, GroupDetail, UserForm, GroupForm },
   data() {
@@ -133,6 +137,9 @@ export default {
       }
       return "none";
     },
+    notifications(){
+      return this.$store.state.notifications.notifications;
+    }
   },
   methods: {
     logout() {
@@ -149,6 +156,11 @@ export default {
       this.view = "normal";
     },
   },
+  mounted(){
+    if(this.notifications && this.groups){
+      console.log(this.notifications)
+    }
+  }
 };
 </script>
 

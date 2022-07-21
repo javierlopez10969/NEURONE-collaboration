@@ -4,6 +4,7 @@ const express = require('express'),
     User = require('../models/User'),
     Socket = require('../utils/socket');
 const mongoose = require('mongoose');
+const {sendNotificationByKey} = require('../controllers/NotificationController')
 //Get all
 router.get('/', async (req, res) => {
     const tasks = await Task.find();
@@ -52,7 +53,8 @@ router.post('/send-task', async (req, res) => {
             model: User,
             select : 'email username color textColor'
         })  
-        Socket.sendMessage(req.body.group, 'task',socketTask);
+        Socket.sendMessage(req.body.group, 'task',socketTask);        
+        sendNotificationByKey('documents', group, user._id)
         res.json({
             status: 'task sended'
         })

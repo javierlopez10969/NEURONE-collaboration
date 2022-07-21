@@ -4,6 +4,7 @@ const express = require('express'),
     User = require('../models/User'),
     Socket = require('../utils/socket');
 const mongoose = require('mongoose');
+const {sendNotificationByKey} = require('../controllers/NotificationController')
 //Get all
 router.get('/', async (req, res) => {
     const messages = await Message.find();
@@ -39,6 +40,8 @@ router.post('/send-message', async (req, res) => {
             model: User
           }) 
         Socket.sendMessage(req.body.group, 'message',socketMessage);
+        Socket.sendMessage(req.body.group, 'notification', 'new ' + 'message');         
+        sendNotificationByKey('chat', req.body.group, message.user._id);
         res.json({
             status: 'message sended'
         })

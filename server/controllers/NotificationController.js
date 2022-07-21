@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const User = require('../models/User');
 const Notification = require('../models/Notification');
 const Group = require('../models/Group');
+const Socket = require('../utils/socket')
 const getAll = async (req, res) => {
     const notifications = await Notification.find()
     return res.status(200).json({
@@ -85,7 +86,8 @@ const sendNotificationByKey = async (key,groupID,user)=> {
             if (notification) {
                 notification.total++;
                 notification.modules[key].total++;
-                await Notification.findOneAndUpdate({_id: notification._id},notification);            
+                await Notification.findOneAndUpdate({_id: notification._id},notification);                 
+                Socket.sendMessage(group, 'notification', 'new ' + key);          
             }
         }        
     }

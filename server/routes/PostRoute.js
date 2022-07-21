@@ -3,6 +3,9 @@ const express = require('express'),
     Post = require('../models/Post'),
     Socket = require('../utils/socket');
 
+    const mongoose = require('mongoose');
+
+    const {sendNotificationByKey} = require('../controllers/NotificationController')
 //Get all
 router.get('/', async (req, res) => {
     const posts = await Post.find();

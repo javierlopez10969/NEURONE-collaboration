@@ -41,12 +41,6 @@ export default new Vuex.Store({
     updateNotifications(state, notifications) {
       state.notifications = notifications;
     },
-    updateNotification(state, notification) {      
-      var index = state.notifications.findIndex(function(not) {
-        return not._id ==  notification._id
-      });
-      state.notifications[index] = notification;
-    },
     updateGroup(state, index) {
       state.group = state.groups[index];
     },
@@ -55,7 +49,7 @@ export default new Vuex.Store({
     },
     socketConnection(state) {
       //initial connection to the server
-      state.socket = io.connect(state.apiURL);
+      state.socket = io.connect("http://localhost:3000");
       state.socket.on("connect", () => {
         console.log(`You connected with id : ${state.socket.id}`);
       });

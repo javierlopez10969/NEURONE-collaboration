@@ -81,6 +81,52 @@ export default {
       feed: this.feed,
       documents: this.documents,
     });
+     var id = "";
+    if (localStorage.getItem("auth_token")) {
+      var currentUser = localStorage.getItem("currentUser");
+      id = currentUser._id;
+    }
+    if (localStorage.getItem("token") || localStorage.getItem("auth_token")) {
+      axios
+        .get(this.$store.state.apiURL + "/user/", {
+          headers: {
+            token: localStorage.getItem("token"),
+            auth_token: localStorage.getItem("auth_token"),
+            id: id,
+          },
+        })
+        .then((res) => {
+          this.$store.commit("updateUser", res.data.user);
+          this.$store.commit("updateNeuroneUser", res.data.userNeurone);
+          if (res.data.token) {
+            localStorage.setItem("token", res.data.token);
+          }
+          
+          this.getNotifications();
+          //Get the groups
+          axios
+            .get(
+              this.$store.state.apiURL +
+                "/group/user/" +
+                this.$store.state.user._id,
+              {
+                headers: {
+                  token: localStorage.getItem("token"),
+                  auth_token: localStorage.getItem("auth_token"),
+                },
+              }
+            )
+            .then((res) => {
+              this.$store.commit("updateGroups", res.data);
+              this.$store.commit("socketConnection");
+              this.socket = this.$store.state.socket;
+              this.socket.on("notification", () => {
+                console.log('NEW NOTIFICATION')
+                this.getNotifications();
+              });
+            });
+        });
+    }
   },
   computed: {
     snack: {
@@ -175,7 +221,7 @@ export default {
       x.className.replace("show", "");
       this.snack = false;
     },
-    getNotifications(){
+        getNotifications(){
                 axios
             .get(
               this.$store.state.apiURL +
@@ -191,49 +237,6 @@ export default {
             .then((res) => {
               this.$store.commit("updateNotifications", res.data);
             });
-    }
-  },
- mounted() {
-    var id = "";
-    if (localStorage.getItem("auth_token")) {
-      var currentUser = localStorage.getItem("currentUser");
-      id = currentUser._id;
-    }
-    if (localStorage.getItem("token") || localStorage.getItem("auth_token")) {
-      axios
-        .get(this.$store.state.apiURL + "/user/", {
-          headers: {
-            token: localStorage.getItem("token"),
-            auth_token: localStorage.getItem("auth_token"),
-            id: id,
-          },
-        })
-        .then((res) => {
-          this.$store.commit("updateUser", res.data.user);
-          this.$store.commit("updateNeuroneUser", res.data.userNeurone);
-          if (res.data.token) {
-            localStorage.setItem("token", res.data.token);
-          }
-          this.getNotifications();
-          //Get the groups
-          axios
-            .get(
-              this.$store.state.apiURL +
-                "/group/user/" +
-                this.$store.state.user._id,
-              {
-                headers: {
-                  token: localStorage.getItem("token"),
-                  auth_token: localStorage.getItem("auth_token"),
-                },
-              }
-            )
-            .then((res) => {
-              this.$store.commit("updateGroups", res.data);
-              this.$store.commit("socketConnection");              
-              this.socket = this.$store.state.socket;              
-            }); 
-        });         
     }
   },
   updated() {

@@ -5,7 +5,7 @@ const express = require('express'),
     Group = require('../models/Group'),
     Socket = require('../utils/socket');
 const mongoose = require('mongoose');
-
+const {sendNotificationByKey} = require('../controllers/NotificationController')
 //Get all
 router.get('/', async (req, res) => {
     const bookmarks = await Bookmark.find();
@@ -35,6 +35,7 @@ router.post('/send-bookmark', async (req, res) => {
     var group = req.body.group;
     if (bookmark && bookmark.user && group && bookmark.URL && bookmark.pageTitle) {
         bookmark.group =  mongoose.Types.ObjectId(group);
+        sendNotificationByKey('documents', group, bookmark.user._id)
         Socket.sendMessage(group, 'bookmark', bookmark);
         res.json({
             status: 'Bookmark sended' + bookmark.URL

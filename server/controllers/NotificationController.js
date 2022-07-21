@@ -105,10 +105,11 @@ const deleteNotification = async (req, res) => {
     })
 }
 const updateNotification = async (req, res) => {
-    const notificationU = req.body.notification;
+    const notificationU = req.body;
     await Notification.findByIdAndUpdate(req.params.id, notificationU)
     res.status(200).json(notificationU);
-    console.log('user successfully updated!');
+    Socket.sendMessage(req.body.group, 'notification', 'clear ' + 'message'); 
+    console.log('Notification successfully updated!');
 }
 
 module.exports = {

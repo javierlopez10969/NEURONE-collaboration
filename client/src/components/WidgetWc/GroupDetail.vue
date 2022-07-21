@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div> 
     <h1 :style="{ color: group.color }">{{ group.name }}</h1>
     <m-tab-bar v-show="group.modules">
       <m-tab-scroller>
         <!-- chat -->
         <div v-for="(module, index) in group.modules" :key="module.title">
-          <button active @click="view = module.title">
+          <button active @click="view = module.title , cleanNotification(index)">
             <m-tab
               active
               v-if="
@@ -14,6 +14,9 @@
                 index === 'chat'
               "
             >
+          <div v-if="notifications.modules[index].total != 0"  class="notification">            
+          <span class="badge2"> {{notifications.modules[index].total}}</span>
+          </div>
               {{ module.title }}
             </m-tab>
             <m-tab
@@ -23,8 +26,11 @@
                 index != 'chat'
               "
             >
+                      <div v-if="notifications.modules[index].total != 0" class="notification">            
+          <span class="badge2"> {{notifications.modules[index].total}}</span>
+          </div>
               {{ module.title }}
-            </m-tab>
+            </m-tab>         
           </button>
         </div>
       </m-tab-scroller>
@@ -76,6 +82,7 @@ import DocumentView from "@/components/Document/DocumentView.vue";
 import TaskView from "@/components/Task/TaskView.vue";
 import FeedView from "@/components/Feed/FeedView.vue";
 import SnippetView from "@/components/Snippet/SnippetView.vue";
+import axios from 'axios';
 export default {
   components: {
     ChatView,
@@ -102,10 +109,24 @@ export default {
     modules() {
       return this.$store.state.modules;
     },
+    notifications() {
+      const id = this.$store.state.group._id;      
+      const notifications = this.$store.state.notifications.notifications;
+      return (notifications.find(element => element.group === id));
+    }
   },
   methods: {
     findModule(module) {
       return this.modules[module];
+    },
+    async cleanNotification(module) {
+      if(this.notifications.modules[module].total!=0){        
+      var newNotifications = this.notifications;      
+      newNotifications.total = newNotifications.total-newNotifications.modules[module].total;
+      newNotifications.modules[module].total = 0;
+      console.log(newNotifications);
+      await axios.post(this.$store.state.apiURL +"/notification/" + newNotifications._id,newNotifications)
+      }
     },
   },
 };

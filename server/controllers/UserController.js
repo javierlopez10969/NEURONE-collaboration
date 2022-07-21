@@ -25,60 +25,6 @@ const getUserInfo = (req, res) => {
         })
     })
 }
-
-const updateOtherFields = async (id, user) => {
-    //Update messages
-    Message.updateMany({
-        "user._id": mongoose.Types.ObjectId(id),
-    }, {
-        "$set": {
-            "user.names": user.name,
-            "user.color": user.color,
-            "user.last_names": user.lastName,
-            "user.textColor": user.textColor,
-            "user.username": user.username,
-        }
-    }, (error, messages) => {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log(messages);
-            console.log("Messages updated!");
-        }
-    });
-    //Update documents
-    Document.updateMany({
-        "user._id": mongoose.Types.ObjectId(id),
-        "user._id": id.toString(),
-    }, {
-        "$set": {
-            "user": user
-        }
-    }, (error, messages) => {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log(messages);
-            console.log("Documents updated");
-        }
-    });
-    //Update documents
-    Bookmark.updateMany({
-        "user._id": mongoose.Types.ObjectId(id),
-        "user._id": id.toString(),
-    }, {
-        "$set": {
-            "user": user
-        }
-    }, (error, messages) => {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log(messages);
-            console.log("Bookmarks updated");
-        }
-    });
-}
 const getAll = async (req, res) => {
     users = await User.find()
     return res.status(200).json({
@@ -125,7 +71,6 @@ const updateUser = async (req, res) => {
     const id = userU._id;
     delete userU._id;
     await User.findByIdAndUpdate(req.params.id, userU)
-    updateOtherFields(id, userU);
     res.status(200).json(userU);
     console.log('user successfully updated!');
 }

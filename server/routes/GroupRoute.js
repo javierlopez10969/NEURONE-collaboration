@@ -3,17 +3,26 @@ const router = express.Router();
 
 const Group = require('../models/Group')
 const User = require('../models/User')
+const Notification = require('../models/Notification')
 const jwt = require('jsonwebtoken');
 
 //Create Group
 router.post('/', async (req, res) => {
-    console.log("Name group : " + req.body.group.name.length);
     if (req.body.group.name != undefined &&
         req.body.group.name != "" && req.body.user) {
         userCreator = req.body.user;
         const group = new Group(req.body.group)
         group.users.push(userCreator);
         await group.save();
+        for (let index = 0; index < group.users.length; index++) {
+            console.log(group.users[index]._id);
+            const user = group.users[index]._id;
+            var notification = new Notification({
+                user: user,
+                group: group._id
+            });
+            await notification.save();
+        }     
         return res.status(201).json({
             group
         });

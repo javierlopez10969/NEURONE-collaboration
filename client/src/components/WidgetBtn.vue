@@ -2,7 +2,7 @@
   <m-typography>
     <div>
       <div class="notification dropdown">
-        <span v-if="notifications != 0" class="badge">{{ notifications }}</span>
+        <span v-if="notifications.total != 0" class="badge">{{ notifications.total }}</span>
         <button class="toolt1p" @click="myFunction()">
           <Icon
             :style="{ color: color }"
@@ -26,14 +26,6 @@
     >
       {{ snackText }} <m-button @click="closeSnack">Close</m-button>
     </div>
-    <!-- 
-    <m-snackbar
-      :style="{ 'background-color': snackColor, color: snackColor }"
-      v-model="snack"
-      :label-text="snackText"
-    ></m-snackbar>
-      
-      -->
   </m-typography>
 </template>
 <script>
@@ -163,6 +155,7 @@ export default {
         { title: "Click Me" },
         { title: "Click Me 2" },
       ],
+      socket : {}
     };
   },
   methods: {
@@ -182,6 +175,66 @@ export default {
       x.className.replace("show", "");
       this.snack = false;
     },
+    getNotifications(){
+                axios
+            .get(
+              this.$store.state.apiURL +
+                "/notification/user/" +
+                this.$store.state.user._id,
+              {
+                headers: {
+                  token: localStorage.getItem("token"),
+                  auth_token: localStorage.getItem("auth_token"),
+                },
+              }
+            )
+            .then((res) => {
+              this.$store.commit("updateNotifications", res.data);
+            });
+    }
+  },
+ mounted() {
+    var id = "";
+    if (localStorage.getItem("auth_token")) {
+      var currentUser = localStorage.getItem("currentUser");
+      id = currentUser._id;
+    }
+    if (localStorage.getItem("token") || localStorage.getItem("auth_token")) {
+      axios
+        .get(this.$store.state.apiURL + "/user/", {
+          headers: {
+            token: localStorage.getItem("token"),
+            auth_token: localStorage.getItem("auth_token"),
+            id: id,
+          },
+        })
+        .then((res) => {
+          this.$store.commit("updateUser", res.data.user);
+          this.$store.commit("updateNeuroneUser", res.data.userNeurone);
+          if (res.data.token) {
+            localStorage.setItem("token", res.data.token);
+          }
+          this.getNotifications();
+          //Get the groups
+          axios
+            .get(
+              this.$store.state.apiURL +
+                "/group/user/" +
+                this.$store.state.user._id,
+              {
+                headers: {
+                  token: localStorage.getItem("token"),
+                  auth_token: localStorage.getItem("auth_token"),
+                },
+              }
+            )
+            .then((res) => {
+              this.$store.commit("updateGroups", res.data);
+              this.$store.commit("socketConnection");              
+              this.socket = this.$store.state.socket;              
+            }); 
+        });         
+    }
   },
   updated() {
     if (this.snack == true) {

@@ -9,7 +9,7 @@ export default new Vuex.Store({
   state: {
     user: 'none',
     neuroneUser: 'none',
-    notifications: 0,
+    notifications: {total :0},
     token: "",
     authToken: "",
     socket: {},
@@ -38,6 +38,15 @@ export default new Vuex.Store({
     updateGroups(state, groups) {
       state.groups = groups;
     },
+    updateNotifications(state, notifications) {
+      state.notifications = notifications;
+    },
+    updateNotification(state, notification) {      
+      var index = state.notifications.findIndex(function(not) {
+        return not._id ==  notification._id
+      });
+      state.notifications[index] = notification;
+    },
     updateGroup(state, index) {
       state.group = state.groups[index];
     },
@@ -46,7 +55,7 @@ export default new Vuex.Store({
     },
     socketConnection(state) {
       //initial connection to the server
-      state.socket = io.connect("http://localhost:3000");
+      state.socket = io.connect(state.apiURL);
       state.socket.on("connect", () => {
         console.log(`You connected with id : ${state.socket.id}`);
       });

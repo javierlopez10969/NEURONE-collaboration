@@ -2,6 +2,7 @@ const Socket = require('../utils/socket'),
     Document = require('../models/Document'),
     User = require('../models/User'),
     mongoose = require('mongoose')
+const {sendNotificationByKey} = require('./NotificationController')
 let mongoURI;
 if (process.env.NODE_ENV === 'testing') {
     mongoURI = process.env.MONGODB_URI_TEST;
@@ -20,19 +21,21 @@ const saveDocumentDB = async function (group, file, user_id) {
     },{password : 0})
     if (userDB) {
         let document = new Document({
-            user: userDB,
+            user:  mongoose.Types.ObjectId(user_id),
             realfilename: file.originalname,
             filename: file.filename,
-            group_id: group
+            group: mongoose.Types.ObjectId(group)
         })
         document.save()
+        sendNotificationByKey('documents', group, userDB._id)
         Socket.sendMessage(group, 'document', document);
+        Socket.sendMessage(group, 'notification', 'newDocument');
         return document;
     }
 }
 const findDocumentsByGroup = (req, res) => {
     Document.find({
-        group_id: req.params.id
+        group: mongoose.Types.ObjectId(req.params.id)
     }, (err, documents) => {
         if (err) {
             return console.log(err)
@@ -41,7 +44,6 @@ const findDocumentsByGroup = (req, res) => {
         }
     });
 }
-
 
 module.exports = {
     saveDocumentDB,

@@ -1,7 +1,10 @@
 const express = require('express'),
     router = express.Router(),
     Bookmark = require('../models/Bookmark'),
+    User = require('../models/User'),
+    Group = require('../models/Group'),
     Socket = require('../utils/socket');
+const mongoose = require('mongoose');
 
 //Get all
 router.get('/', async (req, res) => {
@@ -15,8 +18,14 @@ router.get('/group/:id', async (req, res) => {
         console.log("UNDEFINED")
     } else if (req.params.id != undefined) {
         const bookmarks = await Bookmark.find({
-            "group_id": req.params.id
-        });
+            "group": mongoose.Types.ObjectId(req.params.id)
+        }).populate({
+            path: 'user',
+            model: User
+          }).populate({
+            path: 'group',
+            model: Group
+          });
         res.json(bookmarks);
     }
 })
@@ -25,11 +34,13 @@ router.post('/send-bookmark', async (req, res) => {
     var bookmark = req.body.bookmark;
     var group = req.body.group;
     if (bookmark && bookmark.user && group && bookmark.URL && bookmark.pageTitle) {
-        bookmark.group_id = group;
+        bookmark.group =  mongoose.Types.ObjectId(group);
         Socket.sendMessage(group, 'bookmark', bookmark);
         res.json({
             status: 'Bookmark sended' + bookmark.URL
         })
+        user = bookmark.user;
+        bookmark.user =  mongoose.Types.ObjectId(bookmark.user._id);
         const BookmarkBD = new Bookmark(bookmark);
         await BookmarkBD.save();
     } else {
@@ -37,8 +48,6 @@ router.post('/send-bookmark', async (req, res) => {
             message: 'Put the required data'
         })
     }
-
-
 })
 
 router.put('/:id', async (req, res) => {

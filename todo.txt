@@ -1,9 +1,7 @@
 Para el Jueves
-Al momento de crear un grupo crear sistema de notificaiones a cada a usuario
-
 
 Al momento de crear cualquier elemento agregar la notificacion al sistema, calcular el total, updatear, 
-enviar por socket, widget btn encargarse de maniuplar notificaciones.
+enviar por socket.
 
 Al momento de quitar o agregar un usuario borrar o agregar sistema de notis,
 

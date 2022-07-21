@@ -115,52 +115,10 @@ import Form from "@/components/UI/FormUI";
 import GroupDetail from "./GroupDetail";
 import UserForm from "../User/UserForm.vue";
 import GroupForm from "../Group/GroupCreate.vue";
-import axios from "axios";
 export default {
   components: { Form, GroupDetail, UserForm, GroupForm },
   data() {
     return { selectedView: 0, selectedGroup: 0, view: "normal", step: 1 };
-  },
-  mounted() {
-    var id = "";
-    if (localStorage.getItem("auth_token")) {
-      var currentUser = localStorage.getItem("currentUser");
-      id = currentUser._id;
-    }
-    if (localStorage.getItem("token") || localStorage.getItem("auth_token")) {
-      axios
-        .get(this.$store.state.apiURL + "/user/", {
-          headers: {
-            token: localStorage.getItem("token"),
-            auth_token: localStorage.getItem("auth_token"),
-            id: id,
-          },
-        })
-        .then((res) => {
-          this.$store.commit("updateUser", res.data.user);
-          this.$store.commit("updateNeuroneUser", res.data.userNeurone);
-          if (res.data.token) {
-            localStorage.setItem("token", res.data.token);
-          }
-          //Get the groups
-          axios
-            .get(
-              this.$store.state.apiURL +
-                "/group/user/" +
-                this.$store.state.user._id,
-              {
-                headers: {
-                  token: localStorage.getItem("token"),
-                  auth_token: localStorage.getItem("auth_token"),
-                },
-              }
-            )
-            .then((res) => {
-              this.$store.commit("updateGroups", res.data);
-              this.$store.commit("socketConnection");
-            });
-        });
-    }
   },
   computed: {
     user() {

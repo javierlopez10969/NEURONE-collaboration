@@ -8,7 +8,14 @@ const {
 let DocumentSchema = mongoose.Schema({
     //User who upload the file
     user: {
-        type: Object,
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    },
+    //Group of the document
+    group: {
+        type: Schema.Types.ObjectId,
+        ref: 'Group',
         required: true
     },
     realfilename: {
@@ -23,9 +30,6 @@ let DocumentSchema = mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    group_id: {
-        type: String
-    }
 });
 
 // Export

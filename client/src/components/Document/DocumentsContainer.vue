@@ -22,8 +22,9 @@
           {{ bookmark.username.name }} {{ bookmark.username.lastName }}
           -->
               <v-spacer></v-spacer>
-              {{ file.filename }}
-
+              <div :style="{width : '200px'}">
+{{ file.realfilename }}
+              </div>
               <button @click="downloadFile(file.filename)">
                 <Icon icon="mdi:download" class="small-icon"></Icon>
               </button>

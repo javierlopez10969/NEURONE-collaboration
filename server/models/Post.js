@@ -1,7 +1,9 @@
 // Message.js
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
-
+const {
+    Schema
+  } = mongoose;
 // Message schema
 let messageSchema = mongoose.Schema({
     //Description of the message

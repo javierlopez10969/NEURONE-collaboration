@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const User = require('../models/User');
 const Notification = require('../models/Notification');
 const Group = require('../models/Group');
-
 const getAll = async (req, res) => {
     const notifications = await Notification.find()
     return res.status(200).json({
@@ -63,13 +62,34 @@ const getByUser = async (req, res) => {
         });
     }
     console.log('Size : ' + size);
-
     const notifications = await Notification.find({
         user: mongoose.Types.ObjectId(id)
     })
-    return res.json(notifications);
+    const calcTotal  = await Notification.aggregate([{ $match: { user: mongoose.Types.ObjectId(id)  } },
+        {$group : {_id : '$user',total:{$sum : '$total'}}}])
+    const total = calcTotal[0].total;
+    return res.json({total,notifications,});
 }
-
+const sendNotificationByKey = async (key,groupID,user)=> {
+    console.log('Key : ' + key);
+    console.log('Group : ' + groupID);
+    console.log('User : ' + user);
+    group = await Group.findOne({_id: groupID},{users:1});    
+    for (let index = 0; index < group.users.length; index++) {
+        const element = group.users[index];
+        if (element._id != user) {
+            const notification = await Notification.findOne({
+                group: mongoose.Types.ObjectId(group._id),
+                user: mongoose.Types.ObjectId(element._id),
+            })
+            if (notification) {
+                notification.total++;
+                notification.modules[key].total++;
+                await Notification.findOneAndUpdate({_id: notification._id},notification);            
+            }
+        }        
+    }
+}
 const deleteAll = async (req, res) => {
     await Notification.deleteMany()
     return res.status(200).json({
@@ -97,5 +117,6 @@ module.exports = {
     deleteNotification,
     getAll,
     deleteAll,
+    sendNotificationByKey
 
 }

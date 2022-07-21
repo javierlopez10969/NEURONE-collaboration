@@ -66,16 +66,38 @@ const getByUser = async (req, res) => {
     const notifications = await Notification.find({
         user: mongoose.Types.ObjectId(id)
     })
-    const calcTotal  = await Notification.aggregate([{ $match: { user: mongoose.Types.ObjectId(id)  } },
-        {$group : {_id : '$user',total:{$sum : '$total'}}}])
-    const total = calcTotal[0].total;
-    return res.json({total,notifications,});
+    const calcTotal = await Notification.aggregate([{
+            $match: {
+                user: mongoose.Types.ObjectId(id)
+            }
+        },
+        {
+            $group: {
+                _id: '$user',
+                total: {
+                    $sum: '$total'
+                }
+            }
+        }
+    ])
+    var total = 0;
+    if (calcTotal.length != 0) {
+        total = calcTotal[0].total;
+    }
+    return res.json({
+        total,
+        notifications,
+    });
 }
-const sendNotificationByKey = async (key,groupID,user)=> {
+const sendNotificationByKey = async (key, groupID, user) => {
     console.log('Key : ' + key);
     console.log('Group : ' + groupID);
     console.log('User : ' + user);
-    group = await Group.findOne({_id: groupID},{users:1});    
+    group = await Group.findOne({
+        _id: groupID
+    }, {
+        users: 1
+    });
     for (let index = 0; index < group.users.length; index++) {
         const element = group.users[index];
         if (element._id != user) {
@@ -86,10 +108,12 @@ const sendNotificationByKey = async (key,groupID,user)=> {
             if (notification) {
                 notification.total++;
                 notification.modules[key].total++;
-                await Notification.findOneAndUpdate({_id: notification._id},notification);                 
-                Socket.sendMessage(group, 'notification', 'new ' + key);          
+                await Notification.findOneAndUpdate({
+                    _id: notification._id
+                }, notification);
+                Socket.sendMessage(group, 'notification', 'new ' + key);
             }
-        }        
+        }
     }
 }
 const deleteAll = async (req, res) => {
@@ -108,7 +132,7 @@ const updateNotification = async (req, res) => {
     const notificationU = req.body;
     await Notification.findByIdAndUpdate(req.params.id, notificationU)
     res.status(200).json(notificationU);
-    Socket.sendMessage(req.body.group, 'notification', 'clear ' + 'message'); 
+    Socket.sendMessage(req.body.group, 'notification', 'clear ' + 'message');
     console.log('Notification successfully updated!');
 }
 

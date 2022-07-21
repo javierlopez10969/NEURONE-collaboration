@@ -13,14 +13,13 @@
             <v-container style="height: 470px; overflow: auto" fluid>
               Welcome
               {{ user.email }}
-              
               <v-subheader>My groups</v-subheader>
               <v-list-item-group v-model="selectedGroup" color="primary">
                 <v-list-item v-for="(item, i) in groups" :key="i">
                   <v-list-item-icon :color="item.color">
                     <v-icon> mdi-account-group</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-content >
+                  <v-list-item-content>
                     <m-button
                       raised
                       @click="selectGroup(i), (view = 'group')"
@@ -30,8 +29,20 @@
                       {{ item.name }}
                     </m-button>
                   </v-list-item-content>
-                                      <span v-if="(notifications.find(element => element.group === item._id)).total != 0" class="badge">
-                    {{(notifications.find(element => element.group === item._id)).total }}</span>
+                  <span
+                    v-if="
+                      notifications.find(
+                        (element) => element.group === item._id
+                      ).total != 0
+                    "
+                    class="badge"
+                  >
+                    {{
+                      notifications.find(
+                        (element) => element.group === item._id
+                      ).total
+                    }}</span
+                  >
                 </v-list-item>
               </v-list-item-group>
               <v-col>
@@ -137,9 +148,9 @@ export default {
       }
       return "none";
     },
-    notifications(){
+    notifications() {
       return this.$store.state.notifications.notifications;
-    }
+    },
   },
   methods: {
     logout() {
@@ -156,11 +167,11 @@ export default {
       this.view = "normal";
     },
   },
-  mounted(){
-    if(this.notifications && this.groups){
-      console.log(this.notifications)
+  mounted() {
+    if (this.notifications && this.groups) {
+      console.log(this.notifications);
     }
-  }
+  },
 };
 </script>
 

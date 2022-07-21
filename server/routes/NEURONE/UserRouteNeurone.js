@@ -17,11 +17,11 @@ const {
 router.get('/', async (req, res, next) => {
     let token = req.headers.token; //token
     let authToken = req.header('auth_token'); //token
-    var id = req.headers.id;
-    id = "62d4368d18c69c37c03c304e";
     var userNeurone = {};
     var user = {};
-    if (token === undefined || authToken === undefined || id === undefined) {
+    const userReq = JSON.parse(req.headers.user)
+    var id = userReq._id;
+    if (token === undefined || authToken === undefined) {
         return res.status(401).send({
             error: 'No keys provided'
         });
@@ -44,14 +44,14 @@ router.get('/', async (req, res, next) => {
                         console.log(err);
                     } else {
                         console.log(userNeurone);
-                        if(token=== authToken){
+                        if (token === authToken) {
                             let token = jwt.sign({
                                 userId: user._id
                             }, 'secretkey');
                         }
                         return res.status(200).json({
                             userNeurone,
-                            user : userDB,
+                            user: userDB,
                             token: token
                         });
                     }
@@ -66,8 +66,7 @@ router.get('/', async (req, res, next) => {
 })
 //GET User info
 router.post('/update-users/', async (req, res, next) => {
-    let authToken = req.header('auth_token'); //token
-    let usersNeurone;
+    let authToken = req.body.headers.token; //token
     let url = apiRoute + "/api/user/";
     superagent
         .get(url)
@@ -111,7 +110,7 @@ router.post('/update-users/', async (req, res, next) => {
 //TODO : Change password
 //TODO : Auth on update user data
 // Update user
-router.post('/update-user/:id' , updateUser)
+router.post('/update-user/:id', updateUser)
 
 //Delete all
 router.delete('/all/', deleteAll)
@@ -126,5 +125,5 @@ router.post('/group', getAllExceptGroup);
 router.get('/all/:id', getAllExceptOne)
 
 // Delete by id
-router.delete('/id/:id',deleteUser)
+router.delete('/id/:id', deleteUser)
 module.exports = router;

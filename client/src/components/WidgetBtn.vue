@@ -2,7 +2,9 @@
   <m-typography>
     <div>
       <div class="notification dropdown">
-        <span v-if="notifications.total != 0" class="badge">{{ notifications.total }}</span>
+        <span v-if="notifications.total != 0" class="badge">{{
+          notifications.total
+        }}</span>
         <button class="toolt1p" @click="myFunction()">
           <Icon
             :style="{ color: color }"
@@ -81,18 +83,13 @@ export default {
       feed: this.feed,
       documents: this.documents,
     });
-     var id = "";
-    if (localStorage.getItem("auth_token")) {
-      var currentUser = localStorage.getItem("currentUser");
-      id = currentUser._id;
-    }
     if (localStorage.getItem("token") || localStorage.getItem("auth_token")) {
       axios
         .get(this.$store.state.apiURL + "/user/", {
           headers: {
             token: localStorage.getItem("token"),
             auth_token: localStorage.getItem("auth_token"),
-            id: id,
+            user: localStorage.getItem("currentUser"),
           },
         })
         .then((res) => {
@@ -101,7 +98,7 @@ export default {
           if (res.data.token) {
             localStorage.setItem("token", res.data.token);
           }
-          
+
           this.getNotifications();
           //Get the groups
           axios
@@ -121,7 +118,7 @@ export default {
               this.$store.commit("socketConnection");
               this.socket = this.$store.state.socket;
               this.socket.on("notification", () => {
-                console.log('NEW NOTIFICATION')
+                console.log("NEW NOTIFICATION");
                 this.getNotifications();
               });
             });
@@ -161,35 +158,35 @@ export default {
     },
     bookmarks: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     settings: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     tasks: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     snippets: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     documents: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     feed: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     people: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     activity: {
       type: Boolean,
-      default: true,
+      default: false,
     },
   },
   data() {
@@ -201,7 +198,7 @@ export default {
         { title: "Click Me" },
         { title: "Click Me 2" },
       ],
-      socket : {}
+      socket: {},
     };
   },
   methods: {
@@ -221,23 +218,23 @@ export default {
       x.className.replace("show", "");
       this.snack = false;
     },
-        getNotifications(){
-                axios
-            .get(
-              this.$store.state.apiURL +
-                "/notification/user/" +
-                this.$store.state.user._id,
-              {
-                headers: {
-                  token: localStorage.getItem("token"),
-                  auth_token: localStorage.getItem("auth_token"),
-                },
-              }
-            )
-            .then((res) => {
-              this.$store.commit("updateNotifications", res.data);
-            });
-    }
+    getNotifications() {
+      axios
+        .get(
+          this.$store.state.apiURL +
+            "/notification/user/" +
+            this.$store.state.user._id,
+          {
+            headers: {
+              token: localStorage.getItem("token"),
+              auth_token: localStorage.getItem("auth_token"),
+            },
+          }
+        )
+        .then((res) => {
+          this.$store.commit("updateNotifications", res.data);
+        });
+    },
   },
   updated() {
     if (this.snack == true) {

@@ -25,6 +25,15 @@
         >
       </div>
     </v-form>
+    <div v-if="authToken">
+      <m-button
+        raised
+        style="color: white; background-color: green"
+        type="button"
+        @click="updateUsers"
+        >Update collaborative profile</m-button
+      >
+    </div>
   </div>
 </template>
 
@@ -37,6 +46,7 @@ export default {
     snackColor: "",
     snackText: "",
     valid: false,
+    authToken: null,
     user: {
       email: "",
       password: "",
@@ -50,6 +60,9 @@ export default {
       (v) => /.+@.+\..+/.test(v) || "Invalid email",
     ],
   }),
+  created() {
+    this.authToken = localStorage.getItem("auth_token");
+  },
   methods: {
     async userLogin() {
       if (this.$refs.form.validate()) {
@@ -94,6 +107,11 @@ export default {
           text: "Error",
         });
       }
+    },
+    async updateUsers() {
+      await axios.post(this.$store.state.apiURL + "/user/update-users", {
+        headers: { token: localStorage.getItem("auth_token") },
+      });
     },
   },
 };

@@ -23,7 +23,7 @@
 
       <v-spacer></v-spacer>
 
-      <WidgetBtn></WidgetBtn>
+      <WidgetBtn :documents="true" :bookmarks="true" :people="true"></WidgetBtn>
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"

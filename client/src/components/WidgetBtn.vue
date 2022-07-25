@@ -11,7 +11,7 @@
             icon="mdi:account-group-outline"
             class="dropbtn big-icon"
           />
-          <span class="toolt1ptext">Collaboration</span>
+          <span class="toolt1ptext">Collaboration {{ documents }}</span>
         </button>
         <div ref="myDropdown" class="dropdown-content" style="display: none">
           <WidgetCard></WidgetCard>
@@ -71,7 +71,8 @@ export default {
     WidgetCard,
     Icon,
   },
-  created() {
+  mounted() {
+    console.log(this.documents);
     this.$store.commit("setModules", {
       chat: this.chat,
       bookmarks: this.bookmarks,
@@ -83,6 +84,8 @@ export default {
       feed: this.feed,
       documents: this.documents,
     });
+  },
+  created() {
     if (localStorage.getItem("token") || localStorage.getItem("auth_token")) {
       axios
         .get(this.$store.state.apiURL + "/user/", {

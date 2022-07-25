@@ -31,7 +31,6 @@
 
       <!-- Navbar-->
       <v-app-bar color="primary" :clipped-left="clipped" dark app>
-        <WidgetBtn></WidgetBtn>
         <!-- LEFT SIDE -->
         <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
         <v-btn icon @click.stop="miniVariant = !miniVariant">
@@ -54,7 +53,6 @@
 </template>
 <script>
 import SideBar from "@/components/User/SideBar.vue";
-import WidgetBtn from "../WidgetBtn.vue";
 export default {
   props: ["show", "user"],
   name: "NavBar",
@@ -65,7 +63,9 @@ export default {
     miniVariant: false,
     right: true,
     rightDrawer: false,
+    verdadero: true,
+    falso: false,
   }),
-  components: { SideBar, WidgetBtn },
+  components: { SideBar },
 };
 </script>

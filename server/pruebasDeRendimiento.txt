@@ -1,0 +1,519 @@
+OPTIONS /api/user/ 204 0.104 ms - 0
+Hola estudiante
+{}
+GET /api/user/ 304 2.019 ms - -
+OPTIONS /api/notification/user/62e01808aec6ea355b79ddfc 204 0.170 ms - 0
+OPTIONS /api/group/user/62e01808aec6ea355b79ddfc 204 0.111 ms - 0
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.352 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.500 ms - -
+0tB-4zuTYqRBkCc6AAAn joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+GET /api/message/group/62e018e233aa7323240ca1be 304 1.957 ms - -
+GET /api/bookmark/group/62e018e233aa7323240ca1be 304 3.305 ms - -
+GET /api/activity/62e018e233aa7323240ca1be 304 6.516 ms - -
+GET /api/task/group/62e018e233aa7323240ca1be 304 1.544 ms - -
+GET /api/document/files/group/62e018e233aa7323240ca1be 304 1.441 ms - -
+OPTIONS /api/message/send-message 204 0.188 ms - 0
+Key : chat
+Group : 62e018e233aa7323240ca1be
+User : 62e01808aec6ea355b79ddfc
+POST /api/message/send-message 200 15.472 ms - 27
+OPTIONS /api/notification/user/62e01808aec6ea355b79ddfc 204 0.102 ms - 0
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 2.520 ms - -
+undefined Disconected
+OPTIONS /api/user/ 204 0.114 ms - 0
+Hola estudiante
+{}
+GET /api/user/ 304 2.263 ms - -
+OPTIONS /api/notification/user/62e01808aec6ea355b79ddfc 204 0.135 ms - 0
+OPTIONS /api/group/user/62e01808aec6ea355b79ddfc 204 0.125 ms - 0
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.515 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.739 ms - -
+bIg3sESmtWHXUOAiAAAp joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.774 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.374 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.994 ms - -
+sV3_6YfXNG7TOCsTAAAr joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.047 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.894 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.354 ms - -
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 1.963 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.414 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.550 ms - -
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.258 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.050 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.017 ms - -
+vg7X6Oh0e1DfRz8oAAAx joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+OPTIONS /api/user/ 204 0.132 ms - 0
+Hola estudiante
+{}
+GET /api/user/ 304 1.949 ms - -
+OPTIONS /api/notification/user/62e01808aec6ea355b79ddfc 204 0.117 ms - 0
+OPTIONS /api/group/user/62e01808aec6ea355b79ddfc 204 0.095 ms - 0
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.916 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.265 ms - -
+QoTazjbRErdrraLpAAAz joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.360 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.184 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.450 ms - -
+vsDIbCTw5rkhAkuhAAA1 joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 3.351 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.487 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.712 ms - -
+Mi96v0jtw8R4u_HYAAA3 joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.064 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.036 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.431 ms - -
+h6cpLkpjBl8QU-qqAAA5 joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.172 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.778 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.730 ms - -
+rovHYj29L5nngIVbAAA7 joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.095 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.268 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.588 ms - -
+swxYoTxmIOi7yIWnAAA9 joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.835 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.940 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 7.017 ms - -
+WIK-v6YagujHdaVcAAA_ joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+OPTIONS /api/user/ 204 0.134 ms - 0
+Hola estudiante
+{}
+GET /api/user/ 304 2.521 ms - -
+OPTIONS /api/notification/user/62e01808aec6ea355b79ddfc 204 0.173 ms - 0
+OPTIONS /api/group/user/62e01808aec6ea355b79ddfc 204 0.112 ms - 0
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.627 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 6.448 ms - -
+cEWhYcor0j0ZJMCYAABB joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.229 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.483 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.787 ms - -
+8ZljoRXLCpuNTIlZAABD joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.532 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.364 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.973 ms - -
+ROlMj9urQ-WPgVY9AABF joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.522 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 6.456 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 6.477 ms - -
+j3OJMbQpQj2qrbBAAABH joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.436 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 7.226 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 7.311 ms - -
+vFzEBhOrnBH2E2HwAABJ joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.421 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.655 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.059 ms - -
+IzC4ZY8PtoUReh8sAABL joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.193 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.835 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.339 ms - -
+TzpAxD02F6PL9DRxAABN joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+OPTIONS /api/user/ 204 0.147 ms - 0
+Hola estudiante
+{}
+GET /api/user/ 304 2.346 ms - -
+OPTIONS /api/notification/user/62e01808aec6ea355b79ddfc 204 0.112 ms - 0
+OPTIONS /api/group/user/62e01808aec6ea355b79ddfc 204 0.103 ms - 0
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.252 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 6.187 ms - -
+WzamqM5HCyMJwSuSAABP joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.896 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 6.742 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 7.084 ms - -
+fZRQG6yaYvfxH3VxAABR joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.361 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.451 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.971 ms - -
+mlUVAeg_RNrWl4bJAABT joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.221 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.464 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.725 ms - -
+AXlAeWTx_hDSsPGwAABV joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 4.120 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.179 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.691 ms - -
+0cfAVFXIEiUQbKgYAABX joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.274 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 6.028 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 6.172 ms - -
+AF0uDsLoMUrYh7tHAABZ joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 1.848 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.631 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.637 ms - -
+9PK9nWsDSHCdcwV6AABb joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.259 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.060 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.449 ms - -
+-7tLZxvIz7tcxv0BAABd joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+OPTIONS /api/user/ 204 0.119 ms - 0
+Hola estudiante
+{}
+GET /api/user/ 304 2.036 ms - -
+OPTIONS /api/notification/user/62e01808aec6ea355b79ddfc 204 0.104 ms - 0
+OPTIONS /api/group/user/62e01808aec6ea355b79ddfc 204 0.120 ms - 0
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.454 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.450 ms - -
+kK7GzEtF1B89pI7EAABf joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 1.963 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.090 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.608 ms - -
+KOKj722n-3LbAPviAABh joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.985 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.359 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.744 ms - -
+LKOgo48NB24H3Lc2AABj joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.158 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.915 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.475 ms - -
+eugql70ZcJZoIJsdAABl joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.165 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.472 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.634 ms - -
+zDrtcMmrnnPvFWe5AABn joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.693 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.137 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.402 ms - -
+fW2_7CB9MoPW5xwzAABp joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.008 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.148 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.213 ms - -
+do3A7Is5rUPJHIFzAABr joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.370 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.634 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.598 ms - -
+W6hkJFSHfqzvkZGUAABt joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.710 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 6.247 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 6.667 ms - -
+0_pMXGz_a3p0Sl_PAABv joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+OPTIONS /api/user/ 204 0.111 ms - 0
+Hola estudiante
+{}
+GET /api/user/ 304 1.918 ms - -
+OPTIONS /api/notification/user/62e01808aec6ea355b79ddfc 204 0.103 ms - 0
+OPTIONS /api/group/user/62e01808aec6ea355b79ddfc 204 0.108 ms - 0
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.503 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.934 ms - -
+dyFEbmlr1GaQghQ_AABx joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 1.809 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.014 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.231 ms - -
+1b8Ub0Iprpljj_LFAABz joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.288 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.837 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.999 ms - -
+Q3oIxEJpLUC90zghAAB1 joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.052 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.191 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.742 ms - -
+vOu7yJRJ0kH0WvkJAAB3 joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.601 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 3.995 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.254 ms - -
+5QDEiq7gY3skHfkSAAB5 joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.230 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.045 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.659 ms - -
+Qp9Bn6aB-RyRek5PAAB7 joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.183 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.946 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.955 ms - -
+Flptpx8GVxoudnmdAAB9 joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 1.895 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.032 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.130 ms - -
+NXWYxYritzwhshGyAAB_ joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+OPTIONS /api/user/ 204 0.103 ms - 0
+Hola estudiante
+{}
+GET /api/user/ 304 2.196 ms - -
+OPTIONS /api/notification/user/62e01808aec6ea355b79ddfc 204 0.121 ms - 0
+OPTIONS /api/group/user/62e01808aec6ea355b79ddfc 204 0.100 ms - 0
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.193 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.703 ms - -
+6xHxD3CRVUatj8z_AACB joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.120 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.278 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.762 ms - -
+vvF-Hnrwvl2eND5CAACD joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.232 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 7.574 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 8.270 ms - -
+wrCswzTWbcMh-j-xAACF joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.316 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.151 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.440 ms - -
+nJomWKCi020-Xpp9AACH joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.896 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.297 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.356 ms - -
+xg3Yk2J6ddsxFNARAACJ joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.329 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 6.146 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 6.240 ms - -
+Y8t1Hd8Ky8UCFSVkAACL joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.548 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.226 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 4.677 ms - -
+lW3yMrKiZSJA-ugeAACN joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+OPTIONS /api/user/ 204 0.131 ms - 0
+Hola estudiante
+{}
+GET /api/user/ 304 2.092 ms - -
+OPTIONS /api/notification/user/62e01808aec6ea355b79ddfc 204 0.157 ms - 0
+OPTIONS /api/group/user/62e01808aec6ea355b79ddfc 204 0.244 ms - 0
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 4.792 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.273 ms - -
+1IQPQ4WpXgxlDbjZAACP joined to room 62e018e233aa7323240ca1be
+undefined Joined to the token groups
+undefined Disconected
+Hola estudiante
+{}
+GET /api/user/ 304 2.616 ms - -
+Size : 24
+GET /api/notification/user/62e01808aec6ea355b79ddfc 304 5.178 ms - -
+GET /api/group/user/62e01808aec6ea355b79ddfc 304 5.112 ms - -

@@ -97,6 +97,11 @@ router.post('/login', async (req, res, next) => {
 router.get('/', async (req, res) => {
     let token = req.headers.token; //token
     var _id;
+    if (!token) {
+        return res.status(401).json({
+            error: 'You are not logged in'
+        })
+    }
     jwt.verify(token, 'secretkey', (err, decoded) => {
         if (err) return res.status(401).json({
             title: 'unauthorized'

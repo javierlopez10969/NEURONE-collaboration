@@ -26,43 +26,68 @@ router.get('/', async (req, res, next) => {
             error: 'No keys provided'
         });
     }
-    let url = apiRoute + "/api/user/" + id;
-    console.log(url);
-    superagent
-        .get(url)
-        .set('x-access-token', authToken) // set the token as a header
-        .end((err, response) => {
-            // Calling the end function will send the request
-            console.log(response.status);
-            if (response.status == 200) {
-                userNeurone = response.body.user;
-                console.log(userNeurone);
-                User.findOne({
-                    email: response.body.user.email
-                }, (err, userDB) => {
-                    if (err) {
-                        console.log(err);
-                    } else {
-                        console.log(userNeurone);
-                        if (token === authToken) {
-                            let token = jwt.sign({
-                                userId: user._id
-                            }, 'secretkey');
-                        }
-                        return res.status(200).json({
-                            userNeurone,
-                            user: userDB,
-                            token: token
-                        });
-                    }
-                })
-
+    if (userReq.role.name === 'student') {
+        console.log('Hola estudiante');
+        User.findOne({
+            email: userReq.email
+        }, (err, userDB) => {
+            if (err) {
+                console.log(err);
             } else {
-                return res.status(400).json({
-                    message: res.status
+                console.log(userNeurone);
+                if (token === authToken) {
+                    token = jwt.sign({
+                        userId: userDB._id
+                    }, 'secretkey');
+                }
+                return res.status(200).json({
+                    userReq,
+                    user: userDB,
+                    token: token
                 });
             }
-        });
+        })
+    }
+    if (userReq.role.name === 'admin') {
+        console.log('Hello admin.');
+        let url = apiRoute + "/api/user/" + id;
+        console.log(url);
+        superagent
+            .get(url)
+            .set('x-access-token', authToken) // set the token as a header
+            .end((err, response) => {
+                // Calling the end function will send the request
+                console.log(response.status);
+                if (response.status == 200) {
+                    userNeurone = response.body.user;
+                    console.log(userNeurone);
+                    User.findOne({
+                        email: response.body.user.email
+                    }, (err, userDB) => {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            console.log(userNeurone);
+                            if (token === authToken) {
+                                let token = jwt.sign({
+                                    userId: user._id
+                                }, 'secretkey');
+                            }
+                            return res.status(200).json({
+                                userNeurone,
+                                user: userDB,
+                                token: token
+                            });
+                        }
+                    })
+
+                } else {
+                    return res.status(400).json({
+                        message: res.status
+                    });
+                }
+            });
+    }
 })
 //GET User info
 router.post('/update-users/', async (req, res, next) => {

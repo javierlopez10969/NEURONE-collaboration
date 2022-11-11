@@ -38,11 +38,6 @@ Cuando la ruta sea un post verificar todos los datos con los que se van a proces
 
 Hacer un controlador universal y general del socket en la vista
 
-RF-13
-Coordinar la información recolectada por otras personas indicando si ya ha sido adjuntada por otras personas.
-El sistema deberá tener funciones que permitan recolectar los archivos recolectados por las personas.
-Origen
-
 Configurar si un documento ya ha sido subido
 
 Configurar si un bookmark ya ha sido subido
